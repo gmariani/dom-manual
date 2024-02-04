@@ -1,0 +1,29 @@
+<apiPackage id="dom.loadsave.types"><apiName>dom.loadsave.types</apiName><apiDetail/><apiClassifier id="dom.loadsave.types:LSOutputStream"><apiName>LSOutputStream</apiName><shortdesc>
+	 A LSOutputStream represents a byte stream destination for the XML output.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A LSOutputStream represents a byte stream destination for the XML output. 
+	 
+	 <p><b>Note:</b> For Java, LSInputStream is bound to the java.io.InputStream 
+	 type. For ECMAScript, LSInputStream is bound to Object.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LSOutputStream"><linktext>W3C - LSOutputStream</linktext></link></related-links></apiClassifier><apiClassifier id="dom.loadsave.types:LSWriter"><apiName>LSWriter</apiName><shortdesc>
+	 A LSWriter represents a character stream for the XML output.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A LSWriter represents a character stream for the XML output. 
+	 
+	 <p><b>Note:</b> For Java, LSInputStream is bound to the java.io.InputStream 
+	 type. For ECMAScript, LSInputStream is bound to Object.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LSWriter"><linktext>W3C - LSWriter</linktext></link></related-links></apiClassifier><apiClassifier id="dom.loadsave.types:LSInputStream"><apiName>LSInputStream</apiName><shortdesc>
+	 A LSInputStream represents a reference to a byte stream source of an XML input.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A LSInputStream represents a reference to a byte stream source of an XML input. 
+	 
+	 <p><b>Note:</b> For Java, LSInputStream is bound to the java.io.InputStream 
+	 type. For ECMAScript, LSInputStream is bound to Object.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LSInputStream"><linktext>W3C - LSInputStream</linktext></link></related-links></apiClassifier><apiClassifier id="dom.loadsave.types:LSReader"><apiName>LSReader</apiName><shortdesc>
+	 A LSReader represents a character stream for the XML input.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A LSReader represents a character stream for the XML input. 
+	 
+	 <p><b>Note:</b> For Java, LSInputStream is bound to the java.io.InputStream 
+	 type. For ECMAScript, LSInputStream is bound to Object.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LSReader"><linktext>W3C - LSReader</linktext></link></related-links></apiClassifier></apiPackage>

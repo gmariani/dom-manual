@@ -1,0 +1,149 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+//
+//  ADOBE SYSTEMS INCORPORATED
+//  Copyright 2008 Adobe Systems Incorporated
+//  All Rights Reserved.
+//
+//  NOTICE: Adobe permits you to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+//
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+/* Compatibility */
+.yes {
+	background-color: #00882D;
+	color: #FFFFFF;
+}
+
+.almost {
+	background-color: #40A662;
+	color: #FFFFFF;
+}
+
+.incomplete {
+	border:1px solid #00882D;
+	color: #00882D;
+}
+
+.alternative {
+	border:1px solid #666666;
+	color: #666666;
+}
+
+.untestable {
+	color:#006699;
+}
+
+.minimal {
+	color:#CB000F;
+}
+
+.incorrect {
+	border:1px solid #CB000F;
+	color:#CB000F;
+}
+
+.buggy {
+	background-color:#DA4C57;
+	color:#FFFFFF;
+}
+
+.no {
+	background-color:#CB000F;
+	color:#FFFFFF;
+}
+
+.crash {
+	background-color:#535353;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.comp {
+	/*font-family:verdana,sans-serif;*/
+	/*font-size:95%;*/
+	height:20px;
+	text-align:center;
+	/*text-transform:lowercase;*/
+	vertical-align:middle !important;
+	display: inline-block;
+	padding: 3px;
+}
+
+.comp img {
+	padding-top: 2px;
+}
+
+/* Links */
+
+a.external, a[rel~="external"] {
+	background:transparent url(images/link_external.png) no-repeat scroll 99% 40%;
+	padding-right:16px;
+}
+
+/* Standard */
+.domIcon {
+	/*MDC Style */
+	background-color: #FFFFE1;
+	border: 1px solid #818151;
+	color: #25221D;
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: xx-small;
+	font-size-adjust: none;
+	font-variant: normal;
+	font-style: normal;
+	font-weight: normal;
+	/*line-height: 1.7;*/
+	padding: 2px;
+	white-space: nowrap;
+}
+
+/* Non-Standard */
+.nsIcon {
+	background-color: #FFEFD9;
+	/*border: 1px solid #FFD599;*/
+	color: #25221D;
+	font-size: x-small;
+	font-size-adjust: none;
+	font-variant: normal;
+	font-weight: bold;
+	padding: 2px;
+	white-space: nowrap;
+}
+
+/* Deprecated */
+.depIcon {
+	background-color: #DDDDFF;
+	/*border: 1px solid #FF9999;*/
+	color: #25221D;
+	font-size: x-small;
+	font-size-adjust: none;
+	font-variant: normal;
+	font-weight: bold;
+	padding: 2px;
+	white-space: nowrap;
+}
+
+/* Obsolete */
+.obsIcon {
+	background-color: #FFDBDB;
+	/*border: 1px solid #FF9999;*/
+	color: #25221D;
+	font-size: x-small;
+	font-size-adjust: none;
+	font-variant: normal;
+	font-weight: bold;
+	padding: 2px;
+	white-space: nowrap;
+}
+
+.detailHeaderNS {
+	background-color: #FFEFD9;
+}
+
+.detailHeaderDEP {
+	background-color: #FFDBDB;
+}

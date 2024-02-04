@@ -1,0 +1,119 @@
+<apiPackage id="elementtraversal"><apiName>elementtraversal</apiName><apiDetail/><apiClassifier id="elementtraversal:ElementTraversal"><apiName>ElementTraversal</apiName><shortdesc>
+	 Allows script navigation of the elements of a DOM tree, excluding all other nodes in the DOM, such 
+	 as text nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Allows script navigation of the elements of a DOM tree, excluding all other nodes in the DOM, such 
+	 as text nodes. It also provides an attribute to expose the number of child elements of an element. 
+	 It is intended to provide a more convenient alternative to existing DOM navigation interfaces, with 
+	 a low implementation footprint.
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element"><linktext>MDC - Element</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#interface-elementTraversal"><linktext>W3C Element Traversal Specification</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link></related-links><apiValue id="elementtraversal:ElementTraversal:elementtraversal:ElementTraversal:childElementCount:get"><apiName>childElementCount</apiName><shortdesc>
+		 Returns the current number of element nodes that are children of this 
+		 element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the current number of element nodes that are children of this 
+		 element. 0 if this element has no child nodes that are of nodeType 1.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element.childElementCount"><linktext>MDC - Element: childElementCount Property</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#attribute-childElementCount"><linktext>W3C - Element Traversel: childElementCount Property</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link><link href="elementtraversal.xml#ElementTraversal/firstElementChild"><linktext>firstElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/lastElementChild"><linktext>lastElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/nextElementSibling"><linktext>nextElementSibling</linktext></link><link href="elementtraversal.xml#ElementTraversal/previousElementSibling"><linktext>previousElementSibling</linktext></link></related-links></apiValue><apiValue id="elementtraversal:ElementTraversal:elementtraversal:ElementTraversal:firstElementChild:get"><apiName>firstElementChild</apiName><shortdesc>
+		 Returns the first child element node of this element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the first child element node of this element. null if this 
+		 element has no child elements.
+		 
+		 </apiDesc><example>
+		 In this example, the alert shows "SPAN", which is the name of the 
+		 first child node of the paragraph element.
+		 <codeblock>
+		 &lt;p id="para-01"&gt;
+		 	&lt;span&gt;First span&lt;/span&gt;
+		 &lt;/p&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	var p01 = document.getElementById('para-01');
+		 	alert(p01.firstElementChild.nodeName);
+		 &lt;/script&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element.firstElementChild"><linktext>MDC - Element: firstElementChild Property</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#attribute-firstElementChild"><linktext>W3C - Element Traversel: firstElementChild Property</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link><link href="elementtraversal.xml#ElementTraversal/childElementCount"><linktext>childElementCount</linktext></link><link href="elementtraversal.xml#ElementTraversal/lastElementChild"><linktext>lastElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/nextElementSibling"><linktext>nextElementSibling</linktext></link><link href="elementtraversal.xml#ElementTraversal/previousElementSibling"><linktext>previousElementSibling</linktext></link></related-links></apiValue><apiValue id="elementtraversal:ElementTraversal:elementtraversal:ElementTraversal:lastElementChild:get"><apiName>lastElementChild</apiName><shortdesc>
+		 Returns the last child element node of this element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the last child element node of this element. null if this 
+		 element has no child elements.
+		 
+		 </apiDesc><example>
+		 In this example, the alert shows "B", which is the name of the 
+		 last child node of the paragraph element.
+		 <codeblock>
+		 &lt;p id="para-01"&gt;
+		 	&lt;span&gt;First span&lt;/span&gt;
+		 	&lt;b&gt;bold&lt;/b&gt;
+		 &lt;/p&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	var p01 = document.getElementById('para-01');
+		 	alert(p01.lastElementChild.nodeName);
+		 &lt;/script&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element.lastElementChild"><linktext>MDC - Element: lastElementChild Property</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#attribute-lastElementChild"><linktext>W3C - Element Traversel: lastElementChild Property</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link><link href="elementtraversal.xml#ElementTraversal/childElementCount"><linktext>childElementCount</linktext></link><link href="elementtraversal.xml#ElementTraversal/firstElementChild"><linktext>firstElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/nextElementSibling"><linktext>nextElementSibling</linktext></link><link href="elementtraversal.xml#ElementTraversal/previousElementSibling"><linktext>previousElementSibling</linktext></link></related-links></apiValue><apiValue id="elementtraversal:ElementTraversal:elementtraversal:ElementTraversal:nextElementSibling:get"><apiName>nextElementSibling</apiName><shortdesc>
+		 Returns the next sibling element node of this element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the next sibling element node of this element. null if this 
+		 element has no element sibling nodes that come after this one in the 
+		 document tree.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
+		 &lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	var el = document.getElementById('div-01').nextElementSibling;
+		 	document.write('&lt;p&gt;Siblings of div-01&lt;/p&gt;&lt;ol&gt;');
+		 	while (el) {
+		 		document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+		 		el = el.nextElementSibling;
+		 	}
+		 	document.write('&lt;/ol&gt;');
+		 &lt;/script&gt;</codeblock>
+		 
+		 <p>This example outputs the following into the page when it loads:</p>
+		 
+		 <p>Siblings of div-01</p>
+		 <ol>
+		 	<li>DIV</li>
+		 	<li>SCRIPT</li>
+		 	<li>P</li>
+		 	<li>OL</li>
+		 </ol>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element.nextElementSibling"><linktext>MDC - Element: nextElementSibling Property</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#attribute-nextElementSibling"><linktext>W3C - Element Traversel: nextElementSibling Property</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link><link href="elementtraversal.xml#ElementTraversal/childElementCount"><linktext>childElementCount</linktext></link><link href="elementtraversal.xml#ElementTraversal/firstElementChild"><linktext>firstElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/lastElementChild"><linktext>lastElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/previousElementSibling"><linktext>previousElementSibling</linktext></link></related-links></apiValue><apiValue id="elementtraversal:ElementTraversal:elementtraversal:ElementTraversal:previousElementSibling:get"><apiName>previousElementSibling</apiName><shortdesc>
+		 Returns the previous sibling element node of this element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="ElemTrav" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the previous sibling element node of this element. null if 
+		 this element has no element sibling nodes that come before this one 
+		 in the document tree.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
+		 &lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+		 &lt;li&gt;This is a list item&lt;/li&gt;
+		 &lt;li&gt;This is another list item&lt;/li&gt;
+		 &lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	var el = document.getElementById('div-03').previousElementSibling;
+		 	document.write('&lt;p&gt;Siblings of div-03&lt;/p&gt;&lt;ol&gt;');
+		 	while (el) {
+		 		document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+		 		el = el.previousElementSibling;
+		 	}
+		 	document.write('&lt;/ol&gt;');
+		 &lt;/script&gt;</codeblock>
+		 
+		 <p>This example outputs the following into the page when it loads:</p>
+		 
+		 <p>Siblings of div-03</p>
+		 <ol>
+		 	<li>LI</li>
+		 	<li>LI</li>
+		 	<li>DIV</li>
+		 	<li>DIV</li>
+		 </ol>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Element.previousElementSibling"><linktext>MDC - Element: previousElementSibling Property</linktext></link><link href="http://www.w3.org/TR/ElementTraversal/#attribute-previousElementSibling"><linktext>W3C - Element Traversel: previousElementSibling Property</linktext></link><link href="http://quirksmode.org/dom/w3c_traversal.html"><linktext>Quirksmode: W3C DOM Compatibility - Traversal</linktext></link><link href="elementtraversal.xml#ElementTraversal/childElementCount"><linktext>childElementCount</linktext></link><link href="elementtraversal.xml#ElementTraversal/firstElementChild"><linktext>firstElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/lastElementChild"><linktext>lastElementChild</linktext></link><link href="elementtraversal.xml#ElementTraversal/nextElementSibling"><linktext>nextElementSibling</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

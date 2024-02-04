@@ -1,0 +1,458 @@
+<apiPackage id="dom.tr.traversal"><apiName>dom.tr.traversal</apiName><apiDetail/><apiClassifier id="dom.tr.traversal:DocumentTraversal"><apiName>DocumentTraversal</apiName><shortdesc>
+	 Contains methods that create iterators and tree-walkers to traverse a node and its children in document order.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains methods that create iterators and tree-walkers to traverse a node and its children in document order.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Document"><linktext>MDC - Document</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-Document"><linktext>W3C - DOM Level 2 Traversal: DocumentTraversal</linktext></link></related-links><apiOperation id="dom.tr.traversal:DocumentTraversal:dom.tr.traversal:DocumentTraversal:createNodeIterator"><apiName>createNodeIterator</apiName><shortdesc>
+		 Create a new NodeIterator over the subtree rooted at the specified node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if the specified <codeph>root</codeph> is <codeph>null</codeph>.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The newly created NodeIterator.
+		 
+		 </apiDesc><apiOperationClassifier>dom.tr.traversal:NodeIterator</apiOperationClassifier></apiReturn><apiParam><apiItemName>root</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node which will be iterated together with its children. The iterator is initially positioned 
+		 just before this node. The <codeph>whatToShow</codeph> flags and the filter, if any, are not considered when setting this position. The <codeph>root</codeph> must not be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>whatToShow</apiItemName><apiType value="Number"/><apiDesc>This flag specifies which node types may appear in the logical view of the tree presented 
+		 by the iterator. These flags can be combined using OR.
+		 </apiDesc></apiParam><apiParam><apiItemName>filter</apiItemName><apiOperationClassifier>dom.tr.traversal:NodeFilter</apiOperationClassifier><apiDesc>The <codeph>NodeFilter</codeph> to be used with this <codeph>TreeWalker</codeph>, or <codeph>null</codeph> to indicate no filter.
+		 </apiDesc></apiParam><apiParam><apiItemName>entityReferenceExpansion</apiItemName><apiType value="Boolean"/><apiDesc>The value of this flag determines whether entity reference nodes are expanded.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Create a new NodeIterator over the subtree rooted at the specified node. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 var nodeList = new Array();
+		 var currentNode;
+		 
+		 while (currentNode = nodeIterator.nextNode()) {
+		 	nodeList.push(currentNode);
+		 }</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Document.createNodeIterator"><linktext>MDC - Document: createNodeIterator Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-Document"><linktext>W3C - DOM Level 2 Traversal: createNodeIterator Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:DocumentTraversal:dom.tr.traversal:DocumentTraversal:createTreeWalker"><apiName>createTreeWalker</apiName><shortdesc>
+		 Create a new TreeWalker over the subtree rooted at the specified node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if the specified <codeph>root</codeph> is <codeph>null</codeph>.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The newly created <codeph>TreeWalker</codeph>.
+		 
+		 </apiDesc><apiOperationClassifier>dom.tr.traversal:TreeWalker</apiOperationClassifier></apiReturn><apiParam><apiItemName>root</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node which will serve as the <codeph>root</codeph> for the TreeWalker. The whatToShow flags and the NodeFilter 
+		 are not considered when setting this value; any node type will be accepted as the <codeph>root</codeph>. The <codeph>currentNode</codeph> of the 
+		 TreeWalker is initialized to this node, whether or not it is visible. The <codeph>root</codeph> functions as a stopping point for 
+		 traversal methods that look upward in the document structure, such as <codeph>parentNode</codeph> and nextNode. The <codeph>root</codeph> must not 
+		 be <codeph>null</codeph>.
+		 </apiDesc></apiParam><apiParam><apiItemName>whatToShow</apiItemName><apiType value="Number"/><apiDesc>This flag specifies which node types may appear in the logical view of the tree presented by 
+		 the tree-walker. These flags can be combined using OR.
+		 </apiDesc></apiParam><apiParam><apiItemName>filter</apiItemName><apiOperationClassifier>dom.tr.traversal:NodeFilter</apiOperationClassifier><apiDesc>The <codeph>NodeFilter</codeph> to be used with this <codeph>TreeWalker</codeph>, or <codeph>null</codeph> to indicate no filter.
+		 </apiDesc></apiParam><apiParam><apiItemName>entityReferenceExpansion</apiItemName><apiType value="Boolean"/><apiDesc>If this flag is false, the contents of <codeph>EntityReference</codeph> nodes are not presented in the logical view.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Create a new TreeWalker over the subtree rooted at the specified node. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var treeWalker = document.createTreeWalker(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 var nodeList = new Array();
+		 while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Document.createNodeIterator"><linktext>MDC - Document: createNodeIterator Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-Document"><linktext>W3C - DOM Level 2 Traversal: createNodeIterator Method</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.tr.traversal:TreeWalker"><apiName>TreeWalker</apiName><shortdesc>
+	 Represents the nodes of a document subtree and a position within them.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Represents the nodes of a document subtree and a position within them.
+	 
+	 <p>A <codeph>TreeWalker</codeph> can be created using the createTreeWalker()<codeph/> method of the <codeph>Document</codeph> object.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker"><linktext>MDC - treeWalker</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: TreeWalker</linktext></link><link href="dom.core.xml#Document/createTreeWalker()"><linktext>dom.core.Document.createTreeWalker()</linktext></link></related-links><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:firstChild"><apiName>firstChild</apiName><shortdesc>
+		 Moves the TreeWalker to the first visible child of the current node, and returns the new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no visible children in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the first visible child of the current node, and returns the new node. If the current 
+		 node has no visible children, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.firstChild"><linktext>MDC - treeWalker: firstChild Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: firstChild Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:lastChild"><apiName>lastChild</apiName><shortdesc>
+		 Moves the TreeWalker to the last visible child of the current node, and returns the new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no children in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the last visible child of the current node, and returns the new node. If the current 
+		 node has no visible children, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.lastChild"><linktext>MDC - treeWalker: lastChild Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: lastChild Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:nextNode"><apiName>nextNode</apiName><shortdesc>
+		 Moves the TreeWalker to the next visible node in document order relative to the current node, and returns the 
+		 new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no next node in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the next visible node in document order relative to the current node, and returns the 
+		 new node. If the current node has no next node, or if the search for nextNode attempts to step upward from the 
+		 <codeph>TreeWalker</codeph>'s root node, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.nextNode"><linktext>MDC - treeWalker: nextNode Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: nextNode Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:nextSibling"><apiName>nextSibling</apiName><shortdesc>
+		 Moves the TreeWalker to the next sibling of the current node, and returns the new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no next sibling. in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the next sibling of the current node, and returns the new node. If the current node has 
+		 no visible next sibling, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.nextSibling"><linktext>MDC - treeWalker: nextSibling Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: nextSibling Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:parentNode"><apiName>parentNode</apiName><shortdesc>
+		 Moves to and returns the closest visible ancestor node of the current node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new parent node, or <codeph>null</codeph> if the current node has no parent in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves to and returns the closest visible ancestor node of the current node. If the search for <codeph>parentNode</codeph> attempts 
+		 to step upward from the <codeph>TreeWalker</codeph>'s root node, or if it fails to find a visible ancestor node, this method 
+		 retains the current position and returns <codeph>null</codeph>. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.currentNode"><linktext>MDC - treeWalker: parentNode Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: parentNode Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:previousNode"><apiName>previousNode</apiName><shortdesc>
+		 Moves the TreeWalker to the previous visible node in document order relative to the current node, and returns the 
+		 new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no previous node in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the previous visible node in document order relative to the current node, and returns the 
+		 new node. If the current node has no previous node, or if the search for previousNode attempts to step upward from 
+		 the <codeph>TreeWalker</codeph>'s root node, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.previousNode"><linktext>MDC - treeWalker: previousNode Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: previousNode Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:previousSibling"><apiName>previousSibling</apiName><shortdesc>
+		 Moves the TreeWalker to the previous sibling of the current node, and returns the new node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The new node, or <codeph>null</codeph> if the current node has no previous sibling. in the <codeph>TreeWalker</codeph>'s logical view.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the <codeph>TreeWalker</codeph> to the previous sibling of the current node, and returns the new node. If the current node has 
+		 no visible previous sibling, returns <codeph>null</codeph>, and retains the current node. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.previousSibling"><linktext>MDC - treeWalker: previousSibling Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: previousSibling Method</linktext></link></related-links></apiOperation><apiValue id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:currentNode:get"><apiName>currentNode</apiName><shortdesc>
+		 The node at which the TreeWalker is currently positioned.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core:Node</apiValueClassifier><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if an attempt is made to set currentNode to <codeph>null</codeph>.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The node at which the <codeph>TreeWalker</codeph> is currently positioned.
+		 
+		 <p>Alterations to the DOM tree may cause the current node to no longer be accepted by the <codeph>TreeWalker</codeph>'s 
+		 associated filter. currentNode may also be explicitly set to any node, whether or not it is within the 
+		 subtree specified by the root node or would be accepted by the filter and <codeph>whatToShow</codeph> flags. Further 
+		 traversal occurs relative to currentNode even if it is not part of the current view, by applying the 
+		 filters in the requested direction; if no traversal is possible, currentNode is not changed.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.currentNode"><linktext>MDC - treeWalker: currentNode Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: currentNode Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:expandEntityReferences:get"><apiName>expandEntityReferences</apiName><shortdesc>
+		 The value of this flag determines whether the children of entity reference nodes are visible to the TreeWalker.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 The value of this flag determines whether the children of entity reference nodes are visible to the <codeph>TreeWalker</codeph>. 
+		 If false, they and their descendants will be rejected. Note that this rejection takes precedence over <codeph>whatToShow</codeph> 
+		 and the filter, if any.
+		 
+		 <p>To produce a view of the document that has entity references expanded and does not expose the entity reference 
+		 node itself, use the <codeph>whatToShow</codeph> flags to hide the entity reference node and set <codeph>expandEntityReferences</codeph> to true 
+		 when creating the <codeph>TreeWalker</codeph>. To produce a view of the document that has entity reference nodes but no entity 
+		 expansion, use the <codeph>whatToShow</codeph> flags to show the entity reference node and set <codeph>expandEntityReferences</codeph> to false.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.ExpandEntityReferences"><linktext>MDC - treeWalker: ExpandEntityReferences Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: ExpandEntityReferences Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:filter:get"><apiName>filter</apiName><shortdesc>
+		 The filter used to screen nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.tr.traversal:NodeFilter</apiValueClassifier></apiValueDef><apiDesc>
+		 The filter used to screen nodes.
+		 
+		 <p>Note: When creating the TreeWalker, the filter object is passed in as the third parameter, and the object 
+		 method acceptNode(node) is called on every single node to determine whether or not to accept it. This function 
+		 should return the constant NodeFilter.FILTER_ACCEPT for cases when the node should be accepted and 
+		 NodeFilter.FILTER_REJECT for cases when the node should be rejected.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var treeWalker = document.createTreeWalker(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 nodeFilter = treeWalker.filter; // document.body in this case</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.filter"><linktext>MDC - treeWalker: filter Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: filter Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:root:get"><apiName>root</apiName><shortdesc>
+		 The root node of the TreeWalker, as specified when it was created.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 The root node of the <codeph>TreeWalker</codeph>, as specified when it was created.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var treeWalker = document.createTreeWalker(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 root = treeWalker.root; // document.body in this case</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/treeWalker.root"><linktext>MDC - treeWalker: root Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: root Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:TreeWalker:dom.tr.traversal:TreeWalker:whatToShow:get"><apiName>whatToShow</apiName><shortdesc>
+		 This attribute determines which node types are presented via the TreeWalker.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 This attribute determines which node types are presented via the <codeph>TreeWalker</codeph>. The available set of constants is 
+		 defined in the NodeFilter interface. Nodes not accepted by <codeph>whatToShow</codeph> will be skipped, but their children may 
+		 still be considered. Note that this skip takes precedence over the filter, if any.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var treeWalker = document.createTreeWalker(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 if((treeWalker.whatToShow == NodeFilter.SHOW_ALL) || 
+		 	(treeWalker.whatToShow % (NodeFilter.SHOW_COMMENT)) &gt;= NodeFilter.SHOW_COMMENT) {
+		 	// treeWalker will show comments
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="dom.tr.traversal.xml#NodeFilter"><linktext>NodeFilter</linktext></link><link href="http://developer.mozilla.org/en/DOM/treeWalker.whatToShow"><linktext>MDC - treeWalker: whatToShow Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: whatToShow Property</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.tr.traversal:NodeIterator"><apiName>NodeIterator</apiName><shortdesc>
+	 Allows you to iterate over the members of a list of the nodes in a subtree of the DOM, in document order.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Allows you to iterate over the members of a list of the nodes in a subtree of the DOM, in document order.
+	 
+	 A <codeph>NodeIterator</codeph> can be created using the createNodeIterator()<codeph/> method of the <codeph>Document</codeph> object, as follows:
+	 
+	 <codeblock>var nodeIterator = document.createNodeIterator();</codeblock>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator"><linktext>MDC - NodeIterator</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-TreeWalker"><linktext>W3C - DOM Level 2 Traversal: NodeIterator</linktext></link></related-links><apiOperation id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:detach"><apiName>detach</apiName><shortdesc>
+		 Detaches the NodeIterator from the set over which it iterates, releasing any resources used by the set 
+		 and setting the iterator's state to INVALID.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Detaches the NodeIterator from the set over which it iterates, releasing any resources used by the set 
+		 and setting the iterator's state to INVALID.
+		 
+		 <p>Once this method has been called, calls to other methods on NodeIterator will raise the 
+		 INVALID_STATE_ERR exception.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 nodeIterator.detach(); // detaches the iterator
+		 
+		 nodeIterator.nextNode(); // throws an INVALID_STATE_ERR exception</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.detach"><linktext>MDC - NodeIterator: detach Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: detach Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:nextNode"><apiName>nextNode</apiName><shortdesc>
+		 Returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if this method is called after the detach method was invoked.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The next Node in the set being iterated over, or null if there are no more members in that set.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.  The first call to nextNode() returns the first node in the set.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 currentNode = nodeIterator.nextNode(); // returns the next node</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.nextNode"><linktext>MDC - NodeIterator: nextNode Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: nextNode Method</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:previousNode"><apiName>previousNode</apiName><shortdesc>
+		 Returns the previous node in the set and moves the position of the NodeIterator backwards in the set.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if this method is called after the detach method was invoked.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The previous Node in the set being iterated over, or null if there are no more members in that set.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Returns the previous node in the set and moves the position of the NodeIterator backwards in the set.
+		 
+		 <p>This method returns null when the current node is the first node in the set.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 currentNode = nodeIterator.nextNode(); // returns the next node
+		 previousNode = nodeIterator.previousNode(); // same result, since we backtracked to the previous node</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.previousNode"><linktext>MDC - NodeIterator: previousNode Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: previousNode Method</linktext></link></related-links></apiOperation><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:expandEntityReferences:get"><apiName>expandEntityReferences</apiName><shortdesc>
+		 Returns a flag indicating whether or not the children of entity reference nodes are visible to the NodeIterator.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns a flag indicating whether or not the children of entity reference nodes are visible to the NodeIterator.
+		 
+		 <p>If this value is false, the children of entity reference nodes (as well as all of their descendants) are rejected.  
+		 This takes precedence over the whatToShow value and the filter.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 expand = nodeIterator.expandEntityReferences;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.expandEntityReferences"><linktext>MDC - NodeIterator: expandEntityReferences Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: expandEntityReferences Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:filter:get"><apiName>filter</apiName><shortdesc>
+		 Returns an object with a method acceptNode(node).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.tr.traversal:NodeFilter</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns an object with a method acceptNode(node). This is the NodeFilter used to screen nodes.
+		 
+		 <p>Note: When creating the NodeIterator, the filter object is passed in as the third parameter, and the 
+		 object method acceptNode(node) is called on every single node to determine whether or not to accept it. 
+		 This function should return the constant NodeFilter.FILTER_ACCEPT for cases when the node should be 
+		 accepted and NodeFilter.FILTER_REJECT for cases when the node should be rejected.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 nodeFilter = nodeIterator.filter</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.filter"><linktext>MDC - NodeIterator: filter Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: filter Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:pointerBeforeReferenceNode:get"><apiName>pointerBeforeReferenceNode</apiName><shortdesc>
+		 A Boolean value that indicates whether the NodeIterator is anchored before (if this value is true) or after (if this value is false) the anchor node indicated by the referenceNode property.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 A Boolean value that indicates whether the NodeIterator is anchored before (if this value is true) or after (if this value is false) the anchor node indicated by the referenceNode property.
+		 
+		 <p>Note: This property was introduced by WebKit and is used for testing; it can also be used by debuggers.  It is not part of the DOM specification.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 flag = nodeIterator.pointerBeforeReferenceNode;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.pointerBeforeReferenceNode"><linktext>MDC - NodeIterator: pointerBeforeReferenceNode Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:referenceNode:get"><apiName>referenceNode</apiName><shortdesc>
+		 Returns the node to which the iterator is anchored; as new nodes are inserted, the iterator remains anchored to the reference node as specified by this property.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the node to which the iterator is anchored; as new nodes are inserted, the iterator remains anchored to the reference node as specified by this property.
+		 
+		 <p>Note: This property was introduced by WebKit and is used for testing; it can also be used by debuggers.  It is not part of the DOM specification.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 node = nodeIterator.referenceNode;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.referenceNode"><linktext>MDC - NodeIterator: referenceNode Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:root:get"><apiName>root</apiName><shortdesc>
+		 Returns the node that is the root of what the NodeIterator traverses.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the node that is the root of what the NodeIterator traverses.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 root = nodeIterator.root; // document.body in this case</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.root"><linktext>MDC - NodeIterator: root Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: root Property</linktext></link></related-links></apiValue><apiValue id="dom.tr.traversal:NodeIterator:dom.tr.traversal:NodeIterator:whatToShow:get"><apiName>whatToShow</apiName><shortdesc>
+		 Returns a number signifying what types of nodes should be returned by the NodeIterator.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns a number signifying what types of nodes should be returned by the NodeIterator.
+		 
+		 <p>The available set of constants is defined in the NodeFilter interface. Nodes not accepted 
+		 by whatToShow will be skipped, but their children may still be considered. Note that this 
+		 skip takes precedence over the filter, if any.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var nodeIterator = document.createNodeIterator(
+		 	document.body,
+		 	NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+		 	{ acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+		 	false
+		 	);
+		 if((nodeIterator.whatToShow == NodeFilter.SHOW_ALL) || 
+		 	(nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT)) &gt;= NodeFilter.SHOW_COMMENT) {
+		 	// nodeIterator will show comments
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.whatToShow"><linktext>MDC - NodeIterator: whatToShow Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator"><linktext>W3C - DOM Level 2 Traversal: whatToShow Property</linktext></link><link href="dom.tr.traversal.xml#NodeFilter"><linktext>NodeFilter</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.tr.traversal:NodeFilter"><apiName>NodeFilter</apiName><shortdesc>
+	 Filters are objects that know how to "filter out" nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Filters are objects that know how to "filter out" nodes. 
+	 
+	 <p>If a <codeph>NodeIterator</codeph> or <codeph>TreeWalker</codeph> is given a <codeph>NodeFilter</codeph>, it 
+	 applies the filter before it returns the next node. If the filter says to accept the node, the traversal logic 
+	 returns it; otherwise, traversal looks for the next node and pretends that the node that was rejected was not there.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter"><linktext>W3C - DOM Level 2 Traversal: NodeFilter</linktext></link></related-links><apiOperation id="dom.tr.traversal:NodeFilter:acceptNode"><apiName>acceptNode</apiName><shortdesc>
+		 Test whether a specified node is visible in the logical view of a TreeWalker or NodeIterator.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A constant to determine whether the node is accepted, rejected, or skipped.
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>n</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node to check to see if it passes the filter or not.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Test whether a specified node is visible in the logical view of a TreeWalker or NodeIterator. This function will be 
+		 called by the implementation of TreeWalker and NodeIterator; it is not normally called directly from user code. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/NodeIterator.filter"><linktext>MDC - NodeIterator: filter Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter"><linktext>W3C - DOM Level 2 Traversal: acceptNode Method</linktext></link></related-links></apiOperation><apiValue id="dom.tr.traversal:NodeFilter:FILTER_ACCEPT"><apiName>FILTER_ACCEPT</apiName><shortdesc>
+		 Accept the node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Accept the node. Navigation methods defined for NodeIterator or TreeWalker will return this node.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:FILTER_REJECT"><apiName>FILTER_REJECT</apiName><shortdesc>
+		 Reject the node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Reject the node. Navigation methods defined for NodeIterator or TreeWalker will not return this node. For 
+		 TreeWalker, the children of this node will also be rejected. NodeIterators treat this as a synonym for 
+		 FILTER_SKIP.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:FILTER_SKIP"><apiName>FILTER_SKIP</apiName><shortdesc>
+		 Skip this single node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Skip this single node. Navigation methods defined for NodeIterator or TreeWalker will not return this node. 
+		 For both NodeIterator and TreeWalker, the children of this node will still be considered.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_ALL"><apiName>SHOW_ALL</apiName><shortdesc>
+		 Show all Nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>-1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show all <codeph>Nodes</codeph>.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_ATTRIBUTE"><apiName>SHOW_ATTRIBUTE</apiName><shortdesc>
+		 Show Attr nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Attr</codeph> nodes. This is meaningful only when creating an iterator or tree-walker with an attribute node as 
+		 its <codeph>root</codeph>; in this case, it means that the attribute node will appear in the first position of the iteration 
+		 or traversal. Since attributes are never children of other nodes, they do not appear when traversing over 
+		 the document tree.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_CDATA_SECTION"><apiName>SHOW_CDATA_SECTION</apiName><shortdesc>
+		 Show CDATASection nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>8</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>CDATASection</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_COMMENT"><apiName>SHOW_COMMENT</apiName><shortdesc>
+		 Show Comment nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>128</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Comment</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_DOCUMENT"><apiName>SHOW_DOCUMENT</apiName><shortdesc>
+		 Show Document nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>256</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Document</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_DOCUMENT_FRAGMENT"><apiName>SHOW_DOCUMENT_FRAGMENT</apiName><shortdesc>
+		 Show DocumentFragment nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1024</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>DocumentFragment</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_DOCUMENT_TYPE"><apiName>SHOW_DOCUMENT_TYPE</apiName><shortdesc>
+		 Show DocumentType nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>512</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>DocumentType</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_ELEMENT"><apiName>SHOW_ELEMENT</apiName><shortdesc>
+		 Show Element nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show Element nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_ENTITY"><apiName>SHOW_ENTITY</apiName><shortdesc>
+		 Show Entity nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>32</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Entity</codeph> nodes. This is meaningful only when creating an iterator or tree-walker with an <codeph>Entity</codeph> node as 
+		 its <codeph>root</codeph>; in this case, it means that the <codeph>Entity</codeph> node will appear in the first position of the traversal. 
+		 Since entities are not part of the document tree, they do not appear when traversing over the document tree.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_ENTITY_REFERENCE"><apiName>SHOW_ENTITY_REFERENCE</apiName><shortdesc>
+		 Show EntityReference nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>16</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>EntityReference</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_NOTATION"><apiName>SHOW_NOTATION</apiName><shortdesc>
+		 Show Notation nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2048</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Notation</codeph> nodes. This is meaningful only when creating an iterator or tree-walker with a <codeph>Notation</codeph> node as 
+		 its <codeph>root</codeph>; in this case, it means that the <codeph>Notation</codeph> node will appear in the first position of the traversal. 
+		 Since notations are not part of the document tree, they do not appear when traversing over the document tree.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_PROCESSING_INSTRUCTION"><apiName>SHOW_PROCESSING_INSTRUCTION</apiName><shortdesc>
+		 Show ProcessingInstruction nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>64</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>ProcessingInstruction</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.traversal:NodeFilter:SHOW_TEXT"><apiName>SHOW_TEXT</apiName><shortdesc>
+		 Show Text nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Show <codeph>Text</codeph> nodes.
+		 
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

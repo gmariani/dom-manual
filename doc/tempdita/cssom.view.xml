@@ -1,0 +1,1285 @@
+<apiPackage id="cssom.view"><apiName>cssom.view</apiName><apiDetail/><apiClassifier id="cssom.view:Screen"><apiName>Screen</apiName><shortdesc>
+	 Has properties that hold information about the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Has properties that hold information about the screen.
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C CSSOM Views Specification: Screen</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html"><linktext>Quirksmode: W3C DOM Compatibility - CSS Object Model View</linktext></link></related-links><apiValue id="cssom.view:Screen:cssom.view:Screen:availHeight:get"><apiName>availHeight</apiName><shortdesc>
+		 Returns the amount of vertical space available to the window on the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the amount of vertical space available to the window on the screen. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (window.screen.availHeight != window.screen.height) {
+		 	// something's in the way!
+		 	// use available to size window
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533487(VS.85).aspx"><linktext>MSDN: availHeight Propety</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.screen.availHeight"><linktext>MDC - Window: availHeight Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: availHeight Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:Screen:cssom.view:Screen:availWidth:get"><apiName>availWidth</apiName><shortdesc>
+		 Returns the amount of horizontal space in pixels available to the window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the amount of horizontal space in pixels available to the window. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (window.screen.availHeight != window.screen.height) {
+		 	// something's in the way!
+		 	// use available to size window
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533488(VS.85).aspx"><linktext>MSDN: availWidth Propety</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.screen.availWidth"><linktext>MDC - Window: availWidth Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: availWidth Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:Screen:cssom.view:Screen:colorDepth:get"><apiName>colorDepth</apiName><shortdesc>
+		 Returns the lowest number of bits from the color components of the output device.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the lowest number of bits from the color components of the output device.
+		 
+		 </apiDesc><example>
+		 Check the color depth of the screen
+		 <codeblock>
+		 if ( window.screen.colorDepth &lt; 8) {
+		 	// use low-color version of page
+		 } else { 
+		 	// use regular, colorful page
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533578(VS.85).aspx"><linktext>MSDN: colorDepth Propety</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.screen.colorDepth"><linktext>MDC - Window: colorDepth Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: colorDepth Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:Screen:cssom.view:Screen:height:get"><apiName>height</apiName><shortdesc>
+		 Returns the height of the screen in pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the height of the screen in pixels. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (window.screen.availHeight != window.screen.height) {
+		 	// something is occupying some screen real estate!
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533779(VS.85).aspx"><linktext>MSDN: height Propety</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.screen.height"><linktext>MDC - Window: height Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: height Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:Screen:cssom.view:Screen:pixelDepth:get"><apiName>pixelDepth</apiName><shortdesc>
+		 Returns the lowest number of bits from the color components of the output device.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the lowest number of bits from the color components of the output device.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // if there is not adequate bit depth choose a simpler color
+		 if ( window.screen.pixelDepth &gt; 8 ) {
+		 	document.style.color = "#FAEBD7";
+		 } else {
+		 	document.style.color = "#FFFFFF";
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screen.pixelDepth"><linktext>MDC - Window: pixelDepth Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: pixelDepth Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:Screen:cssom.view:Screen:width:get"><apiName>width</apiName><shortdesc>
+		 Returns the width of the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the width of the screen. 
+		 
+		 </apiDesc><example>
+		 Crude way to check that the screen is at 1024x768
+		 <codeblock>
+		 if (window.screen.width &gt; 1000) {
+		 	// resolution is below 10 x 7
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535144(VS.85).aspx"><linktext>MSDN: width Propety</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.screen.width"><linktext>MDC - Window: width Propety</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-screen-interface"><linktext>W3C - CSSOM View: width Propety</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#screenview"><linktext>Quirksmode: ScreenView properties</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:DocumentView"><apiName>DocumentView</apiName><shortdesc>
+	 Has a method that gives position information about an Element node relative to the Document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Has a method that gives position information about an Element node relative to the Document.
+	 
+	 <p>DocumentView contains many properties and a few methods that were previously not part of any specification. They originated as part of 
+	 MSIE's DHTML object model. They are now all part of the CSSOM Views specification which should be implemented on any browser supporting
+	 DOM 3 Core.</p>
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 <p><b>Note:</b> This conflicts with an interface in DOM 2 Views. Maybe this specification
+	 combined with HTML 5 (for AbstractView) can obsolete that one as it is completely useless in practice.</p> 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-documentview-interface"><linktext>W3C CSSOM Views Specification: DocumentView</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html"><linktext>Quirksmode: W3C DOM Compatibility - CSS Object Model View</linktext></link></related-links><apiOperation id="cssom.view:DocumentView:cssom.view:DocumentView:elementFromPoint"><apiName>elementFromPoint</apiName><shortdesc>
+		 Returns the element from the document whose elementFromPoint method is being called which is the 
+		 topmost element which lies under the given point.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_alternative"/><apiTool name="Safari" version="3.1_alternative"/><apiTool name="Safari" version="4.0b_alternative"/><apiTool name="Chrome" version="1.0_alternative"/><apiTool name="Chrome" version="2.0_alternative"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_alternative"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The element at x,y in the viewport
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Element</apiOperationClassifier></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiDesc>The X coordinate to check, in CSS pixels relative to the upper-left corner of the document's containing window or frame.
+		 </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiDesc>The Y coordinate to check, in CSS pixels relative to the upper-left corner of the document's containing window or frame.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the element from the document whose elementFromPoint method is being called which is the 
+		 topmost element which lies under the given point. 
+		 
+		 <p>The point is specified via coordinates, in CSS pixels, relative to the upper-left-most point 
+		 in the window or frame containing the document.</p>
+		 
+		 <p><b>Note:</b> If the element at the specified point belongs to another document (for example, 
+		 an iframe's subdocument), the element in the DOM of the document the method is called on (in the iframe 
+		 case, the iframe itself) is returned. If the element at the given point is anonymous or XBL generated 
+		 content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, 
+		 the textbox) is returned.</p>
+		 
+		 <p><b>Note:</b> If the specified point is outside the visible bounds of the document or either 
+		 coordinate is negative, the result is null.</p>
+		 
+		 <p><b>Note:</b> The browsers do not entirely agree which mouse coordinates this method needs. 
+		 IE and Firefox 3 need clientX/Y (relative to the viewport), while Opera and Safari need pageX/Y (relative 
+		 to the document).</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;elementFromPoint example&lt;/title&gt;
+		 		&lt;script type="text/javascript"&gt;
+		 			function changeColor(newColor) {
+		 				elem = document.elementFromPoint(2, 2);
+		 				elem.style.color = newColor;
+		 			}
+		 		&lt;/script&gt;
+		 	&lt;/head&gt;
+		 
+		 	&lt;body&gt;
+		 		&lt;p id="para1"&gt;Some text here&lt;/p&gt;
+		 		&lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
+		 		&lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;
+		 </codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536417(VS.85).aspx"><linktext>MSDN: elementFromPoint Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/document.elementFromPoint"><linktext>MDC - Document: elementFromPoint Method</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-documentview-interface"><linktext>W3C - CSSOM View: elementFromPoint Method</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#documentview"><linktext>Quirksmode: DocumentView and ElementView methods</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="cssom.view:WindowView"><apiName>WindowView</apiName><shortdesc>
+	 Has properties that hold the dimensions of the entire browser window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Has properties that hold the dimensions of the entire browser window.
+	 
+	 <p>Some browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 <p>Some browser compatibility information was obtained via Aptana.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C CSSOM Views Specification: WindowView</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html"><linktext>Quirksmode: W3C DOM Compatibility - CSS Object Model View</linktext></link></related-links><apiValue id="cssom.view:WindowView:cssom.view:WindowView:innerHeight:get"><apiName>innerHeight</apiName><shortdesc>
+		 Height of the browser window viewport including, if rendered, the horizontal scrollbar.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Height of the browser window viewport including, if rendered, the horizontal scrollbar.
+		 
+		 <p><b>Note:</b> The innerHeight property will be supported in any window object like a window, a frame, a frameset or a secondary window.</p>
+		 
+		 </apiDesc><example>
+		 Assuming a frameset
+		 <codeblock>
+		 var intFrameHeight = window.innerHeight; // or
+		 var intFrameHeight = self.innerHeight; // will return the height of the frame viewport within the frameset
+		 var intFramesetHeight = parent.innerHeight; // will return the height of the viewport of the closest frameset
+		 var intOuterFramesetHeight = top.innerHeight; // will return the height of the viewport of the outermost frameset</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.innerHeight"><linktext>MDC - Window: innerHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: innerHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/outerWidth"><linktext>outerWidth</linktext></link><link href="cssom.view.xml#WindowView/innerWidth"><linktext>innerWidth</linktext></link><link href="cssom.view.xml#WindowView/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:innerWidth:get"><apiName>innerWidth</apiName><shortdesc>
+		 Width of the browser window viewport including, if rendered, the vertical scrollbar.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Width of the browser window viewport including, if rendered, the vertical scrollbar.
+		 
+		 <p><b>Note:</b> The innerWidth property does not include the sidebar. So when the sidebar is expanded, the innerWidth property value diminishes.</p>
+		 
+		 <p><b>Note:</b> The innerWidth property will be supported in any window object like a window, a frame, a frameset or a secondary window.</p>
+		 
+		 </apiDesc><example>
+		 Assuming a frameset
+		 <codeblock>
+		 var intFrameWidth = window.innerWidth; // or
+		 var intFrameWidth = self.innerWidth; // will return the width of the frame viewport within the frameset
+		 var intFramesetWidth = parent.innerWidth; // will return the width of the viewport of the closest frameset
+		 var intOuterFramesetWidth = top.innerWidth; // will return the width of the viewport of the outermost frameset</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.innerWidth"><linktext>MDC - Window: innerWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: innerWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/outerWidth"><linktext>outerWidth</linktext></link><link href="cssom.view.xml#WindowView/innerHeight"><linktext>innerHeight</linktext></link><link href="cssom.view.xml#WindowView/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:media:get"><apiName>media</apiName><shortdesc>
+		 Returns an Media object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="HTML 5"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>cssom.view:Media</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns an Media object.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: media Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:outerHeight:get"><apiName>outerHeight</apiName><shortdesc>
+		 Gets the height of the outside of the browser window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Gets the height of the outside of the browser window. window.outerHeight represents the height of 
+		 the whole browser window including toolbars and window chrome.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.outerHeight"><linktext>MDC - Window: outerHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: outerHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/innerWidth"><linktext>innerWidth</linktext></link><link href="cssom.view.xml#WindowView/innerHeight"><linktext>innerHeight</linktext></link><link href="cssom.view.xml#WindowView/outerWidth"><linktext>outerWidth</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:outerWidth:get"><apiName>outerWidth</apiName><shortdesc>
+		 Gets the width of the outside of the browser window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Gets the width of the outside of the browser window. window.outerWidth represents the width of 
+		 the whole browser window including sidebar (if expanded), window chrome and window [re-]sizing borders/handles.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.outerWidth"><linktext>MDC - Window: outerWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: outerWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/innerWidth"><linktext>innerWidth</linktext></link><link href="cssom.view.xml#WindowView/innerHeight"><linktext>innerHeight</linktext></link><link href="cssom.view.xml#WindowView/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:pageXOffset:get"><apiName>pageXOffset</apiName><shortdesc>
+		 Returns the number of pixels that the document has already been scrolled horizontally.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of pixels that the document has already been scrolled horizontally. 
+		 
+		 <p><b>Note:</b> <codeph>window.pageXOffset == window.scrollX; // always true</codeph></p>
+		 
+		  </apiDesc><example>
+		 <codeblock>
+		 // make sure and go over to the second horizontal page
+		 if (window.scrollX) {
+		 	scroll(0,0);
+		 }
+		 scrollBy(400, 0);</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.pageXOffset"><linktext>MDC - Window: pageXOffset Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: pageXOffset Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/pageYOffset"><linktext>pageYOffset</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:pageYOffset:get"><apiName>pageYOffset</apiName><shortdesc>
+		 Returns the number of CSS pixels the user has scrolled towards the bottom within the viewport.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of CSS pixels the user has scrolled towards the bottom within the viewport. 
+		 
+		 <p><b>Note:</b> <codeph>window.pageYOffset == window.scrollY; // always true</codeph></p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // make sure and go over to the second horizontal page
+		 if (window.scrollY) {
+		 	scroll(0,0);
+		 }
+		 scrollByPages(1);</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.pageYOffset"><linktext>MDC - Window: pageYOffset Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: pageYOffset Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="" invalidHref="cssom.view.pageXOffset.xml"><linktext>pageXOffset</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:screen:get"><apiName>screen</apiName><shortdesc>
+		 Returns a reference to the screen object associated with the window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>cssom.view:Screen</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a reference to the screen object associated with the window. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (screen.pixelDepth &lt; 8) {
+		 	// use low-color version of page
+		 } else { 
+		 	// use regular, colorful page
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screen"><linktext>MDC - Window: screen Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screen Property</linktext></link><link href="http://www.aptana.com/reference/html/api/Window.html#Window.screen"><linktext>Aptana: Window.screen Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:screenX:get"><apiName>screenX</apiName><shortdesc>
+		 Returns the horizontal distance of the left border of the user's browser from the left side of the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the horizontal distance of the left border of the user's browser from the left side of the screen. 
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the coordinates of the specific tab window relative to 
+		 the encompassing browser window. This is understandable given its way of working with 
+		 windows, but strictly speaking it's a bug. It should give the coordinates of the encompassing 
+		 browser window relative to the screen.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screenX"><linktext>MDC - Window: screenX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screenX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="cssom.view:WindowView:cssom.view:WindowView:screenY:get"><apiName>screenY</apiName><shortdesc>
+		 Returns the vertical distance of the top border of the user's browser from the top edge of the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the vertical distance of the top border of the user's browser from the top edge of the screen. 
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the coordinates of the specific tab window relative to 
+		 the encompassing browser window. This is understandable given its way of working with 
+		 windows, but strictly speaking it's a bug. It should give the coordinates of the encompassing 
+		 browser window relative to the screen.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screenY"><linktext>MDC - Window: screenY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screenY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="cssom.view.xml#WindowView/screenX"><linktext>screenX</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:Media"><apiName>Media</apiName><shortdesc>
+	 Should be an object returned by the Window.media property, although I haven't found any
+	 browsers that support this.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Should be an object returned by the Window.media property, although I haven't found any
+	 browsers that support this.
+	 
+	 </apiDesc><example>
+	 <codeblock>var m = window.media;</codeblock>
+	 
+	 </example></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-media-interface"><linktext>W3C CSSOM Views Specification: Media</linktext></link></related-links><apiOperation id="cssom.view:Media:cssom.view:Media:query"><apiName>query</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>If the mediaquery matches the state of the current view.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>mediaquery</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#media-query"><linktext>W3C CSSOM Views Specification: Media.query()</linktext></link></related-links></apiOperation><apiValue id="cssom.view:Media:cssom.view:Media:type:get"><apiName>type</apiName><shortdesc>
+		 Returns the string that represents the canvas' current rendering mode in canonical form.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the string that represents the canvas' current rendering mode in canonical form.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#media-type"><linktext>W3C CSSOM Views Specification: Media.type</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:ElementView"><apiName>ElementView</apiName><shortdesc>
+	 Has properties and methods that give information about the dimensions of an Element node (HTML tag).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Has properties and methods that give information about the dimensions of an Element node (HTML tag).
+	 
+	 <p>ElementView contains many properties and a few methods that were previously not part of any specification. They originated as part of 
+	 MSIE's DHTML object model. They are now all part of the CSSOM Views specification which should be implemented on any browser supporting
+	 DOM 3 Core.</p>
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-elementview"><linktext>W3C CSSOM Views Specification: ElementView</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html"><linktext>Quirksmode: W3C DOM Compatibility - CSS Object Model View</linktext></link></related-links><apiOperation id="cssom.view:ElementView:cssom.view:ElementView:getBoundingClientRect"><apiName>getBoundingClientRect</apiName><shortdesc>
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_almost"/><apiTool name="Firefox" version="3.1b_almost"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The returned value is a TextRectangle object which is the union 
+		 of the rectangles returned by getClientRects() for the element, i.e., 
+		 the CSS border-boxes associated with the element.
+		 
+		 </apiDesc><apiOperationClassifier>cssom.view:TextRectangle</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.
+		 
+		 <p><b>Note (IE8):</b> In IE8 mode, the bounding rectangle is the same as the client rectangle.</p>
+		 
+		 <p><b>Note (IE5):</b> In Microsoft Internet Explorer 5, the window's upper-left is at 
+		 2,2 (pixels) with respect to the true client.</p>
+		 
+		 <p><b>Note (Firefox 3.5):</b> Firefox 3.5 adds width and height properties to the TextRectangle object.</p>
+		 
+		 <p><b>Note (Firefox):</b> Firefox doesn't round the top/bottom coordinates.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>var rect = obj.getBoundingClientRect();</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536433(VS.85).aspx"><linktext>MSDN: getBoundingClientRect Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.getBoundingClientRect"><linktext>MDC - Element: getBoundingClientRect Method</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-getclientrects"><linktext>W3C - CSSOM View: getBoundingClientRect Method</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#documentview"><linktext>Quirksmode: DocumentView and ElementView methods</linktext></link></related-links></apiOperation><apiOperation id="cssom.view:ElementView:cssom.view:ElementView:getClientRects"><apiName>getClientRects</apiName><shortdesc>
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_buggy"/><apiTool name="IE" version="6.0_buggy"/><apiTool name="IE" version="7.0_buggy"/><apiTool name="IE" version="8.0_as_IE7_buggy"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_almost"/><apiTool name="Firefox" version="3.1b_almost"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>cssom.view:TextRectangleList</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client. Each rectangle 
+		 describes a single line.
+		 
+		 <p><b>Note (IE8):</b> In IE8 mode, getClientRects always returns 
+		 a collection of one rectangle—the same rectangle as getBoundingClientRect.</p>
+		 
+		 <p><b>Note (IE):</b> In IE5-7, split up a block-level element such as a &lt;p&gt; into one rectangle per line.
+		 This is incorrect: a block-level element should be reported as one rectangle.</p>
+		 
+		 <p><b>Note (IE):</b> In IE5-7, the rectangles are off by about two pixels. According to John Resig this is caused by the 
+		 (invisible, but nonetheless present) borders of the &lt;html&gt; element.</p>
+		 
+		 <p><b>Note (Firefox 3.5):</b> Firefox 3.5 adds width and height properties to the TextRectangle object.</p>
+		 
+		 <p><b>Note (Firefox):</b> Firefox doesn't round the top/bottom coordinates.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var rects = obj.getClientRects();
+		 var numLines = rects.length;</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536435(VS.85).aspx"><linktext>MSDN: getClientRects Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.getClientRects"><linktext>MDC - Element: getClientRects Method</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-getclientrects"><linktext>W3C - CSSOM View: getClientRects Method</linktext></link><link href="http://ejohn.org/blog/getboundingclientrect-is-awesome/"><linktext>John Resig</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#documentview"><linktext>Quirksmode: DocumentView and ElementView methods</linktext></link></related-links></apiOperation><apiValue id="cssom.view:ElementView:cssom.view:ElementView:clientHeight:get"><apiName>clientHeight</apiName><shortdesc>
+		 Returns the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the inner height of an element in pixels, including padding but not the horizontal scrollbar height, border, or margin.
+		 
+		 <p>clientHeight can be calculated as CSS height + CSS padding - height of horizontal scrollbar (if present).</p>
+		 
+		 <p><b>Note:</b> offsetLeft returns the position the upper left edge of the element; not necessarily 
+		 the 'real' left edge of the element. This is important for span elements in flowed text that wraps from one 
+		 line to the next. The span may start in the middle of the page and wrap around to the beginning of the next 
+		 line. The offsetLeft will refer to the left edge of the start of the span, not the left edge of text at the 
+		 start of the second line. Therefore, a box with the left, top, width and height of offsetLeft, offsetTop, 
+		 offsetWidth and offsetHeight will not be a bounding box for a span with wrapped text.</p>
+		 
+		 </apiDesc><example>
+		 This example shows how the clientHeight property and the offsetHeight property measure document height differently. 
+		 The height of the div is set to 100, and this is the value retrieved by the offsetHeight property, not the clientHeight property. 
+		 
+		 <codeblock>
+		 &lt;div id=oDiv style="overflow:scroll; width:200; height:100"&gt; . . . &lt;/div&gt;
+		 &lt;button onclick="alert(oDiv.clientHeight)"&gt;client height&lt;/button&gt;
+		 &lt;button onclick="alert(oDiv.offsetHeight)"&gt;offset heightY&lt;/button&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533563(VS.85).aspx"><linktext>MSDN: clientHeight Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.clientHeight"><linktext>MDC - Element: clientHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#client-attributes"><linktext>W3C - CSSOM View: clientHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:clientLeft:get"><apiName>clientLeft</apiName><shortdesc>
+		 The width of the left border of an element in pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The width of the left border of an element in pixels. 
+		 
+		 <p>It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and 
+		 if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left 
+		 margin or the left padding.</p>
+		 
+		 <p><b>Note:</b> The difference between the offsetLeft and clientLeft properties is the border of the object.</p>
+		 
+		 <p><b>Note:</b> When layout.scrollbar.side property is set to 1 or to 3 and when the text-direction is set to RTL, 
+		 then the vertical scrollbar is positioned on the left and this impacts the way clientLeft is computed.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533564(VS.85).aspx"><linktext>MSDN: clientLeft Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.clientLeft"><linktext>MDC - Element: clientLeft Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#client-attributes"><linktext>W3C - CSSOM View: clientLeft Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:clientTop:get"><apiName>clientTop</apiName><shortdesc>
+		 The width of the top border of an element in pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The width of the top border of an element in pixels. It does not include the top margin or padding.
+		 
+		 <p><b>Note:</b> The difference between the offsetTop and the clientTop properties is the border area of the object.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533565(VS.85).aspx"><linktext>MSDN: clientTop Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.clientTop"><linktext>MDC - Element: clientTop Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#client-attributes"><linktext>W3C - CSSOM View: clientTop Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:clientWidth:get"><apiName>clientWidth</apiName><shortdesc>
+		 Returns the inner width of an element in pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the inner width of an element in pixels. It includes padding but not the vertical scrollbar (if present, if rendered), border or margin.
+		 
+		 </apiDesc><example>
+		 This example shows how the clientWidth property and the offsetWidth property measure document width differently. The width of the div 
+		 is set to 200, and this is the value retrieved by the offsetWidth property, not the clientWidth property. 
+		 
+		 <codeblock>
+		 &lt;div id=oDiv style="overflow:scroll; width:200; height:100"&gt; . . . &lt;/div&gt;
+		 &lt;button onclick="alert(oDiv.clientWidth)"&gt;client width&lt;/button&gt;
+		 &lt;button onclick="alert(oDiv.offsetWidth)"&gt;offset widthY&lt;/button&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533566(VS.85).aspx"><linktext>MSDN: clientWidth Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.clientWidth"><linktext>MDC - Element: clientWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#client-attributes"><linktext>W3C - CSSOM View: clientWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:offsetHeight:get"><apiName>offsetHeight</apiName><shortdesc>
+		 Height of an element relative to the element's offsetParent.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Height of an element relative to the element's offsetParent.
+		 
+		 <p>Typically, an element's offsetHeight is a measurement which includes 
+		 the element borders, the element vertical padding, the element 
+		 horizontal scrollbar (if present, if rendered) and the element CSS height.</p>
+		 
+		 <p>For the document body object, the measurement includes total linear 
+		 content height instead of the element CSS height. Floated elements 
+		 extending below other linear content are ignored.</p>
+		 
+		 <p><b>Note (IE6):</b> To comply with the <xref class="external" href="http://www.w3.org/TR/REC-CSS1/" rel="external nofollow">Cascading Style Sheets, Level 1 (CSS1)</xref> World Wide 
+		 Web link box model, Microsoft Internet Explorer 6 and later calculate the 
+		 height of objects differently when you use the !DOCTYPE declaration in your 
+		 document to switch on standards-compliant mode. This difference may affect 
+		 the value of the offsetWidth propety. When standards-compliant mode is 
+		 switched on, the width property specifies the distance between the left and 
+		 right edges of the bounding box that surrounds the object's content. When 
+		 standards-compliant mode is not switched on, and with earlier versions of 
+		 Windows Internet Explorer, the width property also includes the border and 
+		 padding belts that surround the object's bounding box.</p>
+		 
+		 </apiDesc><example>
+		 This example adjusts the size of a clock's readout to fit the current width and height of the document body.
+		 
+		 <codeblock>
+		 &lt;html&gt;
+		 &lt;head&gt;
+		 &lt;title&gt;A Simple Clock&lt;/title&gt;
+		 &lt;script type="text/javascript"&gt;
+		 	function startClock() {
+		 		window.setInterval("Clock_Tick()", 1000);
+		 		Clock_Tick();
+		 	}
+		 
+		 	var iRatio = 4;
+		 	function Clock_Tick() {
+		 		var dToday = Date();
+		 		var sTime = dToday.substring(11,19);
+		 		var iDocHeight = document.body.offsetHeight;
+		 		var iDocWidth = document.body.offsetWidth;
+		 
+		 		if ((iDocHeightRatio)&gt;iDocWidth)
+		 		iDocHeight = iDocWidth / iRatio;
+		 		document.all.MyTime.innerText = sTime;
+		 		document.all.MyTime.style.fontSize = iDocHeight;
+		 	}
+		 &lt;/script&gt;
+		 &lt;/head&gt;
+		 &lt;body onload="startClock()"&gt;
+		 &lt;p id="MyTime"&gt;&amp;nbsp;&lt;/p&gt;
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms530302(VS.85).aspx"><linktext>MSDN: Measuring Element Dimension and Location</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms534199(VS.85).aspx"><linktext>MSDN: offsetHeight Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.offsetHeight"><linktext>MDC - Element: offsetHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#offset-attributes"><linktext>W3C - CSSOM View: offsetHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:offsetLeft:get"><apiName>offsetLeft</apiName><shortdesc>
+		 Returns the number of pixels that the upper left corner of the current 
+		 element is offset to the left within the offsetParent node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_incorrect"/><apiTool name="IE" version="6.0_incorrect"/><apiTool name="IE" version="7.0_incorrect"/><apiTool name="IE" version="8.0_as_IE7_incorrect"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of pixels that the upper left corner of the current 
+		 element is offset to the left within the offsetParent node.
+		 
+		 <p><b>Note:</b> offsetLeft returns the position the upper left edge of the element; 
+		 not necessarily the 'real' left edge of the element. This is important 
+		 for inline elements (such as span) in flowed text that wraps from one 
+		 line to the next. The span may start in the middle of the line and wrap 
+		 around to the beginning of the next line. The offsetLeft will refer to 
+		 the left edge of the start of the span, not the left edge of text at the 
+		 start of the second line. Therefore, a box with the left, top, width and 
+		 height of offsetLeft, offsetTop, offsetWidth and offsetHeight will not be 
+		 a bounding box for a span with wrapped text.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var colorTable = document.getElementById("t1");
+		 var tOLeft = colorTable.offsetLeft;
+		 
+		 if (tOLeft &gt; 5) {
+		 	// large left offset: do something here
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms530302(VS.85).aspx"><linktext>MSDN: Measuring Element Dimension and Location</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms534200(VS.85).aspx"><linktext>MSDN: offsetLeft Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.offsetLeft"><linktext>MDC - Element: offsetLeft Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#offset-attributes"><linktext>W3C - CSSOM View: offsetLeft Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:offsetParent:get"><apiName>offsetParent</apiName><shortdesc>
+		 The element from which all offset calculations are currently computed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 The element from which all offset calculations are currently computed.
+		 
+		 <p>offsetParent returns a reference to the object which is the closest 
+		 (nearest in the containment hierarchy) positioned containing element. 
+		 If the element is non-positioned, the root element (html in standards 
+		 compliant mode; body in quirks rendering mode) is the offsetParent. 
+		 offsetParent returns null when the element has style.display set 
+		 to "none".</p>
+		 
+		 <p><b>Note (IE5):</b> In Microsoft Internet Explorer 5, the offsetParent property returns 
+		 the table object for the td object.</p>
+		 
+		 <p><b>Note (IE4):</b> In Internet Explorer 4.0 it returns 
+		 the tr object. You can use the parentElement property to retrieve the 
+		 immediate container of the table cell.</p>
+		 
+		 </apiDesc><example>
+		 This example shows how to determine the position of a td object. Although the td 
+		 object appears to the far right in the document, its position is close to the x-axis and y-axis, 
+		 because its offset parent is a table object rather than the document body. For Internet Explorer 4.0,
+		 this same example returns a position of 0,0 because the offset parent is the table row.
+		 
+		 <codeblock>
+		 &lt;table border='1' align='right'&gt;
+		 	&lt;tr&gt;
+		 		&lt;td id='oCell'&gt;This is a small table.&lt;/td&gt;
+		 	&lt;/tr&gt;
+		 &lt;/table&gt;</codeblock>
+		 
+		 <codeblock>
+		 var oElement = document.getElementById("oCell");
+		 
+		 alert("The TD element is at (" + oElement.offsetLeft + 
+		 "," + oElement.offsetTop + ")\n" + "The offset parent is " 
+		 + oElement.offsetParent.tagName );</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534302(VS.85).aspx"><linktext>MSDN: offsetParent Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.offsetParent"><linktext>MDC - Element: offsetParent Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#offset-attributes"><linktext>W3C - CSSOM View: offsetParent Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:offsetTop:get"><apiName>offsetTop</apiName><shortdesc>
+		 Returns the distance of the current element relative to the 
+		 top of the offsetParent node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_incorrect"/><apiTool name="IE" version="6.0_incorrect"/><apiTool name="IE" version="7.0_incorrect"/><apiTool name="IE" version="8.0_as_IE7_incorrect"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the distance of the current element relative to the 
+		 top of the offsetParent node.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 d = document.getElementById("div1");
+		 
+		 topPos = d.offsetTop;
+		 
+		 if (topPos &gt; 10) {
+		 	// object is offset more
+		 	// than 10 pixels from its parent
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms530302(VS.85).aspx"><linktext>MSDN: Measuring Element Dimension and Location</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms534303(VS.85).aspx"><linktext>MSDN: offsetTop Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.offsetTop"><linktext>MDC - Element: offsetTop Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#offset-attributes"><linktext>W3C - CSSOM View: offsetTop Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:offsetWidth:get"><apiName>offsetWidth</apiName><shortdesc>
+		 The width of an element, relative to the layout.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The width of an element, relative to the layout.
+		 
+		 <p>Typically, an element's offsetWidth is a measurement which includes 
+		 the element borders, the element horizontal padding, the element 
+		 vertical scrollbar (if present, if rendered) and the element CSS width.</p>
+		 
+		 <p><b>Note (IE6):</b> To comply with the <xref class="external" href="http://www.w3.org/TR/REC-CSS1/" rel="external nofollow">Cascading Style Sheets, Level 1 (CSS1)</xref> World Wide 
+		 Web link box model, Microsoft Internet Explorer 6 and later calculate the 
+		 height of objects differently when you use the !DOCTYPE declaration in your 
+		 document to switch on standards-compliant mode. This difference may affect 
+		 the value of the offsetWidth propety. When standards-compliant mode is 
+		 switched on, the width property specifies the distance between the left and 
+		 right edges of the bounding box that surrounds the object's content. When 
+		 standards-compliant mode is not switched on, and with earlier versions of 
+		 Windows Internet Explorer, the width property also includes the border and 
+		 padding belts that surround the object's bounding box.</p>
+		 
+		 </apiDesc><example>
+		 This example adjusts the size of a clock's readout to fit the current width and height of the document.
+		 
+		 <codeblock>
+		 &lt;html&gt;
+		 &lt;head&gt;
+		 &lt;title&gt;A Simple Clock&lt;/title&gt;
+		 &lt;script type="text/javascript"&gt;
+		 	function startClock() {
+		 		window.setInterval("Clock_Tick()", 1000);
+		 		Clock_Tick();
+		 	}
+		 
+		 	var iRatio = 4;
+		 	function Clock_Tick() {
+		 		var dToday = Date();
+		 		var sTime = dToday.substring(11,19);
+		 		var iDocHeight = document.body.offsetHeight;
+		 		var iDocWidth = document.body.offsetWidth;
+		 
+		 		if ((iDocHeightRatio)&gt;iDocWidth)
+		 		iDocHeight = iDocWidth / iRatio;
+		 		document.all.MyTime.innerText = sTime;
+		 		document.all.MyTime.style.fontSize = iDocHeight;
+		 	}
+		 &lt;/script&gt;
+		 &lt;/head&gt;
+		 &lt;body onload="startClock()"&gt;
+		 &lt;p id="MyTime"&gt;&amp;nbsp;&lt;/p&gt;
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms530302(VS.85).aspx"><linktext>MSDN: Measuring Element Dimension and Location</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms534304(VS.85).aspx"><linktext>MSDN: offsetWidth Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.offsetWidth"><linktext>MDC - Element: offsetWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#offset-attributes"><linktext>W3C - CSSOM View: offsetWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:scrollHeight:get"><apiName>scrollHeight</apiName><shortdesc>
+		 Height of the scroll view of an element; it includes the element padding but not its margin.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_incorrect"/><apiTool name="IE" version="6.0_incorrect"/><apiTool name="IE" version="7.0_incorrect"/><apiTool name="IE" version="8.0_as_IE7_incorrect"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Height of the scroll view of an element; it includes the element padding but not its margin.
+		 
+		 <p>An element's scrollHeight is a measurement of the height of an element's content including 
+		 content not visible on the screen due to overflow.</p>
+		 
+		 <p>If the element's content generated a vertical scrollbar, the scrollHeight value is equal to 
+		 the minimum clientHeight the element would require in order to fit all the content in the viewpoint 
+		 without using a vertical scrollbar. When an element's content does not generate a vertical scrollbar, 
+		 then its scrollHeight property is equal to its clientHeight property.</p>
+		 
+		 </apiDesc><example>
+		 This example uses the scrollHeight property to retrieve the height of the viewable content.
+		 
+		 <codeblock>
+		 &lt;script type="text/javascript"&gt;
+		 	function fnCheckScroll(){
+		 		var iNewHeight = oDiv.scrollHeight;
+		 		alert("The value of the scrollHeight property is: " 
+		 		+ iNewHeight + "px"); 
+		 	}
+		 &lt;/script&gt;
+		 ...
+		 &lt;div id="oDiv" style="overflow: scroll; height= 100px; width= 250px; text-align: left"&gt;
+		 	... 
+		 &lt;/div&gt;
+		 &lt;button onclick="fnCheckScroll()"&gt;Check scrollHeight&lt;/button&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534615(VS.85).aspx"><linktext>MSDN: scrollHeight Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.scrollHeight"><linktext>MDC - Element: scrollHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#scroll-attributes"><linktext>W3C - CSSOM View: scrollHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:scrollLeft:get"><apiName>scrollLeft</apiName><shortdesc>
+		 Gets or sets the number of pixels that an element's content is scrolled to the left.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Gets or sets the number of pixels that an element's content is scrolled to the left.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Set the number of pixels scrolled
+		 element.scrollLeft = 10;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534617(VS.85).aspx"><linktext>MSDN: scrollLeft Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.scrollLeft"><linktext>MDC - Element: scrollLeft Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#scroll-attributes"><linktext>W3C - CSSOM View: scrollLeft Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:scrollTop:get"><apiName>scrollTop</apiName><shortdesc>
+		 Gets or sets the number of pixels that the content of an element is scrolled upward.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Gets or sets the number of pixels that the content of an element is scrolled upward.
+		 
+		 <p>An element's scrollTop is a measurement of the distance of an element's top to its topmost visible content.</p>
+		 
+		 <p>When an element content does not generate a vertical scrollbar, then its scrollTop value defaults to 0.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Get the number of pixels scrolled
+		 var  intElemScrollTop = element.scrollTop;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/scrolltop.asp?frame=true"><linktext>MSDN: scrollTop Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.scrollTop"><linktext>MDC - Element: scrollTop Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#scroll-attributes"><linktext>W3C - CSSOM View: scrollTop Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue><apiValue id="cssom.view:ElementView:cssom.view:ElementView:scrollWidth:get"><apiName>scrollWidth</apiName><shortdesc>
+		 Returns either the width in pixels of the content of an element or the width of the element itself, whichever is greater.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_incorrect"/><apiTool name="IE" version="6.0_incorrect"/><apiTool name="IE" version="7.0_incorrect"/><apiTool name="IE" version="8.0_as_IE7_incorrect"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns either the width in pixels of the content of an element or the width of the element itself, whichever is greater. 
+		 
+		 <p>If the element is wider than its content area (for example, if there are scroll bars for scrolling through the content), the scrollWidth is larger than the clientWidth.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;div id="aDiv" style="width: 100px; height: 200px; overflow: auto;"&gt;
+		 	-FooBar-FooBar-FooBar
+		 &lt;/div&gt;
+		 &lt;br/&gt;
+		 &lt;input type="button" value="Show scrollWidth"
+		 onclick="alert(document.getElementById('aDiv').scrollWidth);"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534619(VS.85).aspx"><linktext>MSDN: scrollWidth Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.scrollWidth"><linktext>MDC - Element: scrollWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#scroll-attributes"><linktext>W3C - CSSOM View: scrollWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#elementview"><linktext>Quirksmode: ElementView properties</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:TextRectangleList"><apiName>TextRectangleList</apiName><shortdesc>
+	 A collection of TextRectangle objects returned by the getClientRects method.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A collection of TextRectangle objects returned by the getClientRects method.
+	 
+	 </apiDesc><example>
+	 This example shows how to use the getClientRects method and the TextRectangle collection to iterate through the lines of text in an object.
+	 
+	 <codeblock>
+	 &lt;script&gt;
+	 function newHighlite(obj) {            
+	 	oRcts = obj.getClientRects();
+	 	iLength = oRcts.length;
+	 	for (i = 0;i &lt; iLength; i++) {	
+	 		alert("Line number " + (i + 1) + " is " + (oRcts(i).right - oRcts(i).left) + " pixels wide.");
+	 	}
+	 }
+	 &lt;/script&gt;</codeblock>
+	 
+	 </example></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms537494(VS.85).aspx"><linktext>MSDN: TextRectangle Collection</linktext></link><link href="http://www.w3.org/TR/cssom-view/#textrectanglelist"><linktext>W3C CSSOM Views Specification: TextRectangleList</linktext></link></related-links><apiOperation id="cssom.view:TextRectangleList:cssom.view:TextRectangleList:item"><apiName>item</apiName><shortdesc>
+		 Retrieves an object from a TextRectangle collection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INDEX_SIZE_ERR: May be raised if the index 
+		 is negative or greater than the number of TextRectangle objects 
+		 associated with the object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The TextRectangle object at that index
+		 
+		 </apiDesc><apiOperationClassifier>cssom.view:TextRectangle</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves an object from a TextRectangle collection.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/dd347037(VS.85).aspx"><linktext>MSDN: item Method</linktext></link><link href="http://www.w3.org/TR/cssom-view/#textrectanglelist"><linktext>W3C - CSSOM View: item Method</linktext></link></related-links></apiOperation><apiOperation id="cssom.view:TextRectangleList:cssom.view:TextRectangleList:namedItem"><apiName>namedItem</apiName><shortdesc>
+		 Retrieves an object or a collection from a specified collection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns an object or a collection of objects if successful, or null otherwise.
+		 
+		 </apiDesc><apiOperationClassifier>cssom.view:TextRectangle</apiOperationClassifier></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The name or id property of the object to retrieve. A collection is returned if more than one match is made.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves an object or a collection from a specified collection.
+		 
+		 <p><b>Note (IE8):</b> In IE8 mode, the namedItem method does not return collections if more than one named item is found; instead, it returns the first case-insensitive matched element.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;div id="oDIV1"&gt;This text will not change.&lt;/div&gt;
+		 &lt;div id="oDIV2"&gt;This text will change.&lt;/div&gt;
+		 &lt;button onclick="document.all.namedItem('oDIV2').innerHTML='Changed!';"&gt;
+		 Change Option
+		 &lt;/button&gt;</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536634(VS.85).aspx"><linktext>MSDN: namedItem Method</linktext></link></related-links></apiOperation><apiValue id="cssom.view:TextRectangleList:cssom.view:TextRectangleList:length:get"><apiName>length</apiName><shortdesc>
+		 Returns the total number of TextRectangle objects associated with the object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the total number of TextRectangle objects associated with the object.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534101(VS.85).aspx"><linktext>MSDN: length Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#textrectanglelist"><linktext>W3C - CSSOM View: length Property</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:MouseEventView"><apiName>MouseEventView</apiName><shortdesc>
+	 Used to calculate the mouse position relative to the page or screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Used to calculate the mouse position relative to the page or screen.
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C CSSOM Views Specification: MouseEventView</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html"><linktext>Quirksmode: W3C DOM Compatibility - CSS Object Model View</linktext></link></related-links><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:clientX:get"><apiName>clientX</apiName><shortdesc>
+		 Returns the horizontal coordinate within the application's client area at which the event occurred 
+		 (as opposed to the coordinates within the page).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the horizontal coordinate within the application's client area at which the event occurred 
+		 (as opposed to the coordinates within the page). 
+		 
+		 <p>For example, clicking in the top-left corner of the client area will always result in a mouse 
+		 event with a clientX value of 0, regardless of whether the page is scrolled horizontally.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 &lt;head&gt;
+		 	&lt;title&gt;clientX\clientY example&lt;/title&gt;
+		 
+		 	&lt;script type="text/javascript"&gt;
+		 		function showCoords(evt) {
+		 			alert(
+		 			"clientX value: " + evt.clientX + "\n"
+		 			+ "clientY value: " + evt.clientY + "\n"
+		 		);
+		 		}
+		 	&lt;/script&gt;
+		 &lt;/head&gt;
+		 
+		 &lt;body onmousedown="showCoords(event)"&gt;
+		 	&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533567(VS.85).aspx"><linktext>MSDN: clientX Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/event.clientX"><linktext>MDC - Event: clientX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: clientX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/clientY"><linktext>clientY</linktext></link><link href="cssom.view.xml#MouseEventView/screenX"><linktext>screenX</linktext></link><link href="cssom.view.xml#MouseEventView/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:clientY:get"><apiName>clientY</apiName><shortdesc>
+		 Returns the vertical coordinate within the application's client area at which the event occurred 
+		 (as opposed to the coordinates within the page).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the vertical coordinate within the application's client area at which the event occurred 
+		 (as opposed to the coordinates within the page).
+		 
+		 <p>For example, clicking in the top-left corner of the client area will always result in a mouse 
+		 event with a clientY value of 0, regardless of whether the page is scrolled vertically.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;clientX\clientY example&lt;/title&gt;
+		 
+		 		&lt;script type="text/javascript"&gt;
+		 			function showCoords(evt){
+		 				alert(
+		 				"clientX value: " + evt.clientX + "\n"
+		 				+ "clientY value: " + evt.clientY + "\n"
+		 			);
+		 			}
+		 		&lt;/script&gt;
+		 	&lt;/head&gt;
+		 
+		 	&lt;body onmousedown="showCoords(event)"&gt;
+		 		&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533568(VS.85).aspx"><linktext>MSDN: clientY Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/event.clientY"><linktext>MDC - Event: clientY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: clientY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/clientX"><linktext>clientX</linktext></link><link href="cssom.view.xml#MouseEventView/screenX"><linktext>screenX</linktext></link><link href="cssom.view.xml#MouseEventView/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:offsetX:get"><apiName>offsetX</apiName><shortdesc>
+		 Returns the horizontal coordinate, as number of CSS pixels, of the 
+		 position where the event occurred relative to the origin of the padding box of the target node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_buggy"/><apiTool name="IE" version="6.0_buggy"/><apiTool name="IE" version="7.0_buggy"/><apiTool name="IE" version="8.0_as_IE7_buggy"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_incorrect"/><apiTool name="Safari" version="3.1_incorrect"/><apiTool name="Safari" version="4.0b_incorrect"/><apiTool name="Chrome" version="1.0_incorrect"/><apiTool name="Chrome" version="2.0_incorrect"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the horizontal coordinate, as number of CSS pixels, of the 
+		 position where the event occurred relative to the origin of the padding box of the target node.
+		 
+		 <p>In IE the coordinates are calculated relative to the target element when that element is 
+		 eligible to become an offsetParent. If that's not the case, the coordinates are calculated 
+		 relative to the target's offsetParent.</p>
+		 
+		 <p><b>Note (Safari/Chrome):</b> Safari and Chrome calculate the position not from the padding box (as per the spec) but form the
+		 border box.</p>
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the position from the content box instead of the padding box.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;head&gt;
+		 	&lt;script&gt;
+		 		function offsetCoords() {
+		 			var offsetInfo = ""
+		 			offsetInfo = "The x coordinate is: " + window.event.offsetX + "\r"
+		 			offsetInfo += "The y coordinate is: " + window.event.offsetY + "\r"
+		 			alert(offsetInfo);
+		 		}
+		 	&lt;/script&gt;
+		 &lt;/head&gt;
+		 &lt;body onmousemove="window.status = 'X=' + window.event.offsetX + 
+		 ' Y=' + window.event.offsetY" ondblclick="offsetCoords()"&gt;
+		 	...
+		 	&lt;div onclick="offsetCoords();" ... position:absolute; top:200; left:300;"&gt;
+		 	...
+		 	&lt;/div&gt;
+		 &lt;/body&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534305(VS.85).aspx"><linktext>MSDN: offsetX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: offsetX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/offsetY"><linktext>offsetY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:offsetY:get"><apiName>offsetY</apiName><shortdesc>
+		 Returns the vertical coordinate, as number of CSS pixels, of the 
+		 position where the event occurred relative to the origin of the padding box of the target node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_buggy"/><apiTool name="IE" version="6.0_buggy"/><apiTool name="IE" version="7.0_buggy"/><apiTool name="IE" version="8.0_as_IE7_buggy"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_incorrect"/><apiTool name="Safari" version="3.1_incorrect"/><apiTool name="Safari" version="4.0b_incorrect"/><apiTool name="Chrome" version="1.0_incorrect"/><apiTool name="Chrome" version="2.0_incorrect"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the vertical coordinate, as number of CSS pixels, of the 
+		 position where the event occurred relative to the origin of the padding box of the target node.
+		 
+		 <p>In IE the coordinates are calculated relative to the target element when that element is 
+		 eligible to become an offsetParent. If that's not the case, the coordinates are calculated 
+		 relative to the target's offsetParent.</p>
+		 
+		 <p><b>Note (Safari/Chrome):</b> Safari and Chrome calculate the position not from the padding box (as per the spec) but form the
+		 border box.</p>
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the position from the content box instead of the padding box.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;head&gt;
+		 	&lt;script&gt;
+		 		function offsetCoords() {
+		 			var offsetInfo = ""
+		 			offsetInfo = "The x coordinate is: " + window.event.offsetX + "\r"
+		 			offsetInfo += "The y coordinate is: " + window.event.offsetY + "\r"
+		 			alert(offsetInfo);
+		 		}
+		 	&lt;/script&gt;
+		 &lt;/head&gt;
+		 &lt;body onmousemove="window.status = 'X=' + window.event.offsetX + 
+		 ' Y=' + window.event.offsetY" ondblclick="offsetCoords()"&gt;
+		 	...
+		 	&lt;div onclick="offsetCoords();" ... position:absolute; top:200; left:300;"&gt;
+		 	...
+		 	&lt;/div&gt;
+		 &lt;/body&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534306(VS.85).aspx"><linktext>MSDN: offsetY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: offsetY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/offsetX"><linktext>offsetX</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:pageX:get"><apiName>pageX</apiName><shortdesc>
+		 Returns the horizontal coordinate of the event relative to whole document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the horizontal coordinate of the event relative to whole document. 
+		 
+		 <p><b>Note (IE):</b> In order to get it in IE, too, add the scrolling offset of the 
+		 document to clientX/Y.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 &lt;head&gt;
+		 &lt;title&gt;pageX\pageY &amp; layerX\layerY example&lt;/title&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	function showCoords(evt){
+		 		var form = document.forms.form_coords;
+		 		var parent_id = evt.target.parentNode.id;
+		 		form.parentId.value = parent_id;
+		 		form.pageXCoords.value = evt.pageX;
+		 		form.pageYCoords.value = evt.pageY;
+		 		form.layerXCoords.value = evt.layerX;
+		 		form.layerYCoords.value = evt.layerY;
+		 	}
+		 &lt;/script&gt;
+		 
+		 &lt;style type="text/css"&gt;
+		 
+		 #d1 {
+		 	border: solid blue 1px;
+		 	padding: 20px;
+		 }
+		 
+		 #d2 {
+		 	position: absolute;
+		 	top: 180px;
+		 	left: 80%;
+		 	right:auto;
+		 	width: 40%;
+		 	border: solid blue 1px;
+		 	padding: 20px;
+		 }
+		 
+		 #d3 {
+		 	position: absolute;
+		 	top: 240px;
+		 	left: 20%;
+		 	width: 50%;
+		 	border: solid blue 1px;
+		 	padding: 10px;
+		 }
+		 
+		 &lt;/style&gt;
+		 &lt;/head&gt;
+		 
+		 &lt;body onmousedown="showCoords(event)"&gt;
+		 
+		 &lt;p&gt;To display the mouse coordinates please click anywhere on the page.&lt;/p&gt;
+		 
+		 &lt;div id="d1"&gt;
+		 	&lt;span&gt;This is an un-positioned div so clicking it will return
+		 	layerX/layerY values almost the same as pageX/PageY values.&lt;/span&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;div id="d2"&gt;
+		 	&lt;span&gt;This is a positioned div so clicking it will return layerX/layerY
+		 	values that are relative to the top-left corner of this positioned
+		 	element. Note the pageX\pageY properties still return the
+		 	absolute position in the document, including page scrolling.&lt;/span&gt;
+		 
+		 	&lt;span&gt;Make the page scroll more! This is a positioned div so clicking it
+		 	will return layerX/layerY values that are relative to the top-left
+		 	corner of this positioned element. Note the pageX\pageY properties still
+		 	return the absolute position in the document, including page
+		 	scrolling.&lt;/span&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;div id="d3"&gt;
+		 	&lt;form name="form_coords"&gt;
+		 		Parent Element id: &lt;input type="text" name="parentId" size="7" /&gt;&lt;br /&gt;
+		 		pageX:&lt;input type="text" name="pageXCoords" size="7" /&gt;  
+		 		pageY:&lt;input type="text" name="pageYCoords" size="7" /&gt;&lt;br /&gt;
+		 		layerX:&lt;input type="text" name="layerXCoords" size="7" /&gt;  
+		 		layerY:&lt;input type="text" name="layerYCoords" size="7" /&gt;
+		 	&lt;/form&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/event.pageX"><linktext>MDC - Event: pageX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: pageX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/pageY"><linktext>pageY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:pageY:get"><apiName>pageY</apiName><shortdesc>
+		 Returns the vertical coordinate of the event relative to the whole document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the vertical coordinate of the event relative to the whole document.
+		 
+		 <p><b>Note (IE):</b> In order to get it in IE, too, add the scrolling offset of the 
+		 document to clientX/Y.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 &lt;head&gt;
+		 &lt;title&gt;pageX\pageY &amp; layerX\layerY example&lt;/title&gt;
+		 
+		 &lt;script type="text/javascript"&gt;
+		 	function showCoords(evt){
+		 		var form = document.forms.form_coords;
+		 		var parent_id = evt.target.parentNode.id;
+		 		form.parentId.value = parent_id;
+		 		form.pageXCoords.value = evt.pageX;
+		 		form.pageYCoords.value = evt.pageY;
+		 		form.layerXCoords.value = evt.layerX;
+		 		form.layerYCoords.value = evt.layerY;
+		 	}
+		 &lt;/script&gt;
+		 
+		 &lt;style type="text/css"&gt;
+		 
+		 #d1 {
+		 	border: solid blue 1px;
+		 	padding: 20px;
+		 }
+		 
+		 #d2 {
+		 	position: absolute;
+		 	top: 180px;
+		 	left: 80%;
+		 	right:auto;
+		 	width: 40%;
+		 	border: solid blue 1px;
+		 	padding: 20px;
+		 }
+		 
+		 #d3 {
+		 	position: absolute;
+		 	top: 240px;
+		 	left: 20%;
+		 	width: 50%;
+		 	border: solid blue 1px;
+		 	padding: 10px;
+		 }
+		 
+		 &lt;/style&gt;
+		 &lt;/head&gt;
+		 
+		 &lt;body onmousedown="showCoords(event)"&gt;
+		 
+		 &lt;p&gt;To display the mouse coordinates please click anywhere on the page.&lt;/p&gt;
+		 
+		 &lt;div id="d1"&gt;
+		 	&lt;span&gt;This is an un-positioned div so clicking it will return
+		 	layerX/layerY values almost the same as pageX/PageY values.&lt;/span&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;div id="d2"&gt;
+		 	&lt;span&gt;This is a positioned div so clicking it will return layerX/layerY
+		 	values that are relative to the top-left corner of this positioned
+		 	element. Note the pageX\pageY properties still return the
+		 	absolute position in the document, including page scrolling.&lt;/span&gt;
+		 
+		 	&lt;span&gt;Make the page scroll more! This is a positioned div so clicking it
+		 	will return layerX/layerY values that are relative to the top-left
+		 	corner of this positioned element. Note the pageX\pageY properties still
+		 	return the absolute position in the document, including page
+		 	scrolling.&lt;/span&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;div id="d3"&gt;
+		 	&lt;form name="form_coords"&gt;
+		 		Parent Element id: &lt;input type="text" name="parentId" size="7" /&gt;&lt;br /&gt;
+		 		pageX:&lt;input type="text" name="pageXCoords" size="7" /&gt;  
+		 		pageY:&lt;input type="text" name="pageYCoords" size="7" /&gt;&lt;br /&gt;
+		 		layerX:&lt;input type="text" name="layerXCoords" size="7" /&gt;  
+		 		layerY:&lt;input type="text" name="layerYCoords" size="7" /&gt;
+		 	&lt;/form&gt;
+		 &lt;/div&gt;
+		 
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/event.pageY"><linktext>MDC - Event: pageY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: pageY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/pageX"><linktext>pageX</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:screenX:get"><apiName>screenX</apiName><shortdesc>
+		 Returns the horizontal coordinate of the event within the screen as a whole.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the horizontal coordinate of the event within the screen as a whole. 
+		 
+		 <p><b>Note:</b> When you trap events on the window, document, or other roomy elements, you can get the 
+		 coordinates of that event (e.g., a click) and route it properly, as the "clickMap" example demonstrates.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;screenX\screenY example&lt;/title&gt;
+		 
+		 		&lt;script type="text/javascript"&gt;
+		 			function showCoords(evt){
+		 				alert(
+		 				"screenX value: " + evt.screenX + "\n"
+		 				+ "screenY value: " + evt.screenY + "\n"
+		 			);
+		 		}
+		 
+		 		&lt;/script&gt;
+		 	&lt;/head&gt;
+		 
+		 	&lt;body onmousedown="showCoords(event)"&gt;
+		 		&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 <codeblock>
+		 function checkClickMap(e) {
+		 	if (e.screenX &lt; 50) doRedButton();
+		 	if (50 &lt;= e.screenX) &lt; 100 doYellowButton();
+		 	if (e.screenX &gt;= 100) doRedButton();
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534391(VS.85).aspx"><linktext>MSDN: screenX Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/event.screenX"><linktext>MDC - Event: screenX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: screenX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/clientX"><linktext>clientX</linktext></link><link href="cssom.view.xml#MouseEventView/clientY"><linktext>clientY</linktext></link><link href="cssom.view.xml#MouseEventView/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:screenY:get"><apiName>screenY</apiName><shortdesc>
+		 Returns the vertical coordinate of the event within the screen as a whole.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the vertical coordinate of the event within the screen as a whole.
+		 
+		 <p><b>Note:</b> When you trap events on the window, document, or other roomy elements, you can get the 
+		 coordinates of that event (e.g., a click) and route it properly, as the "clickMap" example demonstrates.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;screenX\screenY example&lt;/title&gt;
+		 
+		 		&lt;script type="text/javascript"&gt;
+		 			function showCoords(evt){
+		 				alert(
+		 				"screenX value: " + evt.screenX + "\n"
+		 				+ "screenY value: " + evt.screenY + "\n"
+		 			);
+		 		}
+		 
+		 		&lt;/script&gt;
+		 	&lt;/head&gt;
+		 
+		 	&lt;body onmousedown="showCoords(event)"&gt;
+		 		&lt;p&gt;To display the mouse coordinates click anywhere on the page.&lt;/p&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 <codeblock>
+		 function checkClickMap(e) {
+		 	if (e.screenX &lt; 50) doRedButton();
+		 	if (50 &lt;= e.screenX) &lt; 100 doYellowButton();
+		 	if (e.screenX &gt;= 100) doRedButton();
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534392(VS.85).aspx"><linktext>MSDN: screenY Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/event.screenY"><linktext>MDC - Event: screenY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: screenY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/clientX"><linktext>clientX</linktext></link><link href="cssom.view.xml#MouseEventView/clientY"><linktext>clientY</linktext></link><link href="cssom.view.xml#MouseEventView/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:x:get"><apiName>x</apiName><shortdesc>
+		 Returns the value of pageX.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_alternative"/><apiTool name="IE" version="6.0_alternative"/><apiTool name="IE" version="7.0_alternative"/><apiTool name="IE" version="8.0_as_IE7_alternative"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_alternative"/><apiTool name="Safari" version="3.1_alternative"/><apiTool name="Safari" version="4.0b_alternative"/><apiTool name="Chrome" version="1.0_alternative"/><apiTool name="Chrome" version="2.0_alternative"/><apiTool name="Opera" version="9.62_alternative"/><apiTool name="Opera" version="10.0a_alternative"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the value of pageX. 
+		 
+		 </apiDesc><example>
+		 <codeblock>&lt;body onmousemove="window.status = 'X=' + window.event.x + ' Y=' + window.event.y"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535154(VS.85).aspx"><linktext>MSDN: x Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: x Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/y"><linktext>y</linktext></link></related-links></apiValue><apiValue id="cssom.view:MouseEventView:cssom.view:MouseEventView:y:get"><apiName>y</apiName><shortdesc>
+		 Returns the value of pageY.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_alternative"/><apiTool name="IE" version="6.0_alternative"/><apiTool name="IE" version="7.0_alternative"/><apiTool name="IE" version="8.0_as_IE7_alternative"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_alternative"/><apiTool name="Safari" version="3.1_alternative"/><apiTool name="Safari" version="4.0b_alternative"/><apiTool name="Chrome" version="1.0_alternative"/><apiTool name="Chrome" version="2.0_alternative"/><apiTool name="Opera" version="9.62_alternative"/><apiTool name="Opera" version="10.0a_alternative"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMEvents 2
+		 
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the value of pageY. 
+		 
+		 </apiDesc><example>
+		 <codeblock>&lt;body onmousemove="window.status = 'X=' + window.event.x + ' Y=' + window.event.y"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535164(VS.85).aspx"><linktext>MSDN: y Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-mouseeventview-interface"><linktext>W3C - CSSOM View: y Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#mousepos"><linktext>Quirksmode: Mouse position</linktext></link><link href="cssom.view.xml#MouseEventView/x"><linktext>x</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:TextRectangle"><apiName>TextRectangle</apiName><shortdesc>
+	 Objects implementing the TextRectangle interface represent a rectangular box.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Objects implementing the TextRectangle interface represent a rectangular box.
+	 
+	 </apiDesc><example>
+	 In the following excerpt from the Gettysburg Address, four TextRectangle objects are contained in the b element (bold text).
+	 
+	 <codeblock>
+	 &lt;p&gt;Four score and seven years ago &lt;b&gt;our fathers&lt;br&gt;
+	 brought forth . . . a new nation, conceived in liberty&lt;br&gt;
+	 and dedicated to the proposition that all men are&lt;br&gt;
+	 created equal.&lt;/b&gt; Now we are engaged in a great civil war . . . 
+	 &lt;/p&gt;
+	 </codeblock>
+	 
+	 <p>
+	 The four TextRectangle objects are: 
+	 <ol>
+	 <li>"our fathers"</li>
+	 <li>"brought forth . . . a new nation, conceived in liberty"</li>
+	 <li>"and dedicated to the proposition that all men are"</li>
+	 <li>"created equal"</li>
+	 </ol>
+	 </p>
+	 
+	 <p>If you resize the window containing this text, the TextRectangle objects do not update. Because the objects are a 
+	 snapshot of the layout, the objects should update after an onresize event occurs.</p>
+	 
+	 <p>The width of the TextRectangle may not be identical to the width of the TextRange it contains. A TextRange is only 
+	 as wide as the text, but a TextRectangle is as wide as the element containing that text.</p>
+	 
+	 </example></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535906(VS.85).aspx"><linktext>MSDN: TextRectangle Object</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-textrectangle-interface"><linktext>W3C CSSOM Views Specification: TextRectangle</linktext></link></related-links><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:bottom:get"><apiName>bottom</apiName><shortdesc>
+		 Returns the distance between the top of the viewport and the bottom 
+		 of the rectangle box as number of CSS pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the distance between the top of the viewport and the bottom 
+		 of the rectangle box as number of CSS pixels. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt;
+		 function getCoords(oObject) {
+		 	oBndRct = oObject.getBoundingClientRect();
+		 	alert("Bounding rectangle = \nUpper left coordinates: "
+		 	+ oBndRct.left + " " + oBndRct.top +
+		 	"\nLower right coordinates: "
+		 	+ oBndRct.right + " " + oBndRct.bottom);
+		 }
+		 &lt;/script&gt;
+		 &lt;/head&gt;	
+		 &lt;body&gt;
+		 &lt;p id=oPara onclick="getCoords(this)"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533535(VS.85).aspx"><linktext>MSDN: bottom Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-textrectangle-interface"><linktext>W3C - CSSOM View: bottom Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:height:get"><apiName>height</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/element.getClientRects"><linktext>MDC - Element: getClientRects Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.getBoundingClientRect"><linktext>MDC - Element: getBoundingClientRect Method</linktext></link></related-links></apiValue><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:left:get"><apiName>left</apiName><shortdesc>
+		 Returns the distance between the left of the viewport and the left 
+		 of the rectangle box as number of CSS pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the distance between the left of the viewport and the left 
+		 of the rectangle box as number of CSS pixels.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt;
+		 function getCoords(oObject) {
+		 	oBndRct = oObject.getBoundingClientRect();
+		 	alert("Bounding rectangle = \nUpper left coordinates: "
+		 	+ oBndRct.left + " " + oBndRct.top +
+		 	"\nLower right coordinates: "
+		 	+ oBndRct.right + " " + oBndRct.bottom);
+		 }
+		 &lt;/script&gt;
+		 &lt;/head&gt;	
+		 &lt;body&gt;
+		 &lt;p id=oPara onclick="getCoords(this)"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534099(VS.85).aspx"><linktext>MSDN: left Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-textrectangle-interface"><linktext>W3C - CSSOM View: left Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:right:get"><apiName>right</apiName><shortdesc>
+		 Returns the distance between the left of the viewport and the right 
+		 of the rectangle box as number of CSS pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the distance between the left of the viewport and the right 
+		 of the rectangle box as number of CSS pixels. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt;
+		 function getCoords(oObject) {
+		 	oBndRct = oObject.getBoundingClientRect();
+		 	alert("Bounding rectangle = \nUpper left coordinates: "
+		 	+ oBndRct.left + " " + oBndRct.top +
+		 	"\nLower right coordinates: "
+		 	+ oBndRct.right + " " + oBndRct.bottom);
+		 }
+		 &lt;/script&gt;
+		 &lt;/head&gt;	
+		 &lt;body&gt;
+		 &lt;p id=oPara onclick="getCoords(this)"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534374(VS.85).aspx"><linktext>MSDN: right Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-textrectangle-interface"><linktext>W3C - CSSOM View: right Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:top:get"><apiName>top</apiName><shortdesc>
+		 Returns the distance between the top of the viewport and the top of 
+		 the rectangle box as number of CSS pixels.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the distance between the top of the viewport and the top of 
+		 the rectangle box as number of CSS pixels. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt;
+		 function getCoords(oObject) {
+		 	oBndRct = oObject.getBoundingClientRect();
+		 	alert("Bounding rectangle = \nUpper left coordinates: "
+		 	+ oBndRct.left + " " + oBndRct.top +
+		 	"\nLower right coordinates: "
+		 	+ oBndRct.right + " " + oBndRct.bottom);
+		 }
+		 &lt;/script&gt;
+		 &lt;/head&gt;	
+		 &lt;body&gt;
+		 &lt;p id=oPara onclick="getCoords(this)"&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534688(VS.85).aspx"><linktext>MSDN: top Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-textrectangle-interface"><linktext>W3C - CSSOM View: top Property</linktext></link></related-links></apiValue><apiValue id="cssom.view:TextRectangle:cssom.view:TextRectangle:width:get"><apiName>width</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/element.getClientRects"><linktext>MDC - Element: getClientRects Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/element.getBoundingClientRect"><linktext>MDC - Element: getBoundingClientRect Method</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="cssom.view:RangeView"><apiName>RangeView</apiName><shortdesc>
+	 Has properties and methods that give information about the dimensions of a Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiSince version="DOMTR 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Has properties and methods that give information about the dimensions of a Range.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-rangeview-interface"><linktext>W3C CSSOM Views Specification: RangeView</linktext></link></related-links><apiOperation id="cssom.view:RangeView:cssom.view:RangeView:getBoundingClientRect"><apiName>getBoundingClientRect</apiName><shortdesc>
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.1b_unknown"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMTR 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The returned value is a TextRectangle object which is the union 
+		 of the rectangles returned by getClientRects() for the element, i.e., 
+		 the CSS border-boxes associated with the element.
+		 
+		 </apiDesc><apiOperationClassifier>cssom.view:TextRectangle</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#rangeview-getboundingclientrect"><linktext>W3C - CSSOM View: RangeView.getBoundingClientRect()</linktext></link><link href="cssom.view.xml#ElementView/getBoundingClientRect()"><linktext>ElementView.getBoundingClientRect()</linktext></link></related-links></apiOperation><apiOperation id="cssom.view:RangeView:cssom.view:RangeView:getClientRects"><apiName>getClientRects</apiName><shortdesc>
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.1b_unknown"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMTR 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>cssom.view:TextRectangleList</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client. Each rectangle 
+		 describes a single line.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#rangeview-getclientrects"><linktext>W3C - CSSOM View: RangeView.getClientRects()</linktext></link><link href="cssom.view.xml#ElementView/getClientRects()"><linktext>ElementView.getClientRects()</linktext></link></related-links></apiOperation></apiClassifier></apiPackage>

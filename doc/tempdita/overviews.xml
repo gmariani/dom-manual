@@ -1,0 +1,79 @@
+
+<overviews>
+	
+<packages>
+		
+<package name="dom">
+			
+<shortDescription>
+				
+				The DOM package contains all the general DOM objects and any specification that is part of the DOM.
+				
+			</shortDescription>
+			
+<description>
+				
+				The DOM package contains all the general DOM objects and any specification that is 
+				part of the DOM.&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a class='external' rel='external nofollow' href='http://www.w3.org/TR/DOM-Level-2-Core/' 
+				title='http://www.w3.org/TR/DOM-Level-2-Core/' target='_blank'&gt;DOM Level 2 Core Specification&lt;/a&gt;-describes 
+				the core interfaces shared by most DOM objects in HTML and XML documents&lt;/li&gt; &lt;li&gt;&lt;a class='external' 
+				rel='external nofollow' href='http://www.w3.org/TR/DOM-Level-2-HTML/' title='http://www.w3.org/TR/DOM-Level-2-HTML/' 
+				target='_blank'&gt;DOM Level 2 HTML Specification&lt;/a&gt;-describes interfaces for objects in HTML and XHTML documents 
+				that build on the core specification&lt;/li&gt; &lt;li&gt;&lt;a class='external' rel='external nofollow' 
+				href='http://www.w3.org/TR/DOM-Level-2-Events/' title='http://www.w3.org/TR/DOM-Level-2-Events/' target='_blank'&gt;DOM 
+				Level 2 Events Specification&lt;/a&gt;-describes events shared by most DOM objects, building on the DOM Core and &lt;a 
+				class='external' rel='external nofollow' href='http://www.w3.org/TR/DOM-Level-2-Views/' 
+				title='http://www.w3.org/TR/DOM-Level-2-Views/' target='_blank'&gt;Views&lt;/a&gt; specifications&lt;/li&gt; &lt;li&gt;&lt;a class='external' 
+				title='http://www.w3.org/TR/ElementTraversal/' rel='external nofollow' href='http://www.w3.org/TR/ElementTraversal/' 
+				target='_blank'&gt;Element Traversal Specification&lt;/a&gt;-describes the new attributes that allow traversal of elements 
+				in the DOM&amp;#xA0;tree&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+				
+			</description>
+		</package>
+		
+<package name="cssom.views">
+			
+<shortDescription>
+				
+				This document (CSSOM Views Specification) was produced by the CSS Working Group.
+				
+			</shortDescription>
+			
+<description>
+				
+				This document (CSSOM Views Specification) was produced by the CSS Working Group.&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a class='external' 
+				rel='external nofollow' href='http://www.w3.org/TR/DOM-Level-2-Events/' title='http://www.w3.org/TR/DOM-Level-2-Events/' 
+				target='_blank'&gt;DOM Level 2 Events Specification&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='external' rel='external nofollow' 
+				href='http://www.w3.org/TR/DOM-Level-2-Traversal-Range/' title='http://www.w3.org/TR/DOM-Level-2-Traversal-Range/' 
+				target='_blank'&gt;DOM Level 2 Traversal and Range Specification&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='external' rel='external nofollow' 
+				href='http://www.w3.org/TR/DOM-Level-3-Core' title='http://www.w3.org/TR/DOM-Level-3-Core' target='_blank'&gt;DOM Level 3 
+				Core Specification&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='external' rel='external nofollow' href='http://www.w3.org/html/wg/html5/' 
+				title='http://www.w3.org/html/wg/html5/' target='_blank'&gt;HTML 5&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;
+				
+			</description>
+		</package>
+		
+		
+<package name="dom.events">
+			
+<shortDescription>
+				
+				This section defines the event dispatch and handler mechanisms of the event model 
+				
+			</shortDescription>
+			
+<description>
+				
+				Event handlers may be attached to various elements in the DOM. When an event occurs, an event object is dynamically created, and passed 
+				sequentially to the event listeners that are allowed to handle the event. The DOM Event interface is then accessible within the handler 
+				function, via the event object passed as the first (and the only) argument.
+				&lt;p&gt;Applications may dispatch event objects using the EventTarget.dispatchEvent() method, and implementations must dispatch event objects as 
+				if through this method. The behavior of this method depends on the event flow associated with the underlying object. An event flow 
+				describes how event objects propagate through a data structure. As an example, when an event object is dispatched to an element in an 
+				XML document, the object propagates through parts of the document.&lt;/p&gt;
+				&lt;img src="../../images/eventflow.png" alt="graphical representation of an event dispatched in a DOM tree using the DOM event flow" title="graphical representation of an event dispatched in a DOM tree using the DOM event flow"&gt;
+				
+			</description>
+		</package>
+	</packages>
+</overviews>

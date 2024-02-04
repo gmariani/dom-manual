@@ -1,0 +1,26 @@
+<apiPackage id="gecko.dom.objects"><apiName>gecko.dom.objects</apiName><apiDetail/><apiClassifier id="gecko.dom.objects:Sidebar"><apiName>Sidebar</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata/><asCustoms><internal>http://developer.mozilla.org/en/DOM/window.sidebar
+	 </internal></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><apiOperation id="gecko.dom.objects:Sidebar:addMicrosummaryGenerator"><apiName>addMicrosummaryGenerator</apiName><shortdesc>
+		 Firefox 2+
+		 
+		 Installs a microsummary generator.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>generatorURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>Firefox 2+</b>
+		 
+		 Installs a microsummary generator.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="gecko.dom.objects:Sidebar:addPanel"><apiName>addPanel</apiName><shortdesc>
+		 Note: the third empty parameter is required! 
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>contentURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>customizeURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Note: the third empty parameter is required! 
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="gecko.dom.objects:Sidebar:addPersistentPanel"><apiName>addPersistentPanel</apiName><shortdesc>
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>contentURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>customizeURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="gecko.dom.objects:Sidebar:addSearchEngine"><apiName>addSearchEngine</apiName><shortdesc>
+		 Installs a search engine.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>engineURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>iconURL</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>suggestedTitle</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>suggestedCategory</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Installs a search engine.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation></apiClassifier></apiPackage>

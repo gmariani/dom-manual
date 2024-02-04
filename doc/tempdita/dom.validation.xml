@@ -1,0 +1,383 @@
+<apiPackage id="dom.validation"><apiName>dom.validation</apiName><apiDetail/><apiClassifier id="dom.validation:ExceptionVAL"><apiName>ExceptionVAL</apiName><shortdesc>
+	 Some Validation operations may throw an ExceptionVAL as described in their descriptions.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Some Validation operations may throw an ExceptionVAL as described in their descriptions. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ExceptionVAL"><linktext>W3C - ExceptionVAL</linktext></link></related-links><apiValue id="dom.validation:ExceptionVAL:dom.validation:ExceptionVAL:code:get"><apiName>code</apiName><shortdesc>
+		 The specific exception code.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The specific exception code.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ExceptionVAL"><linktext>W3C - ExceptionVAL</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:CharacterDataEditVAL"><apiName>CharacterDataEditVAL</apiName><shortdesc>
+	 When validating CharacterData nodes, the NodeEditVAL.nodeValidity  operation must find the nearest parent node 
+	 in order to do this; if no parent node is found, VAL_UNKNOWN  is returned.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>dom.validation:NodeEditVAL</apiBaseInterface><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 When validating CharacterData nodes, the NodeEditVAL.nodeValidity  operation must find the nearest parent node 
+	 in order to do this; if no parent node is found, VAL_UNKNOWN  is returned. In addition, when VAL_INCOMPLETE  
+	 is passed in as an argument to the NodeEditVAL.nodeValidity operation to operate on such nodes, the operation 
+	 considers all the text and not just some of it. 
+	 
+	 <p>An object implementing this interface must also implement CharacterData interface.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL"><linktext>W3C - CharacterDataEditVAL</linktext></link></related-links><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:canAppendData"><apiName>canAppendData</apiName><shortdesc>
+		 Determines if character data can be appended.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>arg</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Data to be appended.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if character data can be appended.
+		  
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-canAppendData"><linktext>W3C - CharacterDataEditVAL.canAppendData()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:canDeleteData"><apiName>canDeleteData</apiName><shortdesc>
+		 Determines if character data can be deleted.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INDEX_SIZE_ERR: Raised if the specified offset is negative or greater than the number of 16-bit units in data, or if the specified count is negative. 
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>Offset.
+		 </apiDesc></apiParam><apiParam><apiItemName>count</apiItemName><apiType value="Number"/><apiDesc>Number of 16-bit units to delete.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if character data can be deleted.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-canDeleteData"><linktext>W3C - CharacterDataEditVAL.canDeleteData()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:canInsertData"><apiName>canInsertData</apiName><shortdesc>
+		 Determines if character data can be inserted.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INDEX_SIZE_ERR: Raised if the specified offset is negative or greater than the number of 16-bit units in data. 
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>Offset.
+		 </apiDesc></apiParam><apiParam><apiItemName>arg</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Argument to be set.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if character data can be inserted.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-canInsertData"><linktext>W3C - CharacterDataEditVAL.canInsertData()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:canReplaceData"><apiName>canReplaceData</apiName><shortdesc>
+		 Determines if character data can be replaced.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INDEX_SIZE_ERR: Raised if the specified offset is negative or greater than the number of 16-bit units in data, or if the specified count is negative. 
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>Offset.
+		 </apiDesc></apiParam><apiParam><apiItemName>count</apiItemName><apiType value="Number"/><apiDesc>Replacement.
+		 </apiDesc></apiParam><apiParam><apiItemName>arg</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Argument to be set.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if character data can be replaced.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-canReplaceData"><linktext>W3C - CharacterDataEditVAL.canReplaceData()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:canSetData"><apiName>canSetData</apiName><shortdesc>
+		 Determines if character data can be set.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>arg</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Argument to be set.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if character data can be set.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-canSetData"><linktext>W3C - CharacterDataEditVAL.canSetData()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:CharacterDataEditVAL:dom.validation:CharacterDataEditVAL:isWhitespaceOnly"><apiName>isWhitespaceOnly</apiName><shortdesc>
+		 Determines if character data is only whitespace.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn></apiOperationDef><apiDesc>
+		 Determines if character data is only whitespace. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-CharacterDataEditVAL-isWhitespaceOnly"><linktext>W3C - CharacterDataEditVAL.isWhitespaceOnly()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.validation:ElementEditVAL"><apiName>ElementEditVAL</apiName><shortdesc>
+	 This interface also has attributes that are a NameList of elements or attributes which can appear in the specified context.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>dom.validation:NodeEditVAL</apiBaseInterface><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 This interface also has attributes that are a NameList of elements or attributes which can appear in the specified context. 
+	 Some schema languages, i.e., W3C XML schema, define wildcards which provide for validation of attribute and element information 
+	 items dependent on their namespace names but independent of their local names. 
+	 
+	 <p>To expose wildcards, the NameList returns the values that represent the  namespace constraint: 
+	 <ul>
+	 <li><codeph>{namespaceURI, name}</codeph> is <codeph>{null, ##any}</codeph> if any;</li>
+	 <li><codeph>{namespaceURI, name}</codeph> is <codeph>{namespace_a, ##other}</codeph> if not and a namespace name (namespace_a);</li>
+	 <li><codeph>{namespaceURI, name}</codeph> is <codeph>{null, ##other}</codeph> if not and absent;</li>
+	 <li>Pairs of <codeph>{namespaceURI, name}</codeph> with values <codeph>{a_namespaceURI | null, null}</codeph> if a set whose members are either namespace names or absent.</li>
+	 </ul>
+	 </p>
+	 
+	 <p>An object implementing this interface must also implement the Element interface. </p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL"><linktext>W3C - ElementEditVAL</linktext></link></related-links><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canRemoveAttribute"><apiName>canRemoveAttribute</apiName><shortdesc>
+		 Verifies if an attribute by the given name can be removed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>attrname</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of attribute.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Verifies if an attribute by the given name can be removed.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canRemoveAttribute"><linktext>W3C - ElementEditVAL.canRemoveAttribute()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canRemoveAttributeNS"><apiName>canRemoveAttributeNS</apiName><shortdesc>
+		 Verifies if an attribute by the given local name and namespace can be removed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The namespace URI of the attribute to remove.
+		 </apiDesc></apiParam><apiParam><apiItemName>localName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Local name of the attribute to be removed.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Verifies if an attribute by the given local name and namespace can be removed.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canRemoveAttributeNS"><linktext>W3C - ElementEditVAL.canRemoveAttributeNS()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canRemoveAttributeNode"><apiName>canRemoveAttributeNode</apiName><shortdesc>
+		 Determines if an attribute node can be removed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant.
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>attrNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The Attr node to remove from the attribute list.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if an attribute node can be removed.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canRemoveAttributeNode"><linktext>W3C - ElementEditVAL.canRemoveAttributeNode()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canSetAttribute"><apiName>canSetAttribute</apiName><shortdesc>
+		 Determines if the value for specified attribute can be set.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>attrname</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of attribute.
+		 </apiDesc></apiParam><apiParam><apiItemName>attrval</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Value to be assigned to the attribute.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if the value for specified attribute can be set.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-ElementEditVAL-canSetAttribute"><linktext>W3C - ElementEditVAL.canSetAttribute()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canSetAttributeNS"><apiName>canSetAttributeNS</apiName><shortdesc>
+		 Determines if the attribute with given namespace and qualified name can be created if not already present in the attribute list 
+		 of the element.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>namespaceURI of namespace.
+		 </apiDesc></apiParam><apiParam><apiItemName>qualifiedName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Qualified name of attribute.
+		 </apiDesc></apiParam><apiParam><apiItemName>value</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Value to be assigned to the attribute.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if the attribute with given namespace and qualified name can be created if not already present in the attribute list 
+		 of the element. If the attribute with the same qualified name and namespaceURI is already present in the element's attribute list, 
+		 it tests whether the value of the attribute and its prefix can be set to the new value. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canSetAttributeNS"><linktext>W3C - ElementEditVAL.canSetAttributeNS()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canSetAttributeNode"><apiName>canSetAttributeNode</apiName><shortdesc>
+		 Determines if an attribute node can be added.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>attrNode</apiItemName><apiOperationClassifier>dom.core:Attr</apiOperationClassifier><apiDesc>Node in which the attribute can possibly be set.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if an attribute node can be added. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canSetAttributeNode"><linktext>W3C - ElementEditVAL.canSetAttributeNode()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:canSetTextContent"><apiName>canSetTextContent</apiName><shortdesc>
+		 Determines if the text content of this node and its descendants can be set to the string passed in.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>possibleTextContent</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Possible text content string.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if the text content of this node and its descendants can be set to the string passed in. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-canSetTextContent"><linktext>W3C - ElementEditVAL.canSetTextContent()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:isElementDefined"><apiName>isElementDefined</apiName><shortdesc>
+		 Determines if name is defined in the schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of element.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if name is defined in the schema. This only applies to global declarations. This method is for non-namespace aware schemas. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-isElementDefined"><linktext>W3C - ElementEditVAL.isElementDefined()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:isElementDefinedNS"><apiName>isElementDefinedNS</apiName><shortdesc>
+		 Determines if name in this namespace is defined in the current context.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>namespaceURI of namespace.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of element.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if name in this namespace is defined in the current context. Thus not only does this apply to global declarations, 
+		 but depending on the content, this may also apply to local definitions. This method is for namespace aware schemas. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-isElementDefinedNS"><linktext>W3C - ElementEditVAL.isElementDefinedNS()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedAttributes:get"><apiName>allowedAttributes</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible attribute information items or wildcards  that can appear as attributes 
+		 of this element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible attribute information items or wildcards  that can appear as attributes 
+		 of this element, or null  if this element has no context or schema. Duplicate pairs of {namespaceURI, name} are eliminated. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedAttributes"><linktext>W3C - ElementEditVAL.allowedAttributes</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedChildren:get"><apiName>allowedChildren</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items or wildcards  that can appear as children 
+		 of this element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items or wildcards  that can appear as children 
+		 of this element, or null  if this element has no context or schema. Duplicate pairs of {namespaceURI, name} are eliminated. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedChildren"><linktext>W3C - ElementEditVAL.allowedChildren</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedFirstChildren:get"><apiName>allowedFirstChildren</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items or wildcards  that can appear as a first 
+		 child of this element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items or wildcards  that can appear as a first 
+		 child of this element, or null  if this element has no context or schema. Duplicate pairs of {namespaceURI, name} are eliminated. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedFirstChildren"><linktext>W3C - ElementEditVAL.allowedFirstChildren</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedNextSiblings:get"><apiName>allowedNextSiblings</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all element information items or wildcards  that can be inserted as a next 
+		 sibling of this element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all element information items or wildcards  that can be inserted as a next 
+		 sibling of this element, or null  if this element has no context or schema. Duplicate pairs of {namespaceURI, name} are eliminated. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedNextSiblings"><linktext>W3C - ElementEditVAL.allowedNextSiblings</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedParents:get"><apiName>allowedParents</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items that can appear as a parent this 
+		 element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all possible element information items that can appear as a parent this 
+		 element, or null  if this element has no context or schema. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedParents"><linktext>W3C - ElementEditVAL.allowedParents</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:allowedPreviousSiblings:get"><apiName>allowedPreviousSiblings</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of all element information items or wildcards  that can be inserted as a previous 
+		 sibling of this element, or null  if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of all element information items or wildcards  that can be inserted as a previous 
+		 sibling of this element, or null  if this element has no context or schema. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-allowedNextSiblings"><linktext>W3C - ElementEditVAL.allowedNextSiblings</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:contentType:get"><apiName>contentType</apiName><shortdesc>
+		 The content type of an element as defined above.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content type of an element as defined above.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-ElementEditVAL-contentType"><linktext>W3C - ElementEditVAL.contentType</linktext></link></related-links></apiValue><apiValue id="dom.validation:ElementEditVAL:dom.validation:ElementEditVAL:requiredAttributes:get"><apiName>requiredAttributes</apiName><shortdesc>
+		 A NameList, as described in [DOM Level 3 Core], of required attribute information items that must appear on this element, or null  
+		 if this element has no context or schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:NameList</apiValueClassifier></apiValueDef><apiDesc>
+		 A NameList, as described in [DOM Level 3 Core], of required attribute information items that must appear on this element, or null  
+		 if this element has no context or schema. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ElementEditVAL-requiredAttributes"><linktext>W3C - ElementEditVAL.requiredAttributes</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:ValidationState"><apiName>ValidationState</apiName><shortdesc>
+	 Validation state constants stored in NodeEditVAL.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Validation state constants stored in NodeEditVAL.
+	 
+	 <p><b>Note:</b> Moved to ValidationState specifically for this documentation. Constants are not allowed in an interface.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="dom.validation.xml#NodeEditVAL"><linktext>dom.validation.NodeEditVAL</linktext></link></related-links><apiValue id="dom.validation:ValidationState:VAL_FALSE"><apiName>VAL_FALSE</apiName><shortdesc>
+		 False if the node is invalid with regards to the operation, or if the operation cannot be done.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>6</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 False if the node is invalid with regards to the operation, or if the operation cannot be done. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_FALSE"><linktext>W3C - NodeEditVAL.VAL_FALSE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ValidationState:VAL_TRUE"><apiName>VAL_TRUE</apiName><shortdesc>
+		 True if the node is valid with regards to the operation, or if the operation can be done.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>5</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 True if the node is valid with regards to the operation, or if the operation can be done. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_TRUE"><linktext>W3C - NodeEditVAL.VAL_TRUE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ValidationState:VAL_UNKNOWN"><apiName>VAL_UNKNOWN</apiName><shortdesc>
+		 The validity of the node is unknown.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>7</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The validity of the node is unknown. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_UNKNOWN"><linktext>W3C - NodeEditVAL.VAL_UNKNOWN</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:ValidationType"><apiName>ValidationType</apiName><shortdesc>
+	 Validation type constants stored in NodeEditVAL.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Validation type constants stored in NodeEditVAL.
+	 
+	 <p><b>Note:</b> Moved to ValidationType specifically for this documentation. Constants are not allowed in an interface.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="dom.validation.xml#NodeEditVAL"><linktext>dom.validation.NodeEditVAL</linktext></link></related-links><apiValue id="dom.validation:ValidationType:VAL_INCOMPLETE"><apiName>VAL_INCOMPLETE</apiName><shortdesc>
+		 Check if the node's immediate children are those expected by the content model.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Check if the node's immediate children are those expected by the content model. This node's trailing required 
+		 children could be missing. It includes VAL_NS_WF. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_INCOMPLETE"><linktext>W3C - NodeEditVAL.VAL_INCOMPLETE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ValidationType:VAL_NS_WF"><apiName>VAL_NS_WF</apiName><shortdesc>
+		 Check if the node is namespace well-formed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Check if the node is namespace well-formed. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_NS_WF"><linktext>W3C - NodeEditVAL.VAL_NS_WF</linktext></link></related-links></apiValue><apiValue id="dom.validation:ValidationType:VAL_SCHEMA"><apiName>VAL_SCHEMA</apiName><shortdesc>
+		 Check if the node's entire subtree are those expected by the content model.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Check if the node's entire subtree are those expected by the content model. It includes VAL_NS_WF. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_SCHEMA"><linktext>W3C - NodeEditVAL.VAL_SCHEMA</linktext></link></related-links></apiValue><apiValue id="dom.validation:ValidationType:VAL_WF"><apiName>VAL_WF</apiName><shortdesc>
+		 Check if the node is  well-formed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Check if the node is  well-formed.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-VAL_WF"><linktext>W3C - NodeEditVAL.VAL_WF</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:ContentTypeVAL"><apiName>ContentTypeVAL</apiName><shortdesc>
+	 Content type constants stored in ElementEditVAL.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Content type constants stored in ElementEditVAL.
+	 
+	 <p><b>Note:</b> Moved to ContentTypeVAL specifically for this documentation. Constants are not allowed in an interface.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="dom.validation.xml#ElementEditVAL"><linktext>dom.validation.ElementEditVAL</linktext></link></related-links><apiValue id="dom.validation:ContentTypeVAL:VAL_ANY_CONTENTTYPE"><apiName>VAL_ANY_CONTENTTYPE</apiName><shortdesc>
+		 The content model contains unordered child information item(s), i.e., element, processing instruction, unexpanded entity reference, character, and 
+		 comment information items as defined in the XML Information Set.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content model contains unordered child information item(s), i.e., element, processing instruction, unexpanded entity reference, character, and 
+		 comment information items as defined in the XML Information Set. If the schema is a DTD, this corresponds to the ANY content model. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-VAL_ANY_CONTENTTYPE"><linktext>W3C - ElementEditVAL.VAL_ANY_CONTENTTYPE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ContentTypeVAL:VAL_ELEMENTS_CONTENTTYPE"><apiName>VAL_ELEMENTS_CONTENTTYPE</apiName><shortdesc>
+		 The content model contains a sequence of element information items  optionally separated by whitespace.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content model contains a sequence of element information items  optionally separated by whitespace. If the schema is a DTD, this is the element 
+		 content content model; and if the schema is a W3C XML schema, this is the element-only content type. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-VAL_ELEMENTS_CONTENTTYPE"><linktext>W3C - ElementEditVAL.VAL_ELEMENTS_CONTENTTYPE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ContentTypeVAL:VAL_EMPTY_CONTENTTYPE"><apiName>VAL_EMPTY_CONTENTTYPE</apiName><shortdesc>
+		 The content model does not allow any content.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content model does not allow any content. If the schema is a W3C XML schema, this 
+		 corresponds to the empty content type; and if the schema is a DTD, this corresponds to the EMPTY content model. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-VAL_EMPTY_CONTENTTYPE"><linktext>W3C - ElementEditVAL.VAL_EMPTY_CONTENTTYPE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ContentTypeVAL:VAL_MIXED_CONTENTTYPE"><apiName>VAL_MIXED_CONTENTTYPE</apiName><shortdesc>
+		 The content model contains a sequence of ordered element information items  optionally interspersed with character data.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content model contains a sequence of ordered element information items  optionally interspersed with character data. If the schema is a W3C XML 
+		 schema, this corresponds to the mixed  content type. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-VAL_MIXED_CONTENTTYPE"><linktext>W3C - ElementEditVAL.VAL_MIXED_CONTENTTYPE</linktext></link></related-links></apiValue><apiValue id="dom.validation:ContentTypeVAL:VAL_SIMPLE_CONTENTTYPE"><apiName>VAL_SIMPLE_CONTENTTYPE</apiName><shortdesc>
+		 The content model contains  character information items.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>5</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The content model contains  character information items. If the schema is a W3C XML schema, then the element has a content type of VAL_SIMPLE_CONTENTTYPE  
+		 if the type of the element is a simple type definition, or the type of the element is a complexType whose {content type} is a simple type definition. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-ElementEditVAL-VAL_SIMPLE_CONTENTTYPE"><linktext>W3C - ElementEditVAL.VAL_SIMPLE_CONTENTTYPE</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:DocumentEditVAL"><apiName>DocumentEditVAL</apiName><shortdesc>
+	 An object implementing this interface must also implement the Document interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseInterface>dom.validation:NodeEditVAL</apiBaseInterface><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An object implementing this interface must also implement the Document interface. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-DocumentEditVAL"><linktext>W3C - DocumentEditVAL</linktext></link></related-links><apiOperation id="dom.validation:DocumentEditVAL:dom.validation:DocumentEditVAL:getDefinedElements"><apiName>getDefinedElements</apiName><shortdesc>
+		 Returns list of all element information item names of global declaration, belonging to the specified namespace.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>List of all element information item names belonging to the specified namespace or null if no schema is available. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:NameList</apiOperationClassifier></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>namespaceURI of namespace. For DTDs, this is null.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns list of all element information item names of global declaration, belonging to the specified namespace. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#DocumentEditVAL-getDefinedElements"><linktext>W3C - DocumentEditVAL.getDefinedElements()</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:DocumentEditVAL:dom.validation:DocumentEditVAL:validateDocument"><apiName>validateDocument</apiName><shortdesc>
+		 Validates the document against the schema, e.g., a DTD or an W3C XML schema or another.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn></apiOperationDef><apiDesc>
+		 Validates the document against the schema, e.g., a DTD or an W3C XML schema or another. Any attempt to modify any part 
+		 of the document while validating results in implementation-dependent behavior. In addition, the validation operation itself 
+		 cannot modify the document, e.g., for default attributes. This method makes use of the error handler, as described in the 
+		 DOM Level 3 Core DOMConfiguration interface, with all errors being SEVERITY_ERROR as defined in the DOMError interface. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#DocumentEditVAL-validateDocument"><linktext>W3C - DocumentEditVAL.validateDocument()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiValue id="dom.validation:DocumentEditVAL:dom.validation:DocumentEditVAL:continuousValidityChecking:get"><apiName>continuousValidityChecking</apiName><shortdesc>
+		 An attribute specifying whether the validity of the document is continuously enforced.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if the implementation does not support setting this attribute to true.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>NO_SCHEMA_AVAILABLE_ERR: Raised if this attribute is set to true  and a schema is unavailable. 
+		 
+		 </apiDesc><apiItemName>ExceptionVAL</apiItemName><apiOperationClassifier>dom.validation:ExceptionVAL</apiOperationClassifier></apiException><apiException><apiDesc>VALIDATION_ERR: Raised if an operation makes this document not compliant with the VAL_INCOMPLETE 
+		 validity type or the document is invalid, and this attribute is set to true. 
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiDefaultValue>false
+		 
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 An attribute specifying whether the validity of the document is continuously enforced. When the attribute 
+		 is set to true, the implementation may raise certain exceptions, depending on the situation (see the following).
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#DocumentEditVAL-continuousValidityChecking"><linktext>W3C - DocumentEditVAL.continuousValidityChecking</linktext></link></related-links></apiValue><apiValue id="dom.validation:DocumentEditVAL:dom.validation:DocumentEditVAL:domConfig:get"><apiName>domConfig</apiName><shortdesc>
+		 This allows the setting of the error handler, as described in the [DOM Level 3 Core] DOMConfiguration interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:DOMConfiguration</apiValueClassifier></apiValueDef><apiDesc>
+		 This allows the setting of the error handler, as described in the [DOM Level 3 Core] DOMConfiguration interface. An object implementing 
+		 this DocumentEditVAL interface and the DOM Level 3 Core Document interface, which also has a domConfig attribute, needs to only implement 
+		 this attribute once. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#DocumentEditVAL-domConfig"><linktext>W3C - DocumentEditVAL.domConfig</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:NodeEditVAL"><apiName>NodeEditVAL</apiName><shortdesc>
+	 This interface is similar to the DOM Level 3 Core Node interface, with methods for guided document editing.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 This interface is similar to the DOM Level 3 Core Node interface, with methods for guided document editing. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL"><linktext>W3C - NodeEditVAL</linktext></link></related-links><apiOperation id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:canAppendChild"><apiName>canAppendChild</apiName><shortdesc>
+		 Determines whether the Node.appendChild operation would make this document not compliant with the VAL_INCOMPLETE validity type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>newChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Node to be appended.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines whether the Node.appendChild operation would make this document not compliant with the VAL_INCOMPLETE validity type. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-canAppendChild"><linktext>W3C - NodeEditVAL.canAppendChild()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:canInsertBefore"><apiName>canInsertBefore</apiName><shortdesc>
+		 Determines whether the Node.insertBefore operation would make this document not compliant with the VAL_INCOMPLETE  validity type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>newChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Node to be inserted.
+		 </apiDesc></apiParam><apiParam><apiItemName>refChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Reference Node.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines whether the Node.insertBefore operation would make this document not compliant with the VAL_INCOMPLETE  validity type. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-canInsertBefore"><linktext>W3C - NodeEditVAL.canInsertBefore()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:canRemoveChild"><apiName>canRemoveChild</apiName><shortdesc>
+		 Determines whether the Node.removeChild operation would make this document not compliant with the VAL_INCOMPLETE  validity type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>oldChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Node to be removed.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines whether the Node.removeChild operation would make this document not compliant with the VAL_INCOMPLETE  validity type. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-canRemoveChild"><linktext>W3C - NodeEditVAL.canRemoveChild()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:canReplaceChild"><apiName>canReplaceChild</apiName><shortdesc>
+		 Determines whether the Node.replaceChild operation would make this document not compliant with the VAL_INCOMPLETE validity type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>newChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>New Node.
+		 </apiDesc></apiParam><apiParam><apiItemName>oldChild</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Node to be replaced.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines whether the Node.replaceChild operation would make this document not compliant with the VAL_INCOMPLETE validity type.  
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#VAL-Interfaces-NodeEditVAL-canReplaceChild"><linktext>W3C - NodeEditVAL.canReplaceChild()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiOperation id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:nodeValidity"><apiName>nodeValidity</apiName><shortdesc>
+		 Determines if the node is valid relative to the validation type  specified in valType.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A validation state constant. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>valType</apiItemName><apiType value="Number"/><apiDesc>Flag to indicate the validation type  checking to be done. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Determines if the node is valid relative to the validation type  specified in valType. This operation doesn't normalize 
+		 before checking if it is valid. To do so, one would need to explicitly call a normalize method. The difference between 
+		 this method and the DocumentEditVAL.validateDocument method is that the latter method only checks to determine whether 
+		 the entire document is valid. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#NodeEditVAL-nodeValidity"><linktext>W3C - NodeEditVAL.nodeValidity()</linktext></link><link href="dom.validation.xml#ValidationState"><linktext>dom.validation.ValidationState</linktext></link></related-links></apiOperation><apiValue id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:defaultValue:get"><apiName>defaultValue</apiName><shortdesc>
+		 The default value specified in an attribute or an element declaration or null if unspecified.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The default value specified in an attribute or an element declaration or null if unspecified. If the schema is a 
+		 W3C XML schema, this is the canonical lexical representation of the default value. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#NodeEditVAL-defaultValue"><linktext>W3C - NodeEditVAL.defaultValue</linktext></link></related-links></apiValue><apiValue id="dom.validation:NodeEditVAL:dom.validation:NodeEditVAL:enumeratedValues:get"><apiName>enumeratedValues</apiName><shortdesc>
+		 A DOMStringList, as described in DOM Level 3 Core, of distinct values for an attribute or an element declaration or 
+		 null  if unspecified.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:DOMStringList</apiValueClassifier></apiValueDef><apiDesc>
+		 A DOMStringList, as described in DOM Level 3 Core, of distinct values for an attribute or an element declaration or 
+		 null  if unspecified. If the schema is a W3C XML schema, this is a list of strings which are lexical representations 
+		 corresponding to the values in the [value] property of the enumeration component for the type of the attribute or element. 
+		 It is recommended that the canonical lexical representations of the values be used. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#NodeEditVAL-enumeratedValues"><linktext>W3C - NodeEditVAL.enumeratedValues</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.validation:ExceptionVALCode"><apiName>ExceptionVALCode</apiName><shortdesc>
+	 An integer indicating the type of error generated.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An integer indicating the type of error generated. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ExceptionVAL-codes"><linktext>W3C - ExceptionVALCode</linktext></link></related-links><apiValue id="dom.validation:ExceptionVALCode:NO_SCHEMA_AVAILABLE_ERR"><apiName>NO_SCHEMA_AVAILABLE_ERR</apiName><shortdesc>
+		 This error occurs when the operation cannot complete due to an unavailable schema.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMVAL" version="3"/><apiSince version="DOMVAL 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>71</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 This error occurs when the operation cannot complete due to an unavailable schema. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Val/validation.html#ExceptionVAL-NO_SCHEMA_AVAILABLE_ERR"><linktext>W3C - ExceptionVALCode.NO_SCHEMA_AVAILABLE_ERR</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

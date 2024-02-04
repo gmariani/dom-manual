@@ -1,0 +1,24 @@
+<apiPackage id="dom.views"><apiName>dom.views</apiName><apiDetail/><apiClassifier id="dom.views:DocumentView"><apiName>DocumentView</apiName><shortdesc>
+	 The DocumentView interface is implemented by Document objects in DOM 
+	 implementations supporting DOM Views.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMViews" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The DocumentView interface is implemented by Document objects in DOM 
+	 implementations supporting DOM Views. It provides an attribute to 
+	 retrieve the default view of a document.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView"><linktext>W3C - DocumentView</linktext></link></related-links><apiValue id="dom.views:DocumentView:dom.views:DocumentView:defaultView:get"><apiName>defaultView</apiName><shortdesc>
+		 The default AbstractView for this Document, or null if none available.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMViews" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.views:AbstractView</apiValueClassifier></apiValueDef><apiDesc>
+		 The default AbstractView for this Document, or null if none available.
+		 
+		 <p><b>Note:</b> document.defaultView is generally a reference to the window object 
+		 for the document, however that is not defined in the specification and can't be relied upon 
+		 for all host environments, particularly as not all browsers implement it.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.defaultView"><linktext>MDC - Document.defaultView</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView"><linktext>W3C - DocumentView.defaultView</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.views:AbstractView"><apiName>AbstractView</apiName><shortdesc>
+	 A base interface that all views shall derive from.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMViews" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A base interface that all views shall derive from.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView"><linktext>W3C - DOM 2 Views: AbstractView</linktext></link></related-links><apiValue id="dom.views:AbstractView:dom.views:AbstractView:document:get"><apiName>document</apiName><shortdesc>
+		 The source DocumentView of which this is an AbstractView.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMViews" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.views:DocumentView</apiValueClassifier></apiValueDef><apiDesc>
+		 The source DocumentView of which this is an AbstractView.
+		 
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

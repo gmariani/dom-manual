@@ -1,0 +1,337 @@
+<apiPackage id="dom.loadsave"><apiName>dom.loadsave</apiName><apiDetail/><apiClassifier id="dom.loadsave:LSExceptionCode"><apiName>LSExceptionCode</apiName><shortdesc>
+	 An integer indicating the type of error generated.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An integer indicating the type of error generated. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSException-LSExceptionCode"><linktext>W3C - LSExceptionCode</linktext></link></related-links><apiValue id="dom.loadsave:LSExceptionCode:PARSE_ERR"><apiName>PARSE_ERR</apiName><shortdesc>
+		 If an attempt was made to load a document, or an XML Fragment, using LSParser and the processing has been stopped.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>81</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If an attempt was made to load a document, or an XML Fragment, using LSParser and the processing has been stopped. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#PARSE_ERR"><linktext>W3C - LSExceptionCode.PARSE_ERR</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSExceptionCode:SERIALIZE_ERR"><apiName>SERIALIZE_ERR</apiName><shortdesc>
+		 If an attempt was made to serialize a Node using LSSerializer and the processing has been stopped.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>82</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If an attempt was made to serialize a Node using LSSerializer and the processing has been stopped. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#SERIALIZE_ERR"><linktext>W3C - LSExceptionCode.SERIALIZE_ERR</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSInput"><apiName>LSInput</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput</linktext></link></related-links><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:baseURI:get"><apiName>baseURI</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-baseURI"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-baseURI</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:byteStream:get"><apiName>byteStream</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.loadsave.types:LSInputStream</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-byteStream"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-byteStream</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:certifiedText:get"><apiName>certifiedText</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-certifiedText"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-certifiedText</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:characterStream:get"><apiName>characterStream</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.loadsave.types:LSReader</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-characterStream"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-characterStream</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:encoding:get"><apiName>encoding</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-encoding"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-encoding</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:publicId:get"><apiName>publicId</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-publicId"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-publicId</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:stringData:get"><apiName>stringData</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-stringData"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-stringData</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSInput:dom.loadsave:LSInput:systemId:get"><apiName>systemId</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-systemId"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSInput-systemId</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:DocumentLS"><apiName>DocumentLS</apiName><shortdesc>
+	 The DocumentLS interface provides a mechanism by which the content of a document can be replaced with the 
+	 DOM tree produced when loading a URI, or parsing a string.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The DocumentLS interface provides a mechanism by which the content of a document can be replaced with the 
+	 DOM tree produced when loading a URI, or parsing a string. The expectation is that an instance of the 
+	 DocumentLS interface can be obtained by using binding-specific casting methods on an instance of the 
+	 Document interface.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-Interfaces-DocumentLS"><linktext>W3C - DocumentLS</linktext></link></related-links><apiOperation id="dom.loadsave:DocumentLS:dom.loadsave:DocumentLS:abort"><apiName>abort</apiName><shortdesc>
+		 If the document is currently being loaded as a result of the method load being invoked the loading and parsing is immediately 
+		 aborted.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 If the document is currently being loaded as a result of the method load being invoked the loading and parsing is immediately 
+		 aborted. The possibly partial result of parsing the document is discarded and the document is cleared. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-DocumentLS-abort"><linktext>W3C - DocumentLS.abort()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DocumentLS:dom.loadsave:DocumentLS:load"><apiName>load</apiName><shortdesc>
+		 Replaces the content of the document with the result of parsing the given URI.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>If async is set to true load returns true if the document load was successfully initiated. If an 
+		 error occurred when initiating the document load load returns false. If async is set to false load returns 
+		 true if the document was successfully loaded and parsed. If an error occurred when either loading or parsing 
+		 the URI load returns false.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI reference for the XML file to be loaded. If this is a relative URI, the base URI used by the implementation is implementation dependent.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Replaces the content of the document with the result of parsing the given URI. Invoking this method 
+		 will either block the caller or return to the caller immediately depending on the value of the async 
+		 attribute. Once the document is fully loaded the document will fire a "load" event that the caller can 
+		 register as a listener for. If an error occurs the document will fire an "error" event so that the caller 
+		 knows that the load failed (see ParseErrorEvent). If this method is called on a document that is currently 
+		 loading, the current load is interrupted and the new URI load is initiated. 
+		 
+		 <p><b>Note (Mozilla):</b> As of at least Gecko 1.9, this no longer supports cross-site loading 
+		 of documents (Use XMLHttpRequest instead).</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var xmlDoc = document.implementation.createDocument("", "test", null);
+		 function documentLoaded (e) {
+		 	alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
+		 }
+		 xmlDoc.addEventListener("load", documentLoaded, false);
+		 xmlDoc.load('querydata.xml');</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.load"><linktext>MDC - Document.load()</linktext></link><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-DocumentLS-load"><linktext>W3C - DocumentLS.load()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DocumentLS:dom.loadsave:DocumentLS:loadXML"><apiName>loadXML</apiName><shortdesc>
+		 Replace the content of the document with the result of parsing the input string, this method is always synchronous.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>true if parsing the input string succeeded without errors, otherwise false.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>source</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A string containing an XML document.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Replace the content of the document with the result of parsing the input string, this method is always synchronous. 
+		 This method always parses from a DOMString, which means the data is always UTF16. All other encoding information is ignored. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-DocumentLS-loadXML"><linktext>W3C - DocumentLS.loadXML()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DocumentLS:dom.loadsave:DocumentLS:saveXML"><apiName>saveXML</apiName><shortdesc>
+		 Save the document or the given node to a string (i.e.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>WRONG_DOCUMENT_ERR: Raised if the node passed in as the node parameter is from an other document.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The serialized document or null.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>snode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Specifies what to serialize, if this parameter is null the whole document is serialized, if it's non-null the given node is serialized.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Save the document or the given node to a string (i.e. serialize the document or node). 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-DocumentLS-saveXML"><linktext>W3C - DocumentLS.saveXML()</linktext></link></related-links></apiOperation><apiValue id="dom.loadsave:DocumentLS:dom.loadsave:DocumentLS:async:get"><apiName>async</apiName><shortdesc>
+		 Indicates whether the method load should be synchronous or asynchronous.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if the implementation doesn't support the mode the attribute is being set to.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiDefaultValue>false
+		 
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 Indicates whether the method load should be synchronous or asynchronous. When the async attribute is set 
+		 to true the load method returns control to the caller before the document has completed loading.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 function loadXMLData(e) {
+		 	alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
+		 }
+		 
+		 var xmlDoc = document.implementation.createDocument("", "test", null);
+		 xmlDoc.async = false;
+		 xmlDoc.onload = loadXMLData;
+		 xmlDoc.load('querydata.xml');</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.async"><linktext>MDC - Document.async</linktext></link><link href="http://www.w3.org/TR/2002/WD-DOM-Level-3-ASLS-20020409/load-save.html#LS-DocumentLS-async"><linktext>W3C - DocumentLS.async</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSLoadEvent"><apiName>LSLoadEvent</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom.events:Event</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent</linktext></link></related-links><apiValue id="dom.loadsave:LSLoadEvent:input:get"><apiName>input</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.loadsave:LSInput</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent-input"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent-input</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSLoadEvent:newDocument:get"><apiName>newDocument</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Document</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent-document"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSLoadEvent-document</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSSerializer"><apiName>LSSerializer</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer</linktext></link></related-links><apiOperation id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:write"><apiName>write</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>nodeArg</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>destination</apiItemName><apiOperationClassifier>dom.loadsave:LSOutput</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-write"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-write</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:writeToString"><apiName>writeToString</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>nodeArg</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-writeToString"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-writeToString</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:writeToURI"><apiName>writeToURI</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>nodeArg</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-writeToURI"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-writeToURI</linktext></link></related-links></apiOperation><apiValue id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:domConfig:get"><apiName>domConfig</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:DOMConfiguration</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-config"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-config</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:filter:get"><apiName>filter</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.loadsave:LSSerializerFilter</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-LSSerializerFilter"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-LSSerializerFilter</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSSerializer:dom.loadsave:LSSerializer:newLine:get"><apiName>newLine</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-newLine"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializer-newLine</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSOutput"><apiName>LSOutput</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput</linktext></link></related-links><apiValue id="dom.loadsave:LSOutput:dom.loadsave:LSOutput:byteStream:get"><apiName>byteStream</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.loadsave.types:LSInputStream</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-byteStream"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-byteStream</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSOutput:dom.loadsave:LSOutput:characterStream:get"><apiName>characterStream</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.loadsave.types:LSReader</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-characterStream"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-characterStream</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSOutput:dom.loadsave:LSOutput:encoding:get"><apiName>encoding</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-encoding"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-encoding</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSOutput:dom.loadsave:LSOutput:systemId:get"><apiName>systemId</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-systemId"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSOutput-systemId</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:DOMImplementationLS"><apiName>DOMImplementationLS</apiName><shortdesc>
+	 DOMImplementationLS contains the factory methods for creating Load and Save objects.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 DOMImplementationLS contains the factory methods for creating Load and Save objects. 
+	 
+	 The expectation is that an instance of the DOMImplementationLS interface can be obtained by using 
+	 binding-specific casting methods on an instance of the DOMImplementation interface or, if the Document 
+	 supports the feature "Core"  version "3.0" defined in DOM Level 3 Core, by using the method 
+	 DOMImplementation.getFeature with parameter values "LS" (or "LS-Async") and "3.0" (respectively). 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementation"><linktext>W3C - DOMImplementationLS</linktext></link></related-links><apiOperation id="dom.loadsave:DOMImplementationLS:dom.loadsave:DOMImplementationLS:createLSInput"><apiName>createLSInput</apiName><shortdesc>
+		 Create a new empty input source object where LSInput.characterStream, LSInput.byteStream, LSInput.stringData  
+		 LSInput.systemId, LSInput.publicId, LSInput.baseURI, and LSInput.encoding are null, and LSInput.certifiedText is false.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The newly created input object. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.loadsave:LSInput</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Create a new empty input source object where LSInput.characterStream, LSInput.byteStream, LSInput.stringData  
+		 LSInput.systemId, LSInput.publicId, LSInput.baseURI, and LSInput.encoding are null, and LSInput.certifiedText is false. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-createLSInput"><linktext>W3C - DOMImplementationLS.createLSInput()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DOMImplementationLS:dom.loadsave:DOMImplementationLS:createLSOutput"><apiName>createLSOutput</apiName><shortdesc>
+		 Create a new empty output destination object where LSOutput.characterStream, LSOutput.byteStream, LSOutput.systemId, 
+		 LSOutput.encoding are null.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The newly created output object. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.loadsave:LSOutput</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Create a new empty output destination object where LSOutput.characterStream, LSOutput.byteStream, LSOutput.systemId, 
+		 LSOutput.encoding are null. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-createLSOutput"><linktext>W3C - DOMImplementationLS.createLSOutput()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DOMImplementationLS:dom.loadsave:DOMImplementationLS:createLSParser"><apiName>createLSParser</apiName><shortdesc>
+		 Create a new LSParser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NOT_SUPPORTED_ERR: Raised if the requested mode or schema type is not supported. 
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The newly created LSParser object. This LSParser is either synchronous or asynchronous depending on the value of the mode argument. 
+		 
+		 <p><b>Note:</b> By default, the newly created LSParser does not contain a DOMErrorHandler, 
+		 i.e. the value of the "error-handler" configuration parameter is null. However, implementations may provide 
+		 a default error handler at creation time. In that case, the initial value of the "error-handler" configuration 
+		 parameter on the new LSParser object contains a reference to the default error handler. </p>
+		 
+		 </apiDesc><apiOperationClassifier>dom.loadsave:LSParser</apiOperationClassifier></apiReturn><apiParam><apiItemName>mode</apiItemName><apiType value="Number"/><apiDesc>The mode argument is either MODE_SYNCHRONOUS or MODE_ASYNCHRONOUS, if mode is 
+		 MODE_SYNCHRONOUS then the LSParser that is created will operate in synchronous mode, if it's 
+		 MODE_ASYNCHRONOUS then the LSParser that is created will operate in asynchronous mode. 
+		 </apiDesc></apiParam><apiParam><apiItemName>schemaType</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>An absolute URI representing the type of the schema language used during 
+		 the load of a Document using the newly created LSParser. Note that no lexical checking is done 
+		 on the absolute URI. In order to create a LSParser for any kind of schema types (i.e. the LSParser 
+		 will be free to use any schema found), use the value null. 
+		 
+		 <p><b>Note:</b> For W3C XML Schema [XML Schema Part 1], applications must use the value 
+		 "http://www.w3.org/2001/XMLSchema". For XML DTD [XML 1.0], applications must use the value 
+		 "http://www.w3.org/TR/REC-xml". Other Schema languages are outside the scope of the W3C and therefore 
+		 should recommend an absolute URI in order to use this method. </p>
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Create a new LSParser. The newly constructed parser may then be configured by means of its 
+		 DOMConfiguration object, and used to parse documents by means of its parse method. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-createLSParser"><linktext>W3C - DOMImplementationLS.createLSParser()</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:DOMImplementationLS:dom.loadsave:DOMImplementationLS:createLSSerializer"><apiName>createLSSerializer</apiName><shortdesc>
+		 Create a new LSSerializer object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The newly created LSSerializer object.
+		 
+		 <p><b>Note:</b> By default, the newly created LSSerializer  has no DOMErrorHandler, i.e. the value of the 
+		 "error-handler" configuration parameter is null. However, implementations may provide a default error handler at creation time. 
+		 In that case, the initial value of the "error-handler"  configuration parameter on the new LSSerializer object contains a 
+		 reference to the default error handler. </p>
+		 
+		 </apiDesc><apiOperationClassifier>dom.loadsave:LSSerializer</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Create a new LSSerializer object. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-createLSSerializer"><linktext>W3C - DOMImplementationLS.createLSSerializer()</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.loadsave:LSParser"><apiName>LSParser</apiName><shortdesc>
+	 An interface to an object that is able to build, or augment, a DOM tree from various input sources.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An interface to an object that is able to build, or augment, a DOM tree from various input sources. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser"><linktext>W3C - LSParser</linktext></link></related-links><apiOperation id="dom.loadsave:LSParser:abort"><apiName>abort</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-abort"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-abort</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSParser:parse"><apiName>parse</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Document</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parse"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parse</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSParser:parseURI"><apiName>parseURI</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Document</apiOperationClassifier></apiReturn><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parseURI"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parseURI</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSParser:parseWithContext"><apiName>parseWithContext</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn><apiParam><apiItemName>input</apiItemName><apiOperationClassifier>dom.loadsave.types:LSInputStream</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>contextArg</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>action</apiItemName><apiType value="Number"/><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parseWithContext"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-parseWithContext</linktext></link></related-links></apiOperation><apiValue id="dom.loadsave:LSParser:ACTION_APPEND_AS_CHILDREN"><apiName>ACTION_APPEND_AS_CHILDREN</apiName><shortdesc>
+		 Append the result of the parse operation as children of the context node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Append the result of the parse operation as children of the context node. For this action to work, 
+		 the context node must be an Element or a DocumentFragment. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_APPEND_AS_CHILDREN"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_APPEND_AS_CHILDREN</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:ACTION_INSERT_AFTER"><apiName>ACTION_INSERT_AFTER</apiName><shortdesc>
+		 Insert the result of the parse operation as the immediately following sibling of the context node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Insert the result of the parse operation as the immediately following sibling of the context node. 
+		 For this action to work the context node's parent must be an Element or a DocumentFragment. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_INSERT_AFTER"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_INSERT_AFTER</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:ACTION_INSERT_BEFORE"><apiName>ACTION_INSERT_BEFORE</apiName><shortdesc>
+		 Insert the result of the parse operation as the immediately preceding sibling of the context node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Insert the result of the parse operation as the immediately preceding sibling of the context node. 
+		 For this action to work the context node's parent must be an Element or a DocumentFragment.  
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_INSERT_BEFORE"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_INSERT_BEFORE</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:ACTION_REPLACE"><apiName>ACTION_REPLACE</apiName><shortdesc>
+		 Replace the context node with the result of the parse operation.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>5</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Replace the context node with the result of the parse operation. For this action to work, the 
+		 context node must have a parent, and the parent must be an Element or a DocumentFragment.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_REPLACE"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_REPLACE</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:ACTION_REPLACE_CHILDREN"><apiName>ACTION_REPLACE_CHILDREN</apiName><shortdesc>
+		 Replace all the children of the context node with the result of the parse operation.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Replace all the children of the context node with the result of the parse operation. For this 
+		 action to work, the context node must be an Element, a Document, or a DocumentFragment. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_REPLACE_CHILDREN"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-ACTION_REPLACE_CHILDREN</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:async:get"><apiName>async</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-async"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-async</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:busy:get"><apiName>busy</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-busy"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-busy</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:domConfig:get"><apiName>domConfig</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:DOMConfiguration</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-config"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-config</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParser:filter:get"><apiName>filter</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.loadsave:LSParserFilter</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-filter"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParser-filter</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:DOMImplementationLSMode"><apiName>DOMImplementationLSMode</apiName><shortdesc>
+	 Integer parser mode constants.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Integer parser mode constants.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementation"><linktext>W3C - DOMImplementationLS</linktext></link></related-links><apiValue id="dom.loadsave:DOMImplementationLSMode:MODE_ASYNCHRONOUS"><apiName>MODE_ASYNCHRONOUS</apiName><shortdesc>
+		 Create an asynchronous LSParser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Create an asynchronous LSParser.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-MODE_ASYNCH"><linktext>W3C - DOMImplementationLSMode.MODE_ASYNCHRONOUS</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:DOMImplementationLSMode:MODE_SYNCHRONOUS"><apiName>MODE_SYNCHRONOUS</apiName><shortdesc>
+		 Create a synchronous LSParser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Create a synchronous LSParser.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DOMImplementationLS-MODE_SYNC"><linktext>W3C - DOMImplementationLSMode.MODE_SYNCHRONOUS</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSSerializerFilter"><apiName>LSSerializerFilter</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom.tr.traversal:NodeFilter</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializerFilter"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializerFilter</linktext></link></related-links><apiValue id="dom.loadsave:LSSerializerFilter:whatToShow:get"><apiName>whatToShow</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializerFilter-whatToShow"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSSerializerFilter-whatToShow</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSResourceResolver"><apiName>LSResourceResolver</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSResourceResolver"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSResourceResolver</linktext></link></related-links><apiOperation id="dom.loadsave:LSResourceResolver:dom.loadsave:LSResourceResolver:resolveResource"><apiName>resolveResource</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.loadsave:LSInput</apiOperationClassifier></apiReturn><apiParam><apiItemName>type</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>publicId</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>systemId</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>baseURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSResourceResolver-resolveResource"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSResourceResolver-resolveResource</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.loadsave:LSParserFilter"><apiName>LSParserFilter</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter</linktext></link></related-links><apiOperation id="dom.loadsave:LSParserFilter:acceptNode"><apiName>acceptNode</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>nodeArg</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-acceptNode"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-acceptNode</linktext></link></related-links></apiOperation><apiOperation id="dom.loadsave:LSParserFilter:startElement"><apiName>startElement</apiName><shortdesc>
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>elementArg</apiItemName><apiOperationClassifier>dom.core:Element</apiOperationClassifier><apiDesc>	 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-startElement"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-startElement</linktext></link></related-links></apiOperation><apiValue id="dom.loadsave:LSParserFilter:FILTER_ACCEPT"><apiName>FILTER_ACCEPT</apiName><shortdesc>
+		 Accept the node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Accept the node.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_ACCEPT"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_ACCEPT</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParserFilter:FILTER_INTERRUPT"><apiName>FILTER_INTERRUPT</apiName><shortdesc>
+		 Interrupt the normal processing of the document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Interrupt the normal processing of the document. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_INTERRUPT"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_INTERRUPT</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParserFilter:FILTER_REJECT"><apiName>FILTER_REJECT</apiName><shortdesc>
+		 Reject the node and its children.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Reject the node and its children.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_REJECT"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_REJECT</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParserFilter:FILTER_SKIP"><apiName>FILTER_SKIP</apiName><shortdesc>
+		 Skip this single node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Skip this single node. The children of this node will still be considered. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_SKIP"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-FILTER_SKIP</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSParserFilter:whatToShow:get"><apiName>whatToShow</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-whatToShow"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSParserFilter-whatToShow</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.loadsave:LSProgressEvent"><apiName>LSProgressEvent</apiName><shortdesc>
+	 This interface represents a progress event object that notifies the application about progress as a document is parsed.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom.events:Event</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 This interface represents a progress event object that notifies the application about progress as a document is parsed.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent</linktext></link></related-links><apiValue id="dom.loadsave:LSProgressEvent:input:get"><apiName>input</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.loadsave:LSInput</apiValueClassifier></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-input"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-input</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSProgressEvent:position:get"><apiName>position</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-position"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-position</linktext></link></related-links></apiValue><apiValue id="dom.loadsave:LSProgressEvent:totalSize:get"><apiName>totalSize</apiName><shortdesc>
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMLS" version="3"/><apiSince version="DOMLS 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-totalSize"><linktext>http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-LSProgressEvent-totalSize</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

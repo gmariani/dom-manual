@@ -1,0 +1,266 @@
+<apiPackage id="dom.style.stylesheets"><apiName>dom.style.stylesheets</apiName><apiDetail/><apiClassifier id="dom.style.stylesheets:DocumentStyle"><apiName>DocumentStyle</apiName><shortdesc>
+	 The DocumentStyle interface provides a mechanism by which the style sheets embedded in a document 
+	 can be retrieved.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The DocumentStyle interface provides a mechanism by which the style sheets embedded in a document 
+	 can be retrieved. The expectation is that an instance of the DocumentStyle interface can be obtained 
+	 by using binding-specific casting methods on an instance of the Document interface.
+	 
+	 <p><b>Note:</b> CSSOM is in its very early stages. The intention is that this specification will in due course supersede DOM Level 2 Style. </p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet-DocumentStyle"><linktext>W3C - DOM Level 2 Style: DocumentStyle</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle"><linktext>W3C - CSSOM: DocumentStyle</linktext></link></related-links><apiOperation id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:enableStylesheetsForSet"><apiName>enableStylesheetsForSet</apiName><shortdesc>
+		 Invoking this method must change the disabled attribute on each StyleSheet object with a title in the 
+		 styleSheets attribute, so that all those whose title matches the name argument are enabled, and all others 
+		 are disabled.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOM" version="0"/><apiSince version="CSSOM 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>	 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Invoking this method must change the disabled attribute on each StyleSheet object with a title in the 
+		 styleSheets attribute, so that all those whose title matches the name argument are enabled, and all others 
+		 are disabled. Title matches must be case-sensitive.
+		 
+		 <p>Invoking this method with the empty string value must disable all alternative and preferred style sheets
+		 (but does not change the state of persistent style sheets).</p>
+		 
+		 <p>Invoking this method with the null value must have no effect.</p>
+		 
+		 <p>Style sheets that do not have a title are never affected by this method. This method does not change the 
+		 values of the lastStyleSheetSet or preferredStyleSheetSet  attributes.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/document.enableStyleSheetsForSet"><linktext>MDC - Document.enableStylesheetsForSet()</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-enablestylesheetsforset"><linktext>W3C - DocumentStyle.enableStylesheetsForSet()</linktext></link></related-links></apiOperation><apiValue id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:lastStyleSheetSet:get"><apiName>lastStyleSheetSet</apiName><shortdesc>
+		 This attribute must initially have the value null.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOM" version="0"/><apiSince version="CSSOM 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute must initially have the value null. Its value changes when the selectedStyleSheetSet  attribute is set.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/document.lastStyleSheetSet"><linktext>MDC - Document.lastStyleSheetSet</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-lastStyleSheetSet"><linktext>W3C - DocumentStyle.lastStyleSheetSet</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:preferredStyleSheetSet:get"><apiName>preferredStyleSheetSet</apiName><shortdesc>
+		 This attribute must be the preferred style sheet set as set by the author.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOM" version="0"/><apiSince version="CSSOM 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute must be the preferred style sheet set as set by the author. It is determined from the order 
+		 of style sheet declarations and the Default-Style HTTP headers. If there is no preferred style sheet set, 
+		 this attribute must  be the empty string. The case of this attribute must  exactly match the case given by 
+		 the author where the preferred style sheet is specified or implied. This attribute must  never be null.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/document.preferredStyleSheetSet"><linktext>MDC - Document.preferredStyleSheetSet</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-preferredStyleSheetSet"><linktext>W3C - DocumentStyle.preferredStyleSheetSet</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:selectedStyleSheetSet:get"><apiName>selectedStyleSheetSet</apiName><shortdesc>
+		 This attribute indicates which style sheet set is in use.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOM" version="0"/><apiSince version="CSSOM 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute indicates which style sheet set is in use. This attribute is live; changing the disabled attribute 
+		 on style sheets directly will change the value of this attribute.
+		 
+		 <p>If all the sheets that are enabled and have a title have the same title (by case-sensitive  comparisons) 
+		 then the value of this attribute must be exactly equal to the title of the first enabled style sheet with a 
+		 title in the styleSheets  list. Otherwise, if style sheets from different sets are enabled, then the return 
+		 value must be null (there is no way to determine what the currently selected style sheet set is in those 
+		 conditions). Otherwise, either all style sheets that have a title are disabled, or there are no alternative 
+		 style sheets, and selectedStyleSheetSet  must return the empty string.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/document.selectedStyleSheetSet"><linktext>MDC - Document.selectedStyleSheetSet</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-selectedStyleSheetSet"><linktext>W3C - DocumentStyle.selectedStyleSheetSet</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:styleSheetSets:get"><apiName>styleSheetSets</apiName><shortdesc>
+		 This must be a live list of the currently available style sheet sets.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOM" version="0"/><apiSince version="CSSOM 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:DOMStringList</apiValueClassifier></apiValueDef><apiDesc>
+		 This must be a live list of the currently available style sheet sets. This list is constructed by enumerating 
+		 all the style sheets for this document available to the implementation, in the order they are listed in the 
+		 styleSheets  attribute, adding the title of each style sheet with a title to the list, avoiding duplicates by 
+		 dropping titles that match (case-sensitively) titles that have already been added to the list.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/En/DOM/document.styleSheetSets"><linktext>MDC - Document.styleSheetSets</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-styleSheetSets"><linktext>W3C - DocumentStyle.styleSheetSets</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:DocumentStyle:dom.style.stylesheets:DocumentStyle:styleSheets:get"><apiName>styleSheets</apiName><shortdesc>
+		 A list containing all the style sheets explicitly linked into or embedded in a document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.style.stylesheets:StyleSheetList</apiValueClassifier></apiValueDef><apiDesc>
+		 A list containing all the style sheets explicitly linked into or embedded in a document. For HTML 
+		 documents, this includes external style sheets, included via the HTML LINK element, and inline 
+		 STYLE elements. In XML, this includes external style sheets, included via style sheet 
+		 processing instructions.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms531200%28VS.85%29.aspx"><linktext>MSDN: styleSheets Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/document.styleSheets"><linktext>MDC - Document.styleSheets</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet-DocumentStyle"><linktext>W3C - DOM Level 2 Style: DocumentStyle..styleSheets</linktext></link><link href="http://dev.w3.org/csswg/cssom/#documentstyle-stylesheets"><linktext>W3C - CSSOM: DocumentStyle.styleSheets</linktext></link><link href="http://www.quirksmode.org/dom/w3c_css.html#access"><linktext>Quirksmode: Accessing style sheets</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.style.stylesheets:MediaList"><apiName>MediaList</apiName><shortdesc>
+	 The MediaList interface provides the abstraction of an ordered collection of media, without 
+	 defining or constraining how this collection is implemented.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The MediaList interface provides the abstraction of an ordered collection of media, without 
+	 defining or constraining how this collection is implemented. An empty list is the same as 
+	 a list that contains the medium "all".
+	 
+	 The items in the MediaList are accessible via an integral index, starting from 0.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList"><linktext>W3C - DOM Level 2 Style: MediaList</linktext></link></related-links><apiOperation id="dom.style.stylesheets:MediaList:appendMedium"><apiName>appendMedium</apiName><shortdesc>
+		 Adds the medium newMedium to the end of the list.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_CHARACTER_ERR: If the medium contains characters that are 
+		 invalid in the underlying style language.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>newMedium</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The new medium to add.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adds the medium newMedium to the end of the list. If the newMedium is already used, it is first removed. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList"><linktext>W3C - DOM Level 2 Style: appendMedium Method</linktext></link></related-links></apiOperation><apiOperation id="dom.style.stylesheets:MediaList:deleteMedium"><apiName>deleteMedium</apiName><shortdesc>
+		 Deletes the medium indicated by oldMedium from the list.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>NOT_FOUND_ERR: Raised if oldMedium is not in the list.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>oldMedium</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The medium to delete in the media list.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Deletes the medium indicated by oldMedium from the list. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList"><linktext>W3C - DOM Level 2 Style: deleteMedium Method</linktext></link></related-links></apiOperation><apiValue id="dom.style.stylesheets:MediaList:length:get"><apiName>length</apiName><shortdesc>
+		 The number of media in the list.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The number of media in the list. The range of valid media is 0 to length-1 inclusive.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList"><linktext>W3C - DOM Level 2 Style: length Property</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:MediaList:mediaText:get"><apiName>mediaText</apiName><shortdesc>
+		 The parsable textual representation of the media list.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier><apiException><apiDesc>SYNTAX_ERR: Raised if the specified string value has a syntax error and is unparsable.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The parsable textual representation of the media list. This is a comma-separated list of media.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList"><linktext>W3C - DOM Level 2 Style: mediaText Property</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.style.stylesheets:LinkStyle"><apiName>LinkStyle</apiName><shortdesc>
+	 The LinkStyle interface provides a mechanism by which a style sheet can be retrieved from the node responsible 
+	 for linking it into a document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The LinkStyle interface provides a mechanism by which a style sheet can be retrieved from the node responsible 
+	 for linking it into a document. An instance of the LinkStyle interface can be obtained using binding-specific 
+	 casting methods on an instance of a linking node.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-LinkStyle"><linktext>W3C - DOM Level 2 Style: LinkStyle</linktext></link></related-links><apiValue id="dom.style.stylesheets:LinkStyle:sheet:get"><apiName>sheet</apiName><shortdesc>
+		 The style sheet.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.style.stylesheets:StyleSheet</apiValueClassifier></apiValueDef><apiDesc>
+		 The style sheet.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-LinkStyle"><linktext>W3C - DOM Level 2 Style: sheet Property</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.style.stylesheets:StyleSheet"><apiName>StyleSheet</apiName><shortdesc>
+	 The StyleSheet interface is the abstract base interface for any type of style sheet.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The StyleSheet interface is the abstract base interface for any type of style sheet. It represents 
+	 a single style sheet associated with a structured document. In HTML, the StyleSheet interface 
+	 represents either an external style sheet, included via the HTML LINK element, or an inline STYLE 
+	 element. In XML, this interface represents an external style sheet, included via a style sheet 
+	 processing instruction.
+	 
+	 <p>All browser compatibility information was obtained via Quirksmode.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535871%28VS.85%29.aspx"><linktext>MSDN: StyleSheet</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet"><linktext>MDC - stylesheet</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link></related-links><apiValue id="dom.style.stylesheets:StyleSheet:disabled:get"><apiName>disabled</apiName><shortdesc>
+		 This property indicates whether the current stylesheet is applied or not.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 This property indicates whether the current stylesheet is applied or not.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // if the stylesheet is disabled... 
+		 if (stylesheet.disabled) {
+		 	// apply style in-line 
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533732%28VS.85%29.aspx"><linktext>MSDN: disabled Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.disabled"><linktext>MDC - stylesheet: disabled Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link><link href="http://www.quirksmode.org/dom/w3c_css.html#access"><linktext>Quirksmode: Accessing style sheets</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:href:get"><apiName>href</apiName><shortdesc>
+		 If the style sheet is a linked style sheet, the value of its attribute is its location.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 If the style sheet is a linked style sheet, the value of its attribute is its location. For inline 
+		 style sheets, the value of this attribute is null.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // on a local machine: 
+		 &lt;html&gt; 
+		 	&lt;head&gt; 
+		 		&lt;link rel="StyleSheet" href="example.css" type="text/css" /&gt; 
+		 		&lt;script&gt; 
+		 			function sref() { 
+		 				alert(document.styleSheets[0].href); 
+		 			}
+		 		&lt;/script&gt; 
+		 	&lt;/head&gt; 
+		 	&lt;body&gt; 
+		 		&lt;div class="thunder"&gt;Thunder&lt;/div&gt;
+		 
+		 		&lt;button onclick="sref()"&gt;ss&lt;/button&gt;
+		 	&lt;/body&gt; 
+		 &lt;/html&gt;
+		 // returns "file:////C:/Windows/Desktop/example.css</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533860%28VS.85%29.aspx"><linktext>MSDN: href Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.href"><linktext>MDC - stylesheet: href Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link><link href="http://www.quirksmode.org/dom/w3c_css.html#access"><linktext>Quirksmode: Accessing style sheets</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:media:get"><apiName>media</apiName><shortdesc>
+		 Specifies the intended destination medium for style information.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier><apiDefaultValue>"screen" for Firefox and "all" for Internet Explorer
+		 
+		 </apiDefaultValue></apiValueDef><apiDesc>
+		 Specifies the intended destination medium for style information. 
+		 
+		 <b>DOM 1 Spec</b>
+		 <p>A string describing a single medium or a comma-separated list.</p>
+		 
+		 <b>DOM Level 2 Style Spec</b>
+		 <p>The intended destination media for style information. The media is often specified in the ownerNode. 
+		 If no media has been specified, the MediaList will be empty.</p>
+		 
+		 <p><b>Note:</b> According to DOM Level 2 Style specification, the Media property is supposed to be Read-Only and return an 
+		 instance of the MediaList object. Most browsers handle this property as it was specified in DOM Level 1.</p>
+		 
+		 <p><b>Note:</b> Acceptable values are as listed:</p>
+		 <ul>
+		 	<li>screen - Intended for non-paged computer screens.</li>
+		 	<li>tty - Intended for media using a fixed-pitch character grid, such as teletypes, terminals, or portable devices with limited display capabilities.</li>
+		 	<li>tv - Intended for television-type devices (low resolution, color, limited scrollability).</li>
+		 	<li>projection - Intended for projectors.</li>
+		 	<li>handheld - Intended for handheld devices (small screen, monochrome, bitmapped graphics, limited bandwilih).</li>
+		 	<li>print - Intended for paged, opaque material and for documents viewed on screen in print preview mode.</li>
+		 	<li>braille - Intended for braille tactile feedback devices.</li>
+		 	<li>aural - Intended for speech synthesizers.</li>
+		 	<li>all - Suitable for all devices. </li>
+		 </ul>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534161%28VS.85%29.aspx"><linktext>MSDN: media Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.media"><linktext>MDC - stylesheet: media Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link><link href="http://www.w3.org/TR/1998/REC-html40-19980424/types.html#type-media-descriptors"><linktext>W3C - Media descriptors</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:ownerNode:get"><apiName>ownerNode</apiName><shortdesc>
+		 The node that associates this style sheet with the document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 The node that associates this style sheet with the document. For HTML, this may be the corresponding 
+		 LINK or STYLE element. For XML, it may be the linking processing instruction. For style sheets that 
+		 are included by other style sheets, the value of this attribute is null.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html&gt;
+		 	&lt;head&gt;
+		 		&lt;link rel="StyleSheet" href="example.css" type="text/css" /&gt;
+		 		&lt;script&gt;
+		 			function stilo() {
+		 				alert(document.styleSheets[0].ownerNode);
+		 			}
+		 		&lt;/script&gt; 
+		 	&lt;/head&gt;
+		 
+		 	&lt;body&gt; 
+		 		&lt;div class="thunder"&gt;Thunder&lt;/div&gt;
+		 
+		 		&lt;button onclick="sref()"&gt;ss&lt;/button&gt;
+		 	&lt;/body&gt; 
+		 	// displays "object HTMLLinkElement"
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/stylesheet.ownerNode"><linktext>MDC - stylesheet: ownerNode Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link><link href="http://www.quirksmode.org/dom/w3c_css.html#access"><linktext>Quirksmode: Accessing style sheets</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:parentStyleSheet:get"><apiName>parentStyleSheet</apiName><shortdesc>
+		 For style sheet languages that support the concept of style sheet inclusion, this attribute represents 
+		 the including style sheet, if one exists.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0b"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.style.stylesheets:StyleSheet</apiValueClassifier></apiValueDef><apiDesc>
+		 For style sheet languages that support the concept of style sheet inclusion, this attribute represents 
+		 the including style sheet, if one exists. If the style sheet is a top-level style sheet, or the style 
+		 sheet language does not support inclusion, the value of this attribute is null.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // find the top level stylesheet
+		 if (stylesheet.parentStyleSheet) {
+		 	sheet = stylesheet.parentStyleSheet;
+		 } else {
+		 	sheet = stylesheet;
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534329%28VS.85%29.aspx"><linktext>MSDN: parentStyleSheet Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.parentStyleSheet"><linktext>MDC - stylesheet: parentStyleSheet Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link><link href="http://www.quirksmode.org/dom/w3c_css.html#access"><linktext>Quirksmode: Accessing style sheets</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:title:get"><apiName>title</apiName><shortdesc>
+		 The advisory title.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The advisory title.
+		 
+		 <p><b>Note:</b> The title is often specified in the ownerNode.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534682%28VS.85%29.aspx"><linktext>MSDN: title Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.title"><linktext>MDC - stylesheet: title Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link></related-links></apiValue><apiValue id="dom.style.stylesheets:StyleSheet:type:get"><apiName>type</apiName><shortdesc>
+		 This specifies the style sheet language for this style sheet.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This specifies the style sheet language for this style sheet. The style sheet language is 
+		 specified as a content type. The content type is often specified in the ownerNode.
+		 
+		 </apiDesc><example>
+		 <codeblock>ss.type = "text/css";</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534699%28VS.85%29.aspx"><linktext>MSDN: type Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/stylesheet.type"><linktext>MDC - stylesheet: type Property</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet"><linktext>W3C - DOM Level 2 Style: StyleSheet</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.style.stylesheets:StyleSheetList"><apiName>StyleSheetList</apiName><shortdesc>
+	 The StyleSheetList interface provides the abstraction of an ordered collection of style sheets.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The StyleSheetList interface provides the abstraction of an ordered collection of style sheets.
+	 
+	 <p>The items in the StyleSheetList are accessible via an integral index, starting from 0.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheetList"><linktext>W3C - DOM Level 2 Style: StyleSheetList</linktext></link></related-links><apiOperation id="dom.style.stylesheets:StyleSheetList:item"><apiName>item</apiName><shortdesc>
+		 Used to retrieve a style sheet by ordinal index.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The style sheet at the index position in the StyleSheetList, or null if that is not a valid index.
+		 
+		 </apiDesc><apiOperationClassifier>dom.style.stylesheets:StyleSheet</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>Index into the collection
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Used to retrieve a style sheet by ordinal index. If index is greater than or equal to the number 
+		 of style sheets in the list, this returns null. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.styleSheets"><linktext>MDC - Document.styleSheets</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheetList-item"><linktext>W3C - DOM Level 2 Style: StyleSheetList.itme()</linktext></link></related-links></apiOperation><apiValue id="dom.style.stylesheets:StyleSheetList:length:get"><apiName>length</apiName><shortdesc>
+		 The number of StyleSheets in the list.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMStyle" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The number of StyleSheets in the list. The range of valid child stylesheet indices is 0 to length-1 inclusive.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.styleSheets"><linktext>MDC - Document.styleSheets</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheetList-length"><linktext>W3C - DOM Level 2 Style: StyleSheetList.length</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

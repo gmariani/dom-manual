@@ -1,0 +1,227 @@
+//common ones
+public String getCopyTag();    //@copy
+public Map getCustomTags();    //(all unknown tags)
+public List getExampleTags();     //@example
+public String getHelpidTag();     //@helpid
+public List getIncludeExampleTags();
+public List getSeeTags();    //@see (multiple)
+public String getTiptextTag();    //@tiptext
+public boolean hasInheritTag();    //@inheritDoc
+
+//privacy tags
+public boolean hasPrivateTag();    //@private
+public String getInternalTag();    //@internal
+public boolean hasReviewTag();    //@review
+
+//Version of AS/other products
+public String getLangversionTag();    //@langversion
+public List<String> getPlayerversionTags();    //@playerversion (multiple)
+public List<String> getProductversionTags();   //@productversion (multiple)
+public String getToolversionTag();    //@toolversion
+public String getSinceTag();    //@since
+
+//For Classes and Interfaces
+public List getAuthorTags();    //@author (multiple)
+
+//For Methods
+public List getParamTags();    //@param (multiple)
+public String getReturnTag();    //@return
+public List getThrowsTags();    //@throws (multiple)
+public List<String> getEventTags();    //@event (multiple)
+
+//For Fields
+public String getDefaultTag();     //@default
+
+//[Event]-specific
+public String getEventTypeTag();    //@eventType
+
+
+
+Commands
+
+-doc-classes path-element [...]	
+A list of classes to document. These classes must be in the source path. This is the default option.
+This option works the same way as does the -include-classes option for the compc component compiler. For more information, see Using the component compiler.
+
+-doc-namespaces uri manifest	
+A list of URIs whose classes should be documented. The classes must be in the source path.
+You must include a URI and the location of the manifest file that defines the contents of this namespace.
+This option works the same way as does the -include-namespaces option for the compc component compiler. For more information, see Using the component compiler.
+
+-doc-sources path-element [...]	
+A list of files that should be documented. If a directory name is in the list, it is recursively searched.
+This option works the same way as does the -include-sources option for the compc component compiler. For more information, see Using the component compiler.
+
+-exclude-classes string	
+A list of classes that should not be documented. You must specify individual class names. Alternatively, if the ASDoc comment for the class contains the @private tag, is not documented.
+
+-exclude-dependencies true|false	
+Whether all dependencies found by the compiler are documented. If true, the dependencies of the input classes are not documented.
+The default value is false.
+
+-footer string	
+The text that appears at the bottom of the HTML pages in the output documentation.
+
+-left-frameset-width int	
+An integer that changes the width of the left frameset of the documentation. You can change this size to accommodate the length of your package names.
+The default value is 210 pixels.
+
+-main-title "string"	
+The text that appears at the top of the HTML pages in the output documentation.
+The default value is "API Documentation".
+
+-output string	
+The output directory for the generated documentation. The default value is "asdoc-output".
+
+-package name "description"	
+The descriptions to use when describing a package in the documentation. You can specify more than one package option.
+The following example adds two package descriptions to the output:
+asdoc -doc-sources my_dir -output myDoc -package com.my.business "Contains business classes and interfaces" -package com.my.commands "Contains command base classes and interfaces"
+
+-templates-path string	
+The path to the ASDoc template directory. The default is the asdoc/templates directory in the ASDoc installation directory. This directory contains all the HTML, CSS, XSL, and image files used for generating the output.
+
+-window-title "string"	
+The text that appears in the browser window in the output documentation.
+The default value is "API Documentation".
+
+-source-path
+-library-path
+-namespace
+-load-config
+-actionscript-file-encoding
+-help
+-advanced
+-benchmark
+-strict
+-warnings
+
+-benchmark
+-compiler.accessible
+-compiler.actionscript-file-encoding <string>
+-compiler.allow-source-path-overlap
+-compiler.as3
+-compiler.context-root <context-path>
+-compiler.debug
+-compiler.defaults-css-files [filename] [...]
+-compiler.defaults-css-url <string>
+-compiler.define <name> <value>
+-compiler.es
+-compiler.external-library-path [path-element] [...]
+-compiler.fonts.advanced-anti-aliasing
+-compiler.fonts.flash-type
+-compiler.fonts.languages.language-range <lang> <range>
+-compiler.fonts.local-font-paths [path-element] [...]
+-compiler.fonts.local-fonts-snapshot <string>
+-compiler.fonts.managers [manager-class] [...]
+-compiler.fonts.max-cached-fonts <string>
+-compiler.fonts.max-glyphs-per-face <string>
+-compiler.headless-server
+-compiler.include-libraries [library] [...]
+-compiler.incremental
+-compiler.keep-all-type-selectors
+-compiler.keep-as3-metadata [name] [...]
+-compiler.keep-generated-actionscript
+-compiler.library-path [path-element] [...]
+-compiler.locale [locale-element] [...]
+-compiler.mxml.compatibility-version <version>
+-compiler.mxml.qualified-type-selectors
+-compiler.namespaces.namespace [uri] [manifest] [...]
+-compiler.optimize
+-compiler.services <filename>
+-compiler.show-actionscript-warnings
+-compiler.show-binding-warnings
+-compiler.show-shadowed-device-font-warnings
+-compiler.show-unused-type-selector-warnings
+-compiler.source-path [path-element] [...]
+-compiler.strict
+-compiler.theme [filename] [...]
+-compiler.use-resource-bundle-metadata
+-compiler.verbose-stacktraces
+-compiler.warn-array-tostring-changes
+-compiler.warn-assignment-within-conditional
+-compiler.warn-bad-array-cast
+-compiler.warn-bad-bool-assignment
+-compiler.warn-bad-date-cast
+-compiler.warn-bad-es3-type-method
+-compiler.warn-bad-es3-type-prop
+-compiler.warn-bad-nan-comparison
+-compiler.warn-bad-null-assignment
+-compiler.warn-bad-null-comparison
+-compiler.warn-bad-undefined-comparison
+-compiler.warn-boolean-constructor-with-no-args
+-compiler.warn-changes-in-resolve
+-compiler.warn-class-is-sealed
+-compiler.warn-const-not-initialized
+-compiler.warn-constructor-returns-value
+-compiler.warn-deprecated-event-handler-error
+-compiler.warn-deprecated-function-error
+-compiler.warn-deprecated-property-error
+-compiler.warn-duplicate-argument-names
+-compiler.warn-duplicate-variable-def
+-compiler.warn-for-var-in-changes
+-compiler.warn-import-hides-class
+-compiler.warn-instance-of-changes
+-compiler.warn-internal-error
+-compiler.warn-level-not-supported
+-compiler.warn-missing-namespace-decl
+-compiler.warn-negative-uint-literal
+-compiler.warn-no-constructor
+-compiler.warn-no-explicit-super-call-in-constructor
+-compiler.warn-no-type-decl
+-compiler.warn-number-from-string-changes
+-compiler.warn-scoping-change-in-this
+-compiler.warn-slow-text-field-addition
+-compiler.warn-unlikely-function-value
+-compiler.warn-xml-class-has-changed
+-date-in-footer
+-debug-password <string>
+-default-background-color <int>
+-default-frame-rate <int>
+-default-script-limits <max-recursion-depth> <max-execution-time>
+-default-size <width> <height>
+-doc-classes [class] [...]
+-doc-namespaces [uri] [...]
+-doc-sources [path-element] [...]
+-examples-path <string>
+-exclude-classes [class] [...]
+-exclude-dependencies
+-exclude-sources [path-element] [...]
+-externs [symbol] [...]
+-footer <string>
+-frames.frame [label] [classname] [...]
+-framework <string>
+-help [keyword] [...]
+-include-all-for-asdoc
+-include-lookup-only
+-includes [symbol] [...]
+-left-frameset-width <int>
+-lenient
+-licenses.license <product> <serial-number>
+-link-report <filename>
+-load-config <filename>
+-load-externs <filename>
+-main-title <string>
+-metadata.contributor <name>
+-metadata.creator <name>
+-metadata.date <text>
+-metadata.description <text>
+-metadata.language <code>
+-metadata.localized-description <text> <lang>
+-metadata.localized-title <title> <lang>
+-metadata.publisher <name>
+-metadata.title <text>
+-output <filename>
+-packages.package <string> <string>
+-raw-metadata <text>
+-resource-bundle-list <filename>
+-runtime-shared-libraries [url] [...]
+-runtime-shared-library-path [path-element] [rsl-url] [policy-file-url] [rsl-url] [policy-file-url]
+-static-link-runtime-shared-libraries
+-target-player <version>
+-templates-path <string>
+-use-network
+-verify-digests
+-version
+-warnings
+-window-title <string>

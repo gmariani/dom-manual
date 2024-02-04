@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="EventTarget,dom.events.EventTarget,addEventListener,addEventListener,addEventListenerNS,canDispatch,checkModifier,createEvent,createEventGroup,dispatchEvent,getModifierState,getModifierState,handleEvent,initCustomEventNS,initEvent,initEventNS,initKeyEvent,initKeyboardEvent,initKeyboardEventNS,initMessageEvent,initMessageEventNS,initModifier,initMouseEvent,initMouseEventNS,initMouseMultiWheelEventNS,initMouseWheelEventNS,initMutationEvent,initMutationEventNS,initMutationNameEvent,initMutationNameEventNS,initTextEvent,initTextEventNS,initUIEvent,initUIEventNS,isSameEventGroup,preventBubble,preventCapture,preventDefault,removeEventListener,removeEventListener,removeEventListenerNS,stopImmediatePropogation,stopPropogation"><title>dom.events.EventTarget</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'EventTarget - DOM Reference Manual';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue(){
+var searchStr=document.getElementById('search-livedocs').value;
+window.location="../../search.html"+"###"+searchStr;
+}
+--></script><script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">DOM Reference Manual</td><td class="titleTableSearch" align="center"><form class="searchForm" method="get" action="../../search.html" onsubmit="submitValue();"><input class="hidden" name="loc" value="" type="hidden"><input class="hidden" name="termPrefix" value="" type="hidden"><input class="hidden" name="term" value="" type="hidden"><input class="hidden" name="area" value="" type="hidden"><input id="search-livedocs" name="search_text" value="" title="" type="text"> <input type="button" name="action" value="Search" onclick="submitValue()"></form></td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?dom/events/EventTarget.html&amp;dom/events/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">EventTarget</td><td class="titleTableSubNav" id="subNav" align="right" colspan="2"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("EventTarget"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">dom.events</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  EventTarget</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../dom/core/Node.html">Node</a>,  <a href="../../dom/Window.html">Window</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;</td></tr></table><p></p><p></p><p></p>
+	 The EventTarget interface is implemented by all the objects which could be 
+	 event targets in an implementation which supports an event flow. The 
+	 interface allows registration and removal of event listeners, and dispatch 
+	 of events to an event target.
+	 
+	 <p>When used with the DOM event flow, this interface is implemented by all 
+	 target nodes and target ancestors, i.e. all DOM Nodes of the tree support 
+	 this interface when the implementation conforms to DOM Level 3 Events and, 
+	 therefore, this interface can be obtained by using binding-specific casting 
+	 methods on an instance of the Node interface.</p>
+	 
+	              <p>Invoking addEventListener or addEventListenerNS repeatedly on the same 
+	 EventTarget with the same values for the parameters namespaceURI, type, 
+	 listener, and useCapture has no effect. Doing so does not cause the 
+	 EventListener to be called more than once and does not cause a change in the 
+	 triggering order.</p>
+	 
+	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTarget" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget</a></div><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;<a href="#addEventListener()" class="signatureLink">addEventListener</a>(type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</div><div class="summaryTableDescription">
+		 Associates a function with a particular event and binds the event to the current node.</div></td><td class="summaryTableOwnerCol">EventTarget</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;<a href="#addEventListenerNS()" class="signatureLink">addEventListenerNS</a>(namespaceURI:<a href="../../dom/core/types/DOMString.html">DOMString</a>, type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</div><div class="summaryTableDescription">
+		 Registers an event listener, depending on the useCapture parameter, on the 
+		 capture phase of the DOM event flow or its target and bubbling phases.</div></td><td class="summaryTableOwnerCol">EventTarget</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;<a href="#dispatchEvent()" class="signatureLink">dispatchEvent</a>(event:<a href="../../dom/events/Event.html">Event</a>):Boolean</div><div class="summaryTableDescription">
+		 Dispatches an event to fire on a node artificially.</div></td><td class="summaryTableOwnerCol">EventTarget</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;<a href="#removeEventListener()" class="signatureLink">removeEventListener</a>(type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</div><div class="summaryTableDescription">
+		 Removes an event listener.</div></td><td class="summaryTableOwnerCol">EventTarget</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;<a href="#removeEventListenerNS()" class="signatureLink">removeEventListenerNS</a>(namespaceURI:<a href="../../dom/core/types/DOMString.html">DOMString</a>, type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</div><div class="summaryTableDescription">
+		 Removes an event listener.</div></td><td class="summaryTableOwnerCol">EventTarget</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addEventListener()"></a><a name="addEventListener(dom.core.types.DOMString,dom.events.EventListener,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function addEventListener(type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Associates a function with a particular event and binds the event to the current node.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; A string representing the event to bind, without the "on" prefix. For example, "click", "mousedown" etc.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../dom/events/EventListener.html">EventListener</a></code> &mdash; The function or method to associate with the event.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> &mdash; Whether to bind the event as it is propagating towards the target node, (event Capture), or as the 
+		 event bubbles upwards from the target (event bubble). Set to true or false, respectively.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTarget-addEventListener" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget.addEventListener()</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <div class="listing"><pre>
+         function statusreport() {
+                 alert("document has loaded");
+         }
+         
+         if (window.addEventListener) {
+                 window.addEventListener("load", statusreport, false); //invoke function
+         }
+         window.onload = statusreport(); //function invoked again, since no event handler conflicts</pre></div>
+		 
+		 </div></div><a name="addEventListenerNS()"></a><a name="addEventListenerNS(dom.core.types.DOMString,dom.core.types.DOMString,dom.events.EventListener,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;addEventListenerNS</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function addEventListenerNS(namespaceURI:<a href="../../dom/core/types/DOMString.html">DOMString</a>, type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Registers an event listener, depending on the useCapture parameter, on the 
+		 capture phase of the DOM event flow or its target and bubbling phases.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">namespaceURI</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; Specifies the Event.namespaceURI associated with the event for which the user is registering.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; A string representing the event to bind, without the "on" prefix. For example, "click", "mousedown" etc.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../dom/events/EventListener.html">EventListener</a></code> &mdash; The function or method to associate with the event.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> &mdash; Whether to bind the event as it is propagating towards the target node, (event Capture), or as the 
+		 event bubbles upwards from the target (event bubble). Set to true or false, respectively.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTarget-addEventListener" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget.addEventListener()</a></div></div><a name="dispatchEvent()"></a><a name="dispatchEvent(dom.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;dispatchEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispatchEvent(event:<a href="../../dom/events/Event.html">Event</a>):Boolean</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;</td></tr><tr><td class="sinceTableLabel"><b>Modified in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Dispatches an event to fire on a node artificially.
+		 
+		 <p><b>Note (IE):</b> IE's equivalent of dispatchEvent() is fireEvent().</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:<a href="../../dom/events/Event.html">Event</a></code> &mdash; The event to be dispatched.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Indicates whether any of the listeners which handled the 
+		 event called Event.preventDefault(). If Event.preventDefault() was 
+		 called the returned value is false, else it is true.
+		 
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; UNSPECIFIED_EVENT_TYPE_ERR: 
+		 Raised if the Event.type was not specified by initializing the event 
+		 before dispatchEvent was called. Specification of the Event.type as 
+		 null or an empty string will also trigger this exception.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; DISPATCH_REQUEST_ERR: Raised 
+		 if the Event object is already being dispatched.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/core/DOMException.html">DOMException</a> </code> &mdash; NOT_SUPPORTED_ERR: Raised if the Event 
+		 object has not been created using DocumentEvent.createEvent().
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/core/DOMException.html">DOMException</a> </code> &mdash; INVALID_CHARACTER_ERR: Raised if 
+		 Event.type is not an NCName as defined in [XML Namespaces 1.1].
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTarget-dispatchEvent" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget.dispatchEvent()</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <div class="listing"><pre>
+         &lt;div id="test" onclick="alert('hi')"&gt;Sample DIV.&lt;/div&gt;
+         &lt;script type="text/javascript"&gt;
+         //Generate an artificial click event on "test". Fires alert("hi")
+         var clickevent = document.createEvent("MouseEvents");
+         clickevent.initEvent("click", true, true);
+         document.getElementById("test").dispatchEvent(myevent);
+         &lt;/script&gt;</pre></div>
+		 
+		 </div></div><a name="removeEventListener()"></a><a name="removeEventListener(dom.core.types.DOMString,dom.events.EventListener,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeEventListener(type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;2 Events</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Removes an event listener.
+		 
+		 <p>Calling removeEventListener with arguments 
+		 which do not identify any currently registered EventListener on the 
+		 EventTarget has no effect. The Event.namespaceURI for which the user 
+		 registered the event listener is implied and is null.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; Specifies the Event.type for which the user registered 
+		 the event listener.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../dom/events/EventListener.html">EventListener</a></code> &mdash; The EventListener to be removed.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> &mdash; Specifies whether the EventListener being removed 
+		 was registered for the capture phase or not. If a listener was 
+		 registered twice, once for the capture phase and once for the target 
+		 and bubbling phases, each must be removed separately. Removal of an 
+		 event listener registered for the capture phase does not affect the 
+		 same event listener registered for the target and bubbling phases, 
+		 and vice versa.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTarget-removeEventListener" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget.removeEventListener()</a></div></div><a name="removeEventListenerNS()"></a><a name="removeEventListenerNS(dom.core.types.DOMString,dom.core.types.DOMString,dom.events.EventListener,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;removeEventListenerNS</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function removeEventListenerNS(namespaceURI:<a href="../../dom/core/types/DOMString.html">DOMString</a>, type:<a href="../../dom/core/types/DOMString.html">DOMString</a>, listener:<a href="../../dom/events/EventListener.html">EventListener</a>, useCapture:Boolean):void</code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 Events</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Removes an event listener. Calling removeEventListenerNS with arguments 
+		 which do not identify any currently registered EventListener on the 
+		 EventTarget has no effect. 
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">namespaceURI</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; Specifies the Event.namespaceURI associated with the event for which the user registered the event listener.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; Specifies the Event.type for which the user registered 
+		 the event listener.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../dom/events/EventListener.html">EventListener</a></code> &mdash; The EventListener to be removed.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> &mdash; Specifies whether the EventListener being removed 
+		 was registered for the capture phase or not. If a listener was 
+		 registered twice, once for the capture phase and once for the target 
+		 and bubbling phases, each must be removed separately. Removal of an 
+		 event listener registered for the capture phase does not affect the 
+		 same event listener registered for the target and bubbling phases, 
+		 and vice versa.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-Events/events.html#Events-EventTargetGroup-removeEventListenerNS" target="mm_external" rel="external nofollow">W3C - DOM 3 Events: EventTarget.removeEventListenerNS()</a></div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>&copy; 2009 Gabriel Mariani (<a href='http://blog.coursevector.com/'>http://blog.coursevector.com/</a>). All rights reserved.</footer><br/>Mon Aug 17 2009, 10:08 AM -04:00  </center></div></body></html><!--&copy; 2009 Gabriel Mariani (<a href='http://blog.coursevector.com/'>http://blog.coursevector.com/</a>). All rights reserved.<br/>Mon Aug 17 2009, 10:08 AM -04:00  -->

@@ -1,0 +1,31 @@
+<apiPackage id="dom.core.types"><apiName>dom.core.types</apiName><apiDetail/><apiClassifier id="dom.core.types:DOMUserData"><apiName>DOMUserData</apiName><shortdesc>
+	 A DOMUserData represents a reference to application data.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="3"/><apiSince version="DOMCore 3"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A DOMUserData represents a reference to application data.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMUserData"><linktext>W3C - DOM 3 Core: DOMUserData</linktext></link></related-links></apiClassifier><apiClassifier id="dom.core.types:DOMTimeStamp"><apiName>DOMTimeStamp</apiName><shortdesc>
+	 A DOMTimeStamp represents a number of milliseconds.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A DOMTimeStamp represents a number of milliseconds. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMTimeStamp"><linktext>W3C - DOM 3 Core: DOMTimeStamp</linktext></link></related-links></apiClassifier><apiClassifier id="dom.core.types:DOMObject"><apiName>DOMObject</apiName><shortdesc>
+	 A DOMObject represents an object reference.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A DOMObject represents an object reference. 
+	 
+	 <p><b>Note:</b> For Java and ECMAScript, DOMObject is bound to the Object type.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMObject"><linktext>W3C - DOM 3 Core: DOMObject</linktext></link></related-links></apiClassifier><apiClassifier id="dom.core.types:DOMString"><apiName>DOMString</apiName><shortdesc>
+	 A DOMString is a sequence of 16-bit units.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>DOMCore 3
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A DOMString is a sequence of 16-bit units.
+	 
+	 The UTF-16 encoding was chosen because of its widespread industry practice. 
+	 Note that for both HTML and XML, the document character set (and therefore 
+	 the notation of numeric character references) is based on UCS [ISO/IEC 
+	 10646]. A single numeric character reference in a source document may therefore 
+	 in some cases correspond to two 16-bit units in a DOMString (a high surrogate 
+	 and a low surrogate). For issues related to string comparisons, refer to String 
+	 Comparisons in the DOM.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMString"><linktext>W3C - DOM 3 Core: DOMString</linktext></link></related-links></apiClassifier></apiPackage>

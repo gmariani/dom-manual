@@ -1,0 +1,27 @@
+<apiPackage id="gecko.events"><apiName>gecko.events</apiName><apiDetail/><apiClassifier id="gecko.events:nsIDOMEventTarget"><apiName>nsIDOMEventTarget</apiName><shortdesc>
+	 </shortdesc><prolog><asMetadata/><asCustoms><internal>http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/events/nsIDOMEventTarget.idl
+	 </internal></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 </apiDesc></apiClassifierDetail></apiClassifier><apiClassifier id="gecko.events:MouseEvent"><apiName>MouseEvent</apiName><shortdesc>
+	 The DOMMouseScroll event is sent when the mouse wheel is moved.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom.events:MouseEvent</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The DOMMouseScroll event is sent when the mouse wheel is moved. The target of 
+	 this event is the element that was under the mouse pointer when the mouse wheel 
+	 was scrolled, similar to the click event.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/Gecko-Specific_DOM_Events"><linktext>http://developer.mozilla.org/en/Gecko-Specific_DOM_Events</linktext></link></related-links><apiValue id="gecko.events:MouseEvent:HORIZONTAL_AXIS"><apiName>HORIZONTAL_AXIS</apiName><shortdesc>
+		 Unknown value
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Unknown value
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="gecko.events:MouseEvent:VERTICAL_AXIS"><apiName>VERTICAL_AXIS</apiName><shortdesc>
+		 Unknown value
+		 </shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Unknown value
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="gecko.events:MouseEvent:axis:get"><apiName>axis</apiName><shortdesc>
+		 Specifies the axis of the scroll gesture (horizontal or vertical).</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Specifies the axis of the scroll gesture (horizontal or vertical). 
+		 This attribute was added in Firefox 3.5
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://bugzilla.mozilla.org/show_bug.cgi?id=378028"><linktext>bug 378028</linktext></link></related-links></apiValue><apiValue id="gecko.events:MouseEvent:detail:get"><apiName>detail</apiName><shortdesc>
+		 Specifies the number of “ticks” that the mouse wheel moved.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiIsOverride/><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Specifies the number of “ticks” that the mouse wheel moved. 
+		 Positive values mean “down” / “right”, negative “up” / “left”.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

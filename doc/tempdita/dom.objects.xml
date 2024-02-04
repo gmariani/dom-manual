@@ -1,0 +1,1740 @@
+<apiPackage id="dom.objects"><apiName>dom.objects</apiName><apiDetail/><apiClassifier id="dom.objects:NavigatorOnLine"><apiName>NavigatorOnLine</apiName><shortdesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorOnLine interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorOnLine interface. This interface is defined separately so 
+	 that other specifications can re-use parts of the Navigator interface.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorOnLine</linktext></link></related-links><apiValue id="dom.objects:NavigatorOnLine:dom.objects:NavigatorOnLine:onLine:get"><apiName>onLine</apiName><shortdesc>
+		 Returns a boolean indicating whether the browser is working online.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns a boolean indicating whether the browser is working online. 
+		 
+		 <p><b>Note (IE):</b>  In Windows Internet Explorer 8 and later, the onLine property returns true if both of the 
+		 following conditions are true: 
+		 <ul>
+		 <li>the system is able to communicate with the network</li>
+		 <li>the system is not in global offline mode (Users can modify the global offline state by choosing Work Offline on the File menu.)</li>
+		 </ul>
+		 If either of these conditions is false, the onLine property returns false.
+		 </p>
+		 
+		 <p><b>Note (IE):</b> In Microsoft Internet Explorer 4.0 through Internet Explorer 7, the onLine property indicates whether the 
+		 system is in global offline mode. It does not indicate whether the system can communicate with the network.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>alert(navigator.onLine ? "You're online" : "You're offline");</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534307%28VS.85%29.aspx"><linktext>MSDN - onLine Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.navigator.onLine"><linktext>MDC - window.navigator.onLine</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:MessagePortArray"><apiName>MessagePortArray</apiName><shortdesc>
+	 A typed array containing only MessagePorts
+	 
+	 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A typed array containing only MessagePorts
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#messageport"><linktext>W3C - HTML5: MessagePortArray</linktext></link><link href="dom.objects.xml#MessagePort"><linktext>dom.objects.MessagePort</linktext></link></related-links></apiClassifier><apiClassifier id="dom.objects:MimeType"><apiName>MimeType</apiName><shortdesc>
+	 A MIME type (Multipart Internet Mail Extension) supported by the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A MIME type (Multipart Internet Mail Extension) supported by the client.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links><apiValue id="dom.objects:MimeType:description:get"><apiName>description</apiName><shortdesc>
+		 A description of the MIME type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 A description of the MIME type.
+		 
+		 </apiDesc><example><codeblock>"Adobe Flash movie"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue><apiValue id="dom.objects:MimeType:enabledPlugin:get"><apiName>enabledPlugin</apiName><shortdesc>
+		 Reference to the Plugin object configured for the MIME type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:Plugin</apiValueClassifier></apiValueDef><apiDesc>
+		 Reference to the Plugin object configured for the MIME type.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Can we display Shockwave movies?
+		 var mimetype = navigator.mimeTypes["application/x-director"];
+		 if (mimetype) {
+		 	// Yes, so can we display with a plug-in?
+		 	var plugin = mimetype.enabledPlugin;
+		 	if (plugin) {
+		 		// Yes, so show the data in-line
+		 		document.writeln("Here's a movie: &lt;EMBED SRC=mymovie.dir HEIGHT=100 WIDTH=100&gt;");
+		 	} else {
+		 		// No, so provide a link to the data
+		 		document.writeln("&lt;A HREF='mymovie.dir'&gt;Click here&lt;/A&gt; to see a movie.");
+		 	}
+		 } else {
+		 	// No, so tell them so
+		 	document.writeln("Sorry, can't show you this cool movie.");
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue><apiValue id="dom.objects:MimeType:suffixes:get"><apiName>suffixes</apiName><shortdesc>
+		 A string listing possible filename extensions for the MIME type, for example "mpeg, mpg, mpe, mpv, vbs, mpegv".</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 A string listing possible filename extensions for the MIME type, for example "mpeg, mpg, mpe, mpv, vbs, mpegv".
+		 
+		 </apiDesc><example><codeblock>"swf"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue><apiValue id="dom.objects:MimeType:type:get"><apiName>type</apiName><shortdesc>
+		 The name of the MIME type, for example "video/mpeg" or "audio/x-wav".</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The name of the MIME type, for example "video/mpeg" or "audio/x-wav".
+		 
+		 </apiDesc><example><codeblock>"application/x-shockwave-flash"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:Location"><apiName>Location</apiName><shortdesc>
+	 Contains information about the URL of the document and provides methods for changing that URL.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains information about the URL of the document and provides methods for changing that URL.
+	 
+	 </apiDesc><example>
+	 Replace the current document with the one at the given URL: 
+	 <codeblock>
+	 function goMoz() {
+	 	window.location = "http://www.mozilla.org";
+	 } 
+	 
+	 // in html: &lt;button onclick="goMoz();"&gt;Mozilla&lt;/button&gt;</codeblock>
+	 
+	 </example></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535866%28VS.85%29.aspx"><linktext>MSDN - location Object</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links><apiOperation id="dom.objects:Location:assign"><apiName>assign</apiName><shortdesc>
+		 Load the document at the provided URL.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URL of the document to load.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Load the document at the provided URL.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536342%28VS.85%29.aspx"><linktext>MSDN - assign Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Location:reload"><apiName>reload</apiName><shortdesc>
+		 Reload the document from the current URL.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>forceget</apiItemName><apiType value="Boolean"/><apiDesc><b>Not in W3 specification</b> When it is true, causes the page to always be reloaded from 
+		 the server. If it is false or not specified, the browser may reload the page 
+		 from its cache.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Reload the document from the current URL.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536691%28VS.85%29.aspx"><linktext>MSDN - reload Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Location:replace"><apiName>replace</apiName><shortdesc>
+		 Replace the current document with the one at the provided URL.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URL to insert into the session history.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Replace the current document with the one at the provided URL. The difference 
+		 from the assign() method is that after using replace() the current page will 
+		 not be saved in session history, meaning the user won't be able to use the 
+		 Back button to navigate to it.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536712%28VS.85%29.aspx"><linktext>MSDN - replace Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiOperation><apiValue id="dom.objects:Location:hash:get"><apiName>hash</apiName><shortdesc>
+		 The part of the URL that follows the # symbol, including the # symbol.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The part of the URL that follows the # symbol, including the # symbol.
+		 
+		 <p><b>Note:</b> If there is no number sign, this property returns an empty string.</p>
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>hash: <codeph>#test</codeph></p>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533775%28VS.85%29.aspx"><linktext>MSDN - hash Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:host:get"><apiName>host</apiName><shortdesc>
+		 The host name (without the port number or square brackets).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The host name (without the port number or square brackets).
+		 
+		 <p><b>Note:</b> The host property is the concatenation of the hostname and port properties, separated by a colon (hostname:port). When the port property is null, the host property is the same as the hostname property. </p>
+		 
+		 <p><b>Note:</b> The host property may be set at any time, although it is safer to set the href property to change a location. If the specified host cannot be found, an error is returned. </p>
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>host: <codeph>[www.google.com]:80</codeph></p>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533784%28VS.85%29.aspx"><linktext>MSDN - host Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:hostname:get"><apiName>hostname</apiName><shortdesc>
+		 This attribute represents the name or IP address of the network location without any port number.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute represents the name or IP address of the network location without any port number.
+		 
+		 <p><b>Note:</b> If no host name is available, this property returns an empty string. </p>
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>hostname: <codeph>www.google.com</codeph></p>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533785%28VS.85%29.aspx"><linktext>MSDN - hostname Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:href:get"><apiName>href</apiName><shortdesc>
+		 Sets or retrieves the entire URL as a string.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Sets or retrieves the entire URL as a string.
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>href: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph></p>
+		 
+		 <p>This example shows a URL list. The user is taken to the URL selected from the options, if the selection is different from the list's default value.</p>
+		 <codeblock>
+		 &lt;SELECT onchange="window.location.href=this.options[this.selectedIndex].value"&gt;
+		 	&lt;OPTION VALUE="http://www.microsoft.com/ie"&gt;Internet Explorer&lt;/OPTION&gt;
+		 	&lt;OPTION VALUE="http://www.microsoft.com"&gt;Microsoft Home&lt;/OPTION&gt;
+		 	&lt;OPTION VALUE="http://msdn.microsoft.com"&gt;Developer Network&lt;/OPTION&gt;
+		 &lt;/SELECT&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533867%28VS.85%29.aspx"><linktext>MSDN - href Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:pathname:get"><apiName>pathname</apiName><shortdesc>
+		 The path (relative to the host).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The path (relative to the host).
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>pathname: <codeph>/search</codeph></p>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534332%28VS.85%29.aspx"><linktext>MSDN - pathname Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:port:get"><apiName>port</apiName><shortdesc>
+		 This attribute represents the port number of the network location.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute represents the port number of the network location.
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>port: <codeph>80</codeph></p>
+		 
+		 <p>This example function returns the port property of two <codeph>a</codeph> elements.</p>
+		 <codeblock>
+		 &lt;script&gt;
+		 function getPort() {
+		 	alert ("FTP: " + oFtp.port + "\n" + "HTTP: " + oHttp.port);
+		 }
+		 &lt;/script&gt;
+		 
+		 &lt;a href="ftp://www.microsoft.com" onclick="getPort();" id=oFtp&gt;ftp&lt;/a&gt;
+		 &lt;a href="http://www.microsoft.com" onclick="getPort();" id=oHttp&gt;http&lt;/a&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534342%28VS.85%29.aspx"><linktext>MDC - port Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:protocol:get"><apiName>protocol</apiName><shortdesc>
+		 This attribute represents the scheme of the URI including the trailing colon (:).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 This attribute represents the scheme of the URI including the trailing colon (:).
+		 
+		 <p><b>Note (IE):</b> The protocol property specifies how to transfer information from the host to the client. Windows Internet Explorer supports several predefined protocols, including http and ftp.</p>
+		 
+		 <p><b>Note (IE):</b> The document, img, and location objects expose the protocol property as read-only.
+		 location.protocol property returns the initial substring of a URL, including the first colon (for example, http:).
+		 However, document.protocol returns the expanded text of the protocol acronym. For example, it returns the http 
+		 protocol as Hypertext Transfer Protocol.</p>
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>protocol: <codeph>http:</codeph></p>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534353%28VS.85%29.aspx"><linktext>MSDN - protocol Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue><apiValue id="dom.objects:Location:search:get"><apiName>search</apiName><shortdesc>
+		 The part of the URL that follows the ? symbol, including the ? symbol.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>WindowObject 1
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 The part of the URL that follows the ? symbol, including the ? symbol.
+		 
+		 </apiDesc><example>
+		 You can read them to get information about the current URL or set them to navigate to another URL.
+		 The example contains the value of the property of the following URL: <codeph>http://[www.google.com]:80/search?q=devmo#test</codeph>
+		 
+		 <p>search: <codeph>?q=devmo</codeph></p>
+		 
+		 <p>Send a string of data to the server by modifying the search property: </p>
+		 <codeblock>
+		 function sendData(dat) {
+		 	window.location.search = dat;
+		 }
+		 
+		 // in html: &lt;button onclick="sendData('Some data');"&gt;Send data&lt;/button&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534620%28VS.85%29.aspx"><linktext>MSDN - search Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.location"><linktext>MDC - window.location</linktext></link><link href="http://www.w3.org/TR/Window/#location"><linktext>W3C - Window.location</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:NavigatorID"><apiName>NavigatorID</apiName><shortdesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorID interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorID interface. This interface is defined separately so 
+	 that other specifications can re-use parts of the Navigator interface.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links><apiValue id="dom.objects:NavigatorID:dom.objects:NavigatorID:appName:get"><apiName>appName</apiName><shortdesc>
+		 Returns the official name of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the official name of the browser. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 dump(window.navigator.appName);
+		 // prints "Navigator" to the console for NS6</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533079%28VS.85%29.aspx"><linktext>MSDN - appName Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.appName"><linktext>MDC - window.navigator.appName</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:NavigatorID:dom.objects:NavigatorID:appVersion:get"><apiName>appVersion</apiName><shortdesc>
+		 Returns the version of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the version of the browser.
+		 
+		 <p><b>Note:</b> The window.navigator.userAgent property also contains the version number 
+		 (example: "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1"), but you 
+		 should be aware of how easy it is to change the user agent string and "spoof" other browsers, platforms, 
+		 or user agents, and also how cavalier the browser vendor themselves are with these properties. 
+		 The window.navigator.appVersion and window.navigator.userAgent properties are quite often used in 
+		 "browser sniffing" code: scripts that attempt to find out what kind of browser you are using and 
+		 adjust pages accordingly.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if ( navigator.appVersion.charAt(0) == "5" ) { 
+		 	// browser is putatively a v5 browser
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533080%28VS.85%29.aspx"><linktext>MSDN - appVersion Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.appVersion"><linktext>MDC - window.navigator.appVersion</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:NavigatorID:dom.objects:NavigatorID:platform:get"><apiName>platform</apiName><shortdesc>
+		 Returns a string representing the platform of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a string representing the platform of the browser.
+		 
+		 <adobetable class="innertable">
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 <tgroup cols="2"><thead><row><entry>Platform Code</entry><entry>Platform Name</entry></row></thead><tbody><row>
+		 		<entry>HP-UX</entry><entry><codeph>HP UNIX-based computers.</codeph></entry>
+		 	</row><row>
+		 		<entry>MacPPC</entry><entry>Macintosh PowerPC-based computers.</entry>
+		 	</row><row>
+		 		<entry>Mac68K</entry><entry>Macintosh 68K-based computers.</entry>
+		 	</row><row>
+		 		<entry>MacIntel</entry><entry>Macintosh Intel-based computers.</entry>
+		 	</row><row>
+		 		<entry>Win32</entry><entry><codeph>Microsoft Windows 32-bit platform.</codeph></entry>
+		 	</row><row>
+		 		<entry>Win16</entry><entry>Windows 16-bit platform.</entry>
+		 	</row><row>
+		 		<entry>WinCE</entry><entry>Windows CE platform.</entry>
+		 	</row><row>
+		 		<entry>Linux i686</entry><entry>Linux i686</entry>
+		 	</row><row>
+		 		<entry>Other</entry><entry>Other</entry>
+		 	</row></tbody></tgroup></adobetable>
+		 
+		 <p><b>Note (Mozilla):</b> Unless your code is privileged (chrome or at least has the UniversalBrowserRead 
+		 privilege), it may get the value of the general.platform.override preference instead of the true platform. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534340%28VS.85%29.aspx"><linktext>MSDN - platform Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.platform"><linktext>MDC - window.navigator.platform</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:NavigatorID:dom.objects:NavigatorID:userAgent:get"><apiName>userAgent</apiName><shortdesc>
+		 Returns the user agent string for the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the user agent string for the current browser. 
+		 
+		 <p><b>Note:</b> Browser identification based on detecting the user agent string is 
+		 <b>unreliable</b> and <b>is not recommended</b>, as the user agent string is user configurable.
+		 
+		 <ul>
+		 <li>Mozilla Suite and Firefox can use the preference "general.useragent.override" in about:config. Some Firefox extensions or multi-bar do that. </li>
+		 <li>Opera 6+ allows users to set the browser identification string via a menu </li>
+		 <li>Microsoft Internet Explorer uses the Windows registry </li>
+		 <li>Safari and iCab allow users to change the browser user agent string to predefined Internet Explorer or Netscape strings via a menu. </li>
+		 </ul>
+		 
+		 </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 alert(window.navigator.userAgent);
+		 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534712%28VS.85%29.aspx"><linktext>MSDN - userAgent Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.userAgent"><linktext>MDC - window.navigator.userAgent</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:CRMFRequest"><apiName>CRMFRequest</apiName><shortdesc>
+	 RFC 4211, the Internet X.509 Public Key Infrastructure Certificate Request Message 
+	 Format (CRMF), defines a certReqMessage.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 RFC 4211, the Internet X.509 Public Key Infrastructure Certificate Request Message 
+	 Format (CRMF), defines a certReqMessage. The object returned by generateCRMFRequest() 
+	 contains one of those.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.ietf.org/rfc/rfc4211.txt"><linktext>Network Working Group - RFC 4211</linktext></link><link href="http://mh-in-f132.google.com/search?hl=en&amp;safe=off&amp;num=100&amp;q=cache%3Awww.ietf.org%2Frfc%2Frfc4211.txt+certReqMessage+certRequest+certReq&amp;btnG=Search"><linktext>Network Working Group - certReqMessage</linktext></link><link href="http://developer.mozilla.org/en/CRMF_Request_object"><linktext>MDC - CRMF Request object</linktext></link><link href="dom.objects.xml#Crypto/generateCRMFRequest()"><linktext>dom.objects.Crypto.generateCRMFRequest()</linktext></link></related-links><apiValue id="dom.objects:CRMFRequest:request:get"><apiName>request</apiName><shortdesc>
+		 Returns a encrypted string.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a encrypted string.
+		 
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="dom.objects:MimeTypeArray"><apiName>MimeTypeArray</apiName><shortdesc>
+	 Contains a list of MimeType objects representing the MIME types recognized by the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains a list of MimeType objects representing the MIME types recognized by the browser. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links><apiOperation id="dom.objects:MimeTypeArray:item"><apiName>item</apiName><shortdesc>
+		 Retrieves a MimeType by index.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified MimeType
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:MimeType</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>Index of the MimeType
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves a MimeType by index.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:MimeTypeArray:nameItem"><apiName>nameItem</apiName><shortdesc>
+		 Retrives a MimeType by name.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified MimeType
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:MimeType</apiOperationClassifier></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of the MimeType
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrives a MimeType by name.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiOperation><apiValue id="dom.objects:MimeTypeArray:length:get"><apiName>length</apiName><shortdesc>
+		 The number of MimeTypes in the array.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The number of MimeTypes in the array.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:BarProp"><apiName>BarProp</apiName><shortdesc>
+	 To allow Web pages to integrate with Web browsers, certain Web browser interface elements are exposed in a limited way to scripts in Web pages.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiSince version="HTML 5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 To allow Web pages to integrate with Web browsers, certain Web browser interface elements are exposed in a limited way to scripts in Web pages.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/html5/browsers.html#barprop"><linktext>W3C HTML 5: BarProp</linktext></link></related-links><apiValue id="dom.objects:BarProp:visible:get"><apiName>visible</apiName><shortdesc>
+		 The visible attribute, on getting, must return either true or a value determined by the user agent to most accurately 
+		 represent the visibility state of the user interface element that the object represents, 
+		 as described below.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiSince version="HTML 5"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 The visible attribute, on getting, must return either true or a value determined by the user agent to most accurately 
+		 represent the visibility state of the user interface element that the object represents, 
+		 as described below. On setting, the new value must be discarded.
+		 
+		 <p>The following BarProp objects exist for each Document object in a browsing context. Some of the user interface elements represented 
+		 by these objects might have no equivalent in some user agents; for those user agents, unless otherwise specified, the object must 
+		 act as if it was present and visible (i.e. its visible attribute must return true).</p>
+		 
+		 <adobetable class="innertable">
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 <tgroup cols="2"><thead><row><entry>Title</entry><entry>Value</entry></row></thead><tbody><row>
+		 		<entry>window.locationbar</entry><entry>Represents the user interface element that contains a control that displays the URL of the
+		 active document, or some similar interface concept.</entry>
+		 	</row><row>
+		 		<entry>window.menubar</entry><entry>Represents the user interface element that contains a list of commands in menu form, or some 
+		 similar interface concept.</entry>
+		 	</row><row>
+		 		<entry>window.personalbar</entry><entry>Represents the user interface element that contains links to the user's favorite pages, or 
+		 some similar interface concept.</entry>
+		 	</row><row>
+		 		<entry>window.scrollbars</entry><entry>Represents the user interface element that contains links to the user's favorite pages, 
+		 or some similar interface concept.</entry>
+		 	</row><row>
+		 		<entry>window.statusbar</entry><entry>Represents a user interface element found immediately below or after the document, as appropriate 
+		 for the default view's media. If the user agent has no such user interface element, then the object may act as if the corresponding
+		 user interface element was absent (i.e. its visible attribute may return false).</entry>
+		 	</row><row>
+		 		<entry>window.toolbar</entry><entry>Represents the user interface element found immediately above or before the document, as appropriate 
+		 for the default view's media. If the user agent has no such user interface element, then the object may act as if the corresponding 
+		 user interface element was absent (i.e. its visible attribute may return false).</entry>
+		 	</row></tbody></tgroup></adobetable>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/html5/browsers.html#barprop"><linktext>W3C HTML 5: BarProp.visible</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:PluginArray"><apiName>PluginArray</apiName><shortdesc>
+	 Contains a list of Plugins objects loaded in the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains a list of Plugins objects loaded in the browser. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms537477%28VS.85%29.aspx#"><linktext>MSDN - plugins Collection</linktext></link><link href="http://developer.mozilla.org/en/Navigator.plugins"><linktext>MDC - window.navigator.plugins</linktext></link></related-links><apiOperation id="dom.objects:PluginArray:item"><apiName>item</apiName><shortdesc>
+		 Retrieves a Plugins by index.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified Plugins
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:Plugin</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>Index of the Plugins
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves a Plugins by index.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536460%28VS.85%29.aspx"><linktext>MSDN - item Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:PluginArray:nameItem"><apiName>nameItem</apiName><shortdesc>
+		 Retrives a Plugins by name.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified Plugins
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:Plugin</apiOperationClassifier></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of the Plugins
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrives a Plugins by name.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536634%28VS.85%29.aspx"><linktext>MSDN - namedItem Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:PluginArray:refresh"><apiName>refresh</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom.objects:PluginArray:tags"><apiName>tags</apiName><shortdesc>
+		 Retrieves a collection of objects that have the specified HTML tag name.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Retrieves a collection of objects that have the specified HTML tag name. 
+		 
+		 </apiDesc><example>
+		 <codeblock>var coll = document.all.tags("p");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536776%28VS.85%29.aspx"><linktext>MSDN - tags Method</linktext></link></related-links></apiOperation><apiValue id="dom.objects:PluginArray:length:get"><apiName>length</apiName><shortdesc>
+		 The number of Plugins in the array.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The number of Plugins in the array.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534101%28VS.85%29.aspx"><linktext>MSDN - length Property</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:History"><apiName>History</apiName><shortdesc>
+	 Contains information about the URLs visited by the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains information about the URLs visited by the client.
+	 
+	 <p><b>Note:</b> For security reasons, the history object does not expose the actual 
+	 URLs in the browser history. It does allow navigation through the browser history by exposing 
+	 the back, forward, and go methods. A particular document in the browser history can be 
+	 identified as an index relative to the current page. For example, specifying -1 as a parameter 
+	 for the go method is the equivalent of clicking the Back button.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535864(VS.85).aspx"><linktext>MSDN - history Object</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links><apiOperation id="dom.objects:History:back"><apiName>back</apiName><shortdesc>
+		 Goes to the previous page in session history, the same action as when the user clicks the browser's Back button.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Goes to the previous page in session history, the same action as when the user clicks the browser's Back button.
+		 
+		 <p>Equivalent to history.go(-1).</p>
+		 
+		 <p>Calling this method to go back beyond the first page in the session history has no effect 
+		 and doesn't raise an exception.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536346%28VS.85%29.aspx"><linktext>MSDN - back Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:History:forward"><apiName>forward</apiName><shortdesc>
+		 Goes to the next page in session history, the same action as when the user clicks the browser's Forward button.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Goes to the next page in session history, the same action as when the user clicks the browser's Forward button.
+		 
+		 <p>Equivalent to history.go(1).</p>
+		 
+		 <p>Calling this method to go back beyond the last page in the session history has no effect 
+		 and doesn't raise an exception.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536426%28VS.85%29.aspx"><linktext>MSDN - forward Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:History:go"><apiName>go</apiName><shortdesc>
+		 Loads a page from the session history, identified by its relative location to the current page, for 
+		 example -1 for the previous page or 1 for the next page.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>integerDelta</apiItemName><apiType value=""/><apiDesc>Specifies an integer or a string. An integer indicates the relative position of a URL in the History list. A string indicates an exact URL in the History list.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Loads a page from the session history, identified by its relative location to the current page, for 
+		 example -1 for the previous page or 1 for the next page.
+		 
+		 <p>When integerDelta is out of bounds (e.g. -1 when there are no previously visited pages in the session 
+		 history), the method doesn't do anything and doesn't raise an exception.</p>
+		 
+		 <p>Calling go() without parameters or with a non-integer argument has no effect (unlike Internet Explorer, 
+		 which supports string URLs as the argument [1]).</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href=""><linktext/></link><link href="http://msdn.microsoft.com/en-us/library/ms536426%28VS.85%29.aspx"><linktext>MSDN - forward Method MSDN - go Method</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms536443(VS.85).aspx"><linktext>MSDN - [1]</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiOperation><apiValue id="dom.objects:History:current:get"><apiName>current</apiName><shortdesc>
+		 Returns the URL of the active item of the session history.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the URL of the active item of the session history.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiValue><apiValue id="dom.objects:History:length:get"><apiName>length</apiName><shortdesc>
+		 Returns the number of elements in the session history, including the currently loaded page.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of elements in the session history, including the currently loaded page.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534105%28VS.85%29.aspx"><linktext>MSDN - length Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiValue><apiValue id="dom.objects:History:next:get"><apiName>next</apiName><shortdesc>
+		 Returns the URL of the next item in the session history
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the URL of the next item in the session history
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiValue><apiValue id="dom.objects:History:previous:get"><apiName>previous</apiName><shortdesc>
+		 Returns the URL of the previous item in the session history
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the URL of the previous item in the session history
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.history"><linktext>MDC - window.history</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:MessagePort"><apiName>MessagePort</apiName><shortdesc>
+	 Each channel has two message ports.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Each channel has two message ports. Data sent through one port is received by the other port, and vice versa.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#messageport"><linktext>W3C - HTML5: MessagePort</linktext></link></related-links><apiOperation id="dom.objects:MessagePort:dom.objects:MessagePort:close"><apiName>close</apiName><shortdesc>
+		 Disconnects the port, so that it is no longer active.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Disconnects the port, so that it is no longer active.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#dom-messageport-close"><linktext>W3C - HTML5: MessagePort.start()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:MessagePort:dom.objects:MessagePort:postMessage"><apiName>postMessage</apiName><shortdesc>
+		 Posts a message through the channel, optionally with the given ports.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: If the ports array is not null and it contains either null 
+		 entries, duplicate ports, ports that are not entangled, or the source or target port.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiType value=""/><apiDesc>	 </apiDesc></apiParam><apiParam><apiItemName>ports</apiItemName><apiOperationClassifier>dom.objects:MessagePortArray</apiOperationClassifier><apiDesc>	 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Posts a message through the channel, optionally with the given ports.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#dom-messageport-postmessage"><linktext>W3C - HTML5: MessagePort.postMessage()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:MessagePort:dom.objects:MessagePort:start"><apiName>start</apiName><shortdesc>
+		 Begins dispatching messages received on the port.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Begins dispatching messages received on the port.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#dom-messageport-start"><linktext>W3C - HTML5: MessagePort.start()</linktext></link></related-links></apiOperation><apiValue id="dom.objects:MessagePort:dom.objects:MessagePort:active:get"><apiName>active</apiName><shortdesc>
+		 Returns true if the port is still active; otherwise, returns false.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns true if the port is still active; otherwise, returns false.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/html5/comms.html#dom-messageport-active"><linktext>W3C - HTML5: MessagePort.active</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:Crypto"><apiName>Crypto</apiName><shortdesc>
+	 Mozilla defines a special JavaScript object to allow web pages access to certain cryptographic related services.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Mozilla defines a special JavaScript object to allow web pages access to certain cryptographic related services. 
+	 These services are a balance between the functionality web pages need, and the requirement to protect users from 
+	 malicious web sites. Most of these services are available via the JavaScript window object as window.crypto.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links><apiOperation id="dom.objects:Crypto:alert"><apiName>alert</apiName><shortdesc> 
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiParam></apiOperationDef><apiDesc> 
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:disableRightClick"><apiName>disableRightClick</apiName><shortdesc> 
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:generateCRMFRequest"><apiName>generateCRMFRequest</apiName><shortdesc>
+		 This method will generate a sequence of CRMF requests that has N requests.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:CRMFRequest</apiOperationClassifier></apiReturn><apiParam><apiItemName>requestedDN</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>An RFC 1485 formatted DN to include in the certificate request.
+		 </apiDesc></apiParam><apiParam><apiItemName>regToken</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A value used to authenticate the user to the RA/CA.
+		 </apiDesc></apiParam><apiParam><apiItemName>authenticator</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A value that the user can authenticate with in the future when 
+		 their private key is not available. Can be used for key recovery or revocation requests.
+		 </apiDesc></apiParam><apiParam><apiItemName>escrowAuthorityCert</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>If this value is NULL, then no key escrow will be performed. 
+		 This value specifies which KRA certificate should be used to wrap the private key being 
+		 escrowed. The user will be prompted for confirmation whenever a key will be escrowed. 
+		 Only key exchange keys will be escrowed. If a dual use key is being generated, it will 
+		 not be escrowed. The value of this argument is a base-64 encoded certificate.
+		 </apiDesc></apiParam><apiParam><apiItemName>CRMFGenerationDoneCode</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This parameter is JavaScript to execute when the CRMF generation is complete.
+		 </apiDesc></apiParam><apiParam><apiItemName>keySizeN</apiItemName><apiType value="Number"/><apiDesc>The size in bits of the Nth key to generate
+		 </apiDesc></apiParam><apiParam><apiItemName>keyParamsN</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This string is an optional algorithm dependent parameter value. For 
+		 Diffie-Hellman it is used to specify p and g parameters. For DSA, it will be used to 
+		 specify pqg. If the key generation requires parameters and the value passed in is NULL, 
+		 then the client will generate the parameters on its own. Currently, this value is ignored.
+		 </apiDesc></apiParam><apiParam><apiItemName>keyGenAlgN</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Which algorithm the generated key will support. Acceptable values are (the 
+		 mentioned values for keyUsage pertain to the keyUsage value of the Certificate Extension that 
+		 will ultimately be in the issued certificate):
+		 <ul>
+		 <li>"rsa-ex" - generate an RSA key for key exchange only (This will have eyEncipherment set for keyUsage.)</li>
+		 <li>"rsa-dual-use" - generate a single RSA key for both signing and encryption. (This will have digitalSignature, keyEncipherment, and nonRepudiation set for keyUsage.)</li>
+		 <li>"rsa-sign" - generate an RSA key for signing only. (This will have digitalSignature set for keyUsage.)</li>
+		 <li>"rsa-nonrepudiation" - generate a single RSA key for nonRepudiation only. (This will have non-repudiation set for keyUsage.)</li>
+		 <li>"rsa-sign-nonrepudiation" - generate a single RSA key use for both signing and nonRepudiation. (This will have both digitalSignature and nonRepudiation set for keyUsage.)</li>
+		 <li>"dsa-sign" - generate a single DSA key for signing only. (This will have digitalSignature set for keyUsage.)</li>
+		 <li>"dsa-nonrepudiation" - generate a single DSA key for nonRepudiation. (This will have nonRepudiation set for keyUsage.)</li>
+		 <li>"dsa-sign-nonrepudiation" - generate a single DSA key for signing and non-repudiation. (This will have digitalSignature and nonRepudiation set for keyUsage.)</li>
+		 <li>"dh-ex"</li>
+		 <li>"ec-ex"</li>
+		 <li>"ec-dual-use"</li>
+		 <li>"ec-sign"</li>
+		 <li>"ec-sign-nonrepudiation"</li>
+		 <li>"ec-nonrepudiation"</li>
+		 </ul>
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 This method will generate a sequence of CRMF requests that has N requests. One request 
+		 for each key pair that is generated. The first three parameters will be applied to every 
+		 request. The "escrowAuthorityCert" parameter will only be used for requests that pertain 
+		 to a key that is being escrowed. After the "escrowAuthorityCert" parameter, the method 
+		 takes some JavaScript code that is invoked when the CRMF request is ready. Finally, there 
+		 are 1 or more sets of key generation arguments. Each key generation will be associated 
+		 with its own request. All the requests will have the same DN.
+		 
+		 </apiDesc><example>
+		 This generates a CRMF object with dummy settings and outputs to Firebug
+		 <codeblock>
+		 var crmfObject = null;
+		 try {
+		 	crmfObject = window.crypto.generateCRMFRequest("CN=vvv", "regToken", null, null, 'f' , 1024, null, "rsa-dual-use");
+		 } catch(ex) {
+		 	console.log("window.crypto.generateCRMFRequest() failed - " + ex + "\n");
+		 }
+		 function f() {
+		 	console.log("done");
+		 }
+		 console.log(crmfObject);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/GenerateCRMFRequest"><linktext>MDC - crypto.generateCRMFRequest()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:importUserCertificates"><apiName>importUserCertificates</apiName><shortdesc>
+		 Imports newly issued certificates for the user.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>If the import operation succeeds, an empty string will be returned. If it fails, one of 
+		 the following error strings will be returned: 
+		 <ul>
+		 <li>"error:userCancel" -	The user canceled the import operation</li>
+		 <li>"error:invalidCertificate" -	One of the certificate packages was incorrectly formatted</li>
+		 <li>"error:internalError" -	The software encountered some internal error, such as out of memory</li>
+		 <li>"error:invalidRequestID" -	The request ID in the response message does not match any outstanding request</li>
+		 </ul>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>nicknameString</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This is the nickname that will be used to describe the certificate in the 
+		 client's certificate management UI. It should serve to uniquely identify the certificate to the user. 
+		 For example, "John Smith's VeriSign Class 3 Digital ID" or "John Smith's Ford ID Certificate". However, 
+		 if this certificate has the same DN as one or more certificates that already exist in the user's 
+		 certificate store, the nickname associated with the certificate(s) of the same DN in the certificate 
+		 store is used, and the "nicknameString" parameter is ignored. If the string is null and no certificate 
+		 with the same DN exists in the user's certificate store, Personal Security Manager uses the following 
+		 pattern to derive the nickname: &lt;Common Name&gt;'s &lt;Issuer Name&gt; ID.
+		 </apiDesc></apiParam><apiParam><apiItemName>certString</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This string is the CMMF Certification Response from the CA that contains the user's certificate(s). The response is base-64 encoded.
+		 </apiDesc></apiParam><apiParam><apiItemName>forceBackup</apiItemName><apiType value="Boolean"/><apiDesc>It allows the CA or RA to indicate to the client whether to force the user to back up a newly issued certificate (PKCS #12).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Imports newly issued certificates for the user. The private key for the certificates must 
+		 already reside in the user's personal private key database.
+		 
+		 The request ID in the response being imported must match the request ID in the associated 
+		 Certification Request or Recovery Request.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/ImportUserCertificates"><linktext>MDC - crypto.importUserCertificates()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:logout"><apiName>logout</apiName><shortdesc> 
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc> 
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:popChallengeResponse"><apiName>popChallengeResponse</apiName><shortdesc>
+		 The popChallengeResponse() function returns a proof of key posession signed challenge which a CA can use 
+		 to verify the client has the private key associated with it's claimed public key.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The resultString will either be a base-64 encoded POPODecKeyRespContent message, or one of the 
+		 following error strings: 
+		 <ul>
+		 <li>"error:invalidParameter:XXX" 	The parameter XXX was an invalid value.</li>
+		 <li>"error:internalError" 	The software encountered some internal error, such as out of memory</li>
+		 </ul>
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>challengeString</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A base-64 encoded CMMF POPODecKeyChallContent message. The current implementation
+		 does not conform to that defined in the CMMF draft, and we intend to change this implementation to that 
+		 defined in the CMC RFC. See below for the current implementation.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 The popChallengeResponse() function returns a proof of key posession signed challenge which a CA can use 
+		 to verify the client has the private key associated with it's claimed public key. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 resultString = crypto.popChallengeResponse("challengeString");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/PopChallengeResponse"><linktext>MDC - crypto.popChallengeResponse()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:random"><apiName>random</apiName><shortdesc> 
+		 Generates a random number of numBytes length.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>numBytes</apiItemName><apiType value="Number"/></apiParam></apiOperationDef><apiDesc> 
+		 Generates a random number of numBytes length.
+		 
+		 <p><b>Note (Mozilla):</b> window.crypto.random() is not yet implemented in Mozilla browsers.</p>
+		 
+		 </apiDesc><example>
+		 To obtain a ten byte random number using the cryptographic engine, simply call: 
+		 <codeblock>var myrandom = window.crypto.random(10);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Crypto:signText"><apiName>signText</apiName><shortdesc> 
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>stringToSign</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiParam><apiParam><apiItemName>caOption</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiParam></apiOperationDef><apiDesc> 
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiValue id="dom.objects:Crypto:enableSmartCardEvents:get"><apiName>enableSmartCardEvents</apiName><shortdesc> 
+		 To enable your document to receive these events, you must first tell the crypto system you are interested.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc> 
+		 To enable your document to receive these events, you must first tell the crypto system you are interested. You 
+		 can do this by setting <codeph>window.crypto.enableSmartCardEvents</codeph> to <codeph>true</codeph>. This tells the 
+		 crypto system that you are interested in listening for these events. You can then register event handlers for 
+		 these events with the document.addEventListener. 
+		 
+		 </apiDesc><example>
+		 With this example, your website will automatically reload anytime a SmartCard is inserted or removed. This 
+		 allows the page to automatically login and logout based on the presence of the SmartCard. 
+		 <codeblock>
+		 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+		 &lt;html&gt;&lt;head&gt; 
+		 ....
+		 &lt;script language="javascript"&gt;
+		 
+		 function onSmartCardChange() {
+		 	window.location.reload();
+		 }
+		 function register() {
+		 window.crypto.enableSmartCardEvents=true;
+		 	document.addEventListener("smartcard-insert",onSmartCardChange,false);
+		 	document.addEventListener("smartcard-remove",onSmartCardChange,false);
+		 };
+		 function deregister() {
+		 	document.removeEventListener("smartcard-insert",onSmartCardChange,false);
+		 	document.removeEventListener("smartcard-remove",onSmartCardChange,false);
+		 };
+		 
+		 &lt;/script&gt;
+		 &lt;/head&gt;
+		 &lt;body .... onload=register() onunload=deregister()&gt;
+		 
+		 .....
+		 &lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiValue><apiValue id="dom.objects:Crypto:version:get"><apiName>version</apiName><shortdesc> 
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc> 
+		 Undocumented
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:Plugin"><apiName>Plugin</apiName><shortdesc>
+	 A plug-in module installed on the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A plug-in module installed on the client.
+	 
+	 <p>A plug-in is a software module that the browser can invoke to display specialized types of 
+	 embedded data within the browser. The user can obtain a list of installed plug-ins by choosing 
+	 About Plug-ins from the Help menu.</p>
+	 
+	 <p>Each Plugin object is itself array containing one element for each MIME type supported by the 
+	 plug-in. Each element of the array is a MimeType object. For example, the following code displays 
+	 the type and description properties of the first Plugin object's first MimeType object.</p>
+	 
+	 <codeblock>
+	 myPlugin=navigator.plugins[0]
+	 myMimeType=myPlugin[0]
+	 document.writeln('myMimeType.type is ',myMimeType.type,"&lt;BR&gt;")
+	 document.writeln('myMimeType.description is ',myMimeType.description</codeblock>
+	 
+	 <p>The preceding code displays output similar to the following:</p>
+	 
+	 <codeblock>
+	 myMimeType.type is video/quicktime
+	 myMimeType.description is QuickTime for Windows </codeblock>
+	 
+	 </apiDesc></apiClassifierDetail><apiOperation id="dom.objects:Plugin:item"><apiName>item</apiName><shortdesc>
+		 Retrieves a MimeType by index.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified MimeType
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:MimeType</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>Index of the MimeType
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrieves a MimeType by index.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536460%28VS.85%29.aspx"><linktext>MSDN - item Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Plugin:nameItem"><apiName>nameItem</apiName><shortdesc>
+		 Retrives a MimeType by name.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The specified MimeType
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:MimeType</apiOperationClassifier></apiReturn><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of the MimeType
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Retrives a MimeType by name.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536634%28VS.85%29.aspx"><linktext>MSDN - namedItem Method</linktext></link></related-links></apiOperation><apiValue id="dom.objects:Plugin:description:get"><apiName>description</apiName><shortdesc>
+		 A description of the plug-in.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 A description of the plug-in.
+		 
+		 </apiDesc><example><codeblock>3.0.40624.0</codeblock>
+		 
+		 </example></apiValueDetail></apiValue><apiValue id="dom.objects:Plugin:filename:get"><apiName>filename</apiName><shortdesc>
+		 Name of the plug-in file on disk.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Name of the plug-in file on disk.
+		 
+		 </apiDesc><example><codeblock>npctrl.dll</codeblock>
+		 
+		 </example></apiValueDetail></apiValue><apiValue id="dom.objects:Plugin:length:get"><apiName>length</apiName><shortdesc>
+		 Number of elements in the plug-in's array of MimeType objects.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Number of elements in the plug-in's array of MimeType objects.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.objects:Plugin:name:get"><apiName>name</apiName><shortdesc>
+		 	Name of the plug-in.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 	Name of the plug-in.
+		 
+		 </apiDesc><example><codeblock>Silverlight Plug-In</codeblock>
+		 
+		 </example></apiValueDetail></apiValue></apiClassifier><apiClassifier id="dom.objects:UserProfile"><apiName>UserProfile</apiName><shortdesc>
+	 Provides methods that allow a script to request read access to and perform read actions on a user's profile information.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Provides methods that allow a script to request read access to and perform read actions on a user's profile information.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535915%28VS.85%29.aspx"><linktext>MSDN - userProfile Object</linktext></link></related-links><apiOperation id="dom.objects:UserProfile:addReadRequest"><apiName>addReadRequest</apiName><shortdesc>
+		 Adds an entry to the queue for read requests.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>True if the request has been successfully added to the queue. False if the attribute name was not recognized or the attribute already appeared in the request queue.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>attributeName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies one of the standard vCard names. If anything else is used, the request is ignored and nothing is added to the read-requests queue.
+		 </apiDesc></apiParam><apiParam><apiItemName>reserved</apiItemName><apiType value=""/><apiData>null</apiData><apiDesc>Windows Internet Explorer currently ignores this parameter.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adds an entry to the queue for read requests.
+		 
+		 <p><b>Note:</b> This method appends a vCard name to the read-requests queue. The
+		 read-requests queue is a list of read requests waiting to be initiated. To initiate the accumulated, 
+		 or compound, read requests in the queue, call doReadRequest. To clear the queue, call clearRequest. </p>
+		  
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535929%28VS.85%29.aspx"><linktext>MSDN - addReadRequest Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:UserProfile:clearRequest"><apiName>clearRequest</apiName><shortdesc>
+		 Clears all requests in the read-requests queue to prepare for new profile-information requests.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Clears all requests in the read-requests queue to prepare for new profile-information requests.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536355%28VS.85%29.aspx"><linktext>MSDN - clearRequest Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:UserProfile:doReadRequest"><apiName>doReadRequest</apiName><shortdesc>
+		 Performs all requests located in the read-requests queue.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>usageCode</apiItemName><apiType value="Number"/><apiDesc>Specifies the code that notifies the user of the type of access requested. This usage 
+		 code should be one of the following 13 codes defined by the Internet Privacy Working Group (IPWG).
+		 <adobetable class="innertable">
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <tgroup cols="2"><thead><row><entry>Title</entry><entry>Value</entry></row></thead><tbody><row>
+		 		<entry>0</entry><entry>Used for system administration.</entry>
+		 	</row><row>
+		 		<entry>1</entry><entry>Used for research and product development.</entry>
+		 	</row><row>
+		 		<entry>2</entry><entry>Used for completion and support of the current transaction.</entry>
+		 	</row><row>
+		 		<entry>3</entry><entry>Used to customize the content and design of a site.</entry>
+		 	</row><row>
+		 		<entry>4</entry><entry>Used to improve the content of a site that includes advertisements.</entry>
+		 	</row><row>
+		 		<entry>5</entry><entry>Used for notifying visitors about updates to the site.</entry>
+		 	</row><row>
+		 		<entry>6</entry><entry>Used for contacting visitors for marketing of services or products.</entry>
+		 	</row><row>
+		 		<entry>7</entry><entry>Used for linking other collected information.</entry>
+		 	</row><row>
+		 		<entry>8</entry><entry>Used by a site for other purposes.</entry>
+		 	</row><row>
+		 		<entry>9</entry><entry>Disclosed to others for customization or improvement of the content and design of the site.</entry>
+		 	</row><row>
+		 		<entry>10</entry><entry>Disclosed to others, who may contact the user, for marketing of services or products.</entry>
+		 	</row><row>
+		 		<entry>11</entry><entry>Disclosed to others, who may contact the user, for marketing of services or products. The user can ask a site not to do this.</entry>
+		 	</row><row>
+		 		<entry>12</entry><entry>Disclosed to others for any other purpose.</entry>
+		 	</row></tbody></tgroup></adobetable>
+		 </apiDesc></apiParam><apiParam><apiItemName>friendlyName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiData>null</apiData><apiDesc>Specifies the display name of the party requesting access to private information. 
+		 For security reasons, it is not sufficient for the user agent to show this display name to the user. In addition 
+		 to display name, the user agent must display the URL that originates the script requesting profile access. If 
+		 this script originates from a secure connection (for example, SSL), the Web author can use the SSL certificate 
+		 to reliably identify the party requesting access.
+		 </apiDesc></apiParam><apiParam><apiItemName>domain</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiData>null</apiData><apiDesc>Specifies the pages that the user's choice will apply to in addition to the current page. 
+		 The specification follows the cookie standard.
+		 </apiDesc></apiParam><apiParam><apiItemName>path</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiData>null</apiData><apiDesc>Specifies the path to the domain server requesting access. When vExpiration is set, the path is saved with the requested attributes.
+		 </apiDesc></apiParam><apiParam><apiItemName>expiration</apiItemName><apiType value=""/><apiData>null</apiData><apiDesc>Specifies the amount of time the site has requested access to these attributes. This is currently ignored by Windows Internet Explorer.
+		 </apiDesc></apiParam><apiParam><apiItemName>reserved</apiItemName><apiType value=""/><apiData>null</apiData><apiDesc>This parameter is reserved.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Performs all requests located in the read-requests queue.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536413%28VS.85%29.aspx"><linktext>MSDN - doReadRequest Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:UserProfile:getAttribute"><apiName>getAttribute</apiName><shortdesc>
+		 Returns the value of the named attribute from the userProfile object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns a null value if read access for this attribute is not available.
+		 
+		 </apiDesc><apiType value="void"/></apiReturn><apiParam><apiItemName>attributeName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>One of the standard vCard names listed in Remarks. If one of these names is not used, the request is ignored.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the value of the named attribute from the userProfile object.
+		 
+		 <p><b>Note:</b> The following schema is used for the field names of the user data store. These names are 
+		 specified when you use the getAttribute method on the userProfile object. Note that the format has changed from 
+		 vCard_xxx to vCard.xxx, and that the older format no longer is supported.</p>
+		 
+		 <p><b>Note:</b> An asterisk ( denotes extensions to the vCard schema. Extensions are referenced 
+		 as X- elements, as defined in the vCard schema.</p>
+		 
+		 <adobetable class="innertable">
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 <tgroup cols="3"><thead><row><entry>vCard Names</entry></row></thead><tbody><row>
+		 <entry>vCard.Business.City</entry>
+		 <entry>vCard.Business.Country</entry>
+		 <entry>vCard.Business.Fax</entry>
+		 </row><row>
+		 <entry>vCard.Business.Phone</entry>
+		 <entry>vCard.Business.State</entry>
+		 <entry>vCard.Business.StreetAddress</entry>
+		 </row><row>
+		 <entry>vCard.Business.URL</entry>
+		 <entry>vCard.Business.Zipcode</entry>
+		 <entry>vCard.Cellular</entry>
+		 </row><row>
+		 <entry>vCard.Company</entry>
+		 <entry>vCard.Department</entry>
+		 <entry>vCard.DisplayName</entry>
+		 </row><row>
+		 <entry>vCard.Email</entry>
+		 <entry>vCard.FirstName</entry>
+		 <entry>vCard.Gender~~</entry>
+		 </row><row>
+		 <entry>vCard.Home.City</entry>
+		 <entry>vCard.Home.Country</entry>
+		 <entry>vCard.Home.Fax</entry>
+		 </row><row>
+		 <entry>vCard.Home.Phone</entry>
+		 <entry>vCard.Home.State</entry>
+		 <entry>vCard.Home.StreetAddress</entry>
+		 </row><row>
+		 <entry>vCard.Home.Zipcode</entry>
+		 <entry>vCard.Homepage</entry>
+		 <entry>vCard.JobTitle</entry>
+		 </row><row>
+		 <entry>vCard.LastName</entry>
+		 <entry>vCard.MiddleName</entry>
+		 <entry>vCard.Notes</entry>
+		 </row><row>
+		 <entry>vCard.Office</entry>
+		 <entry>vCard.Pager</entry>
+		 <entry/>
+		 </row></tbody></tgroup></adobetable>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536431%28VS.85%29.aspx"><linktext>MSDN - getAttribute Method</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:UserProfile:setAttribute"><apiName>setAttribute</apiName><shortdesc>
+		 Sets the value of the specified attribute.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>attrName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The name of the attribute.
+		 </apiDesc></apiParam><apiParam><apiItemName>value</apiItemName><apiType value="Number"/><apiDesc>The string, number, or Boolean to assign to the attribute. 
+		 </apiDesc></apiParam><apiParam><apiItemName>caseSensitive</apiItemName><apiType value=""/><apiData>unknown</apiData><apiDesc>Whether to use a case-sensitive search to locate the attribute. Can be one of the following values: 
+		 <ul>
+		 <li>1 - The case of attrName is respected. </li>
+		 <li>0 - TMatch attrName regardless of case. </li>
+		 </ul>
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the value of the specified attribute.
+		 
+		 <p><b>Note (IE8):</b>  Internet Explorer 8 and later. IE8 mode enables several enhancements to the setAttribute, getAttribute, and 
+		 removeAttribute methods that are not available when pages are displayed in earlier document modes. 
+		 
+		 <ul>
+		 <li>The attrName parameter requires the name of the desired content attribute and not the Document Object Model (DOM) attribute. 
+		 For example, in IE8 mode, this method no longer requires attrName to be "className" when setting, getting, or removing a CLASS attribute. 
+		 Earlier versions of Internet Explorer and Internet Explorer 8 in compatibility mode still require attrName to specify the corresponding 
+		 DOM property name. </li>
+		 <li>The attrName parameter is not case sensitive. As a result, the iCaseSensitive parameter is no longer supported and should not be used.</li>
+		 <li>The methods support event handlers. For example, the following code example defines an event handler to call a function called SomeFunction 
+		 when the body of the page is loaded. 
+		 <codeblock>document.body.setAttribute('onload', 'SomeFunction()');</codeblock></li>
+		 </ul>
+		 
+		 If the specified attribute is not already present, the setAttribute method adds the attribute to the object and sets the value.
+		 </p>
+		 
+		 <p><b>Note:</b> If your pages are displayed in IE5 mode or IE7 mode, be careful when spelling attribute names. If you 
+		 set caseSensitive to 1 and the attrName parameter does not have the same uppercase and lowercase letters as the attribute, a new 
+		 attribute is created for the object. If two or more attributes have the same name, differing only in case, and caseSensitive is 
+		 set to 0, this method assigns values only to the first attribute created with this name. All other attributes of the same name are ignored.</p>
+		 
+		 <p><b>Note (IE8):</b> Internet Explorer 8 and later. When pages are displayed in IE8 mode, the value parameter only supports 
+		 string values. Non-string values are not automatically converted to string values. For best results, formally convert values to 
+		 strings before using them as parameter values. For example, do not attempt to pass an object directly to the value parameter; 
+		 call the object's toString method instead.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536431%28VS.85%29.aspx"><linktext>MSDN - getAttribute Method</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.objects:Navigator"><apiName>Navigator</apiName><shortdesc>
+	 Contains information about the application running the script.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+	 </modified></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>dom.objects:NavigatorID</apiBaseInterface><apiBaseInterface>dom.objects:NavigatorOnLine</apiBaseInterface><apiBaseInterface>dom.objects:NavigatorAbilities</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains information about the application running the script. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535867%28VS.85%29.aspx"><linktext>MSDN - navigator Object</linktext></link><link href="http://developer.mozilla.org/en/DOM_Client_Object_Cross-Reference/navigator"><linktext>MDC - navigator</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.navigator"><linktext>MDC - window.navigator</linktext></link></related-links><apiOperation id="dom.objects:Navigator:getStorageUpdates"><apiName>getStorageUpdates</apiName><shortdesc>
+		 The getStorageUpdates()  method, when invoked, must, if the storage mutex is owned by the event loop of the task that resulted in the method 
+		 being called, release the storage mutex so that it is once again free.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 The getStorageUpdates()  method, when invoked, must, if the storage mutex is owned by the event loop of the task that resulted in the method 
+		 being called, release the storage mutex so that it is once again free. Otherwise, it must do nothing.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-getstorageupdates"><linktext>W3C - HTML5: Navigator.getStorageUpdates()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Navigator:javaEnabled"><apiName>javaEnabled</apiName><shortdesc>
+		 Indicates whether the host browser is Java-enabled or not.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Boolean"/></apiReturn></apiOperationDef><apiDesc>
+		 Indicates whether the host browser is Java-enabled or not. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (window.navigator.javaEnabled()) {
+		 	// browser has java
+		 }</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536610%28VS.85%29.aspx"><linktext>MSDN - javaEnabled Method</linktext></link><link href="http://developer.mozilla.org/en/Navigator.javaEnabled"><linktext>MDC - window.navigator.javaEnabled()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Navigator:mozIsLocallyAvailable"><apiName>mozIsLocallyAvailable</apiName><shortdesc>
+		 Allows code to determine whether or not a given resource is available.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>URI of the resource whose availability is to be checked, as a string. 
+		 </apiDesc></apiParam><apiParam><apiItemName>ifOffline</apiItemName><apiType value="Boolean"/><apiDesc>Whether or not the offline resources cache should be checked; specify true to consider the offline resources cache. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Allows code to determine whether or not a given resource is available. 
+		 
+		 <p><b>Note:</b> Security exceptions can occur if the requested URI is not from the same origin.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var available = navigator.mozIsLocallyAvailable("my-image-file.png", true);
+		 if (available) {
+		 	/~~ the offline resource is present ~~/
+		 } else {
+		 	alert("Certain needed resources are not available until you connect to the network.");
+		 }</codeblock>
+		 
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom.objects:Navigator:preference"><apiName>preference</apiName><shortdesc>
+		 Sets a user preference.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Function"/></apiReturn></apiOperationDef><apiDesc>
+		 Sets a user preference. This method is only available to privileged code, 
+		 and you should use XPCOM Preferences API instead. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.preference"><linktext>MDC - window.navigator.preference()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Navigator:registerContentHandler"><apiName>registerContentHandler</apiName><shortdesc>
+		 Allows web sites to register themselves as possible handlers for content of a particular MIME type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>mimeType</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The desired MIME type as a string.
+		 </apiDesc></apiParam><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI to the handler as a string.
+		 </apiDesc></apiParam><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The title of the handler presented to the user as a string.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Allows web sites to register themselves as possible handlers for content of a particular MIME type. 
+		 
+		 <p><b>Note:</b> For Firefox 2, only the application/vnd.mozilla.maybe.feed, application/atom+xml, and 
+		 application/rss+xml MIME types are supported. All values have the same effect, and the registered 
+		 handler will receive feeds in all Atom and RSS versions. </p>
+		 
+		 <p><b>Note:</b> Web sites may only register content handlers for themselves. For security reasons, 
+		 it's not possible for an extension or web site to register content handlers targeting other sites.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
+                                 "http://www.example.tld/?foo=%s",
+                                 "My Feed Reader");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.registerContentHandler"><linktext>MDC - window.navigator.registerContentHandler()</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-registercontenthandler"><linktext>W3C - HTML5: Navigator.registerContentHandler()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Navigator:registerProtocolHandler"><apiName>registerProtocolHandler</apiName><shortdesc>
+		 Allows web sites to register themselves as possible handlers for particular protocols.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>protocol</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The protocol the site wishes to handle, specified as a string. 
+		 </apiDesc></apiParam><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI to the handler as a string. You can include "%s" to indicate where to insert the escaped URI of the document to be handled. 
+		 </apiDesc></apiParam><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The title of the handler presented to the user as a string. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Allows web sites to register themselves as possible handlers for particular protocols. 
+		 
+		 </apiDesc><example>If your web application is located at http://www.example.com, you can register a protocol handler for it to handle "mailto" like this: 
+		 <codeblock>navigator.registerProtocolHandler("mailto", "http://www.example.com/?uri=%s", "Example Mail");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.registerProtocolHandler"><linktext>MDC - window.navigator.registerProtocolHandler()</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-registerprotocolhandler"><linktext>W3C - HTML5: Navigator.registerProtocolHandler()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Navigator:taintEnabled"><apiName>taintEnabled</apiName><shortdesc>
+		 Returns whether data tainting is enabled.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Obsolete" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Function"/></apiReturn></apiOperationDef><apiDesc>
+		 Returns whether data tainting is enabled. JavaScript taint/untaint functions removed in JavaScript 1.2[1].
+		 
+		 <p><b>Note (IE):</b> Microsoft Internet Explorer 5 and earlier does not support data tainting and therefore always returns false.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536778%28VS.85%29.aspx"><linktext>taintEnabled Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.navigator.taintEnabled"><linktext>MDC - window.navigator.taintEnabled()</linktext></link><link href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/nav.html#1194117"><linktext>[1]</linktext></link></related-links></apiOperation><apiValue id="dom.objects:Navigator:appCodeName:get"><apiName>appCodeName</apiName><shortdesc>
+		 Returns the internal "code" name of the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the internal "code" name of the current browser. 
+		 
+		 <p><b>Note:</b> Mozilla, Netscape 6, and IE5 all use the internal name "Mozilla."</p>
+		 
+		 </apiDesc><example>Mozilla
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533077%28VS.85%29.aspx"><linktext>MSDN - appCodeName Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.appCodeName"><linktext>MDC - window.navigator.appCodeName</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:appMinorVersion:get"><apiName>appMinorVersion</apiName><shortdesc>
+		 Retrieves the application's minor version value.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the application's minor version value. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533077%28VS.85%29.aspx"><linktext>MSDN - appMinorVersion Property</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:appName:get"><apiName>appName</apiName><shortdesc>
+		 Returns the official name of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the official name of the browser. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 dump(window.navigator.appName);
+		 // prints "Navigator" to the console for NS6</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533079%28VS.85%29.aspx"><linktext>MSDN - appName Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.appName"><linktext>MDC - window.navigator.appName</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:appVersion:get"><apiName>appVersion</apiName><shortdesc>
+		 Returns the version of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the version of the browser.
+		 
+		 <p><b>Note:</b> The window.navigator.userAgent property also contains the version number 
+		 (example: "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1"), but you 
+		 should be aware of how easy it is to change the user agent string and "spoof" other browsers, platforms, 
+		 or user agents, and also how cavalier the browser vendor themselves are with these properties. 
+		 The window.navigator.appVersion and window.navigator.userAgent properties are quite often used in 
+		 "browser sniffing" code: scripts that attempt to find out what kind of browser you are using and 
+		 adjust pages accordingly.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if ( navigator.appVersion.charAt(0) == "5" ) { 
+		 	// browser is putatively a v5 browser
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533080%28VS.85%29.aspx"><linktext>MSDN - appVersion Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.appVersion"><linktext>MDC - window.navigator.appVersion</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:browserLanguage:get"><apiName>browserLanguage</apiName><shortdesc>
+		 Retrieves the current browser language.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the current browser language. 
+		 
+		 <p><b>Note (IE):</b> This property does not indicate the language or languages set by the user in Language 
+		 Preferences, located in the Internet Options dialog box.</p>
+		 
+		 <p><b>Note (IE):</b> In Microsoft Internet Explorer 4.0 and earlier, the browserLanguage property reflects 
+		 the language of the installed browser's user interface. For example, if you install a Japanese version of Windows 
+		 Internet Explorer on an English operating system, browserLanguage would be ja.</p>
+		 
+		 <p><b>Note (IE):</b> In Internet Explorer 5 and later, however, the browserLanguage property reflects the language 
+		 of the operating system regardless of the installed language version of Internet Explorer. However, if Microsoft Windows 
+		 2000 MultiLanguage version is installed, the browserLanguage property indicates the language set in the operating system's 
+		 current menus and dialogs, as found in the Regional Options of the Control Panel. For example, if you install a 
+		 Japanese version of Internet Explorer 5 on an English (United Kingdom) operating system, browserLanguage would be en-gb. 
+		 If you install Windows 2000 MultiLanguage version and set the language of the menus and dialogs to French, browserLanguage 
+		 would be fr, even though you have a Japanese version of Internet Explorer.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533542%28VS.85%29.aspx"><linktext>MSDN - browserLanguage Property</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:buildID:get"><apiName>buildID</apiName><shortdesc>
+		 Returns the build identifier of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the build identifier of the browser. The build ID is in form YYYYMMDDHH.
+		 
+		 <p><b>Note:</b> Available in Firefox 2 (Gecko 1.8.1) and later.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 dump(window.navigator.buildID); 
+		 // prints "2006090803" to the console</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.buildID"><linktext>window.navigator.buildID MDC - window.navigator.buildID</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:cookieEnabled:get"><apiName>cookieEnabled</apiName><shortdesc>
+		 Returns a boolean indicating whether cookies are enabled in the browser or not.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns a boolean indicating whether cookies are enabled in the browser or not. 
+		 
+		 <p><b>Note (IE):</b> CookieEnabled does not check the status of session cookies.</p>
+		 
+		 <p><b>Note (Mozilla):</b> Due to bug 230350, cookieEnabled may return the wrong result in Gecko-based applications. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (!navigator.cookieEnabled) { 
+		 	// let the user know that enabling cookies makes the web page much more useful
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533694%28VS.85%29.aspx"><linktext>MSDn - cookieEnabled Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.cookieEnabled"><linktext>MDC - window.navigator.cookieEnabled</linktext></link><link href="http://bugzilla.mozilla.org/show_bug.cgi?id=230350"><linktext>bug 230350</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:cpuClass:get"><apiName>cpuClass</apiName><shortdesc>
+		 Retrieves a string denoting the CPU class.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves a string denoting the CPU class. 
+		 
+		 <adobetable class="innertable">
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 <tgroup cols="2"><thead><row><entry>CPU Class</entry><entry>CPU Name</entry></row></thead><tbody><row>
+		 		<entry>x86</entry><entry><codeph>Intel processor.</codeph></entry>
+		 	</row><row>
+		 		<entry>68K</entry><entry>Motorola processor.</entry>
+		 	</row><row>
+		 		<entry>Alpha</entry><entry>Digital processor.</entry>
+		 	</row><row>
+		 		<entry>PPC</entry><entry><codeph>Motorola processor.</codeph></entry>
+		 	</row><row>
+		 		<entry>Other</entry><entry>Other CPU classes, including Sun SPARC.</entry>
+		 	</row></tbody></tgroup></adobetable>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms533697%28VS.85%29.aspx"><linktext>MSDN - cpuClass Property</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:language:get"><apiName>language</apiName><shortdesc>
+		 Returns a string representing the language version of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a string representing the language version of the browser. Examples 
+		 of valid language codes include "en", "en-US", "fr", "es-ES", etc. 
+		 
+		 <p><b>Note:</b> This property also shows up as part of the navigator.userAgent string.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if ( window.navigator.language != "en" ) {       
+		 	doLangSelect(window.navigator.language); 
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.language"><linktext>MDC - window.navigator.language</linktext></link><link href="dom.objects.xml#Navigator/systemLanguage"><linktext>systemLanguage</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:mimeTypes:get"><apiName>mimeTypes</apiName><shortdesc>
+		 Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:MimeTypeArray</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser. 
+		 
+		 <p><b>Note:</b> The zeroth element in mimeTypes (the "Mozilla Default Plug-in" MimeType object) has a type property of 
+		 instead of a typical MIME format like "image/x-macpaint"</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>alert(window.navigator.mimeTypes.item(0).description); // alerts "Mozilla Default Plug-in"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.mimeTypes"><linktext>MDC - window.navigator.mimeTypes</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:onLine:get"><apiName>onLine</apiName><shortdesc>
+		 Returns a boolean indicating whether the browser is working online.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns a boolean indicating whether the browser is working online. 
+		 
+		 <p><b>Note (IE):</b>  In Windows Internet Explorer 8 and later, the onLine property returns true if both of the 
+		 following conditions are true: 
+		 <ul>
+		 <li>the system is able to communicate with the network</li>
+		 <li>the system is not in global offline mode (Users can modify the global offline state by choosing Work Offline on the File menu.)</li>
+		 </ul>
+		 If either of these conditions is false, the onLine property returns false.
+		 </p>
+		 
+		 <p><b>Note (IE):</b> In Microsoft Internet Explorer 4.0 through Internet Explorer 7, the onLine property indicates whether the 
+		 system is in global offline mode. It does not indicate whether the system can communicate with the network.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>alert(navigator.onLine ? "You're online" : "You're offline");</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534307%28VS.85%29.aspx"><linktext>MSDN - onLine Property</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.navigator.onLine"><linktext>MDC - window.navigator.onLine</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:oscpu:get"><apiName>oscpu</apiName><shortdesc>
+		 Returns a string that represents the current operating system.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a string that represents the current operating system. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 function osInfo() { 
+		 	alert(window.navigator.oscpu); 
+		 }
+		 // returns: Windows NT 6.0</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.oscpu"><linktext>MDC - window.navigator.oscpu</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:platform:get"><apiName>platform</apiName><shortdesc>
+		 Returns a string representing the platform of the browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a string representing the platform of the browser.
+		 
+		 <adobetable class="innertable">
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 	
+		 <tgroup cols="2"><thead><row><entry>Platform Code</entry><entry>Platform Name</entry></row></thead><tbody><row>
+		 		<entry>HP-UX</entry><entry><codeph>HP UNIX-based computers.</codeph></entry>
+		 	</row><row>
+		 		<entry>MacPPC</entry><entry>Macintosh PowerPC-based computers.</entry>
+		 	</row><row>
+		 		<entry>Mac68K</entry><entry>Macintosh 68K-based computers.</entry>
+		 	</row><row>
+		 		<entry>MacIntel</entry><entry>Macintosh Intel-based computers.</entry>
+		 	</row><row>
+		 		<entry>Win32</entry><entry><codeph>Microsoft Windows 32-bit platform.</codeph></entry>
+		 	</row><row>
+		 		<entry>Win16</entry><entry>Windows 16-bit platform.</entry>
+		 	</row><row>
+		 		<entry>WinCE</entry><entry>Windows CE platform.</entry>
+		 	</row><row>
+		 		<entry>Linux i686</entry><entry>Linux i686</entry>
+		 	</row><row>
+		 		<entry>Other</entry><entry>Other</entry>
+		 	</row></tbody></tgroup></adobetable>
+		 
+		 <p><b>Note (Mozilla):</b> Unless your code is privileged (chrome or at least has the UniversalBrowserRead 
+		 privilege), it may get the value of the general.platform.override preference instead of the true platform. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534340%28VS.85%29.aspx"><linktext>MSDN - platform Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.platform"><linktext>MDC - window.navigator.platform</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:plugins:get"><apiName>plugins</apiName><shortdesc>
+		 Returns an PluginArray object, listing the plugins installed in the application.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:PluginArray</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns an PluginArray object, listing the plugins installed in the application. 
+		 
+		 <b>IE:</b> Retrieves a collection of all embed objects within the document.
+		 
+		 <p><b>Note (IE):</b> The collection is an alias for the embeds collection on the document. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script type="text/javascript"&gt;
+		 	var L = navigator.plugins.length;
+		 	document.write(L.toString().bold() + " Plugin(s)".bold());
+		 	document.write("&lt;br&gt;");
+		 	document.write("Name | Filename | description".bold());
+		 	document.write("&lt;br&gt;");
+		 	for(var i=0; i&lt;L; i++) {
+		 		document.write(navigator.plugins[i].name);
+		 		document.write(" | ");
+		 		document.write(navigator.plugins[i].filename);
+		 		document.write(" | ");
+		 		document.write(navigator.plugins[i].description);
+		 		document.write("&lt;br&gt;");
+		 	}
+		 &lt;/script&gt;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms537477%28VS.85%29.aspx"><linktext>MSDN - plugins Collection</linktext></link><link href="http://developer.mozilla.org/en/Navigator.plugins"><linktext>MDC - window.navigator.plugins</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:product:get"><apiName>product</apiName><shortdesc>
+		 Returns the product name of the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the product name of the current browser.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt;
+		 function prod() { 
+		 	dt = document.getElementById("d"); 
+		 	dt.innerHTML = window.navigator.product; 
+		 }
+		 &lt;/script&gt; 
+		 &lt;button onclick="prod();"&gt;product&lt;/button&gt; 
+		 &lt;div id="d"&gt; &lt;/div&gt; 
+		 // returns "Gecko"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.product"><linktext>MDC - window.navigator.product</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:productSub:get"><apiName>productSub</apiName><shortdesc>
+		 Returns the build number of the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the build number of the current browser.
+		 
+		 <p><b>Note:</b> On IE, this property returns undefined. </p>
+		 
+		 <p><b>Note:</b> On Apple Safari this property always returns 20030107.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script&gt; 
+		 function prodsub() {
+		 	dt = document.getElementById("d").childNodes[0];
+		 	dt.data = window.navigator.productSub;
+		 } 
+		 &lt;/script&gt; 
+		 &lt;button onclick="prodsub();"&gt;productSub&lt;/button&gt;
+		 // returns: 20010725</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.productSub"><linktext>MDC - window.navigator.productSub</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:securityPolicy:get"><apiName>securityPolicy</apiName><shortdesc>
+		 Returns an empty string.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns an empty string. In Netscape 4.7x, returns "US &amp; CA domestic policy" or "Export policy". 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.securityPolicy"><linktext>MDC - window.navigator.securityPolicy</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:systemLanguage:get"><apiName>systemLanguage</apiName><shortdesc>
+		 Retrieves the default language used by the operating system.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the default language used by the operating system. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534653%28VS.85%29.aspx"><linktext>MSDN - systemLanguage Property</linktext></link><link href="dom.objects.xml#Navigator/language"><linktext>language</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:userAgent:get"><apiName>userAgent</apiName><shortdesc>
+		 Returns the user agent string for the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata><asCustoms><modified>HTML 5
+		 </modified></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the user agent string for the current browser. 
+		 
+		 <p><b>Note:</b> Browser identification based on detecting the user agent string is 
+		 <b>unreliable</b> and <b>is not recommended</b>, as the user agent string is user configurable.
+		 
+		 <ul>
+		 <li>Mozilla Suite and Firefox can use the preference "general.useragent.override" in about:config. Some Firefox extensions or multi-bar do that. </li>
+		 <li>Opera 6+ allows users to set the browser identification string via a menu </li>
+		 <li>Microsoft Internet Explorer uses the Windows registry </li>
+		 <li>Safari and iCab allow users to change the browser user agent string to predefined Internet Explorer or Netscape strings via a menu. </li>
+		 </ul>
+		 
+		 </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 alert(window.navigator.userAgent);
+		 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534712%28VS.85%29.aspx"><linktext>MSDN - userAgent Property</linktext></link><link href="http://developer.mozilla.org/en/Navigator.userAgent"><linktext>MDC - window.navigator.userAgent</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:userLanguage:get"><apiName>userLanguage</apiName><shortdesc>
+		 Retrieves the operating system's natural language setting.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Retrieves the operating system's natural language setting.
+		 
+		 <p><b>Note (IE):</b> This property reflects the setting in the "Your locale (location)" 
+		 box in the Regional Options of Control Panelfor example, "English (United States).</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms534713%28VS.85%29.aspx"><linktext>MSDN - userLanguage Property</linktext></link><link href="http://msdn.microsoft.com/en-us/library/ms533052(VS.85).aspx"><linktext>MSDN - Language Codes</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:userProfile:get"><apiName>userProfile</apiName><shortdesc>
+		 Provides methods that allow a script to request read access to and perform read actions on a user's profile information.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Microsoft"/><apiPlatform description="" name="Obsolete" version="IE7"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:UserProfile</apiValueClassifier></apiValueDef><apiDesc>
+		 Provides methods that allow a script to request read access to and perform read actions on a user's profile information.
+		 
+		 <p><b>Note (IE):</b> As of Windows Internet Explorer 7, this object is obsolete and should not be used.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Queue a request for read access to multiple profile attributes.
+		 navigator.userProfile.addReadRequest("vcard.displayname");
+		 navigator.userProfile.addReadRequest("vcard.gender");
+		 
+		 // Request access to the information.
+		 navigator.userProfile.doReadRequest(usage-code, "Acme Corporation");
+		 
+		 // Now perform read operations to access the information.
+		 name = navigator.userProfile.getAttribute("vcard.displayname");
+		 gender = navigator.userProfile.getAttribute("vcard.gender");
+		 
+		 // The script can now use the 'name' and 'gender' variables
+		 // to personalize content or to send information back to the server.
+		 
+		 // Clear the request queue to prepare for later information requests.
+		 navigator.userProfile.clearRequest();</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms535915%28VS.85%29.aspx"><linktext>MSDN - userProfile Object</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:vendor:get"><apiName>vendor</apiName><shortdesc>
+		 Returns the vendor name of the current browser.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the vendor name of the current browser.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 window.navigator.vendor 
+		 // returns "Netscape6"</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.vendor"><linktext>MDC - window.navigator.vendor</linktext></link></related-links></apiValue><apiValue id="dom.objects:Navigator:vendorSub:get"><apiName>vendorSub</apiName><shortdesc>
+		 Returns the vendor version number.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the vendor version number.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 window.navigator.vendorSub 
+		 // returns "6.1" where the vendor part of userAgent is 
+		 // Netscape6/6.1</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/Navigator.vendor"><linktext>MDC - window.navigator.vendorSub</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.objects:NavigatorAbilities"><apiName>NavigatorAbilities</apiName><shortdesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorAbilities interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Objects implementing the Navigator interface must also implement the NavigatorAbilities interface. This interface is defined separately so 
+	 that other specifications can re-use parts of the Navigator interface.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator"><linktext>W3C - HTML 5: NavigatorID</linktext></link></related-links><apiOperation id="dom.objects:NavigatorAbilities:dom.objects:NavigatorAbilities:getStorageUpdates"><apiName>getStorageUpdates</apiName><shortdesc>
+		 The getStorageUpdates()  method, when invoked, must, if the storage mutex is owned by the event loop of the task that resulted in the method 
+		 being called, release the storage mutex so that it is once again free.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 The getStorageUpdates()  method, when invoked, must, if the storage mutex is owned by the event loop of the task that resulted in the method 
+		 being called, release the storage mutex so that it is once again free. Otherwise, it must do nothing.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-getstorageupdates"><linktext>W3C - HTML5: Navigator.getStorageUpdates()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:NavigatorAbilities:dom.objects:NavigatorAbilities:registerContentHandler"><apiName>registerContentHandler</apiName><shortdesc>
+		 Allows web sites to register themselves as possible handlers for content of a particular MIME type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>mimeType</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The desired MIME type as a string.
+		 </apiDesc></apiParam><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI to the handler as a string.
+		 </apiDesc></apiParam><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The title of the handler presented to the user as a string.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Allows web sites to register themselves as possible handlers for content of a particular MIME type. 
+		 
+		 <p><b>Note:</b> For Firefox 2, only the application/vnd.mozilla.maybe.feed, application/atom+xml, and 
+		 application/rss+xml MIME types are supported. All values have the same effect, and the registered 
+		 handler will receive feeds in all Atom and RSS versions. </p>
+		 
+		 <p><b>Note:</b> Web sites may only register content handlers for themselves. For security reasons, 
+		 it's not possible for an extension or web site to register content handlers targeting other sites.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 navigator.registerContentHandler("application/vnd.mozilla.maybe.feed",
+                                 "http://www.example.tld/?foo=%s",
+                                 "My Feed Reader");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.registerContentHandler"><linktext>MDC - window.navigator.registerContentHandler()</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-registercontenthandler"><linktext>W3C - HTML5: Navigator.registerContentHandler()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:NavigatorAbilities:dom.objects:NavigatorAbilities:registerProtocolHandler"><apiName>registerProtocolHandler</apiName><shortdesc>
+		 Allows web sites to register themselves as possible handlers for particular protocols.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>scheme</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The protocol the site wishes to handle, specified as a string. 
+		 </apiDesc></apiParam><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI to the handler as a string. You can include "%s" to indicate where to insert the escaped URI of the document to be handled. 
+		 </apiDesc></apiParam><apiParam><apiItemName>title</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The title of the handler presented to the user as a string. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Allows web sites to register themselves as possible handlers for particular protocols. 
+		 
+		 </apiDesc><example>If your web application is located at http://www.example.com, you can register a protocol handler for it to handle "mailto" like this: 
+		 <codeblock>navigator.registerProtocolHandler("mailto", "http://www.example.com/?uri=%s", "Example Mail");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.navigator.registerProtocolHandler"><linktext>MDC - window.navigator.registerProtocolHandler()</linktext></link><link href="http://www.whatwg.org/specs/web-apps/current-work/#dom-navigator-registerprotocolhandler"><linktext>W3C - HTML5: Navigator.registerProtocolHandler()</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.objects:Pkcs11"><apiName>Pkcs11</apiName><shortdesc>
+	 PKCS11 modules are external modules which provide access to smart-card readers, biometric security 
+	 devices, or external certificate stores.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 PKCS11 modules are external modules which provide access to smart-card readers, biometric security 
+	 devices, or external certificate stores. There are two methods for installing PKCS11 modules into 
+	 Firefox. Users can use the preferences dialog to install or remove PKCS11 module. Extensions can 
+	 programmatically manage PKCS11 modules using the nsIPKCS11 programming interface.
+	 
+	 <p><b>Note (Mozilla):</b> The information in this article is specific to Firefox 3.5 and 
+	 newer, support for window.pkcs11 property was disabled due to security concerns.</p>
+	 
+	 <p><b>Mechanism Flag Definitions</b></p>
+	 
+	 <p>In general, most tokens should not set any of the cipher flags. Setting these flags means you want 
+	 your token to supply the default implementation for these functions. Normally Mozilla uses its own 
+	 internal module to supply these functions. These flags override that preference. If you choose to 
+	 implement these flags, your module must supply the following additional functions for each flag: </p>
+	 
+	 <ul>
+		<li>PKCS11_MECH_FLAG: must support CKM_RSA_PKCS and CKM_RSA_X_509 and the following functions: C_WRAPKEY, C_ENCRYPT, C_SIGN, C_DECRYPT, C_UNWRAPKEY, C_VERIFYRECOVER, C_VERIFY, C_GENERATEKEYPAIR (2048, 1024, 512) size
+		</li>
+		<li>PKCS11_MECH_DSA_FLAG: must support CKM_DSA and the following functions: C_SIGN, C_VERIFY, C_GENERATEKEYPAIR
+		</li>
+		<li>PKCS11_MECH_RC2_FLAG: must support CKM_RC2_CBC and CKM_RC2_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY
+		</li>
+		<li>PKCS11_MECH_RC4_FLAG: must support CKM_RC4_CBC and CKM_RC4_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY
+		</li>
+		<li>PKCS11_MECH_DES_FLAG: must support CKM_CPMF_CBC, CKM_DES_CBC, CKM_DES3_CBC, CKM_CPMF_ECB, CKM_DES_ECB, CKM_DES3_ECB and the following functions: C_GENERATEKEY, C_ENCRYPT, C_DECRYPT, C_WRAPKEY, C_UNWRAPKEY
+		</li>
+		<li>PKCS11_MECH_DH_FLAG: must support CKM_DH_PKCS_DERIVE and CKM_DH_KEY_PAIR_GEN and the following functions: C_DERIVEKEY, C_GENERATEKEYPAIR
+		</li>
+		<li>PKCS11_MECH_MD5_FLAG: Hashing must be able to function without authentication.
+		</li>
+		<li>PKCS11_MECH_SHA1_FLAG: Hashing must be able to function without authentication.
+		</li>
+		<li>PKCS11_MECH_MD2_FLAG: Hashing must be able to function without authentication.
+		</li>
+		<li>PKCS11_RANDOM_FLAG: Use token's Random Number Generator.
+			<ul>
+				<li>Warning: Must be able to use without authentication. Many hardware random number generators are not as secure as the Netscape internal one. Do not select this value unless you can show that your random number generator is secure. Even so, it's highly discouraged.
+				</li>
+			</ul>
+		</li>
+		<li>PKCS11_PUB_READABLE_CERT_FLAG: This is the only flag most smart tokens should turn on. You can turn this flag on if:
+			<ul>
+				<li> the certs on your token can be read without authentication and,
+				</li>
+				<li> the public key on your token can be found by ID, MODULUS, or VALUE and all your private keys have the associated public key.
+
+					<ul>
+						<li>Turning this flag on will illuminate a large number of password prompts for your token when looking up certs in Communicator. </li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		</ul>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/PKCS11"><linktext>MDC - PKCS11</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.pkcs11"><linktext>MDC - window.pkcs11</linktext></link><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links><apiOperation id="dom.objects:Pkcs11:addModule"><apiName>addModule</apiName><shortdesc>
+		 Loads a new PKCS #11 module.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Unknown
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>moduleName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of the module.
+		 </apiDesc></apiParam><apiParam><apiItemName>libraryFullPath</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The filename of the library prepended with its full path.
+		 </apiDesc></apiParam><apiParam><apiItemName>cryptoMechanismFlags</apiItemName><apiType value="Number"/><apiDesc>A bit vector indicating all cryptographic mechanisms should be turned on by default (see above).
+		 </apiDesc></apiParam><apiParam><apiItemName>cipherFlags</apiItemName><apiType value="Number"/><apiDesc>A bit vector indicating all SSL or S/MIME cipher functions supported by the module (see above).
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Loads a new PKCS #11 module.
+		 
+		 <p><b>Note (Mozilla):</b> The module will be placed in the NSS secmod.db database and will be loaded
+		 automatically on application restart.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Pkcs11:deletemodule"><apiName>deletemodule</apiName><shortdesc>
+		 Removes a PKCS #11 module.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Unknown
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>moduleName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Name of the module.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a PKCS #11 module.
+		 
+		 <p><b>Note (Mozilla):</b> In the delete case, the module is removed from the NSS secmod.db. This function 
+		 will issue a user prompt to confirm the operation before the add or delete actually occurs.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/JavaScript_crypto"><linktext>MDC - JavaScript crypto</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.objects:Selection"><apiName>Selection</apiName><shortdesc>
+	 Selection is the class of the object returned by window.getSelection() and other methods.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Selection is the class of the object returned by window.getSelection() and other methods. A 
+	 selection object represents the ranges that the user has selected.
+	 
+	 <p><b>Note (IE):</b> Internet Explorer uses the document.selection.createRange() to create a TextRange,
+	 which is fundamentally different from Mozilla's Selection and W3C's Range objects.</p>
+	 
+	 </apiDesc><example>
+	 Note the order of the branches: the Mozilla Selection should come first! The reason is that Opera 
+	 supports both objects; if you use window.getSelection() to read out the user selection, Opera 
+	 creates a Selection object, while if you use document.selection it creates a Text Range object.
+	 <codeblock>
+	 var userSelection;
+	 if (window.getSelection) {
+	 	userSelection = window.getSelection();
+	 } else if (document.selection) { // should come last; Opera!
+	 	userSelection = document.selection.createRange();
+	 }</codeblock>
+	 
+	 </example></apiClassifierDetail><related-links><link href="http://www.quirksmode.org/dom/range_intro.html"><linktext>Quirksmode - Accessing the user selection</linktext></link></related-links><apiOperation id="dom.objects:Selection:addRange"><apiName>addRange</apiName><shortdesc>
+		 Adds a range to the selection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>range</apiItemName><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier><apiDesc>A range object that will be added to the selection. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adds a range to the selection. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Select all STRONG elements in an HTML document
+		 var strongs = document.getElementsByTagName("strong");
+		 var s = window.getSelection();
+		 if(s.rangeCount &gt; 0) s.removeAllRanges();
+		 for(var i = 0; i &lt; strongs.length; i++) {
+		   var range = document.createRange();
+		   range.selectNode(strongs[i]);
+		   s.addRange(range);
+		 }</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/addRange"><linktext>MDC - Selection.addRange()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:collapse"><apiName>collapse</apiName><shortdesc>
+		 Collapses the current selection to a single point.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>parentNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The caret location will be within this node. 
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>
+		 <ul>
+		 <li>0 - Collapses the selection from the anchor to the beginning of parentNode's text.</li>
+		 <li>1 - Collapses the selection from the anchor to the end of parentNode's text.</li></ul>
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Collapses the current selection to a single point. The document is not modified. If the content is 
+		 focused and editable, the caret will blink there.
+		 
+		 </apiDesc><example>
+		 // Place the caret at the beginning of an HTML document's body.
+		 var body = document.getElementsByTagName("body")[0];
+		 window.getSelection().collapse(body,0);
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/collapse"><linktext>MDC - Selection.collapse()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:collapseToEnd"><apiName>collapseToEnd</apiName><shortdesc>
+		 Moves the anchor of the selection to the same point as the focus.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Moves the anchor of the selection to the same point as the focus.
+		 
+		 <p>The focus does not move. If the content is focused and editable, the caret will blink there. </p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/collapseToEnd"><linktext>MDC - Selection.collapseToEnd()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:collapseToStart"><apiName>collapseToStart</apiName><shortdesc>
+		 Moves the focus of the selection to the same point at the anchor.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Moves the focus of the selection to the same point at the anchor.
+		 
+		 <p>The anchor does not move. If the content is focused and editable, the caret will blink there. </p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/collapseToStart"><linktext>MDC - Selection.collapseToStart()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:containsNode"><apiName>containsNode</apiName><shortdesc>
+		 Indicates if the node is part of the selection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>If the node is part of the selection.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>node</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node that is being looked for whether it is part of the selection 
+		 </apiDesc></apiParam><apiParam><apiItemName>partlyContained</apiItemName><apiType value="Boolean"/><apiDesc>When true, containsNode returns true when a part of the node is part of the selection. 
+		 When false, containsNode only returns true when the entire node is part of the selection. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Indicates if the node is part of the selection. 
+		 
+		 </apiDesc><example>
+		 // Check to see if anything inside the body element is selected
+		 alert(window.getSelection().containsNode(document.body, true));
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/containsNode"><linktext>MDC - Selection.containsNode()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:deleteFromDocument"><apiName>deleteFromDocument</apiName><shortdesc>
+		 Deletes the actual text being represented by a selection object from the document's DOM.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Deletes the actual text being represented by a selection object from the document's DOM. 
+		 
+		 </apiDesc><example>
+		 A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on a web page. 
+		 The user then clicks a button that executes the JavaScript snippet 
+		 window.getSelection().deleteFromDocument(). The document's text becomes "Rabbits hars." 
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/deleteFromDocument"><linktext>MDC - Selection.deleteFromDocument()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:extend"><apiName>extend</apiName><shortdesc>
+		 Moves the focus of the selection to a specified point.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>parentNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node within which the focus will be moved.
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>The offset position within parentNode where the focus will be moved to.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Moves the focus of the selection to a specified point.
+		 
+		 <p>The anchor of the selection does not move. The selection will be from the anchor 
+		 to the new focus regardless of direction.</p>
+		  
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/extend"><linktext>MDC - Selection.extend()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:getRangeAt"><apiName>getRangeAt</apiName><shortdesc>
+		 Returns a range object representing one of the ranges currently selected.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The range object that will be returned. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>The zero-based index of the range to return. A negative number or a number greater than or 
+		 equal to rangeCount will result in an error.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a range object representing one of the ranges currently selected.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 ranges = [];
+		 sel = window.getSelection();
+		 for(var i = 0; i &lt; sel.rangeCount; i++) {
+		 	ranges[i] = sel.getRangeAt(i);
+		 }
+		 // Each item in the ranges array is now 
+		 // a range object representing one of the 
+		 // ranges in the current selection</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/getRangeAt"><linktext>MDC - Selection.getRangeAt()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:removeAllRanges"><apiName>removeAllRanges</apiName><shortdesc>
+		 Removes all ranges from the selection, leaving the anchorNode and focusNode 
+		 properties equal to null and leaving nothing selected.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Removes all ranges from the selection, leaving the anchorNode and focusNode 
+		 properties equal to null and leaving nothing selected. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/removeAllRanges"><linktext>MDC - Selection.removeAllRanges()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:removeRange"><apiName>removeRange</apiName><shortdesc>
+		 Removes a range from the selection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>range</apiItemName><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier><apiDesc>A range object that will be removed to the selection. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Removes a range from the selection. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // Programmaticaly, more than one range can be selected.  
+		 // This will remove all ranges except the first.
+		 s = window.getSelection();
+		 if(s.rangeCount &gt; 1) {
+		   for(var i = 1; i &lt; s.rangeCount; i++) {
+		     s.removeRange(s.getRangeAt(i));
+		   }
+		 }</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/removeRange"><linktext>MDC - Selection.removeRange()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:selectAllChildren"><apiName>selectAllChildren</apiName><shortdesc>
+		 Adds all the children of the specified node to the selection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>parentNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>All children of parentNode will be selected. parentNode itself is not 
+		 part of the selection. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adds all the children of the specified node to the selection. Previous selection is lost. 
+		 
+		 </apiDesc><example>
+		 footer = document.getElementById("footer");
+		 window.getSelection().selectAllChildren(footer);
+		 // Everything inside the footer is now selected
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/selectAllChildren"><linktext>MDC - Selection.selectAllChildren()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:selectionLanguageChange"><apiName>selectionLanguageChange</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/selectionLanguageChange"><linktext>MDC - Selection.selectionLanguageChange()</linktext></link></related-links></apiOperation><apiOperation id="dom.objects:Selection:toString"><apiName>toString</apiName><shortdesc>
+		 Returns a string currently being represented by the selection object, i.e.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The string representation of selection. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Returns a string currently being represented by the selection object, i.e. the currently selected text. 
+		 
+		 <p><b>Note:</b> In JavaScript, this method is called automatically when a function the selection object is passed 
+		 to requires a string: alert(window.getSelection()) // What is called alert(window.getSelection().toString()) 
+		 // What is actually being effectively called.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/toString"><linktext>MDC - Selection.toString()</linktext></link></related-links></apiOperation><apiValue id="dom.objects:Selection:anchorNode:get"><apiName>anchorNode</apiName><shortdesc>
+		 Returns the node in which the selection begins.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the node in which the selection begins. 
+		 
+		 <p><b>Note:</b> A user may make a selection from left to right (in document order) or right to left (reverse of 
+		 document order). The anchor is where the user began the selection. This can be visualized by holding the 
+		 Shift key and pressing the arrow keys on your keyboard. The selection's anchor does not move, but the 
+		 selection's focus, the other end of the selection, does move.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/anchorNode"><linktext>MDC - Selection.anchorNode</linktext></link></related-links></apiValue><apiValue id="dom.objects:Selection:anchorOffset:get"><apiName>anchorOffset</apiName><shortdesc>
+		 Returns the number of characters that the selection's anchor is offset within the anchorNode.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of characters that the selection's anchor is offset within the anchorNode. 
+		 
+		 <p><b>Note:</b> This number is zero-based. If the selection begins with the first character in the anchorNode, 
+		 0 is returned.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/anchorOffset"><linktext>MDC - Selection.anchorOffset</linktext></link></related-links></apiValue><apiValue id="dom.objects:Selection:focusNode:get"><apiName>focusNode</apiName><shortdesc>
+		 Returns the node in which the selection ends.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the node in which the selection ends. 
+		 
+		 <p><b>Note:</b> A user may make a selection from left to right (in document order) or right to left (reverse of 
+		 document order). The focus is where the user ended the selection. This can be visualized by holding the 
+		 Shift key and pressing the arrow keys on your keyboard to modify the current selection. The selection's 
+		 focus moves, but the selection's anchor, the other end of the selection, does not move. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/focusNode"><linktext>MDC - Selection.focusNode</linktext></link></related-links></apiValue><apiValue id="dom.objects:Selection:focusOffset:get"><apiName>focusOffset</apiName><shortdesc>
+		 Returns the number of characters that the selection's focus is offset within the focusNode.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of characters that the selection's focus is offset within the focusNode. 
+		 
+		 <p><b>Note:</b> This number is zero-based. If the selection ends with the first character in the focusNode, 
+		 0 is returned. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/focusOffset"><linktext>MDC - Selection.focusOffset</linktext></link></related-links></apiValue><apiValue id="dom.objects:Selection:isCollapsed:get"><apiName>isCollapsed</apiName><shortdesc>
+		 Returns a boolean indicating whether the selection's start and end points are at the same position.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Returns a boolean indicating whether the selection's start and end points are at the same position. 
+		 
+		 <p><b>Note:</b> Even a collapsed selection may have a rangeCount greater than 0. sel.getRangeAt(0) may return 
+		 a range that is also collapsed. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/isCollapsed"><linktext>MDC - Selection.isCollapsed</linktext></link></related-links></apiValue><apiValue id="dom.objects:Selection:rangeCount:get"><apiName>rangeCount</apiName><shortdesc>
+		 Returns the number of ranges in the selection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMCore" version="0"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 Returns the number of ranges in the selection. 
+		 
+		 <p><b>Note:</b> Before the user has clicked a freshly loaded page, the rangeCount is 0. A user can normally 
+		 only select one range at a time, so the rangeCount will usually be 1. Scripting can be use to make 
+		 the selection contain more than 1 range. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/Selection/rangeCount"><linktext>MDC - Selection.rangeCount</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

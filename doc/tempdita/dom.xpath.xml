@@ -1,0 +1,353 @@
+<apiPackage id="dom.xpath"><apiName>dom.xpath</apiName><apiDetail/><apiClassifier id="dom.xpath:XPathEvaluator"><apiName>XPathEvaluator</apiName><shortdesc>
+	 The evaluation of XPath expressions is provided by XPathEvaluator.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The evaluation of XPath expressions is provided by XPathEvaluator. In a DOM implementation 
+	 which supports the XPath 3.0 feature, as described above, the XPathEvaluator interface will 
+	 be implemented on the same object which implements the Document interface permitting it to 
+	 be obtained by the usual binding-specific method such as casting or by using the DOM Level 3 
+	 getInterface method. In this case the implementation obtained from the Document supports the 
+	 XPath DOM module and is compatible with the XPath 1.0 specification.
+	 
+	 <p>Evaluation of expressions with specialized extension functions or variables may not work 
+	 in all implementations and is, therefore, not portable. XPathEvaluator implementations may be 
+	 available from other sources that could provide specific support for specialized extension 
+	 functions or variables as would be defined by other specifications. </p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator"><linktext>W3C - XPathEvaluator</linktext></link></related-links><apiOperation id="dom.xpath:XPathEvaluator:dom.xpath:XPathEvaluator:createExpression"><apiName>createExpression</apiName><shortdesc>
+		 Creates a parsed XPath expression with resolved namespaces.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_EXPRESSION_ERR: Raised if the expression is 
+		 not legal according to the rules of the XPathEvaluator.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiException><apiDesc>NAMESPACE_ERR: Raised if the expression contains 
+		 namespace prefixes  which cannot be resolved by the specified XPathNSResolver.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiReturn><apiDesc>The compiled form of the XPath expression.
+		 
+		 </apiDesc><apiOperationClassifier>dom.xpath:XPathExpression</apiOperationClassifier></apiReturn><apiParam><apiItemName>expression</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The XPath expression string to be parsed.
+		 </apiDesc></apiParam><apiParam><apiItemName>resolver</apiItemName><apiOperationClassifier>dom.xpath:XPathNSResolver</apiOperationClassifier><apiDesc>The resolver permits translation of all prefixes, including the xml 
+		 namespace prefix, within the XPath expression into appropriate namespace URIs. If this 
+		 is specified as null, any namespace prefix within the expression will result in 
+		 DOMException being thrown with the code NAMESPACE_ERR.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Creates a parsed XPath expression with resolved namespaces. This is useful when an 
+		 expression will be reused in an application since it makes it possible to compile the 
+		 expression string into a more efficient internal form and preresolve all namespace 
+		 prefixes which occur within the expression.
+		 
+		 <p><b>Note (Mozilla):</b> Prior to Firefox 3, you could call this method on documents other 
+		 than the one you planned to run the XPath against. Under Firefox 3, you must call it on the 
+		 same document.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.createExpression"><linktext>MDC - Document.createExpression()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createExpression"><linktext>W3C - XPathEvaluator.createExpression()</linktext></link></related-links></apiOperation><apiOperation id="dom.xpath:XPathEvaluator:dom.xpath:XPathEvaluator:createNSResolver"><apiName>createNSResolver</apiName><shortdesc>
+		 Adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated 
+		 relative to the context of the node where it appeared within the document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node.
+		 
+		 </apiDesc><apiOperationClassifier>dom.xpath:XPathNSResolver</apiOperationClassifier></apiReturn><apiParam><apiItemName>nodeResolver</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node to be used as a context for namespace resolution.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated 
+		 relative to the context of the node where it appeared within the document. This adapter works 
+		 like the DOM Level 3 method lookupNamespaceURI  on nodes in resolving the namespaceURI from a 
+		 given prefix using the current information available in the node's hierarchy at the time 
+		 lookupNamespaceURI is called. also correctly resolving the implicit xml prefix.
+		 
+		 <p><b>Note:</b> XPath defines QNames without prefix to match only elements in the 
+		 null namespace. There is no way in XPath to pick up the default namespace as applied to a regular 
+		 element reference (e.g., <codeph>p[&amp;64;id='_myid']</codeph> for <codeph>xmlns='http://www.w3.org/1999/xhtml'</codeph>). 
+		 To match default elements in a non-null namespace, you either have to refer to a particular element using 
+		 a form such as <codeph>~~</codeph></p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.createNSResolver"><linktext>MDC - Document.createNSResolver()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver"><linktext>W3C - XPathEvaluator.createNSResolver()</linktext></link></related-links></apiOperation><apiOperation id="dom.xpath:XPathEvaluator:dom.xpath:XPathEvaluator:evaluate"><apiName>evaluate</apiName><shortdesc>
+		 Evaluates an XPath expression string and returns a result of the specified type if possible.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_EXPRESSION_ERR: Raised if the expression is not legal according to the rules of the XPathEvaluator.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiException><apiDesc>TYPE_ERR: Raised if the result cannot be converted to return the specified type.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiException><apiDesc>NAMESPACE_ERR: Raised if the expression contains namespace prefixes  which cannot be resolved by the specified XPathNSResolver.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiException><apiDesc>WRONG_DOCUMENT_ERR: The Node is from a document that is not supported by the XPathEvaluator that created this XPathExpression.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiException><apiDesc>NOT_SUPPORTED_ERR: The Node is not a type permitted as an XPath context node or the request type is not permitted by this XPathExpression.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiReturn><apiDesc>The result of the evaluation of the XPath expression. For XPath 1.0 results, this object 
+		 will be of type XPathResult.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMObject</apiOperationClassifier></apiReturn><apiParam><apiItemName>expression</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The XPath expression string to be parsed and evaluated.
+		 </apiDesc></apiParam><apiParam><apiItemName>contextNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The context is context node for the evaluation of this XPath expression. 
+		 If the XPathEvaluator was obtained by casting the Document then this must be owned by the same 
+		 document and must be a Document, Element, Attribute, Text, CDATASection, Comment, 
+		 ProcessingInstruction, or XPathNamespace  node. If the context node is a Text or a CDATASection, 
+		 then the context is interpreted as the whole logical text node as seen by XPath, unless the node 
+		 is empty in which case it may not serve as the XPath context.
+		 </apiDesc></apiParam><apiParam><apiItemName>resolver</apiItemName><apiOperationClassifier>dom.xpath:XPathNSResolver</apiOperationClassifier><apiDesc>The resolver permits translation of all prefixes, including the xml namespace 
+		 prefix, within the XPath expression into appropriate namespace URIs. If this is specified as null, 
+		 any namespace prefix within the expression will result in DOMException being thrown with the 
+		 code NAMESPACE_ERR.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiType value="Number"/><apiDesc>If a specific type is specified, then the result will be returned as the 
+		 corresponding type. For XPath 1.0 results, this must be one of the codes of the XPathResult interface.
+		 </apiDesc></apiParam><apiParam><apiItemName>result</apiItemName><apiOperationClassifier>dom.core.types:DOMObject</apiOperationClassifier><apiDesc>The result specifies a specific result object which may be reused and returned by 
+		 this method. If this is specified as nullor the implementation does not reuse the specified result, 
+		 a new result object will be constructed and returned. For XPath 1.0 results, this object will be 
+		 of type XPathResult.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Evaluates an XPath expression string and returns a result of the specified type if possible.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var headings = document.evaluate("//h2", document, null, XPathResult.ANY_TYPE, null); 
+		 /~~ Search the document for all h2 elements.  
+		  ~~ The result will likely be an unordered node iterator. ~~/
+		 var thisHeading = headings.iterateNext(); 
+		 var alertText = "Level 2 headings in this document are:\n";
+		 while (thisHeading) {
+		 	alertText += thisHeading.textContent + "\n";
+		 	thisHeading = headings.iterateNext();
+		 }
+		 alert(alertText); // Alerts the text of all h2 elements</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/document.evaluate"><linktext>MDC - Document.evaluate()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate"><linktext>W3C - XPathEvaluator.evaluate()</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.xpath:XPathResult"><apiName>XPathResult</apiName><shortdesc>
+	 The XPathResult interface represents the result of the evaluation of an XPath 1.0 expression 
+	 within the context of a particular node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The XPathResult interface represents the result of the evaluation of an XPath 1.0 expression 
+	 within the context of a particular node. Since evaluation of an XPath expression can result in 
+	 various result types, this object makes it possible to discover and manipulate the type and 
+	 value of the result. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult"><linktext>W3C - XPathResult</linktext></link></related-links><apiOperation id="dom.xpath:XPathResult:iterateNext"><apiName>iterateNext</apiName><shortdesc>
+		 Iterates and returns the next node from the node set or nullif there are no more nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>TYPE_ERR: Raised if resultType is not UNORDERED_NODE_ITERATOR_TYPE or ORDERED_NODE_ITERATOR_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: The document has been mutated since the result was returned.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiReturn><apiDesc>Returns the next node.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Iterates and returns the next node from the node set or nullif there are no more nodes. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-iterateNext"><linktext>W3C - XPathResult.iterateNext()</linktext></link></related-links></apiOperation><apiOperation id="dom.xpath:XPathResult:snapshotItem"><apiName>snapshotItem</apiName><shortdesc>
+		 Returns the indexth item in the snapshot collection.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>TYPE_ERR: Raised if resultType is not UNORDERED_NODE_SNAPSHOT_TYPE or ORDERED_NODE_SNAPSHOT_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiReturn><apiDesc>The node at the indexth position in the NodeList, or null if that is not a valid index.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiReturn><apiParam><apiItemName>index</apiItemName><apiType value="Number"/><apiDesc>Index into the snapshot collection.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the indexth item in the snapshot collection. If index is greater than or equal to the number of nodes in the list, 
+		 this method returns null. Unlike the iterator result, the snapshot does not become invalid, but may not correspond to the 
+		 current document if it is mutated.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-snapshotItem"><linktext>W3C - XPathResult.snapshotItem()</linktext></link></related-links></apiOperation><apiValue id="dom.xpath:XPathResult:ANY_TYPE"><apiName>ANY_TYPE</apiName><shortdesc>
+		 This code does not represent a specific type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 This code does not represent a specific type. An evaluation of an XPath expression will never 
+		 produce this type. If this type is requested, then the evaluation returns whatever type naturally 
+		 results from evaluation of the expression. If the natural result is a node set when ANY_TYPE was 
+		 requested, then UNORDERED_NODE_ITERATOR_TYPE is always the resulting type. Any other representation 
+		 of a node set must be explicitly requested.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-ANY-TYPE"><linktext>W3C - XPathResult.ANY_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:ANY_UNORDERED_NODE_TYPE"><apiName>ANY_UNORDERED_NODE_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] and will be accessed as a single node, which may be 
+		 null if the node set is empty.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>8</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] and will be accessed as a single node, which may be 
+		 null if the node set is empty. Document modification does not invalidate the node, but may mean that the 
+		 result node no longer corresponds to the current document. This is a convenience that permits optimization 
+		 since the implementation can stop once any node in the resulting set has been found. If there is more than 
+		 one node in the actual result, the single node returned might not be the first in document order.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-ANY-UNORDERED-NODE-TYPE"><linktext>W3C - XPathResult.ANY_UNORDERED_NODE_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:BOOLEAN_TYPE"><apiName>BOOLEAN_TYPE</apiName><shortdesc>
+		 The result is a boolean as defined by [XPath 1.0].</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a boolean as defined by [XPath 1.0]. Document modification does not invalidate the boolean, 
+		 but may mean that reevaluation would not yield the same boolean.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-BOOLEAN-TYPE"><linktext>W3C - XPathResult.BOOLEAN_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:FIRST_ORDERED_NODE_TYPE"><apiName>FIRST_ORDERED_NODE_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] and will be accessed as a single node, which may be null if the 
+		 node set is empty.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>9</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] and will be accessed as a single node, which may be null if the 
+		 node set is empty. Document modification does not invalidate the node, but may mean that the result node no longer 
+		 corresponds to the current document. This is a convenience that permits optimization since the implementation can 
+		 stop once the first node in document order of the resulting set has been found. If there are more than one node in
+		 the actual result, the single node returned will be the first in document order.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-FIRST-ORDERED-NODE-TYPE"><linktext>W3C - XPathResult.FIRST_ORDERED_NODE_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:NUMBER_TYPE"><apiName>NUMBER_TYPE</apiName><shortdesc>
+		 The result is a number as defined by [XPath 1.0].</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a number as defined by [XPath 1.0]. Document modification does not invalidate the number, 
+		 but may mean that reevaluation would not yield the same number.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-NUMBER-TYPE"><linktext>W3C - XPathResult.NUMBER_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:ORDERED_NODE_ITERATOR_TYPE"><apiName>ORDERED_NODE_ITERATOR_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed iteratively, which will produce 
+		 document-ordered nodes.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>5</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed iteratively, which will produce 
+		 document-ordered nodes. Document modification invalidates the iteration.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-ORDERED-NODE-ITERATOR-TYPE"><linktext>W3C - XPathResult.ORDERED_NODE_ITERATOR_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:ORDERED_NODE_SNAPSHOT_TYPE"><apiName>ORDERED_NODE_SNAPSHOT_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed as a snapshot list of nodes that will be 
+		 in original document order.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>7</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed as a snapshot list of nodes that will be 
+		 in original document order. Document modification does not invalidate the snapshot but may mean that reevaluation 
+		 would not yield the same snapshot and nodes in the snapshot may have been altered, moved, or removed from the document.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-ORDERED-NODE-SNAPSHOT-TYPE"><linktext>W3C - XPathResult.ORDERED_NODE_SNAPSHOT_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:STRING_TYPE"><apiName>STRING_TYPE</apiName><shortdesc>
+		 The result is a string as defined by [XPath 1.0].</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a string as defined by [XPath 1.0]. Document modification does not invalidate the string, but 
+		 may mean that the string no longer corresponds to the current document.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-STRING-TYPE"><linktext>W3C - XPathResult.STRING_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:UNORDERED_NODE_ITERATOR_TYPE"><apiName>UNORDERED_NODE_ITERATOR_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed iteratively, which may not produce nodes 
+		 in a particular order.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>4</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed iteratively, which may not produce nodes 
+		 in a particular order. Document modification invalidates the iteration. This is the default type returned if the 
+		 result is a node set and ANY_TYPE is requested.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-UNORDERED-NODE-ITERATOR-TYPE"><linktext>W3C - XPathResult.UNORDERED_NODE_ITERATOR_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:UNORDERED_NODE_SNAPSHOT_TYPE"><apiName>UNORDERED_NODE_SNAPSHOT_TYPE</apiName><shortdesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed as a snapshot list of nodes that may 
+		 not be in a particular order.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>6</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 The result is a node set as defined by [XPath 1.0] that will be accessed as a snapshot list of nodes that may 
+		 not be in a particular order. Document modification does not invalidate the snapshot but may mean that reevaluation 
+		 would not yield the same snapshot and nodes in the snapshot may have been altered, moved, or removed from the document.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-UNORDERED-NODE-SNAPSHOT-TYPE"><linktext>W3C - XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:booleanValue:get"><apiName>booleanValue</apiName><shortdesc>
+		 The value of this boolean result.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/><apiException><apiDesc>TYPE_ERR: Raised if resultType is not BOOLEAN_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The value of this boolean result.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-booleanValue"><linktext>W3C - XPathResult.booleanValue</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:invalideIteratorState:get"><apiName>invalideIteratorState</apiName><shortdesc>
+		 Signifies that the iterator has become invalid.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 Signifies that the iterator has become invalid. True if resultType is UNORDERED_NODE_ITERATOR_TYPE or ORDERED_NODE_ITERATOR_TYPE 
+		 and the document has been modified since this result was returned.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-invalid-iterator-state"><linktext>W3C - XPathResult.invalideIteratorState</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:numberValue:get"><apiName>numberValue</apiName><shortdesc>
+		 The value of this number result.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiException><apiDesc>TYPE_ERR: Raised if resultType is not NUMBER_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The value of this number result. If the native double type of the DOM binding does not directly support the exact IEEE 754 result 
+		 of the XPath expression, then it is up to the definition of the binding to specify how the XPath number is converted to the native binding number.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-numberValue"><linktext>W3C - XPathResult.numberValue</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:resultType:get"><apiName>resultType</apiName><shortdesc>
+		 A code representing the type of this result, as defined by the type constants.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 A code representing the type of this result, as defined by the type constants.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-resultType"><linktext>W3C - XPathResult.resultType</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:singleNodeValue:get"><apiName>singleNodeValue</apiName><shortdesc>
+		 The value of this single node result, which may be null.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier><apiException><apiDesc>TYPE_ERR: Raised if resultType is not ANY_UNORDERED_NODE_TYPE or FIRST_ORDERED_NODE_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The value of this single node result, which may be null.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-singleNodeValue"><linktext>W3C - XPathResult.singleNodeValue</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:snapshotLength:get"><apiName>snapshotLength</apiName><shortdesc>
+		 The number of nodes in the result snapshot.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiException><apiDesc>TYPE_ERR: Raised if resultType is not UNORDERED_NODE_SNAPSHOT_TYPE or ORDERED_NODE_SNAPSHOT_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The number of nodes in the result snapshot. Valid values for snapshotItem indices are 0 to snapshotLength-1 inclusive.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-snapshot-length"><linktext>W3C - XPathResult.snapshotLength</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathResult:stringValue:get"><apiName>stringValue</apiName><shortdesc>
+		 The value of this string result.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier><apiException><apiDesc>TYPE_ERR: Raised if resultType is not STRING_TYPE.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The value of this string result.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-stringValue"><linktext>W3C - XPathResult.stringValue</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.xpath:XPathException"><apiName>XPathException</apiName><shortdesc>
+	 A new exception has been created for exceptions specific to these XPath interfaces.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 A new exception has been created for exceptions specific to these XPath interfaces. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathException"><linktext>W3C - XPathException</linktext></link></related-links><apiValue id="dom.xpath:XPathException:dom.xpath:XPathException:code:get"><apiName>code</apiName><shortdesc>
+		 The specific exception code.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 The specific exception code.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathException"><linktext>W3C - XPathException</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.xpath:XPathExpression"><apiName>XPathExpression</apiName><shortdesc>
+	 The XPathExpression interface represents a parsed and resolved XPath expression.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The XPathExpression interface represents a parsed and resolved XPath expression. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression"><linktext>W3C - XPathExpression</linktext></link></related-links><apiOperation id="dom.xpath:XPathExpression:dom.xpath:XPathExpression:evaluate"><apiName>evaluate</apiName><shortdesc>
+		 Evaluates this XPath expression and returns a result.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>TYPE_ERR: Raised if the result cannot be converted to return the specified type.
+		 
+		 </apiDesc><apiItemName>XPathException</apiItemName><apiOperationClassifier>dom.xpath:XPathException</apiOperationClassifier></apiException><apiException><apiDesc>WRONG_DOCUMENT_ERR: The Node is from a document that is not supported by the XPathEvaluator that created this XPathExpression.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiException><apiDesc>NOT_SUPPORTED_ERR: The Node is not a type permitted as an XPath context node or the request type is not permitted by this XPathExpression.
+		 
+		 </apiDesc><apiItemName>EventException</apiItemName><apiOperationClassifier>dom.events:EventException</apiOperationClassifier></apiException><apiReturn><apiDesc>The result of the evaluation of the XPath expression. For XPath 1.0 results, this object will 
+		 be of type XPathResult.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMObject</apiOperationClassifier></apiReturn><apiParam><apiItemName>expression</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The context is context node for the evaluation of this XPath expression. 
+		 If the XPathEvaluator was obtained by casting the Document then this must be owned by the same 
+		 document and must be a Document, Element, Attribute, Text, CDATASection, Comment, ProcessingInstruction, 
+		 or XPathNamespace node. If the context node is a Text or a CDATASection, then the context is 
+		 interpreted as the whole logical text node as seen by XPath, unless the node is empty in which 
+		 case it may not serve as the XPath context.
+		 </apiDesc></apiParam><apiParam><apiItemName>contextNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>If a specific type is specified, then the result will be coerced to return the specified 
+		 type relying on XPath conversions and fail if the desired coercion is not possible. This must be one of 
+		 the type codes of XPathResult.
+		 </apiDesc></apiParam><apiParam><apiItemName>resolver</apiItemName><apiOperationClassifier>dom.xpath:XPathNSResolver</apiOperationClassifier><apiDesc>The result specifies a specific result object which may be reused and returned by this 
+		 method. If this is specified as nullor the implementation does not reuse the specified result, a new 
+		 result object will be constructed and returned. For XPath 1.0 results, this object will be of type XPathResult.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiType value="Number"/></apiParam><apiParam><apiItemName>result</apiItemName><apiOperationClassifier>dom.core.types:DOMObject</apiOperationClassifier></apiParam></apiOperationDef><apiDesc>
+		 Evaluates this XPath expression and returns a result.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExpression-evaluate"><linktext>W3C - XPathExpression.evaluate()</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.xpath:XPathNSResolver"><apiName>XPathNSResolver</apiName><shortdesc>
+	 The XPathNSResolver interface permit prefix strings in the expression to be properly bound to 
+	 namespaceURI strings.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The XPathNSResolver interface permit prefix strings in the expression to be properly bound to 
+	 namespaceURI strings. XPathEvaluator can construct an implementation of XPathNSResolver from a 
+	 node, or the interface may be implemented by any application. 
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNSResolver"><linktext>W3C - XPathNSResolver</linktext></link></related-links><apiOperation id="dom.xpath:XPathNSResolver:dom.xpath:XPathNSResolver:lookupNamespaceURI"><apiName>lookupNamespaceURI</apiName><shortdesc>
+		 Look up the namespace URI associated to the given namespace prefix.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns the associated namespace URI or null if none is found.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>prefix</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The prefix to look for.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Look up the namespace URI associated to the given namespace prefix. The XPath evaluator must 
+		 never call this with a null or empty argument, because the result of doing this is undefined.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNSResolver-lookupNamespaceURI"><linktext>W3C - XPathNSResolver.lookupNamespaceURI()</linktext></link></related-links></apiOperation></apiClassifier><apiClassifier id="dom.xpath:XPathNamespace"><apiName>XPathNamespace</apiName><shortdesc>
+	 The XPathNamespace interface is returned by XPathResult interfaces to represent the XPath namespace node type 
+	 that DOM lacks.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom.core:Node</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The XPathNamespace interface is returned by XPathResult interfaces to represent the XPath namespace node type 
+	 that DOM lacks. There is no public constructor for this node type. Attempts to place it into a hierarchy or a 
+	 NamedNodeMap result in a DOMException with the code HIERARCHY_REQUEST_ERR. This node is read only, so methods 
+	 or setting of attributes that would mutate the node result in a DOMException with the code NO_MODIFICATION_ALLOWED_ERR.
+	 
+	 <p>The core specification describes attributes of the Node interface that are different for different node 
+	 types but does not describe XPATH_NAMESPACE_NODE, so here is a description of those attributes for this node 
+	 type. All attributes of Node not described in this section have a null or false value.</p>
+	 
+	 <p>ownerDocument matches the ownerDocument of the ownerElement even if the element is later adopted.</p>
+	 
+	 <p>nodeName is always the string "#namespace".</p>
+	 
+	 <p>prefix is the prefix of the namespace represented by the node.</p>
+	 
+	 <p>localName is the same as prefix.</p>
+	 
+	 <p>nodeType is equal to XPATH_NAMESPACE_NODE.</p>
+	 
+	 <p>namespaceURI is the namespace URI of the namespace represented by the node.</p>
+	 
+	 <p>nodeValue is the same as namespaceURI.</p>
+	 
+	 <p>adoptNode, cloneNode, and importNode fail on this node type by raising a DOMException with the code NOT_SUPPORTED_ERR.</p>
+	 
+	 <p><b>Note:</b> In future versions of the XPath specification, the definition of a namespace node may be changed 
+	 incomatibly, in which case incompatible changes to field values may be required to implement versions beyond XPath 1.0.</p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNamespace"><linktext>W3C - XPathNamespace</linktext></link></related-links><apiValue id="dom.xpath:XPathNamespace:XPATH_NAMESPACE_NODE"><apiName>XPATH_NAMESPACE_NODE</apiName><shortdesc>
+		 An integer indicating which type of node this is.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>13</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 An integer indicating which type of node this is.
+		 
+		 <p><b>Note:</b> There is currently only one type of node which is specific to XPath. The numbers 
+		 in this list must not collide with the values assigned to core node types.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPATH_NAMESPACE_NODE"><linktext>W3C - XPathNamespace.XPATH_NAMESPACE_NODE</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathNamespace:ownerElement:get"><apiName>ownerElement</apiName><shortdesc>
+		 The Element on which the namespace was in scope when it was requested.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 The Element on which the namespace was in scope when it was requested. This does not change 
+		 on a returned namespace node even if the document changes such that the namespace goes out of 
+		 scope on that element and this node is no longer found there by XPath.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathNamespace-ownerElement"><linktext>W3C - XPathNamespace.ownerElement()</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.xpath:XPathExceptionCode"><apiName>XPathExceptionCode</apiName><shortdesc>
+	 An integer indicating the type of error generated.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An integer indicating the type of error generated.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathExceptionCode"><linktext>W3C - XPathExceptionCode</linktext></link></related-links><apiValue id="dom.xpath:XPathExceptionCode:INVALID_EXPRESSION_ERR"><apiName>INVALID_EXPRESSION_ERR</apiName><shortdesc>
+		 If the expression has a syntax error or otherwise is not a legal expression according to the rules 
+		 of the specific XPathEvaluator or contains specialized extension functions or variables not 
+		 supported by this implementation.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>51</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If the expression has a syntax error or otherwise is not a legal expression according to the rules 
+		 of the specific XPathEvaluator or contains specialized extension functions or variables not 
+		 supported by this implementation.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#INVALID_EXPRESSION_ERR"><linktext>W3C - XPathExceptionCode.INVALID_EXPRESSION_ERR</linktext></link></related-links></apiValue><apiValue id="dom.xpath:XPathExceptionCode:TYPE_ERR"><apiName>TYPE_ERR</apiName><shortdesc>
+		 If the expression cannot be converted to return the specified type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMXPath" version="3"/><apiSince version="DOMXPath 3"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>52</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If the expression cannot be converted to return the specified type.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#TYPE_ERR"><linktext>W3C - XPathExceptionCode.TYPE_ERR</linktext></link></related-links></apiValue></apiClassifier></apiPackage>

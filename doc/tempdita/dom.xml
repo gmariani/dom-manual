@@ -1,0 +1,1767 @@
+<apiPackage id="dom"><apiName>dom</apiName><apiDetail/><apiClassifier id="dom:WindowProxy"><apiName>WindowProxy</apiName><shortdesc>
+	 Must proxy all operations to the Window object of the browsing context's active document.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>dom:Window</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Must proxy all operations to the Window object of the browsing context's active document.
+	 
+	 It is indistinguishable from that Window object in every way, except that it is not equal to it.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#windowproxy"><linktext>http://www.whatwg.org/specs/web-apps/current-work/#windowproxy</linktext></link></related-links></apiClassifier><apiClassifier id="dom:Window"><apiName>Window</apiName><shortdesc>
+	 INCOMPLETE
+	 
+	 </shortdesc><prolog><asMetadata/><asCustoms><internal>
+	 
+	 http://opensource.adobe.com/svn/opensource/flex/sdk/trunk/modules/compiler/src/java/flex2/compiler/asdoc/ClassTable.java
+	 
+	 http://www.w3.org/TR/Window/
+	 
+	 http://developer.mozilla.org/en/DOM/window
+	 </internal></asCustoms></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>dom.style.css:ViewCSS</apiBaseInterface><apiBaseInterface>dom.views:AbstractView</apiBaseInterface><apiBaseInterface>cssom.view:WindowView</apiBaseInterface><apiBaseInterface>dom.events:EventTarget</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 INCOMPLETE
+	 
+	 </apiDesc></apiClassifierDetail><apiOperation id="dom:Window:GeckoActiveXObject"><apiName>GeckoActiveXObject</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Window.GeckoActiveXObject"><linktext>http://developer.mozilla.org/En/DOM/Window.GeckoActiveXObject</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:QueryInterface"><apiName>QueryInterface</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Window.QueryInterface"><linktext>http://developer.mozilla.org/En/DOM/Window.QueryInterface</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:XPCNativeWrapper"><apiName>XPCNativeWrapper</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Window.XPCNativeWrapper"><linktext>http://developer.mozilla.org/En/DOM/Window.XPCNativeWrapper</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:XPCSafeJSObjectWrapper"><apiName>XPCSafeJSObjectWrapper</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Window.XPCSafeJSObjectWrapper"><linktext>http://developer.mozilla.org/En/DOM/Window.XPCSafeJSObjectWrapper</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:addEventListener"><apiName>addEventListener</apiName><shortdesc>
+		 
+		 Associates a function with a particular event and binds the event to the current node.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A string representing the event to bind, without the "on" prefix. For example, "click", "mousedown" etc.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiOperationClassifier>dom.events:EventListener</apiOperationClassifier><apiDesc>The function or method to associate with the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiDesc>Whether to bind the event as it is propagating towards the target node, (event Capture), or as the 
+		 event bubbles upwards from the target (event bubble). Set to true or false, respectively.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 Associates a function with a particular event and binds the event to the current node.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:addEventListenerNS"><apiName>addEventListenerNS</apiName><shortdesc>
+		 
+		 Registers an event listener, depending on the useCapture parameter, on the 
+		 capture phase of the DOM event flow or its target and bubbling phases.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies the Event.namespaceURI associated with the event for which the user is registering.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A string representing the event to bind, without the "on" prefix. For example, "click", "mousedown" etc.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiOperationClassifier>dom.events:EventListener</apiOperationClassifier><apiDesc>The function or method to associate with the event.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiDesc>Whether to bind the event as it is propagating towards the target node, (event Capture), or as the 
+		 event bubbles upwards from the target (event bubble). Set to true or false, respectively.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 Registers an event listener, depending on the useCapture parameter, on the 
+		 capture phase of the DOM event flow or its target and bubbling phases.
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:alert"><apiName>alert</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Display an alert dialog with the specified content and an OK button.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Text you want to display in the alert dialog, or, alternatively, an 
+		 object that is converted into a string and displayed.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Display an alert dialog with the specified content and an OK button.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/confirm()"><linktext>dom.Window.confirm()</linktext></link><link href="dom.xml#Window/prompt()"><linktext>dom.Window.prompt()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:atob"><apiName>atob</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Decodes a string of data which has been encoded using base-64 encoding.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The decoded string
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>encodedData</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The encoded string
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Decodes a string of data which has been encoded using base-64 encoding. 
+		 
+		 </apiDesc><example>
+		 var encodedData = window.btoa("Hello, world"); // encode a string
+		 var decodedData = atob(encodedData); // decode the string
+		 
+		 </example></apiOperationDetail><related-links><link href="dom.xml#Window/btoa()"><linktext>dom.Window.btoa()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:back"><apiName>back</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns the window to the previous item in the history.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns the window to the previous item in the history. 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:blur"><apiName>blur</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Shifts focus away from the window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Shifts focus away from the window. 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:btoa"><apiName>btoa</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Creates a base-64 encoded ASCII string from a string of binary data.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The encoded string
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>stringToEncode</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The string to encode
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Creates a base-64 encoded ASCII string from a string of binary data. 
+		 
+		 </apiDesc><example>
+		 var encodedData = window.btoa("Hello, world"); // encode a string
+		 var decodedData = atob(encodedData); // decode the string
+		 
+		 </example></apiOperationDetail><related-links><link href="dom.xml#Window/atob()"><linktext>dom.Window.atob()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:captureEvents"><apiName>captureEvents</apiName><shortdesc>
+		 DOM Level 0 | OBSOLETE
+		 
+		 Registers the window to capture all events of the specified type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>eventType</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The event type to capture.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0 | OBSOLETE</b>
+		 
+		 Registers the window to capture all events of the specified type. 
+		 
+		 Note: This method is obsolete as of Gecko 1.9, in favor of W3C DOM Events methods 
+		 (see addEventListener). The support for this method has been removed from Gecko 1.9. 
+		 
+		 Note: Events raised in the DOM by user activity (such as clicking buttons or shifting 
+		 focus away from the current document) generally pass through the high-level window and 
+		 document objects first before arriving at the object that initiated the event. 
+		 
+		 Note: When you call the captureEvents() method on the window, events of the type you 
+		 specify (for example, Event.CLICK) no longer pass through to "lower" objects in the 
+		 hierarchy. In order for events to "bubble up" in the way that they normally do, you 
+		 must call window.releaseEvents() (Obsolete ) on the window to keep it from trapping events. 
+		 
+		 Note: Note that you can pass a list of events to this method using the following syntax: 
+		 window.caputureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP). 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/releaseEvents()"><linktext>dom.Window.releaseEvents()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:clearInterval"><apiName>clearInterval</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Cancels repeated action which was set up using setInterval().</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>timerID</apiItemName><apiType value="Number"/><apiDesc>The identifier of the repeated action you want to cancel.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Cancels repeated action which was set up using setInterval(). 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/setInterval()"><linktext>setInterval()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:clearTimeout"><apiName>clearTimeout</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Clears the delay set by window.setTimeout().</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>timerID</apiItemName><apiType value="Number"/><apiDesc>The ID of the timeout you wish you clear
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Clears the delay set by window.setTimeout(). 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/setTimeout()"><linktext>setTimeout()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:close"><apiName>close</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Closes the current window, or a referenced window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Closes the current window, or a referenced window. 
+		 
+		 <p>When this method is called, the referenced window is closed.</p>
+		 
+		 <p>This method is only allowed to be called for windows that were 
+		 opened by a script using the window.open method. If the window 
+		 was not opened by a script, the following error appears in the 
+		 JavaScript Console: Scripts may not close windows that were not
+		 opened by script.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536367(VS.85).aspx"><linktext>http://msdn.microsoft.com/en-us/library/ms536367(VS.85).aspx</linktext></link><link href="http://developer.mozilla.org/en/DOM/window.close"><linktext>http://developer.mozilla.org/en/DOM/window.close</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:confirm"><apiName>confirm</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Displays a modal dialog with a message and two buttons, OK and Cancel.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Value indicating whether OK or Cancel was selected (true means OK). 
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The string to be displayed in the dialog. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Displays a modal dialog with a message and two buttons, OK and Cancel. 
+		 
+		 <p>Dialog boxes are modal windows - they prevent the user from accessing the 
+		 rest of the program's interface until the dialog box is closed. For this 
+		 reason, you should not overuse any function that creates a dialog box (or 
+		 modal window).</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/alert()"><linktext>dom.Window.alert()</linktext></link><link href="dom.xml#Window/prompt()"><linktext>dom.Window.prompt()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:disableExternalCapture"><apiName>disableExternalCapture</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.disableExternalCapture"><linktext>http://developer.mozilla.org/En/DOM/window.disableExternalCapture</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:dispatchEvent"><apiName>dispatchEvent</apiName><shortdesc>
+		 
+		 Dispatches an event to fire on a node artificially.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Indicates whether any of the listeners which handled the 
+		 event called Event.preventDefault(). If Event.preventDefault() was 
+		 called the returned value is false, else it is true.
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>event</apiItemName><apiOperationClassifier>dom.events:Event</apiOperationClassifier><apiDesc>The event to be dispatched.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 Dispatches an event to fire on a node artificially.
+		 
+		 <p><b>Note (IE):</b> IE's equivalent of dispatchEvent() is fireEvent().</p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:dump"><apiName>dump</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Prints messages to the console.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Message to log. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Prints messages to the console. 
+		 
+		 <p>Note: In Gecko dump is disabled by default – it doesn't do anything but doesn't raise 
+		 an error either. To see the dump output you have to enable it by setting the preference 
+		 browser.dom.window.dump.enabled to true. You can set the preference in about:config or 
+		 in a user.js file. Note: this preference is not listed in about:config by default, you 
+		 may need to create it (right-click the content area -&gt; New -&gt; Boolean). </p>
+		 
+		 <p>Note: On Windows, you will need a console to actually see anything. If you don't have one 
+		 already, closing the application and re-opening it with the command line parameter -console 
+		 should create the console. On other operating systems, it's enough to launch the application 
+		 from a terminal. </p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:enableExternalCapture"><apiName>enableExternalCapture</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.enableExternalCapture"><linktext>http://developer.mozilla.org/En/DOM/window.enableExternalCapture</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:escape"><apiName>escape</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Encodes a string, replacing certain characters with a hexadecimal escape sequence.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The encoded string. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>regular</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A regular string. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Encodes a string, replacing certain characters with a hexadecimal escape sequence. 
+		 
+		 <p>Note: The escape() method converts special characters (any characters that are 
+		 not regular text or numbers) into hexadecimal characters, which is especially 
+		 necessary for setting the values of cookies. Also useful when passing name=value 
+		 pairs in the URL of a GET request, or an AJAX GET/POST request. </p>
+		 
+		 </apiDesc><example>alert(escape("http://www.cnn.com")); // displays: http%3A//www.cnn.com
+		 </example></apiOperationDetail><related-links><link href="dom.xml#Window/unescape()"><linktext>dom.Window.unescape()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:find"><apiName>find</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Finds a string in a window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>true if the string is found; otherwise, false. 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>string</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The text string for which to search. 
+		 </apiDesc></apiParam><apiParam><apiItemName>caseSensitive</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a case-sensitive search. 
+		 </apiDesc></apiParam><apiParam><apiItemName>backwards</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a backward search. 
+		 </apiDesc></apiParam><apiParam><apiItemName>wrapAround</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a wrap around search. 
+		 </apiDesc></apiParam><apiParam><apiItemName>wholeWord</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a whole word search. 
+		 </apiDesc></apiParam><apiParam><apiItemName>searchInFrames</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a search in frames. 
+		 </apiDesc></apiParam><apiParam><apiItemName>showDialog</apiItemName><apiType value="Boolean"/><apiDesc>If true, specifies a show Dialog. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Finds a string in a window. 
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:focus"><apiName>focus</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Sets focus on the window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Sets focus on the window. 
+		 
+		 </apiDesc><example>if (clicked) { window.focus(); }
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:forward"><apiName>forward</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Moves the window one document forward in the history.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Moves the window one document forward in the history. 
+		 
+		 </apiDesc><example>function goForward() { if ( canGoForward) window.forward(); }
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:getAttention"><apiName>getAttention</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Attempts to get the user's attention.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Attempts to get the user's attention. How this happens varies based on OS and window manager.
+		 
+		 <p>Note: On Windows, the taskbar button for the window flashes, if this hasn't been disabled by the user.</p>
+		 
+		 <p>Note: On Linux, the behaviour varies from window manager to window manager - some flash the taskbar button, 
+		 others focus the window immediately. This may be configurable as well.</p>
+		 
+		 <p>Note: On Macintosh, the icon in the upper right corner of the desktop flashes.</p>
+		 
+		 <p>Note: The function is disabled for web content. Neither Gecko nor Internet Explorer supports this feature 
+		 now for web content. getAttention will still work when used from chrome in a Gecko application.</p>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:getAttentionWithCycleCount"><apiName>getAttentionWithCycleCount</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.getAttentionWithCycleCount"><linktext>http://developer.mozilla.org/En/DOM/window.getAttentionWithCycleCount</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:getComputedStyle"><apiName>getComputedStyle</apiName><shortdesc>
+		 
+		 This method is used to get the computed style as it is defined in CSS2.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The computed style. The CSSStyleDeclaration is read-only and contains only absolute values.
+		 
+		 </apiDesc><apiOperationClassifier>dom.style.css:CSSStyleDeclaration</apiOperationClassifier></apiReturn><apiParam><apiItemName>elt</apiItemName><apiOperationClassifier>dom.core:Element</apiOperationClassifier><apiDesc>The element whose style is to be computed. This parameter cannot be null.
+		 </apiDesc></apiParam><apiParam><apiItemName>pseudoElt</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The pseudo-element or null if none.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 This method is used to get the computed style as it is defined in CSS2. 
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:getSelection"><apiName>getSelection</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns a selection object representing the range of text selected by the user.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A Selection object. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.objects:Selection</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns a selection object representing the range of text selected by the user. 
+		 
+		 <p>In JavaScript, when a selection object is passed to a function expecting a string (like window.alert  or 
+		 document.write ), a string representation of it (i.e. the selected text) is passed instead. This makes the 
+		 selection object appear like a string, when it is really an object with its own properties and methods. 
+		 Specifically, the return value of calling the toString() method of the Selection object is passed. </p>
+		 
+		 </apiDesc><example>
+		 function foo() {
+		    var selObj = window.getSelection();
+		    alert(selObj);
+		    var selRange = selObj.getRangeAt(0);
+		    // do stuff with the range
+		 }
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:home"><apiName>home</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns the window to the home page.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns the window to the home page. 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:maximize"><apiName>maximize</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.maximize"><linktext>http://developer.mozilla.org/En/DOM/window.maximize</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:minimize"><apiName>minimize</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.minimize"><linktext>http://developer.mozilla.org/En/DOM/window.minimize</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:moveBy"><apiName>moveBy</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Moves the current window by a specified amount.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>deltaX</apiItemName><apiType value="Number"/><apiDesc>Amount of pixels to move the window horizontally. 
+		 </apiDesc></apiParam><apiParam><apiItemName>deltaY</apiItemName><apiType value="Number"/><apiDesc>Amount of pixels to move the window vertically. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Moves the current window by a specified amount. 
+		 
+		 <p>Note: You can use negative numbers as parameters for this function. This function makes 
+		 a relative move while window.moveTo makes an absolute move. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 function budge() {
+		    moveBy(10, -10);
+		 }
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:moveTo"><apiName>moveTo</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Moves the window to the specified coordinates.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiDesc>The horizontal coordinate to be moved to. 
+		 </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiDesc>The vertical coordinate to be moved to. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Moves the window to the specified coordinates. 
+		 
+		 <p>Note: This function moves the window absolutely while window.moveBy moves the window relative to its current location. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 function origin() {
+		   // moves to top left corner of screen
+		   window.moveTo(0, 0)
+		 }
+		 </codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:open"><apiName>open</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Creates a new secondary browser window and loads the referenced resource.</shortdesc><prolog><asCustoms><exampleText>
+		 <h3>Best practices</h3>
+		 <p>The above code solves a few usability problems related to links opening secondary window. The purpose of the return false in 
+		 the code is to cancel default action of the link: if the onclick event handler is executed, then there is no need to execute the 
+		 default action of the link. But if javascript support is disabled or non-existent on the user's browser, then the onclick event 
+		 handler is ignored and the browser loads the referenced resource in the target frame or window that has the name 
+		 "PromoteFirefoxWindowName". If no frame nor window has the name "PromoteFirefoxWindowName", then the browser will create a new 
+		 window and will name it "PromoteFirefoxWindowName".</p>
+		 
+		 </exampleText></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>This is the reference pointing to the newly created browser window. This reference is the return value of the 
+		 open() method; it will be null if for some reasons the execution did not succeed to open the window. A global variable 
+		 is best used to store such reference. You can then, for example, use it to look for properties of the new window or access 
+		 its methods, assuming that your main versus secondary window relationship complies with Same origin policy security requirements.
+		 
+		 </apiDesc><apiOperationClassifier>dom:WindowProxy</apiOperationClassifier></apiReturn><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This is the URL to be loaded in the newly opened window. It can be an HTML document on the web, 
+		 it can be an image file or any type of file which is supported by the browser.
+		 </apiDesc></apiParam><apiParam><apiItemName>windowName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This is the string that just names the new window. Such string can be used to be the target 
+		 of links and forms when the target attribute of an &lt;a&gt; element or of a &lt;form&gt; is specified. This string parameter 
+		 should not contain any blank space. strWindowName does not specify the title of the new window.
+		 </apiDesc></apiParam><apiParam><apiItemName>windowFeatures</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Optional parameter. This parameter is the string which lists the requested window features 
+		 (window functionalities and toolbars) of the new browser window. This string parameter must not contain any blank space. 
+		 Each requested window feature must be separated by a comma inside the character string.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Creates a new secondary browser window and loads the referenced resource.
+		 
+		 <p>The open() method creates a new secondary browser window, similar to choosing New Window from the File menu. The strUrl 
+		 parameter specifies the URL to be fetched and loaded in the new window. If strUrl is an empty string, then a new blank, empty 
+		 window (URL about:blank loaded) is created with the default toolbars of the main window.</p>
+		 
+		 <p>Note: Note that remote URLs won't load immediately. When window.open() returns, the window always contains about:blank. The 
+		 actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and 
+		 the loading of the referenced resource are done asynchronously.</p>
+		 
+		 <p>Note: If you use the strWindowFeatures parameter, then only list the features you want to include in the new window, that 
+		 you want to be enabled or rendered; the others (except titlebar and close) will be disabled, removed.</p>
+		 
+		 <h3>Position and size features</h3>
+		 <p>
+		 	<dl>
+		 		<dt>left</dt>
+		 		<dd>Specifies the distance the new window is placed from the left side of the work area for applications of the user's operating system to the leftmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen.</dd>
+		 		<dd> Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/></dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>top</dt>
+		 		<dd>Specifies the distance the new window is placed from the top side of the work area for applications of the user's operating system to the topmost border (resizing handle) of the browser window. The new window can not be initially positioned offscreen. </dd>
+		 		<dd> Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/></dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>height</dt>
+		 		<dd>Specifies the height of the content area, viewing area of the new secondary window in pixels. The height value includes the height of the horizontal scrollbar if present. The minimum required value is 100.</dd>
+		 		<dd> Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/></dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>width</dt>
+		 		<dd>Specifies the width of the content area, viewing area of the new secondary window in pixels. The width value includes the width of the vertical scrollbar if present. The width value does not include the sidebar if it is expanded. The minimum required value is 100. </dd>
+		 		<dd> Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/></dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>screenX</dt>
+		 		<dd>Deprecated. Same as left but only supported by Netscape and Mozilla-based browsers. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>screenY</dt>
+		 		<dd>Deprecated. Same as top but only supported by Netscape and Mozilla-based browsers. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>centerscreen</dt>
+		 		<dd>Centers the window in relation to its parent's size and position. Requires chrome=yes. </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>outerHeight</dt>
+		 		<dd>Specifies the height of the whole browser window in pixels. This outerHeight value includes any/all present toolbar, window horizontal scrollbar (if present) and top and bottom window resizing borders. Minimal required value is 100. </dd>
+		 		<dd><b>Note</b>: since titlebar is always rendered, then requesting outerHeight=100 will make the innerHeight of the browser window under the minimal 100 pixels. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>outerWidth</dt>
+		 		<dd>Specifies the width of the whole browser window in pixels. This outerWidth value includes the window vertical scrollbar (if present) and left and right window resizing borders. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>innerHeight</dt>
+		 		<dd>Same as height but only supported by Netscape and Mozilla-based browsers. Specifies the height of the content area, viewing area of the new secondary window in pixels. The <var>innerHeight</var> value includes the height of the horizontal scrollbar if present. Minimal required value is 100. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>innerWidth</dt>
+		 		<dd>Same as width but only supported by Netscape and Mozilla-based browsers. Specifies the width of the content area, viewing area of the new secondary window in pixels. The innerWidth value includes the width of the vertical scrollbar if present. The innerWidth value does not include the sidebar if it is expanded. Minimal required value is 100. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 </p>
+		 
+		 <h3>Toolbar and chrome features</h3>
+		 <p>
+		 	<dl>
+		 		<dt>menubar</dt>
+		 		<dd>If this feature is set to yes, then the new secondary window renders the menubar. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>toolbar</dt>
+		 		<dd>If this feature is set to <var>yes</var>, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to <var>no</var> all toolbars in the window will be invisible, for example extension toolbars). </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>location</dt>
+		 		<dd>If this feature is set to <var>yes</var>, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>directories</dt>
+		 		<dd>If this feature is set to <var>yes</var>, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox 1.x and, in MSIE 5+, it renders the Links bar. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>personalbar</dt>
+		 		<dd>Same as <var>directories</var> but only supported by Netscape and Mozilla-based browsers. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>status</dt>
+		 		<dd>If this feature is set to <var>yes</var>, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar. </dd>
+		 		<dd> Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 </dl>
+		 </p>
+		 
+		 <h3>Window functionality features</h3>
+		 <p>
+		 	<dl>
+		 		<dt>resizable</dt>
+		 		<dd>If this feature is set to <var>yes</var>, the new secondary window will be resizable. </dd>
+		 		<dd><b>Note</b>: Starting with version 1.4, Mozilla-based browsers have a window resizing grippy at the right end of the status bar, this ensures that users can resize the browser window even if the web author requested this secondary window to be non-resizable. In such case, the maximize/restore icon in the window's titlebar will be disabled and the window's borders won't allow resizing but the window will still be resizable via that grippy in the status bar. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>scrollbars</dt>
+		 		<dd>If this feature is set to <var>yes</var>, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>dependent</dt>
+		 		<dd>If set to <var>yes</var>, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window. </dd>
+		 		<dd>Dependent windows are not implemented on MacOS X, this option will be ignored. </dd>
+		 		<dd>The dependent feature is currently under revision to be removed.</dd>
+		 		<dd>In MSIE 6, the nearest equivalent to this feature is the <codeph>showModelessDialog()</codeph> method. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>dialog</dt>
+		 		<dd>The <codeph>dialog</codeph> feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>minimizable</dt>
+		 		<dd>This setting can only apply to dialog windows; "minimizable" requires <codeph>dialog=yes</codeph>. If <codeph>minimizable</codeph> is set to <var>yes</var>, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and <codeph>minimizable=no</codeph> will be ignored. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>fullscreen</dt>
+		 		<dd>Do not use. Not implemented in Mozilla. There are no plans to implement this feature in Mozilla. </dd>
+		 		<dd>This feature no longer works in MSIE 6 SP2 the way it worked in MSIE 5.x. The Windows taskbar, as well as the titlebar and the status bar of the window are not visible, nor accessible when fullscreen is enabled in MSIE 5.x. </dd>
+		 		<dd><codeph>fullscreen</codeph> always upsets users with large monitor screen or with dual monitor screen. Forcing <codeph>fullscreen</codeph> onto other users is also extremely unpopular and is considered an outright rude attempt to impose web author's viewing preferences onto users. </dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/> </dd><dd> <codeph>fullscreen</codeph> does not really work in MSIE 6 SP2. </dd>
+		 	</dl>
+		 </p>
+		 
+		 
+		 <h3>Features requiring privileges</h3>
+		 <p>
+		 	The following features require the UniversalBrowserWrite privilege, otherwise they will be ignored. Chrome scripts have this privilege automatically, others have to request it from the PrivilegeManager.
+		 	<dl>
+		 		<dt>chrome</dt>
+		 		<dd><b>Note</b>: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the <codeph>UniversalBrowserWrite</codeph> privilege. Without this privilege, it is ignored. </dd>
+		 		<dd>If set to <var>yes</var>, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way). </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>modal</dt>
+		 		<dd><b>Note</b>: Starting with Mozilla 1.2.1, this feature requires the <codeph>UniversalBrowserWrite</codeph> privilege. Without this privilege, it is ignored. </dd>
+		 		<dd>If set to <var>yes</var>, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the <xref href="http://developer.mozilla.org/en/DOM/window.alert">alert() function</xref>. </dd>
+		 		<dd>The exact behavior of modal windows depends on the platform and on the Mozilla release version. </dd>
+		 		<dd>Note: The MSIE 6 equivalent to this feature is the showModalDialog() method. For compatibility reasons, it is now also supported in Firefox 3.</dd>
+		 		<dd>Supported in: <adobeimage alt="Internet Explorer 5+" href="images/MSIE_ico.png"/>, <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/>, <adobeimage alt="Opera 6+" href="images/Opera6.gif"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>titlebar</dt>
+		 		<dd>By default, all new secondary windows have a titlebar. If set to <var>no</var>, this feature removes the titlebar from the new secondary window. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>alwaysRaised</dt>
+		 		<dd>If set to <var>yes</var>, the new window will always be displayed on top of other browser windows, regardless of whether it is active or not. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>alwaysLowered</dt>
+		 		<dd>If set to <var>yes</var>, the new created window floats below, under its own parent when the parent window is not minimized. alwaysLowered windows are often referred as pop-under windows. The alwaysLowered window can not be on top of the parent but the parent window can be minimized. In NS 6.x, the alwaysLowered window has no minimize system command icon and no restore/maximize system command. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>z-lock</dt>
+		 		<dd>Same as <codeph>alwaysLowered</codeph>. </dd>
+		 	</dl>
+		 	<dl>
+		 		<dt>close</dt>
+		 		<dd>When set to <var>no</var>, this feature removes the system close command icon and system close menu item. It will only work for dialog windows (<codeph>dialog</codeph> feature set). <codeph>close=no</codeph> will override <codeph>minimizable=yes</codeph>. </dd>
+		 		<dd>Supported in: <adobeimage alt="Netscape 6.x" href="images/Ns6.gif"/>, <adobeimage alt="Netscape 7.x" href="images/NS7_ico4.gif"/>, <adobeimage alt="Mozilla 1.x" href="images/Mozilla1_ico.png"/>, <adobeimage alt="Firefox 1.x" href="images/FF1x.png"/> </dd>
+		 	</dl>
+		 </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;script type="text/javascript"&gt;
+		 var WindowObjectReference = null; // global variable
+		 
+		 function openFFPromotionPopup()	{
+		 	if(WindowObjectReference == null || WindowObjectReference.closed) {
+		 		//if the pointer to the window object in memory does not exist or if such pointer exists but the window was closed
+		 		WindowObjectReference = window.open("http://www.spreadfirefox.com/", "PromoteFirefoxWindowName", "resizable=yes,scrollbars=yes,status=yes");
+		 		// then create it. The new window will be created and will be brought on top of any other window.
+		 	} else {
+		 		WindowObjectReference.focus();
+		 		// else the window reference must exist and the window is not closed; therefore, we can bring it back on top of any other window with the focus() method. There would be no need to re-create the window or to reload the referenced resource.
+		 	};
+		 }
+		 &lt;/script&gt;
+		 
+		 (...)
+		 
+		 &lt;p&gt;&lt;a href="http://www.spreadfirefox.com/" target="PromoteFirefoxWindowName" onclick="openFFPromotionPopup(); return false;" title="This link will create a new window or will re-use an already opened one"&gt;Promote Firefox adoption&lt;/a&gt;&lt;/p&gt;
+		 
+		 </codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/"><linktext>Links &amp; JavaScript Living Together in Harmony</linktext></link><link href="http://www.cs.tut.fi/~jkorpela/www/links.html"><linktext>Links Want To Be Links</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:openDialog"><apiName>openDialog</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 window.openDialog is an extension to window.open.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The opened window 
+		 
+		 </apiDesc><apiOperationClassifier>dom:WindowProxy</apiOperationClassifier></apiReturn><apiParam><apiItemName>url</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This is the URL to be loaded in the newly opened window. It can be an HTML document on the web, 
+		 it can be an image file or any type of file which is supported by the browser.
+		 </apiDesc></apiParam><apiParam><apiItemName>name</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>This is the string that just names the new window. Such string can be used to be the target 
+		 of links and forms when the target attribute of an &lt;a&gt; element or of a &lt;form&gt; is specified. This string parameter 
+		 should not contain any blank space. strWindowName does not specify the title of the new window.
+		 </apiDesc></apiParam><apiParam><apiItemName>features</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Optional parameter. This parameter is the string which lists the requested window features 
+		 (window functionalities and toolbars) of the new browser window. This string parameter must not contain any blank space. 
+		 Each requested window feature must be separated by a comma inside the character string.
+		 </apiDesc></apiParam><apiParam><apiItemName>args</apiItemName><apiType value="restParam"/><apiDesc>The arguments to be passed to the new window (optional). 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 window.openDialog is an extension to window.open. It behaves the same, except that it can optionally take one or more parameters past windowFeatures, and windowFeatures itself is treated a little differently. 
+		 
+		 <p>The optional parameters, if present, will be bundled up in a JavaScript Array object and added to the newly created window as a property named window.arguments. They may be referenced in the JavaScript of the window at 
+		 any time, including during the execution of a load handler. These parameters may be used, then, to pass arguments to and from the dialog window. </p>
+		 
+		 <p>Note: The call to openDialog() returns immediately. If you want the call to block until the user has closed the dialog, supply modal as a 
+		 windowFeatures parameter.</p>
+		 
+		 <p>Note: This also means the user won't be able to interact with the opener window until he closes the modal dialog. </p>
+		 
+		 <h3>Passing extra parameters to the dialog</h3>
+		 <p>
+		 To pass extra parameters into the dialog, you can simply supply them after the windowFeatures parameter: 
+		 <codeblock>openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</codeblock>
+		 The extra parameters will then get packed into a property named arguments of type Array, and this property gets added to the newly opened dialog window. 
+		 </p>
+		 
+		 <p>
+		 To access these extra parameters from within dialog code, use the following scheme: 
+		 
+		 <codeblock>
+		 var food  = window.arguments[0];
+		 var price = window.arguments[1];</codeblock>
+		 
+		 Note that you can access this property from within anywhere in the dialog code. 
+		 </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:postMessage"><apiName>postMessage</apiName><shortdesc>
+		 HTML5 | Firefox 3 
+		 
+		 window.postMessage is a method for safely enabling cross-origin communication.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>message</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>String data to be sent to the other window. 
+		 </apiDesc></apiParam><apiParam><apiItemName>targetOrigin</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies what the origin of otherWindow must be for the event to be dispatched, either as the literal 
+		 string "~~" (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, 
+		 or port of otherWindow's document does not match that provided in targetOrigin, the event will not be dispatched; only if all 
+		 three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if 
+		 postMessage were used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the
+		 same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>HTML5 | Firefox 3</b> 
+		 
+		 window.postMessage is a method for safely enabling cross-origin communication.
+		 
+		 <p>Normally, scripts on different pages are only allowed to access each other if and only if the pages which executed them 
+		 are at locations with the same protocol (usually both http), port number (80 being the default for http), and host (modulo 
+		 document.domain being set by both pages to the same value). window.postMessage provides a controlled mechanism to circumvent 
+		 this restriction in a way which is secure when properly used.</p>
+		 
+		 <p>window.postMessage, when called, causes a MessageEvent to be dispatched at the target window when any pending script that 
+		 must be executed completes (e.g. remaining event handlers if window.postMessage is called from an event handler, previously-set 
+		 pending timeouts, etc.). The MessageEvent has the type message, a data property which is set to the string value of the first 
+		 argument provided to window.postMessage, an origin property corresponding to the origin of the main document in the window 
+		 calling window.postMessage at the time window.postMessage was called, and a source property which is the window from which 
+		 window.postMessage is called. (Other standard properties of events are present with their expected values.)</p>
+		 
+		 <p>Note: Any window may access this method on any other window, at any time, regardless of the location of the document in 
+		 the window, to send it a message. Consequently, any event listener used to receive messages must first check the identity of 
+		 the sender of the message, using the origin and possibly source properties. This cannot be understated: Failure to check the 
+		 origin and possibly source properties enables cross-site scripting attacks.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // otherWindow: A reference to another window; such a reference may be obtained, for example, using the 
+		 // contentWindow property of an iframe element, the object returned by window.open, or by named or 
+		 // numeric index on window.frames. 
+		 otherWindow.postMessage(message, targetOrigin);</codeblock>
+		 
+		 <codeblock>
+		 // In window A's scripts, with A being on &lt;http://example.com:8080&gt;:
+		 
+		 var popup = window.open(...popup details...);
+		 
+		 // When the popup has fully loaded, if not blocked by a popup blocker:
+		 
+		 // This does nothing, assuming the window hasn't changed its location.
+		 popup.postMessage("The user is 'bob' and the password is 'secret'", "http://secure.example.net");
+		 
+		 // This will successfully queue a message to be sent to the popup, assuming the window hasn't changed its location.
+		 popup.postMessage("hello there!", "http://example.org");
+		 
+		 function receiveMessage(event) {
+		 		// Do we trust the sender of this message?  (might be different from what we originally opened, for example).
+		 		if (event.origin !== "http://example.org") return;
+		 
+		 		// event.source is popup
+		 		// event.data is "hi there yourself!  the secret response is: rheeeeet!"
+		 }
+		 window.addEventListener("message", receiveMessage, false);</codeblock>
+		 
+		 <codeblock>
+		 // In the popup's scripts, running on &lt;http://example.org&gt;:
+		 
+		 // Called sometime after postMessage is called
+		 function receiveMessage(event) {
+		 		// Do we trust the sender of this message?
+		 		if (event.origin !== "http://example.com:8080") return;
+		 
+		 		// event.source is window.opener
+		 		// event.data is "hello there!"
+		 
+		 		// Assuming you've verified the origin of the received message (which
+		 		// you must do in any case), a convenient idiom for replying to a
+		 		// message is to call postMessage on event.source and provide event.origin as the targetOrigin.
+		 		event.source.postMessage("hi there yourself!  the secret response " + "is: rheeeeet!", event.origin);
+		 }
+		 
+		 window.addEventListener("message", receiveMessage, false);</codeblock>
+		 </example></apiOperationDetail><related-links><link href="dom.events.xml#MessageEvent"><linktext>dom.events.MessageEvent</linktext></link><link href="dom.core.xml#Document/domain"><linktext>dom.core.Document.domain</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:print"><apiName>print</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Opens the Print Dialog to print the current document.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Opens the Print Dialog to print the current document. 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:prompt"><apiName>prompt</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Displays a dialog with a message prompting the user to input some text.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The text entered by the user, or the value null. 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>text</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Text to display to the user. 
+		 </apiDesc></apiParam><apiParam><apiItemName>value</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The default value displayed in the text input field. It is an optional parameter. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Displays a dialog with a message prompting the user to input some text. 
+		 
+		 <p>Note: A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the 
+		 (possibly empty) text the user inputted into that textbox. </p>
+		 
+		 <p>Note: Dialog boxes are modal windows - they prevent the user from accessing the rest of the program's interface 
+		 until the dialog box is closed. For this reason, you should not overuse any function that creates a dialog box 
+		 (or modal window). </p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:releaseEvents"><apiName>releaseEvents</apiName><shortdesc>
+		 DOM Level 0 | OBSOLETE
+		 
+		 Releases the window from trapping events of a specific type.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>eventType</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The event type to release.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0 | OBSOLETE</b>
+		 
+		 Releases the window from trapping events of a specific type. 
+		 
+		 <p>Note: that you can pass a list of events to this method using the following syntax: 
+		 window.releaseEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP). </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 window.releaseEvents(Event.KEYPRESS)</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="dom.xml#Window/captureEvents()"><linktext>dom.Window.captureEvents()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:removeEventListener"><apiName>removeEventListener</apiName><shortdesc>
+		 
+		 Removes an event listener.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies the Event.type for which the user registered 
+		 the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiOperationClassifier>dom.events:EventListener</apiOperationClassifier><apiDesc>The EventListener to be removed.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiDesc>Specifies whether the EventListener being removed 
+		 was registered for the capture phase or not. If a listener was 
+		 registered twice, once for the capture phase and once for the target 
+		 and bubbling phases, each must be removed separately. Removal of an 
+		 event listener registered for the capture phase does not affect the 
+		 same event listener registered for the target and bubbling phases, 
+		 and vice versa.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 Removes an event listener.
+		 
+		 <p>Calling removeEventListener with arguments 
+		 which do not identify any currently registered EventListener on the 
+		 EventTarget has no effect. The Event.namespaceURI for which the user 
+		 registered the event listener is implied and is null.</p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:removeEventListenerNS"><apiName>removeEventListenerNS</apiName><shortdesc>
+		 
+		 Removes an event listener.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>namespaceURI</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies the Event.namespaceURI associated with the event for which the user registered the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>type</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Specifies the Event.type for which the user registered 
+		 the event listener.
+		 </apiDesc></apiParam><apiParam><apiItemName>listener</apiItemName><apiOperationClassifier>dom.events:EventListener</apiOperationClassifier><apiDesc>The EventListener to be removed.
+		 </apiDesc></apiParam><apiParam><apiItemName>useCapture</apiItemName><apiType value="Boolean"/><apiDesc>Specifies whether the EventListener being removed 
+		 was registered for the capture phase or not. If a listener was 
+		 registered twice, once for the capture phase and once for the target 
+		 and bubbling phases, each must be removed separately. Removal of an 
+		 event listener registered for the capture phase does not affect the 
+		 same event listener registered for the target and bubbling phases, 
+		 and vice versa.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 
+		 Removes an event listener. Calling removeEventListenerNS with arguments 
+		 which do not identify any currently registered EventListener on the 
+		 EventTarget has no effect. 
+		  
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:resizeBy"><apiName>resizeBy</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Resizes the current window by a certain amount.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>xDelta</apiItemName><apiType value="Number"/><apiDesc>The number of pixels to grow the window horizontally. 
+		 </apiDesc></apiParam><apiParam><apiItemName>yDelta</apiItemName><apiType value="Number"/><apiDesc>The number of pixels to grow the window vertically. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Resizes the current window by a certain amount. 
+		 
+		 <p>Note: This method resizes the window relative to its current size. To resize the window 
+		 in absolute terms, use window.resizeTo. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // shrink the window 
+		 window.resizeBy(-200, -200);</codeblock>
+		 </example></apiOperationDetail><related-links><link href="dom.xml#Window/resizeTo()"><linktext>dom.Window.resizeTo()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:resizeTo"><apiName>resizeTo</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Dynamically resizes window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>width</apiItemName><apiType value="Number"/><apiDesc>The new width in pixels. 
+		 </apiDesc></apiParam><apiParam><apiItemName>height</apiItemName><apiType value="Number"/><apiDesc>The new height in pixels. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Dynamically resizes window. 
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/resizeBy()"><linktext>dom.Window.resizeBy()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:restore"><apiName>restore</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.restore"><linktext>http://developer.mozilla.org/En/DOM/window.restore</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:routeEvent"><apiName>routeEvent</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Window.routeEvent"><linktext>http://developer.mozilla.org/En/DOM/Window.routeEvent</linktext></link><link href="dom.xml#Window/captureEvents()"><linktext>dom.Window.captureEvents()</linktext></link><link href="dom.xml#Window/releaseEvents()"><linktext>dom.Window.releaseEvents()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:scroll"><apiName>scroll</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Scrolls the window to a particular place in the document.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>xCoord</apiItemName><apiType value="Number"/><apiDesc>The pixel along the horizontal axis of the document that you want displayed in the upper left. 
+		 </apiDesc></apiParam><apiParam><apiItemName>yCoord</apiItemName><apiType value="Number"/><apiDesc>The pixel along the vertical axis of the document that you want displayed in the upper left. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Scrolls the window to a particular place in the document. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // put the 100th vertical pixel at the top of the window 
+		 &lt;button onClick="scroll(0, 100);"&gt;click to scroll down 100 pixels&lt;/button&gt;</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:scrollBy"><apiName>scrollBy</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Scrolls the document in the window by the given amount.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiDesc>the offset in pixels to scroll horizontally. 
+		 </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiDesc>the offset in pixels to scroll vertically. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Scrolls the document in the window by the given amount. 
+		 
+		 <p>Note: Positive co-ordinates will scroll to the right and down the page. Negative values 
+		 will scroll to the left and up the page. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // scroll one page 
+		 window.scrollBy(0, window.innerHeight);</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:scrollByLines"><apiName>scrollByLines</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Scrolls the document by the given number of lines.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>lines</apiItemName><apiType value="Number"/><apiDesc>The number of lines to scroll the document by. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Scrolls the document by the given number of lines. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // scroll down the document by 5 lines.
+		 &lt;button onclick="scrollByLines(5);"&gt;down 5 lines&lt;/button&gt;</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:scrollByPages"><apiName>scrollByPages</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Scrolls the current document by the specified number of pages.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>pages</apiItemName><apiType value="Number"/><apiDesc>The number of pages to scroll. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Scrolls the current document by the specified number of pages. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // scroll down the document by 1 page 
+		 window.scrollByPages(1);</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:scrollTo"><apiName>scrollTo</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Scrolls to a particular set of coordinates in the document.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>xCoord</apiItemName><apiType value="Number"/><apiDesc>The pixel along the horizontal axis of the document that you want displayed in the upper left. 
+		 </apiDesc></apiParam><apiParam><apiItemName>yCoord</apiItemName><apiType value="Number"/><apiDesc>The pixel along the vertical axis of the document that you want displayed in the upper left. 
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Scrolls to a particular set of coordinates in the document. 
+		 
+		 </apiDesc><example>
+		 <codeblock>window.scrollTo(0, 1000);</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:setCursor"><apiName>setCursor</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Changes the cursor for the current window.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>state</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>What state to set the cursor to. Valid settings can be: "wait", "auto"...
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Changes the cursor for the current window. 
+		 
+		 <p>Note: The cursor isn't reset until it's set back to auto.</p>
+		 
+		 <p>Note: This function is unavailable to web pages, which can use CSS cursor property instead.</p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:setInterval"><apiName>setInterval</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Calls a function repeatedly, with a fixed time delay between each call to that function.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>A unique interval ID
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>func</apiItemName><apiType value="Function"/><apiDesc>The function you want to be called repeatedly.
+		 </apiDesc></apiParam><apiParam><apiItemName>delay</apiItemName><apiType value="Number"/><apiDesc>The number of milliseconds (thousandths of a second) that the setInterval() function should wait before each call to func.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Calls a function repeatedly, with a fixed time delay between each call to that function.
+		 
+		 Note: setInterval() will pass the number of milliseconds late the callback was called into 
+		 the callback function, which can confuse it if it expects something else as an argument. To 
+		 sidestep that problem, use an anonymous function to call your callback.
+		 
+		 Note: When you pass a method to setInterval() (or any other function, for that matter), it 
+		 will be invoked with a wrong <codeph>this</codeph> value.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/clearInterval()"><linktext>clearInterval()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:setResizable"><apiName>setResizable</apiName><shortdesc>
+		 Undocumented
+		 
+		 </shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Undocumented
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://developer.mozilla.org/En/DOM/window.setResizable"><linktext>http://developer.mozilla.org/En/DOM/window.setResizable</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:setTimeout"><apiName>setTimeout</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Executes a code snippet or a function after specified delay.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The ID of the timeout
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>func</apiItemName><apiType value="Function"/><apiDesc>The function you want to execute after delay milliseconds. 
+		 </apiDesc></apiParam><apiParam><apiItemName>delay</apiItemName><apiType value="Number"/><apiDesc>The number of milliseconds (thousandths of a second) that the function call should be delayed by. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Executes a code snippet or a function after specified delay. 
+		 
+		 Note: Code executed by setTimeout() is run in a separate execution context to the function from 
+		 which it was called. As a consequence, the <codeph>this</codeph> keyword for the called function will be set to 
+		 the window (or global) object, it will not be the same as the <codeph>this</codeph> value for the function that 
+		 called setTimeout.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="dom.xml#Window/clearTimeout()"><linktext>clearTimeout()</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:showModalDialog"><apiName>showModalDialog</apiName><shortdesc>
+		 Non-Standard | IE4 Firefox3 
+		 
+		 Creates and displays a modal dialog box containing a specified HTML document.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The returnValue property as set by the window of the document specified by uri. 
+		 
+		 </apiDesc><apiType value="any"/></apiReturn><apiParam><apiItemName>uri</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The URI of the document to display in the dialog box. 
+		 </apiDesc></apiParam><apiParam><apiItemName>arguments</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiData>null</apiData><apiDesc>An optional variant that contains values that should be passed to the dialog box; these are made available in the window object's window.dialogArguments property. 
+		 </apiDesc></apiParam><apiParam><apiItemName>options</apiItemName><apiType value=""/><apiData>null</apiData><apiDesc>An optional string that specifies window ornamentation for the dialog box, using one or more semicolon delimited values: 
+		 <dl><dt>center: {on | off | yes | no | 1 | 0 }</dt><dd>If this argument's value is on, yes, or 1, the dialog window is centered on the desktop; otherwise it's hidden. The default value is yes. </dd></dl>
+		 <dl>dialogheight: <i>height</i><dt/><dd>	Specifies the height of the dialog box; by default, the size is specified in pixels. </dd></dl>
+		 <dl><dt>dialogleft: <i>left</i></dt><dd>	Specifies the horizontal position of the dialog box in relation to the upper-left corner of the desktop. </dd></dl>
+		 <dl><dt>dialogwidth: <i>width</i></dt><dd>Specifies the width of the dialog box; by default, the size is specified in pixels. </dd></dl>
+		 <dl><dt>dialogtop: <i>top</i></dt><dd>Specifies the vertical position of the dialog box in relation to the upper-left corner of the desktop. </dd></dl>
+		 <dl><dt>resizable: {on | off | yes | no | 1 | 0 }</dt><dd>If this argument's value is on, yes, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is no. </dd></dl>
+		 <dl><dt>scroll: {on | off | yes | no | 1 | 0 }</dt><dd>If this argument's value is on, yes, or 1, the dialog window has scroll bars; otherwise its size is fixed. The default value is no. </dd></dl>
+		 <dl><dt>dialogHide:{ yes | no | 1 | 0 | on | off }</dt><dd>Specifies whether the dialog window is hidden when printing or using print preview. This feature is only available when a dialog box is opened from a trusted application. The default is no.</dd></dl>
+		 <dl><dt>edge:{ sunken | raised }</dt><dd>Specifies the edge style of the dialog window. The default is raised.</dd></dl>
+		 <dl><dt>status:{ yes | no | 1 | 0 | on | off }</dt><dd>Specifies whether the dialog window displays a status bar. The default is yes for untrusted dialog windows and no for trusted dialog windows.</dd></dl>
+		 <dl><dt>unadorned:{ yes | no | 1 | 0 | on | off }</dt><dd>Specifies whether the dialog window displays the border window chrome. This feature is only available when a dialog box is opened from a trusted application. The default is no.</dd></dl>
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>Non-Standard | IE4 Firefox3</b> 
+		 
+		 Creates and displays a modal dialog box containing a specified HTML document. 
+		 
+		 <p>Note: Firefox does not implement the dialogHide, edge, status, or unadorned arguments.</p>
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536759(VS.85).aspx"><linktext>MSDN: showModalDialog Method</linktext></link></related-links></apiOperation><apiOperation id="dom:Window:sizeToContent"><apiName>sizeToContent</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Sizes the window according to its content.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Sizes the window according to its content. 
+		 
+		 <p>The DOM content should be loaded when this function is called, for example after the DOMContentLoaded event. </p>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:stop"><apiName>stop</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 This method stops window loading.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 This method stops window loading. 
+		 
+		 <p>Note: The stop() method is exactly equivalent to clicking the stop button in the browser. Because of the order 
+		 in which scripts are loaded, the stop() method cannot stop the document in which it is contained from loading, but
+		 it will stop the loading of large images, new windows, and other objects whose loading is deferred.</p>
+		 </apiDesc></apiOperationDetail></apiOperation><apiOperation id="dom:Window:unescape"><apiName>unescape</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Decodes a value that has been encoded in hexadecimal (e.g., a cookie).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The decoded string. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn><apiParam><apiItemName>escaped</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>The encoded string. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Decodes a value that has been encoded in hexadecimal (e.g., a cookie). 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 alert(unescape("%5C")); // displays "\"</codeblock>
+		 </example></apiOperationDetail></apiOperation><apiOperation id="dom:Window:updateCommands"><apiName>updateCommands</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Updates the state of commands of the current chrome window (UI).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>commandName</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>A particular string which describes what kind of update event this is (e.g. whether we are in bold right now). 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Updates the state of commands of the current chrome window (UI). 
+		 
+		 <p>Note: This enables or disables items (setting or clearing the "disabled" attribute on the command 
+		 node as appropriate), or ensures that the command state reflects the state of the selection by setting 
+		 current state information in the "state" attribute of the XUL command nodes. </p>
+		 
+		 </apiDesc></apiOperationDetail></apiOperation><apiValue id="dom:Window:Components:get"><apiName>Components</apiName><shortdesc>
+		 Non-Standard | Firefox 
+		 
+		 The Components object is the object through which XPConnect functionality is reflected into JavaScript.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>gecko:nsIXPCComponents</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>Non-Standard | Firefox</b> 
+		 
+		 The Components object is the object through which XPConnect functionality is reflected into JavaScript.
+		 
+		 Some properties of Components require advanced privileges and may not work in web pages. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:applicationCache:get"><apiName>applicationCache</apiName><shortdesc>
+		 Non-Standard | Firefox 3+ 
+		 
+		 Returns a reference to the application cache object for the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>gecko:nsIDOMOfflineResourceList</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>Non-Standard | Firefox 3+</b> 
+		 
+		 Returns a reference to the application cache object for the window. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.whatwg.org/specs/web-apps/current-work/#applicationcache"><linktext>http://www.whatwg.org/specs/web-apps/current-work/#applicationcache</linktext></link></related-links></apiValue><apiValue id="dom:Window:closed:get"><apiName>closed</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 This property indicates whether the referenced window is closed or not.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 This property indicates whether the referenced window is closed or not. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:content:get"><apiName>content</apiName><shortdesc>
+		 Non-Standard | Firefox 
+		 
+		 Returns a Window object for the primary content window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:Window</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>Non-Standard | Firefox</b> 
+		 
+		 Returns a Window object for the primary content window.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:crypto:get"><apiName>crypto</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the browser crypto object, which can then be used to manipulate various 
+		 browser security features.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:Crypto</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the browser crypto object, which can then be used to manipulate various 
+		 browser security features. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:defaultStatus:get"><apiName>defaultStatus</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Gets/sets the status bar text for the given window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Gets/sets the status bar text for the given window.
+		 
+		 Note: To set the status once the window has been opened, use window.status.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:directories:get"><apiName>directories</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the window directories toolbar object.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the window directories toolbar object. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:document:get"><apiName>document</apiName><shortdesc>
+		 
+		 The source DocumentView of which this is an AbstractView.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.views:DocumentView</apiValueClassifier></apiValueDef><apiDesc>
+		 
+		 The source DocumentView of which this is an AbstractView.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:frameElement:get"><apiName>frameElement</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns the element (such as &amp;lt;iframe&amp;gt; or &amp;lt;object&amp;gt;) in which the window is embedded, 
+		 or null if the window is top-level.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Element</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns the element (such as &lt;iframe&gt; or &lt;object&gt;) in which the window is embedded, 
+		 or null if the window is top-level.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.xml#Window/parent"><linktext>parent</linktext></link><link href="dom.xml#Window/frames"><linktext>frames</linktext></link></related-links></apiValue><apiValue id="dom:Window:frames:get"><apiName>frames</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns an array-like object, listing the direct sub-frames of the current window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Array"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns an array-like object, listing the direct sub-frames of the current window.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:fullScreen:get"><apiName>fullScreen</apiName><shortdesc>
+		 DOM Level 0 | Firefox 3+
+		 
+		 This property indicates whether the window is displayed in full screen mode or not.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0 | Firefox 3+</b>
+		 
+		 This property indicates whether the window is displayed in full screen mode or not.
+		 
+		 Note: This property is only reliable in Mozilla 1.9 (Firefox 3) and later. Mozilla 1.8 
+		 and earlier do have this property, but it always returns false, even when the window 
+		 is in full screen mode.
+		 
+		 Note: Switching between regular window and full screen will fire the "resize" event 
+		 on the corresponding window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:globalStorage:get"><apiName>globalStorage</apiName><shortdesc>
+		 Non-Standard | Firefox 2 
+		 
+		 This is a global object (globalStorage) that maintains multiple private storage areas 
+		 that can be used to hold data over a long period of time (e.g.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Object"/></apiValueDef><apiDesc>
+		 <b>Non-Standard | Firefox 2</b> 
+		 
+		 This is a global object (globalStorage) that maintains multiple private storage areas 
+		 that can be used to hold data over a long period of time (e.g. over multiple pages 
+		 and browser sessions).
+		 
+		 Note: Firefox 2 permitted access to storage objects higher in the domain hierarchy 
+		 than the current document. This is no longer allowed in Firefox 3, for security 
+		 reasons. In addition, this proposed addition to HTML 5 has been removed from the 
+		 HTML 5 specification in favor of localStorage, which is implemented in Firefox 3.5.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:history:get"><apiName>history</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns a reference to the History object, which provides an interface for manipulating 
+		 the browser session history (pages visited in the tab or frame that the current page is loaded in).</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:History</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns a reference to the History object, which provides an interface for manipulating 
+		 the browser session history (pages visited in the tab or frame that the current page is loaded in).
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:innerHeight:get"><apiName>innerHeight</apiName><shortdesc>
+		 
+		 Height of the browser window viewport including, if rendered, the horizontal scrollbar.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Height of the browser window viewport including, if rendered, the horizontal scrollbar.
+		 
+		 <p><b>Note:</b> The innerHeight property will be supported in any window object like a window, a frame, a frameset or a secondary window.</p>
+		 
+		 </apiDesc><example>
+		 Assuming a frameset
+		 <codeblock>
+		 var intFrameHeight = window.innerHeight; // or
+		 var intFrameHeight = self.innerHeight; // will return the height of the frame viewport within the frameset
+		 var intFramesetHeight = parent.innerHeight; // will return the height of the viewport of the closest frameset
+		 var intOuterFramesetHeight = top.innerHeight; // will return the height of the viewport of the outermost frameset</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.innerHeight"><linktext>MDC - Window: innerHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: innerHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/outerWidth"><linktext>outerWidth</linktext></link><link href="dom.xml#Window/innerWidth"><linktext>innerWidth</linktext></link><link href="dom.xml#Window/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="dom:Window:innerWidth:get"><apiName>innerWidth</apiName><shortdesc>
+		 
+		 Width of the browser window viewport including, if rendered, the vertical scrollbar.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Width of the browser window viewport including, if rendered, the vertical scrollbar.
+		 
+		 <p><b>Note:</b> The innerWidth property does not include the sidebar. So when the sidebar is expanded, the innerWidth property value diminishes.</p>
+		 
+		 <p><b>Note:</b> The innerWidth property will be supported in any window object like a window, a frame, a frameset or a secondary window.</p>
+		 
+		 </apiDesc><example>
+		 Assuming a frameset
+		 <codeblock>
+		 var intFrameWidth = window.innerWidth; // or
+		 var intFrameWidth = self.innerWidth; // will return the width of the frame viewport within the frameset
+		 var intFramesetWidth = parent.innerWidth; // will return the width of the viewport of the closest frameset
+		 var intOuterFramesetWidth = top.innerWidth; // will return the width of the viewport of the outermost frameset</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.innerWidth"><linktext>MDC - Window: innerWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: innerWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/outerWidth"><linktext>outerWidth</linktext></link><link href="dom.xml#Window/innerHeight"><linktext>innerHeight</linktext></link><link href="dom.xml#Window/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="dom:Window:length:get"><apiName>length</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the number of frames (either frame or iframe elements) in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the number of frames (either frame or iframe elements) in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:localStorage:get"><apiName>localStorage</apiName><shortdesc>
+		 Web Storage
+		 
+		 This is a global object that maintains multiple private storage areas 
+		 that can be used to hold data over a long period of time (e.g.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>webstorage:Storage</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>Web Storage</b>
+		 
+		 This is a global object that maintains multiple private storage areas 
+		 that can be used to hold data over a long period of time (e.g. over multiple pages 
+		 and browser sessions).
+		 
+		 Note Firefox 3.5: When the browser goes into private browsing mode, a new, temporary database 
+		 is created to store local storage data; this database is empty, and is thrown away 
+		 when private browsing mode is turned off.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/webstorage/"><linktext>http://www.w3.org/TR/webstorage/</linktext></link></related-links></apiValue><apiValue id="dom:Window:location:get"><apiName>location</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns a  Location object, which contains information about the URL 
+		 of the document and provides methods for changing that URL.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:Location</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns a  Location object, which contains information about the URL 
+		 of the document and provides methods for changing that URL.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:locationbar:get"><apiName>locationbar</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the locationbar object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the locationbar object, whose visibility can be toggled in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:media:get"><apiName>media</apiName><shortdesc>
+		 
+		 Returns an Media object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.1b_no"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1_no"/><apiTool name="Safari" version="4.0b_no"/><apiTool name="Chrome" version="1.0_no"/><apiTool name="Chrome" version="2.0_no"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0a_no"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>cssom.view:Media</apiValueClassifier></apiValueDef><apiDesc>
+		 
+		 Returns an Media object.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: media Property</linktext></link></related-links></apiValue><apiValue id="dom:Window:menubar:get"><apiName>menubar</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the menubar object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the menubar object, whose visibility can be toggled in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:name:get"><apiName>name</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Gets/sets the name of the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Gets/sets the name of the window.
+		 
+		 Note: The name of the window is used primarily for setting targets for hyperlinks 
+		 and forms. Windows do not need to have names.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:navigator:get"><apiName>navigator</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns a reference to the navigator object, which can be queried for information 
+		 about the application running the script.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:Navigator</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns a reference to the navigator object, which can be queried for information 
+		 about the application running the script. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onabort:get"><apiName>onabort</apiName><shortdesc>
+		 An event handler for abort events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari) 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onbeforeunload:get"><apiName>onbeforeunload</apiName><shortdesc>
+		 An event that fires before the unload event when the page is unloaded.</shortdesc><prolog><asCustoms><exampleText>The function should assign a string value to the returnValue property of the Event object and return the same string/
+		 </exampleText></asCustoms></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event that fires before the unload event when the page is unloaded. 
+		 
+		 <p>Note: There is no public specification. onbeforeunload was introduced by Microsoft IE 4 and has subsequently been copied by other browsers. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 window.onbeforeunload = function (e) {
+		 		var e = e || window.event;
+		 
+		 		// For IE and Firefox
+		 		if (e) {
+		 			e.returnValue = 'Any string';
+		 		}
+		 
+		 		// For Safari
+		 		return 'Any string';
+		 };</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx"><linktext>MSDN—onbeforeunload Event</linktext></link></related-links></apiValue><apiValue id="dom:Window:onblur:get"><apiName>onblur</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 The onblur property can be used to set the blur handler on the window, which is triggered when the window loses focus.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 The onblur property can be used to set the blur handler on the window, which is triggered when the window loses focus. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onchange:get"><apiName>onchange</apiName><shortdesc>
+		 An event handler for change events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for change events sent to the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onclick:get"><apiName>onclick</apiName><shortdesc>
+		 Called when the user clicks the mouse button while the cursor is in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 Called when the user clicks the mouse button while the cursor is in the window. This event is fired for any mouse button 
+		 pressed; you can look at the event properties to find out which button was pressed and where. 
+		 
+		 <p>Note: The click event is raised when the user clicks on the window.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onclose:get"><apiName>onclose</apiName><shortdesc>
+		 An event handler for close events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for close events sent to the window. (Not available with Firefox 2 or Safari) 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:oncontextmenu:get"><apiName>oncontextmenu</apiName><shortdesc>
+		 An event handler property for right-click events on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler property for right-click events on the window. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 window.oncontextmenu = function () {
+		 		return false;
+		 }
+		 //this will disable right click on the page</codeblock>
+		 </example></apiValueDetail></apiValue><apiValue id="dom:Window:ondragdrop:get"><apiName>ondragdrop</apiName><shortdesc>
+		 An event handler for drag and drop events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for drag and drop events sent to the window. 
+		 
+		 <p>Note: The window.ondragdrop property and the ondragdrop attribute are not implemented in Gecko, 
+		 you have to use addEventListener.</p>
+		 
+		 <p>Note: The event.data array available in NN4 seems to be unavailable in Gecko [1].</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.xml#Window/addEventListener()"><linktext>addEventListener()</linktext></link><link href="http://bugzilla.mozilla.org/show_bug.cgi?id=112288"><linktext>bug 112288</linktext></link><link href="http://forums.mozillazine.org/viewtopic.php?p=863806"><linktext>[1]</linktext></link></related-links></apiValue><apiValue id="dom:Window:onerror:get"><apiName>onerror</apiName><shortdesc>
+		 An event handler for error events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for error events sent to the window. 
+		 
+		 <p>Note: When the function returns true, this prevents the firing of the default event handler. Function parameters: 
+		 <ul>
+		 <li>Error message (string) </li>
+		 <li>Url where error was raised (string) </li>
+		 <li>Error code (number) </li>
+		 </ul>
+		 </p>
+		 
+		 <p>Note: The error event is raised when an error occurs in the script. The example above prevents error 
+		 dialogs from displaying-which is the window's normal behavior-by overriding the default event handler for error events that go to the window. </p>
+		 
+		 <p>Note: When using the inline html markup (&lt;body onerror="alert('an error occurred')&gt;...), the arguments 
+		 are not named. They can be referenced by arguments[0] through arguments[2]. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onfocus:get"><apiName>onfocus</apiName><shortdesc>
+		 An event handler for focus events sent to the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for focus events sent to the window. 
+		 
+		 <p>Note: The focus event is raised when the user sets focus on the current window. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onkeydown:get"><apiName>onkeydown</apiName><shortdesc>
+		 An event handler for the keydown event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the keydown event on the window. 
+		 
+		 <p>Note: The keydown event is raised when the user presses any key. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onkeypress:get"><apiName>onkeypress</apiName><shortdesc>
+		 An event handler for the keypress event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the keypress event on the window. 
+		 
+		 <p>Note: The keypress event is raised when the user presses and releases any key on the keyboard. </p>
+		 
+		 <p>Note: Under FF 1.0.5.4 this event fires before the keyup event is detected, i.e. it appears to work exactly like onkeydown. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onkeyup:get"><apiName>onkeyup</apiName><shortdesc>
+		 An event handler for the keyup event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the keyup event on the window. 
+		 
+		 <p>Note: The keyup event is raised when a key that has been pressed is released. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onload:get"><apiName>onload</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 An event handler for the load event of a window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 An event handler for the load event of a window. 
+		 
+		 <p>Note: The load event fires at the end of the document loading process. At this point, all of the objects in the document 
+		 are in the DOM, and all the images and sub-frames have finished loading. </p>
+		 
+		 <p>Note: There is also Gecko-Specific DOM Events like DOMContentLoaded and DOMFrameContentLoaded events (which can be handled 
+		 using addEventListener) which are fired after the DOM for the page has been constructed, but don't wait for other resources 
+		 to finish loading. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onmousedown:get"><apiName>onmousedown</apiName><shortdesc>
+		 An event handler for the mousedown event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the mousedown event on the window.
+		 
+		 <p>Note: The mousedown event is raised when the user clicks the mouse button anywhere in the document.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onmousemove:get"><apiName>onmousemove</apiName><shortdesc>
+		 An event handler for the mousemove event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the mousemove event on the window. 
+		 
+		 <p>Note: The mousemove event fires when the user moves the mouse pointer by 1 pixel or more in any direction in the browser window. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onmouseout:get"><apiName>onmouseout</apiName><shortdesc>
+		 An event handler for the mouseout event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the mouseout event on the window. 
+		 
+		 <p>Note: The mouseout event is raised when the mouse leaves the area of the specified element (in this case the window itself). </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onmouseover:get"><apiName>onmouseover</apiName><shortdesc>
+		 An event handler for the mouseover event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the mouseover event on the window. 
+		 
+		 <p>Note: The mouseover event is raised when the mouse pointer moves over the current element (in this case the window itself). </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onmouseup:get"><apiName>onmouseup</apiName><shortdesc>
+		 An event handler for the mouseup event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the mouseup event on the window.
+		 
+		 <p>Note: The mouseup event is raised when the user unclicks the mouse button anywhere in the document.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onpaint:get"><apiName>onpaint</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 An event handler for the paint event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 An event handler for the paint event on the window.
+		 
+		 <p>Note: <codeph>onpaint</codeph> doesn't work currently, and it is questionable whether this event is going to work at all.</p>
+		 
+		 <p>Note: The paint event is raised when the window is rendered. This event occurs after the load event for a window, and 
+		 reoccurs each time the window needs to be re-rendered, as when another window obscures it and is then cleared away. </p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://bugzilla.mozilla.org/show_bug.cgi?id=239074"><linktext>bug 239074</linktext></link></related-links></apiValue><apiValue id="dom:Window:onreset:get"><apiName>onreset</apiName><shortdesc>
+		 An event handler for the reset event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the reset event on the window. 
+		 
+		 <p>Note: The reset event is raised when the user clicks a reset button in a form (<input type="reset"/>). </p>
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onresize:get"><apiName>onresize</apiName><shortdesc>
+		 An event handler for the resize event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the resize event on the window. 
+		 
+		 <p>Note: The resize event is fired after the window has been resized. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onscroll:get"><apiName>onscroll</apiName><shortdesc>
+		 Specifies the function to be called when the window is scrolled.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 Specifies the function to be called when the window is scrolled. 
+		 
+		 <p>Note: When the window.scrollX/scrollY isn't 0 -- meaning that some scrolling occurred by either script or 
+		 manual action -- reloading the current page will trigger the onscroll event immediately. </p>
+		 
+		 <p>Note: In older versions of Gecko caused onscroll to be fired only when dragging the scroll bar, not when 
+		 using cursor keys or mousewheel. This was fixed in Gecko 1.8/Firefox 1.5.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onselect:get"><apiName>onselect</apiName><shortdesc>
+		 An event handler for the select event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the select event on the window. 
+		 
+		 <p>Note: The select event only fires when text inside a text input or textarea is selected. The event is fired after the text has been selected. </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onsubmit:get"><apiName>onsubmit</apiName><shortdesc>
+		 An event handler for the submit event on the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 An event handler for the submit event on the window. 
+		 
+		 <p>Note: The submit event is raised when the user clicks a submit button in a form (<input type="submit"/>). </p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:onunload:get"><apiName>onunload</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 The unload event is raised when the document is unloaded.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Function"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 The unload event is raised when the document is unloaded. 
+		 
+		 <p>Note: Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache.</p>
+		 
+		 <p>Note: Browsers equipped with pop-up window blockers will ignore all window.open() method calls in onunload event handler functions.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:opener:get"><apiName>opener</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns a reference to the window that opened this current window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:WindowProxy</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns a reference to the window that opened this current window. 
+		 
+		 Note: When a window is opened from another window, it maintains a reference to that first window 
+		 as window.opener. If the current window has no opener, this method returns NULL. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:outerHeight:get"><apiName>outerHeight</apiName><shortdesc>
+		 
+		 Gets the height of the outside of the browser window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Gets the height of the outside of the browser window. window.outerHeight represents the height of 
+		 the whole browser window including toolbars and window chrome.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.outerHeight"><linktext>MDC - Window: outerHeight Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: outerHeight Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/innerWidth"><linktext>innerWidth</linktext></link><link href="dom.xml#Window/innerHeight"><linktext>innerHeight</linktext></link><link href="dom.xml#Window/outerWidth"><linktext>outerWidth</linktext></link></related-links></apiValue><apiValue id="dom:Window:outerWidth:get"><apiName>outerWidth</apiName><shortdesc>
+		 
+		 Gets the width of the outside of the browser window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Gets the width of the outside of the browser window. window.outerWidth represents the width of 
+		 the whole browser window including sidebar (if expanded), window chrome and window [re-]sizing borders/handles.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.outerWidth"><linktext>MDC - Window: outerWidth Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: outerWidth Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/innerWidth"><linktext>innerWidth</linktext></link><link href="dom.xml#Window/innerHeight"><linktext>innerHeight</linktext></link><link href="dom.xml#Window/outerHeight"><linktext>outerHeight</linktext></link></related-links></apiValue><apiValue id="dom:Window:pageXOffset:get"><apiName>pageXOffset</apiName><shortdesc>
+		 
+		 Returns the number of pixels that the document has already been scrolled horizontally.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Returns the number of pixels that the document has already been scrolled horizontally. 
+		 
+		 <p><b>Note:</b> <codeph>window.pageXOffset == window.scrollX; // always true</codeph></p>
+		 
+		  </apiDesc><example>
+		 <codeblock>
+		 // make sure and go over to the second horizontal page
+		 if (window.scrollX) {
+		 	scroll(0,0);
+		 }
+		 scrollBy(400, 0);</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.pageXOffset"><linktext>MDC - Window: pageXOffset Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: pageXOffset Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/pageYOffset"><linktext>pageYOffset</linktext></link></related-links></apiValue><apiValue id="dom:Window:pageYOffset:get"><apiName>pageYOffset</apiName><shortdesc>
+		 
+		 Returns the number of CSS pixels the user has scrolled towards the bottom within the viewport.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Returns the number of CSS pixels the user has scrolled towards the bottom within the viewport. 
+		 
+		 <p><b>Note:</b> <codeph>window.pageYOffset == window.scrollY; // always true</codeph></p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 // make sure and go over to the second horizontal page
+		 if (window.scrollY) {
+		 	scroll(0,0);
+		 }
+		 scrollByPages(1);</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.pageYOffset"><linktext>MDC - Window: pageYOffset Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: pageYOffset Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="" invalidHref="dom.pageXOffset.xml"><linktext>pageXOffset</linktext></link></related-links></apiValue><apiValue id="dom:Window:parent:get"><apiName>parent</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns a reference to the parent of the current window or subframe.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:Window</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns a reference to the parent of the current window or subframe.
+		 
+		 If a window does not have a parent, its parent property is a reference to itself.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.xml#Window/top"><linktext>top</linktext></link><link href="dom.xml#Window/frameElement"><linktext>frameElement</linktext></link></related-links></apiValue><apiValue id="dom:Window:personalbar:get"><apiName>personalbar</apiName><shortdesc>
+		 Returns the personalbar object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns the personalbar object, whose visibility can be toggled in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:pkcs11:get"><apiName>pkcs11</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the pkcs11 object , which can be used to install drivers and other software 
+		 associated with the pkcs11 protocol.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:Pkcs11</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the pkcs11 object , which can be used to install drivers and other software 
+		 associated with the pkcs11 protocol. 
+		 
+		 <p><b>Note (Mozilla):</b> The window.pkcs11 property has been removed in newer 
+		 versions of Firefox (3.5+) for security reasons. For more information on installing PKCS11 
+		 modules, see <xref href="http://developer.mozilla.org/en/PKCS11_Jar_Install" rel="external nofollow" scope="external">installing PKCS11 modules</xref>. See 
+		 <xref href="http://bugzilla.mozilla.org/show_bug.cgi?id=326628" rel="external nofollow" scope="external">bug 
+		 326628</xref> for details on why the property was removed.</p>
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:returnValue:get"><apiName>returnValue</apiName><shortdesc>
+		 Non-Standard? | Firefox 3+
+		 
+		 The return value to be returned to the function that called window.showModalDialog() 
+		 to display the window as a modal dialog.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="any"/></apiValueDef><apiDesc>
+		 <b>Non-Standard? | Firefox 3+</b>
+		 
+		 The return value to be returned to the function that called window.showModalDialog() 
+		 to display the window as a modal dialog. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:screen:get"><apiName>screen</apiName><shortdesc>
+		 
+		 Returns a reference to the screen object associated with the window.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5"/><apiTool name="IE" version="6.0"/><apiTool name="IE" version="7.0"/><apiTool name="IE" version="8.0_as_IE7"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62"/><apiTool name="Opera" version="10.0a"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>cssom.view:Screen</apiValueClassifier></apiValueDef><apiDesc>
+		 
+		 Returns a reference to the screen object associated with the window. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 if (screen.pixelDepth &lt; 8) {
+		 	// use low-color version of page
+		 } else { 
+		 	// use regular, colorful page
+		 }</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screen"><linktext>MDC - Window: screen Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screen Property</linktext></link><link href="http://www.aptana.com/reference/html/api/Window.html#Window.screen"><linktext>Aptana: Window.screen Property</linktext></link></related-links></apiValue><apiValue id="dom:Window:screenX:get"><apiName>screenX</apiName><shortdesc>
+		 
+		 Returns the horizontal distance of the left border of the user's browser from the left side of the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Returns the horizontal distance of the left border of the user's browser from the left side of the screen. 
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the coordinates of the specific tab window relative to 
+		 the encompassing browser window. This is understandable given its way of working with 
+		 windows, but strictly speaking it's a bug. It should give the coordinates of the encompassing 
+		 browser window relative to the screen.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screenX"><linktext>MDC - Window: screenX Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screenX Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/screenY"><linktext>screenY</linktext></link></related-links></apiValue><apiValue id="dom:Window:screenY:get"><apiName>screenY</apiName><shortdesc>
+		 
+		 Returns the vertical distance of the top border of the user's browser from the top edge of the screen.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="HTML" version="5"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8_no"/><apiTool name="Firefox" version="2.0"/><apiTool name="Firefox" version="3.0"/><apiTool name="Firefox" version="3.1b"/><apiTool name="Safari" version="3.0"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0b"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_incorrect"/><apiTool name="Opera" version="10.0a_incorrect"/><apiSince version="DOMCore 0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 
+		 Returns the vertical distance of the top border of the user's browser from the top edge of the screen. 
+		 
+		 <p><b>Note (Opera):</b> Opera calculates the coordinates of the specific tab window relative to 
+		 the encompassing browser window. This is understandable given its way of working with 
+		 windows, but strictly speaking it's a bug. It should give the coordinates of the encompassing 
+		 browser window relative to the screen.</p>
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/window.screenY"><linktext>MDC - Window: screenY Property</linktext></link><link href="http://www.w3.org/TR/cssom-view/#the-windowview-interface"><linktext>W3C - CSSOM View: screenY Property</linktext></link><link href="http://www.quirksmode.org/dom/w3c_cssom.html#windowview"><linktext>Quirksmode: WindowView properties</linktext></link><link href="dom.xml#Window/screenX"><linktext>screenX</linktext></link></related-links></apiValue><apiValue id="dom:Window:scrollMaxX:get"><apiName>scrollMaxX</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the maximum number of pixels that the document can be scrolled horizontally.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the maximum number of pixels that the document can be scrolled horizontally. 
+		 
+		 Note: Use this property to get the total document width, which is equivalent to 
+		 window.innerWidth + window.scrollMaxX. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.xml#Window/scrollMaxY"><linktext>dom.Window.scrollMaxY</linktext></link></related-links></apiValue><apiValue id="dom:Window:scrollMaxY:get"><apiName>scrollMaxY</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the maximum number of pixels that the document can be scrolled vertically.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the maximum number of pixels that the document can be scrolled vertically. 
+		 
+		 Note: Use this property to get the total document height, which is equivalent to 
+		 window.innerHeight + window.scrollMaxY. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.xml#Window/scrollMaxX"><linktext>dom.Window.scrollMaxX</linktext></link></related-links></apiValue><apiValue id="dom:Window:scrollX:get"><apiName>scrollX</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the number of pixels that the document has already been scrolled horizontally.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the number of pixels that the document has already been scrolled horizontally. 
+		 
+		 Note: Use this property to check that the document hasn't already been scrolled some if 
+		 you are using relative scroll functions such as window.scrollBy, window.scrollByLines, 
+		 or window.scrollByPages. 
+		 
+		 Note: The pageXOffset property is an alias for the scrollX property.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="" invalidHref="dom.xml#window/pageXOffset"><linktext>dom.window.pageXOffset</linktext></link></related-links></apiValue><apiValue id="dom:Window:scrollY:get"><apiName>scrollY</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the number of pixels that the document has already been scrolled vertically.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the number of pixels that the document has already been scrolled vertically. 
+		 
+		 Note: Use this property to check that the document hasn't already been scrolled some if 
+		 you are using relative scroll functions such as window.scrollBy, window.scrollByLines, 
+		 or window.scrollByPages. 
+		 
+		 Note: The pageYOffset property is an alias for the scrollY property.
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="" invalidHref="dom.xml#window/pageYOffset"><linktext>dom.window.pageYOffset</linktext></link></related-links></apiValue><apiValue id="dom:Window:scrollbars:get"><apiName>scrollbars</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the scrollbars object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the scrollbars object, whose visibility can be toggled in the window. 
+		 
+		 Note: Note that scrollbars is not an array of the scrollbars. The visibility of these 
+		 objects can only be controlled as a group. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:self:get"><apiName>self</apiName><shortdesc>
+		 Returns a self-reference.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:WindowProxy</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a self-reference.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:sessionStorage:get"><apiName>sessionStorage</apiName><shortdesc>
+		 HTML5 | Firefox 3+
+		 
+		 This is a global object (sessionStorage) that maintains a storage area that's available 
+		 for the duration of the page session.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>webstorage:Storage</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>HTML5 | Firefox 3+</b>
+		 
+		 This is a global object (sessionStorage) that maintains a storage area that's available 
+		 for the duration of the page session. A page session lasts for as long as the browser is 
+		 open and survives over page reloads and restores. Opening a page in a new tab or window 
+		 will cause a new session to be initiated.
+		 
+		 The sessionStorage object is most useful for hanging on to temporary data that should be
+		 saved and restored if the browser is accidentally refreshed.
+		 
+		 Note: Prior to Firefox 3.5, sessionStorage data was not restored automatically after 
+		 recovering from a browser crash. Starting in Firefox 3.5, this works as per the specification.
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:sidebar:get"><apiName>sidebar</apiName><shortdesc>
+		 Non-Standard | Firefox
+		 
+		 Returns a reference to the window object of the sidebar.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>gecko.dom.objects:Sidebar</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>Non-Standard | Firefox</b>
+		 
+		 Returns a reference to the window object of the sidebar. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:status:get"><apiName>status</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Sets the text in the status bar at the bottom of the browser or returns the previously set text.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiValueClassifier>dom.core.types:DOMString</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Sets the text in the status bar at the bottom of the browser or returns the previously set text. 
+		 
+		 Note Firefox: This property does not work in default configuration of Firefox and some 
+		 other browsers: setting window.status has no effect on the text displayed in the status 
+		 bar. To allow scripts change the the status bar text, the user must set the 
+		 dom.disable_window_status_change preference to false in the about:config screen. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:statusbar:get"><apiName>statusbar</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the statusbar object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the statusbar object, whose visibility can be toggled in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:toolbar:get"><apiName>toolbar</apiName><shortdesc>
+		 DOM Level 0
+		 
+		 Returns the toolbar object, whose visibility can be toggled in the window.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.objects:BarProp</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b>
+		 
+		 Returns the toolbar object, whose visibility can be toggled in the window. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:top:get"><apiName>top</apiName><shortdesc>
+		 DOM Level 0 
+		 
+		 Returns a reference to the topmost window in the window hierarchy.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:WindowProxy</apiValueClassifier></apiValueDef><apiDesc>
+		 <b>DOM Level 0</b> 
+		 
+		 Returns a reference to the topmost window in the window hierarchy. 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom:Window:window:get"><apiName>window</apiName><shortdesc>
+		 Returns a self-reference.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom:WindowProxy</apiValueClassifier></apiValueDef><apiDesc>
+		 Returns a self-reference.
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="XPathEvaluator,dom.xpath.XPathEvaluator,createExpression,createNSResolver,evaluate,evaluate,iterateNext,lookupNamespaceURI,snapshotItem"><title>dom.xpath.XPathEvaluator</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'XPathEvaluator - DOM Reference Manual';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script language="javascript" type="text/javascript"><!--
+function submitValue(){
+var searchStr=document.getElementById('search-livedocs').value;
+window.location="../../search.html"+"###"+searchStr;
+}
+--></script><script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">DOM Reference Manual</td><td class="titleTableSearch" align="center"><form class="searchForm" method="get" action="../../search.html" onsubmit="submitValue();"><input class="hidden" name="loc" value="" type="hidden"><input class="hidden" name="termPrefix" value="" type="hidden"><input class="hidden" name="term" value="" type="hidden"><input class="hidden" name="area" value="" type="hidden"><input id="search-livedocs" name="search_text" value="" title="" type="text"> <input type="button" name="action" value="Search" onclick="submitValue()"></form></td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?dom/xpath/XPathEvaluator.html&amp;dom/xpath/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">XPathEvaluator</td><td class="titleTableSubNav" id="subNav" align="right" colspan="2"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("XPathEvaluator"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">dom.xpath</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  XPathEvaluator</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../dom/html/HTMLDocument.html">HTMLDocument</a></td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;</td></tr></table><p></p><p></p><p></p>
+	 The evaluation of XPath expressions is provided by XPathEvaluator. In a DOM implementation 
+	 which supports the XPath 3.0 feature, as described above, the XPathEvaluator interface will 
+	 be implemented on the same object which implements the Document interface permitting it to 
+	 be obtained by the usual binding-specific method such as casting or by using the DOM Level 3 
+	 getInterface method. In this case the implementation obtained from the Document supports the 
+	 XPath DOM module and is compatible with the XPath 1.0 specification.
+	 
+	 <p>Evaluation of expressions with specialized extension functions or variables may not work 
+	 in all implementations and is, therefore, not portable. XPathEvaluator implementations may be 
+	 available from other sources that could provide specific support for specialized extension 
+	 functions or variables as would be defined by other specifications. </p>
+	 
+	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator" target="mm_external" rel="external nofollow">W3C - XPathEvaluator</a></div><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;<a href="#createExpression()" class="signatureLink">createExpression</a>(expression:<a href="../../dom/core/types/DOMString.html">DOMString</a>, resolver:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a>):<a href="../../dom/xpath/XPathExpression.html">XPathExpression</a></div><div class="summaryTableDescription">
+		 Creates a parsed XPath expression with resolved namespaces.</div></td><td class="summaryTableOwnerCol">XPathEvaluator</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;<a href="#createNSResolver()" class="signatureLink">createNSResolver</a>(nodeResolver:<a href="../../dom/core/Node.html">Node</a>):<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a></div><div class="summaryTableDescription">
+		 Adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated 
+		 relative to the context of the node where it appeared within the document.</div></td><td class="summaryTableOwnerCol">XPathEvaluator</td></tr><tr class="" bgColor=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;<a href="#evaluate()" class="signatureLink">evaluate</a>(expression:<a href="../../dom/core/types/DOMString.html">DOMString</a>, contextNode:<a href="../../dom/core/Node.html">Node</a>, resolver:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a>, type:Number, result:<a href="../../dom/core/types/DOMObject.html">DOMObject</a>):<a href="../../dom/core/types/DOMObject.html">DOMObject</a></div><div class="summaryTableDescription">
+		 Evaluates an XPath expression string and returns a result of the specified type if possible.</div></td><td class="summaryTableOwnerCol">XPathEvaluator</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="createExpression()"></a><a name="createExpression(dom.core.types.DOMString,dom.xpath.XPathNSResolver)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;createExpression</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function createExpression(expression:<a href="../../dom/core/types/DOMString.html">DOMString</a>, resolver:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a>):<a href="../../dom/xpath/XPathExpression.html">XPathExpression</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Creates a parsed XPath expression with resolved namespaces. This is useful when an 
+		 expression will be reused in an application since it makes it possible to compile the 
+		 expression string into a more efficient internal form and preresolve all namespace 
+		 prefixes which occur within the expression.
+		 
+		 <p><b>Note (Mozilla):</b> Prior to Firefox 3, you could call this method on documents other 
+		 than the one you planned to run the XPath against. Under Firefox 3, you must call it on the 
+		 same document.</p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; The XPath expression string to be parsed.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">resolver</span>:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a></code> &mdash; The resolver permits translation of all prefixes, including the xml 
+		 namespace prefix, within the XPath expression into appropriate namespace URIs. If this 
+		 is specified as null, any namespace prefix within the expression will result in 
+		 DOMException being thrown with the code NAMESPACE_ERR.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/xpath/XPathExpression.html">XPathExpression</a></code> &mdash; The compiled form of the XPath expression.
+		 
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/xpath/XPathException.html">XPathException</a> </code> &mdash; INVALID_EXPRESSION_ERR: Raised if the expression is 
+		 not legal according to the rules of the XPathEvaluator.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; NAMESPACE_ERR: Raised if the expression contains 
+		 namespace prefixes  which cannot be resolved by the specified XPathNSResolver.
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://developer.mozilla.org/en/DOM/document.createExpression" target="mm_external" rel="external nofollow">MDC - Document.createExpression()</a><br/><a href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createExpression" target="mm_external" rel="external nofollow">W3C - XPathEvaluator.createExpression()</a></div></div><a name="createNSResolver()"></a><a name="createNSResolver(dom.core.Node)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;createNSResolver</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function createNSResolver(nodeResolver:<a href="../../dom/core/Node.html">Node</a>):<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated 
+		 relative to the context of the node where it appeared within the document. This adapter works 
+		 like the DOM Level 3 method lookupNamespaceURI  on nodes in resolving the namespaceURI from a 
+		 given prefix using the current information available in the node's hierarchy at the time 
+		 lookupNamespaceURI is called. also correctly resolving the implicit xml prefix.
+		 
+		 <p><b>Note:</b> XPath defines QNames without prefix to match only elements in the 
+		 null namespace. There is no way in XPath to pick up the default namespace as applied to a regular 
+		 element reference (e.g., <code>p[&64;id='_myid']</code> for <code>xmlns='http://www.w3.org/1999/xhtml'</code>). 
+		 To match default elements in a non-null namespace, you either have to refer to a particular element using 
+		 a form such as <code>*</code></p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">nodeResolver</span>:<a href="../../dom/core/Node.html">Node</a></code> &mdash; The node to be used as a context for namespace resolution.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a></code> &mdash; XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node.
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://developer.mozilla.org/en/DOM/document.createNSResolver" target="mm_external" rel="external nofollow">MDC - Document.createNSResolver()</a><br/><a href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver" target="mm_external" rel="external nofollow">W3C - XPathEvaluator.createNSResolver()</a></div></div><a name="evaluate()"></a><a name="evaluate(dom.core.types.DOMString,dom.core.Node,dom.xpath.XPathNSResolver,Number,dom.core.types.DOMObject)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName"><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;evaluate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function evaluate(expression:<a href="../../dom/core/types/DOMString.html">DOMString</a>, contextNode:<a href="../../dom/core/Node.html">Node</a>, resolver:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a>, type:Number, result:<a href="../../dom/core/types/DOMObject.html">DOMObject</a>):<a href="../../dom/core/types/DOMObject.html">DOMObject</a></code><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td class="sinceTableLabel"><b>Introduced in:&nbsp;</b></td><td><span class="domIcon"><abbr title="Document Object Model">DOM</abbr>&nbsp;3 XPath</span>&nbsp;</td></tr></table><p></p><p></p><p>
+		 Evaluates an XPath expression string and returns a result of the specified type if possible.
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">expression</span>:<a href="../../dom/core/types/DOMString.html">DOMString</a></code> &mdash; The XPath expression string to be parsed and evaluated.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">contextNode</span>:<a href="../../dom/core/Node.html">Node</a></code> &mdash; The context is context node for the evaluation of this XPath expression. 
+		 If the XPathEvaluator was obtained by casting the Document then this must be owned by the same 
+		 document and must be a Document, Element, Attribute, Text, CDATASection, Comment, 
+		 ProcessingInstruction, or XPathNamespace  node. If the context node is a Text or a CDATASection, 
+		 then the context is interpreted as the whole logical text node as seen by XPath, unless the node 
+		 is empty in which case it may not serve as the XPath context.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">resolver</span>:<a href="../../dom/xpath/XPathNSResolver.html">XPathNSResolver</a></code> &mdash; The resolver permits translation of all prefixes, including the xml namespace 
+		 prefix, within the XPath expression into appropriate namespace URIs. If this is specified as null, 
+		 any namespace prefix within the expression will result in DOMException being thrown with the 
+		 code NAMESPACE_ERR.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:Number</code> &mdash; If a specific type is specified, then the result will be returned as the 
+		 corresponding type. For XPath 1.0 results, this must be one of the codes of the XPathResult interface.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">result</span>:<a href="../../dom/core/types/DOMObject.html">DOMObject</a></code> &mdash; The result specifies a specific result object which may be reused and returned by 
+		 this method. If this is specified as nullor the implementation does not reuse the specified result, 
+		 a new result object will be constructed and returned. For XPath 1.0 results, this object will be 
+		 of type XPathResult.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/core/types/DOMObject.html">DOMObject</a></code> &mdash; The result of the evaluation of the XPath expression. For XPath 1.0 results, this object 
+		 will be of type XPathResult.
+		 
+		 </td></tr></table><br/><span class="label">Throws</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../dom/xpath/XPathException.html">XPathException</a> </code> &mdash; INVALID_EXPRESSION_ERR: Raised if the expression is not legal according to the rules of the XPathEvaluator.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/xpath/XPathException.html">XPathException</a> </code> &mdash; TYPE_ERR: Raised if the result cannot be converted to return the specified type.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; NAMESPACE_ERR: Raised if the expression contains namespace prefixes  which cannot be resolved by the specified XPathNSResolver.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; WRONG_DOCUMENT_ERR: The Node is from a document that is not supported by the XPathEvaluator that created this XPathExpression.
+		 
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20"></td><td><code><a href="../../dom/events/EventException.html">EventException</a> </code> &mdash; NOT_SUPPORTED_ERR: The Node is not a type permitted as an XPath context node or the request type is not permitted by this XPathExpression.
+		 
+		 </td></tr></table><p><span class="label">See also</span></p><div class="seeAlso"><a href="http://developer.mozilla.org/en/DOM/document.evaluate" target="mm_external" rel="external nofollow">MDC - Document.evaluate()</a><br/><a href="http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate" target="mm_external" rel="external nofollow">W3C - XPathEvaluator.evaluate()</a></div><br/><span class="label"> Example </span><br/><div class="detailBody">
+		 <div class="listing"><pre>
+         var headings = document.evaluate("//h2", document, null, XPathResult.ANY_TYPE, null); 
+         /* Search the document for all h2 elements.  
+          * The result will likely be an unordered node iterator. */
+         var thisHeading = headings.iterateNext(); 
+         var alertText = "Level 2 headings in this document are:\n";
+         while (thisHeading) {
+             alertText += thisHeading.textContent + "\n";
+             thisHeading = headings.iterateNext();
+         }
+         alert(alertText); // Alerts the text of all h2 elements</pre></div>
+		 
+		 </div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>&copy; 2009 Gabriel Mariani (<a href='http://blog.coursevector.com/'>http://blog.coursevector.com/</a>). All rights reserved.</footer><br/>Mon Aug 17 2009, 10:08 AM -04:00  </center></div></body></html><!--&copy; 2009 Gabriel Mariani (<a href='http://blog.coursevector.com/'>http://blog.coursevector.com/</a>). All rights reserved.<br/>Mon Aug 17 2009, 10:08 AM -04:00  -->

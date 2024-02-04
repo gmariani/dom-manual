@@ -1,0 +1,616 @@
+<apiPackage id="dom.tr.range"><apiName>dom.tr.range</apiName><apiDetail/><apiClassifier id="dom.tr.range:RangeExceptionCode"><apiName>RangeExceptionCode</apiName><shortdesc>
+	 An integer indicating the type of error generated.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 An integer indicating the type of error generated.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#RangeException"><linktext>W3C - DOM Level 2 Range: RangeExceptionCode</linktext></link></related-links><apiValue id="dom.tr.range:RangeExceptionCode:BAD_BOUNDARYPOINTS_ERR"><apiName>BAD_BOUNDARYPOINTS_ERR</apiName><shortdesc>
+		 If the boundary-points of a Range do not meet specific requirements.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If the boundary-points of a Range do not meet specific requirements.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.range:RangeExceptionCode:INVALID_NODE_TYPE_ERR"><apiName>INVALID_NODE_TYPE_ERR</apiName><shortdesc>
+		 If the container of an boundary-point of a Range is being set to either a node of an invalid type or a node with an ancestor of an invalid type.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 If the container of an boundary-point of a Range is being set to either a node of an invalid type or a node with an ancestor of an invalid type.
+		 
+		 </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="dom.tr.range:Range"><apiName>Range</apiName><shortdesc>
+	 The Range object represents a fragment of a document that can contain nodes and parts of text nodes in a given document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseInterface>cssom.view:RangeView</apiBaseInterface><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 The Range object represents a fragment of a document that can contain nodes and parts of text nodes in a given document. 
+	 
+	 <p>A range can be created using the createRange method of the Document object. Range objects can also be retrieved by using 
+	 the getRangeAt method of the selection object. </p>
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range"><linktext>MDC - range</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-idl"><linktext>W3C - DOM Level 2 Range: Range</linktext></link></related-links><apiOperation id="dom.tr.range:Range:cloneContents"><apiName>cloneContents</apiName><shortdesc>
+		 Duplicates the contents of a Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>HIERARCHY_REQUEST_ERR: Raised if a DocumentType node would be extracted 
+		 into the new DocumentFragment.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A DocumentFragment that contains content equivalent to this Range.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:DocumentFragment</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Duplicates the contents of a Range.
+		 
+		 <p><b>Note:</b> Event Listeners added using DOM Events are not copied during cloning. HTML attribute events 
+		 are duplicated as they are for the DOM Core cloneNode method. HTML id attributes are also cloned, which can lead to an 
+		 invalid document through cloning.</p>
+		 
+		 <p><b>Note:</b> Partially selected nodes include the parent tags necessary to make the document fragment valid.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 documentFragment = range.cloneContents();
+		 document.body.appendChild(documentFragment);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.cloneContents"><linktext>MDC - range.cloneContents()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-cloneContents"><linktext>W3C - DOM Level 2 Range: Range.cloneContents()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:cloneRange"><apiName>cloneRange</apiName><shortdesc>
+		 Produces a new Range whose boundary-points are equal to the boundary-points of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The duplicated Range.
+		 
+		 </apiDesc><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Produces a new Range whose boundary-points are equal to the boundary-points of the Range. 
+		 
+		 <p><b>Note:</b> clone is copied by value, not reference, so a change in either Range does not effect the other. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 clone = range.cloneRange();</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.cloneRange"><linktext>MDC - range.cloneRange()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-clone"><linktext>W3C - DOM Level 2 Range: Range.cloneRange()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:collapse"><apiName>collapse</apiName><shortdesc>
+		 Collapse a Range onto one of its boundary-points 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>toStart</apiItemName><apiType value="Boolean"/><apiDesc>If TRUE, collapses the Range onto its start; if FALSE, collapses it onto its end.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Collapse a Range onto one of its boundary-points 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.selectNode(referenceNode);
+		 range.collapse(true);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.collapse"><linktext>MDC - range.collapse()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-collapse"><linktext>W3C - DOM Level 2 Range: Range.collapse()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:compareBoundaryPoints"><apiName>compareBoundaryPoints</apiName><shortdesc>
+		 Compare the boundary-points of two Ranges in a document.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>WRONG_DOCUMENT_ERR: Raised if the two Ranges are not in the same Document or DocumentFragment.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>-1, 0 or 1 depending on whether the corresponding boundary-point of the Range is 
+		 respectively before, equal to, or after the corresponding boundary-point of sourceRange.
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>how</apiItemName><apiType value="Number"/><apiDesc>A code representing the type of comparison, as defined above.
+		 </apiDesc></apiParam><apiParam><apiItemName>sourceRange</apiItemName><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier><apiDesc>The Range on which this current Range is compared to.
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Compare the boundary-points of two Ranges in a document. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var range, sourceRange, compare;
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div")[0]);
+		 sourceRange = document.createRange();
+		 sourceRange.selectNode(document.getElementsByTagName("div")[1]);
+		 compare = range.compareBoundaryPoints(Range.START_TO_END, sourceRange);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.compareBoundaryPoints"><linktext>MDC - range.compareBoundaryPoints()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-compareBoundaryPoints"><linktext>W3C - DOM Level 2 Range: Range.compareBoundaryPoints()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:compareNode"><apiName>compareNode</apiName><shortdesc>
+		 Returns a constant (see notes).</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata><asCustoms><as-of>Gecko 1.9
+		 </as-of></asCustoms></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiType value="Number"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier></apiParam></apiOperationDef><apiDesc>
+		 Returns a constant (see notes). 
+		 
+		 <p><b>Note:</b> This method is obsolete; you should use the W3C DOM Range methods (see compareBoundaryPoints()).</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 returnValue = range.compareNode(document.getElementsByTagName("p").item(0));</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.compareNode"><linktext>MDC - range.compareNode()</linktext></link><link href="dom.tr.range.xml#Range/NODE_BEFORE"><linktext>dom.tr.range.Range.NODE_BEFORE</linktext></link><link href="dom.tr.range.xml#Range/NODE_AFTER"><linktext>dom.tr.range.Range.NODE_AFTER</linktext></link><link href="dom.tr.range.xml#Range/NODE_BEFORE_AND_AFTER"><linktext>dom.tr.range.Range.NODE_BEFORE_AND_AFTER</linktext></link><link href="dom.tr.range.xml#Range/NODE_INSIDE"><linktext>dom.tr.range.Range.NODE_INSIDE</linktext></link><link href="dom.tr.range.xml#Range/compareBoundaryPoints()"><linktext>dom.tr.range.Range.compareBoundaryPoints()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:comparePoint"><apiName>comparePoint</apiName><shortdesc>
+		 If the referenceNode is a Node of type Text, Comment, or CDATASection, then offset is the number of characters 
+		 from the start of referenceNode.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns -1, 0, or 1 depending on whether the referenceNode is before, the same as, or after the range. 
+		 
+		 </apiDesc><apiType value="Number"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The Node to compare with the Range. 
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>An integer greater than or equal to zero representing the offset inside the referenceNode. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 If the referenceNode is a Node of type Text, Comment, or CDATASection, then offset is the number of characters 
+		 from the start of referenceNode. For other Node types, offset is the number of child nodes between the start of the referenceNode.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 returnValue = range.comparePoint(document.getElementsByTagName("p").item(0),1);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.comparePoint"><linktext>MDC - range.comparePoint()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:createContextualFragment"><apiName>createContextualFragment</apiName><shortdesc>
+		 This method takes a string and uses Mozilla's parser to convert it to a DOM tree.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns a document fragment. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:DocumentFragment</apiOperationClassifier></apiReturn><apiParam><apiItemName>tagString</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>Text that contains text and tags to be converted to a document fragment. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 This method takes a string and uses Mozilla's parser to convert it to a DOM tree.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var tagString = "&lt;div&gt;I am a div node&lt;/div&gt;";
+		 var range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 var documentFragment = range.createContextualFragment(tagString);
+		 document.body.appendChild(documentFragment);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.createContextualFragment"><linktext>MDC - range.createContextualFragment()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:deleteContents"><apiName>deleteContents</apiName><shortdesc>
+		 Removes the contents of a Range from the containing document or document fragment without returning a reference 
+		 to the removed content.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if any portion of the content of the Range is 
+		 read-only or any of the nodes that contain any of the content of the Range are read-only.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Removes the contents of a Range from the containing document or document fragment without returning a reference 
+		 to the removed content. 
+		 
+		 <p><b>Note:</b> Unlike extractContents, this method does not return a documentFragment containing the deleted content. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 range.deleteContents();</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.deleteContents"><linktext>MDC - range.deleteContents()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-deleteContents"><linktext>W3C - DOM Level 2 Range: Range.deleteContents()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:detach"><apiName>detach</apiName><shortdesc>
+		 Called to indicate that the Range is no longer in use and that the implementation may relinquish any resources 
+		 associated with this Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn></apiOperationDef><apiDesc>
+		 Called to indicate that the Range is no longer in use and that the implementation may relinquish any resources 
+		 associated with this Range. Subsequent calls to any methods or attribute getters on this Range will result in 
+		 a DOMException being thrown with an error code of INVALID_STATE_ERR. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 range.detach();</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.detach"><linktext>MDC - range.detach()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-detach"><linktext>W3C - DOM Level 2 Range: Range.detach()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:extractContents"><apiName>extractContents</apiName><shortdesc>
+		 Moves the contents of a Range from the containing document or document fragment to a new DocumentFragment.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if any portion of the content of the Range is 
+		 read-only or any of the nodes which contain any of the content of the Range are read-only.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>HIERARCHY_REQUEST_ERR: Raised if a DocumentType node would be extracted into the 
+		 new DocumentFragment.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A DocumentFragment containing the extracted contents.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:DocumentFragment</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Moves the contents of a Range from the containing document or document fragment to a new DocumentFragment. 
+		 
+		 <p><b>Note:</b> Event Listeners added using DOM Events are not retained during extraction. HTML 
+		 attribute events are retained or duplicated as they are for the DOM Core cloneNode method. HTML id attributes 
+		 are also cloned, which can lead to an invalid document if a partially-selected node is extracted and appened 
+		 to the document. </p>
+		 
+		 <p><b>Note:</b> Partially selected nodes are cloned to include the parent tags necessary to make the document fragment valid. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 documentFragment = range.extractContents();
+		 document.body.appendChild(documentFragment);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.extractContents"><linktext>MDC - range.extractContents()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-extractContents"><linktext>W3C - DOM Level 2 Range: Range.extractContents()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:getBoundingClientRect"><apiName>getBoundingClientRect</apiName><shortdesc>
+		 
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.1b_unknown"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMTR 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The returned value is a TextRectangle object which is the union 
+		 of the rectangles returned by getClientRects() for the element, i.e., 
+		 the CSS border-boxes associated with the element.
+		 
+		 </apiDesc><apiOperationClassifier>cssom.view:TextRectangle</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 
+		 Retrieves an object that specifies the bounds of a collection of TextRectangle objects.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#rangeview-getboundingclientrect"><linktext>W3C - CSSOM View: RangeView.getBoundingClientRect()</linktext></link><link href="cssom.view.xml#ElementView/getBoundingClientRect()"><linktext>ElementView.getBoundingClientRect()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:getClientRects"><apiName>getClientRects</apiName><shortdesc>
+		 
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="CSSOMView" version="0"/><apiTool name="IE" version="5.5_unknown"/><apiTool name="IE" version="6.0_unknown"/><apiTool name="IE" version="7.0_unknown"/><apiTool name="IE" version="8.0_as_IE7_unknown"/><apiTool name="IE" version="8.0_as_IE8_unknown"/><apiTool name="Firefox" version="2.0_unknown"/><apiTool name="Firefox" version="3.0_unknown"/><apiTool name="Firefox" version="3.1b_unknown"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0b_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0a_unknown"/><apiSince version="DOMTR 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiOperationClassifier>cssom.view:TextRectangleList</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 
+		 Retrieves a collection of rectangles that describes the layout of the 
+		 contents of an object or range within the client. Each rectangle 
+		 describes a single line.
+		 
+		 </apiDesc></apiOperationDetail><related-links><link href="http://www.w3.org/TR/cssom-view/#rangeview-getclientrects"><linktext>W3C - CSSOM View: RangeView.getClientRects()</linktext></link><link href="cssom.view.xml#ElementView/getClientRects()"><linktext>ElementView.getClientRects()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:insertNode"><apiName>insertNode</apiName><shortdesc>
+		 Inserts a node into the Document or DocumentFragment at the start of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if an ancestor container of the start of the Range is read-only.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>WRONG_DOCUMENT_ERR: Raised if newNode and the container of the start of the Range were not created from the same document.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>HIERARCHY_REQUEST_ERR: Raised if the container of the start of the Range is of a type that does not allow children of the type of newNode or if newNode is an ancestor of the container.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if newNode is an Attr, Entity, Notation, or Document node.
+		 
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>newNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node to insert at the start of the Range
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Inserts a node into the Document or DocumentFragment at the start of the Range.
+		 
+		 <p>If the container is a 
+		 Text node, this will be split at the start of the Range (as if the Text node's splitText method was 
+		 performed at the insertion point) and the insertion will occur between the two resulting Text nodes. 
+		 Adjacent Text nodes will not be automatically merged. If the node to be inserted is a DocumentFragment 
+		 node, the children will be inserted rather than the DocumentFragment node itself. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 newNode = document.createElement("p");
+		 newNode.appendChild(document.createTextNode("New Node Inserted Here"));
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 range.insertNode(newNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.insertNode"><linktext>MDC - range.insertNode()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-insertNode"><linktext>W3C - DOM Level 2 Range: Range.insertNode()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:intersectsNode"><apiName>intersectsNode</apiName><shortdesc>
+		 Returns a boolean indicating whether the given node intersects the range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns a boolean indicating whether the given node intersects the range. 
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The Node to compare with the Range. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a boolean indicating whether the given node intersects the range. 
+		 
+		 <p><b>Note:</b> This method is obsolete; you should instead use the W3C DOM Range methods (see compareBoundaryPoints()).</p>
+		 
+		 <p><b>Warning:</b> This method has been removed from Gecko 1.9 and will not exist in future versions of Firefox; you should switch to compareBoundaryPoints() as soon as possible.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 bool = range.intersectsNode(document.getElementsByTagName("p").item(0));</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.intersectsNode"><linktext>MDC - range.intersectsNode()</linktext></link><link href="dom.tr.range.xml#Range/compareBoundaryPoints()"><linktext>dom.tr.range.Range.compareBoundaryPoints()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:isPointInRange"><apiName>isPointInRange</apiName><shortdesc>
+		 Returns true if the point (cursor position) at offset within ReferenceNode is within this range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>Returns a boolean indicating whether the given point is in the range. 
+		 
+		 </apiDesc><apiType value="Boolean"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The Node to compare with the Range. 
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>The offset into Node of the point to compare with the Range. 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns true if the point (cursor position) at offset within ReferenceNode is within this range.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 bool = range.isPointInRange(document.getElementsByTagName("p").item(0),1);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.isPointInRange"><linktext>MDC - range.isPointInRange()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:selectNode"><apiName>selectNode</apiName><shortdesc>
+		 Select a node and its contents 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if an ancestor of refNode is an Entity, Notation or DocumentType node or if refNode is a Document, DocumentFragment, Attr, Entity, or Notation node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node to select.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Select a node and its contents 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.selectNode(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.selectNode"><linktext>MDC - range.selectNode()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNode"><linktext>W3C - DOM Level 2 Range: Range.selectNode()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:selectNodeContents"><apiName>selectNodeContents</apiName><shortdesc>
+		 Select the contents within a node 
+		 
+		 Note: The parent Node of the start and end of the Range will be the referenceNode.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if refNode or an ancestor of refNode is an Entity, Notation or DocumentType node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Node to select from
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Select the contents within a node 
+		 
+		 <p><b>Note:</b> The parent Node of the start and end of the Range will be the referenceNode. The startOffset is 0, and the endOffset is the number of child Nodes or number of characters contained in the reference node. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div")[0];
+		 range.selectNodeContents(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.selectNodeContents"><linktext>MDC - range.selectNodeContents()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-selectNodeContents"><linktext>W3C - DOM Level 2 Range: Range.selectNodeContents()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setEnd"><apiName>setEnd</apiName><shortdesc>
+		 Sets the attributes describing the end of a Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if refNode or an ancestor of refNode is an Entity, Notation, or DocumentType node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INDEX_SIZE_ERR: Raised if offset is negative or greater than the number of child units in refNode. Child units are 16-bit units if refNode is a type of CharacterData node (e.g., a Text or Comment node) or a ProcessingInstruction node. Child units are Nodes in all other cases.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The refNode value. This parameter must be different from null.
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>The endOffset value.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the attributes describing the end of a Range. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 endNode = document.getElementsByTagName("p").item(3);
+		 endOffset = document.getElementsByTagName("p").item(3).childNodes.length;
+		 range.setEnd(endNode,endOffset);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setEnd"><linktext>MDC - range.setEnd()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEnd"><linktext>W3C - DOM Level 2 Range: Range.setEnd()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setEndAfter"><apiName>setEndAfter</apiName><shortdesc>
+		 Sets the end of a Range to be after a node 
+		 
+		 Note: The parent Node of end of the Range will be the same as that for the referenceNode.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if the root container of refNode is not an Attr, Document or DocumentFragment node or if refNode is a Document, DocumentFragment, Attr, Entity, or Notation node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Range ends after refNode.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the end of a Range to be after a node 
+		 
+		 <p><b>Note:</b> The parent Node of end of the Range will be the same as that for the referenceNode. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.setEndAfter(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setEndAfter"><linktext>MDC - range.setEndAfter()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setEndAfter"><linktext>W3C - DOM Level 2 Range: Range.setEndAfter()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setEndBefore"><apiName>setEndBefore</apiName><shortdesc>
+		 Sets the end position to be before a node.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if the root container of refNode is not an Attr, Document, or DocumentFragment node or if refNode is a Document, DocumentFragment, Attr, Entity, or Notation node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Range ends before refNode
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the end position to be before a node. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.setEndBefore(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setEndBefore"><linktext>MDC - range.setEndBefore()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setEndBefore"><linktext>W3C - DOM Level 2 Range: Range.setEndBefore()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setStart"><apiName>setStart</apiName><shortdesc>
+		 Sets the attributes describing the start of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if refNode or an ancestor of refNode is an Entity, Notation, or DocumentType node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INDEX_SIZE_ERR: Raised if offset is negative or greater than the number of child units in refNode. Child units are 16-bit units if refNode is a type of CharacterData node (e.g., a Text or Comment node) or a ProcessingInstruction node. Child units are Nodes in all other cases.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The refNode value. This parameter must be different from null.
+		 </apiDesc></apiParam><apiParam><apiItemName>offset</apiItemName><apiType value="Number"/><apiDesc>The startOffset value.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the attributes describing the start of the Range. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 startNode = document.getElementsByTagName("p").item(2);
+		 startOffset = 0;
+		 range.setStart(startNode,startOffset);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setStart"><linktext>MDC - range.setStart()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setStart"><linktext>W3C - DOM Level 2 Range: Range.setStart()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setStartAfter"><apiName>setStartAfter</apiName><shortdesc>
+		 Sets the start position to be after a node 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if the root container of refNode is not an Attr, Document, or DocumentFragment node or if refNode is a Document, DocumentFragment, Attr, Entity, or Notation node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Range starts after refNode
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the start position to be after a node 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.setStartAfter(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setStartAfter"><linktext>MDC - range.setStartAfter()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setStartAfter"><linktext>W3C - DOM Level 2 Range: Range.setStartAfter()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:setStartBefore"><apiName>setStartBefore</apiName><shortdesc>
+		 Sets the start position to be before a node 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if the root container of refNode is not an Attr, Document, or DocumentFragment node or if refNode is a Document, DocumentFragment, Attr, Entity, or Notation node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>refNode</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>Range starts before refNode
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Sets the start position to be before a node 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 referenceNode = document.getElementsByTagName("div").item(0);
+		 range.setStartBefore(referenceNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.setStartBefore"><linktext>MDC - range.setStartBefore()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-setStartBefore"><linktext>W3C - DOM Level 2 Range: Range.setStartBefore()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:surroundContents"><apiName>surroundContents</apiName><shortdesc>
+		 Reparents the contents of the Range to the given node and inserts the node at the position of the start of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NO_MODIFICATION_ALLOWED_ERR: Raised if an ancestor container of either boundary-point of the Range is read-only.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>WRONG_DOCUMENT_ERR: Raised if newParent and the container of the start of the Range were not created from the same document.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>HIERARCHY_REQUEST_ERR: Raised if the container of the start of the Range is of a type that does not allow children of the type of newParent or if newParent is an ancestor of the container or if node would end up with a child node of a type not allowed by the type of node.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiException><apiDesc>BAD_BOUNDARYPOINTS_ERR: Raised if the Range partially selects a non-text node.
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiException><apiDesc>INVALID_NODE_TYPE_ERR: Raised if node is an Attr, Entity, DocumentType, Notation, Document, or DocumentFragment node.
+		 
+		 </apiDesc><apiItemName>RangeException</apiItemName><apiOperationClassifier>dom.tr.range:RangeException</apiOperationClassifier></apiException><apiReturn><apiType value="void"/></apiReturn><apiParam><apiItemName>newParent</apiItemName><apiOperationClassifier>dom.core:Node</apiOperationClassifier><apiDesc>The node to surround the contents with.
+		 
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Reparents the contents of the Range to the given node and inserts the node at the position of the start of the Range. 
+		 
+		 <p><b>Note:</b> surroundContents is equivalent to newNode.appendChild(range.extractContents()); range.insertNode(newNode). After surrounding, the boundary points of the range include newNode.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var range = document.createRange();
+		 var newNode = document.createElement("p");
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 range.surroundContents(newNode);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.surroundContents"><linktext>MDC - range.surroundContents()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-surroundContents"><linktext>W3C - DOM Level 2 Range: Range.surroundContents()</linktext></link></related-links></apiOperation><apiOperation id="dom.tr.range:Range:toString"><apiName>toString</apiName><shortdesc>
+		 Returns the contents of a Range as a string.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The contents of the Range.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 Returns the contents of a Range as a string. This string contains only the data characters, not any markup. 
+		 
+		 <p><b>Note:</b> Alerting the contents of a Range makes an implicit toString() call, so comparing range and text through an alert dialog is ineffective </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.selectNode(document.getElementsByTagName("div").item(0));
+		 text = range.toString();</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.toString"><linktext>MDC - range.toString()</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-toString"><linktext>W3C - DOM Level 2 Range: Range.toString()</linktext></link></related-links></apiOperation><apiValue id="dom.tr.range:Range:END_TO_END"><apiName>END_TO_END</apiName><shortdesc>
+		 Compare end boundary-point of sourceRange to end boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Compare end boundary-point of sourceRange to end boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.range:Range:END_TO_START"><apiName>END_TO_START</apiName><shortdesc>
+		 Compare end boundary-point of sourceRange to start boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Compare end boundary-point of sourceRange to start boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.range:Range:NODE_AFTER"><apiName>NODE_AFTER</apiName><shortdesc>
+		 Node ends after the Range 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Node ends after the Range 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.tr.range.xml#Range/compareNode()"><linktext>dom.tr.range.Range.compareNode()</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:NODE_BEFORE"><apiName>NODE_BEFORE</apiName><shortdesc>
+		 Node starts before the Range 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Node starts before the Range 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.tr.range.xml#Range/compareNode()"><linktext>dom.tr.range.Range.compareNode()</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:NODE_BEFORE_AND_AFTER"><apiName>NODE_BEFORE_AND_AFTER</apiName><shortdesc>
+		 Node starts before and ends after the Range 
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>2</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Node starts before and ends after the Range 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.tr.range.xml#Range/compareNode()"><linktext>dom.tr.range.Range.compareNode()</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:NODE_INSIDE"><apiName>NODE_INSIDE</apiName><shortdesc>
+		 Node starts after and ends before the Range, i.e.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Non-Standard" version="Mozilla"/><apiPlatform description="" name="Obsolete" version="0"/></apiVersion></asMetadata><asCustoms><as-of>Gecko 1.9
+		 </as-of></asCustoms></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>3</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Node starts after and ends before the Range, i.e. the Node is completely selected by the Range. 
+		 
+		 </apiDesc></apiValueDetail><related-links><link href="dom.tr.range.xml#Range/compareNode()"><linktext>dom.tr.range.Range.compareNode()</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:START_TO_END"><apiName>START_TO_END</apiName><shortdesc>
+		 Compare start boundary-point of sourceRange to end boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>1</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Compare start boundary-point of sourceRange to end boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.range:Range:START_TO_START"><apiName>START_TO_START</apiName><shortdesc>
+		 Compare start boundary-point of sourceRange to start boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>0</apiData><apiType value="Number"/></apiValueDef><apiDesc>
+		 Compare start boundary-point of sourceRange to start boundary-point of Range on which 
+		 compareBoundaryPoints is invoked.
+		 
+		 </apiDesc></apiValueDetail></apiValue><apiValue id="dom.tr.range:Range:collapsed:get"><apiName>collapsed</apiName><shortdesc>
+		 Returns a boolean of true if the start and end boundary points of the Range are the same point in the DOM, false if not.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Boolean"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 Returns a boolean of true if the start and end boundary points of the Range are the same point in the DOM, false if not.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode, startOffset); 
+		 range.setEnd(endNode, endOffset);
+		 isCollapsed = range.collapsed;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.collapsed"><linktext>MDC - range.collapsed</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-collapsed"><linktext>W3C - DOM Level 2 Range: Range.collapsed</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:commonAncestorContainer:get"><apiName>commonAncestorContainer</apiName><shortdesc>
+		 The deepest common ancestor container of the Range's two boundary-points.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 The deepest common ancestor container of the Range's two boundary-points.
+		 
+		 <p><b>Note:</b> Returns the deepest, or further down the document tree, Node that contains both the startContainer and 
+		 endContainer nodes. Since a Range need not be continuous, and may also partially select Nodes, this is a convenient way to find 
+		 a Node which encloses a Range. </p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode,startOffset);
+		 range.setEnd(endNode,endOffset);
+		 rangeAncestor = range.commonAncestorContainer;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.commonAncestorContainer"><linktext>MDC - range.commonAncestorContainer</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent"><linktext>W3C - DOM Level 2 Range: Range.commonAncestorContainer</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:endContainer:get"><apiName>endContainer</apiName><shortdesc>
+		 Node within which the Range ends
+		 
+		 </shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 Node within which the Range ends
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode,startOffset); 
+		 range.setEnd(endNode,endOffset);
+		 endRangeNode = range.endContainer;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.endContainer"><linktext>MDC - range.endContainer</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-endParent"><linktext>W3C - DOM Level 2 Range: Range.endContainer</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:endOffset:get"><apiName>endOffset</apiName><shortdesc>
+		 Offset within the ending node of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 Offset within the ending node of the Range.
+		 
+		 <p><b>Note:</b> endOffset has two meanings. If the endContainer is a Node of type Text, Comment, or CDATASection, 
+		 then the offset is the number of characters from the start of the endContainer to the boundary point of the Range. For other 
+		 Node types, the endOffset is the number of child nodes between the start of the endContainer and the boundary point of the Range.</p>
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode,startOffset);
+		 range.setEnd(endNode,endOffset);
+		 endRangeOffset = range.endOffset;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.endOffset"><linktext>MDC - range.endOffset</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-endOffset"><linktext>W3C - DOM Level 2 Range: Range.endOffset</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:startContainer:get"><apiName>startContainer</apiName><shortdesc>
+		 Node within which the Range begins.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiValueClassifier>dom.core:Node</apiValueClassifier><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 Node within which the Range begins.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode,startOffset);
+		 range.setEnd(endNode,endOffset);
+		 startRangeNode = range.startContainer;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.startContainer"><linktext>MDC - range.startContainer</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-startParent"><linktext>W3C - DOM Level 2 Range: Range.startContainer</linktext></link></related-links></apiValue><apiValue id="dom.tr.range:Range:startOffset:get"><apiName>startOffset</apiName><shortdesc>
+		 Offset within the starting node of the Range.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/><apiException><apiDesc>INVALID_STATE_ERR: Raised if detach() has already been invoked on this object.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException></apiValueDef><apiDesc>
+		 Offset within the starting node of the Range.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 range = document.createRange();
+		 range.setStart(startNode,startOffset);
+		 range.setEnd(endNode,endOffset);
+		 startRangeOffset = range.startOffset;</codeblock>
+		 
+		 </example></apiValueDetail><related-links><link href="http://developer.mozilla.org/en/DOM/range.startOffset"><linktext>MDC - range.startOffset</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-startOffset"><linktext>W3C - DOM Level 2 Range: Range.startOffset</linktext></link></related-links></apiValue></apiClassifier><apiClassifier id="dom.tr.range:RangeException"><apiName>RangeException</apiName><shortdesc>
+	 Range operations may throw a RangeException as specified in their method descriptions.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Range operations may throw a RangeException as specified in their method descriptions.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#RangeException"><linktext>W3C - DOM Level 2 Range: RangeException</linktext></link></related-links><apiValue id="dom.tr.range:RangeException:code:get"><apiName>code</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue></apiClassifier><apiClassifier id="dom.tr.range:DocumentRange"><apiName>DocumentRange</apiName><shortdesc>
+	 Contains a method to create a range object.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Contains a method to create a range object.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://developer.mozilla.org/En/DOM/Document"><linktext>MDC - Document</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-DocumentRange-idl"><linktext>W3C - DOM Level 2 Range: DocumentRange</linktext></link></related-links><apiOperation id="dom.tr.range:DocumentRange:dom.tr.range:DocumentRange:createRange"><apiName>createRange</apiName><shortdesc>
+		 This interface can be obtained from the object implementing the Document interface using binding-specific 
+		 casting methods.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="DOMTR" version="2"/><apiSince version="DOMCore 2"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiReturn><apiDesc>The initial state of the Range returned from this method is such that both of its boundary-points 
+		 are positioned at the beginning of the corresponding Document, before any content. The Range returned can 
+		 only be used to select content associated with this Document, or with DocumentFragments and Attrs for which 
+		 this Document is the ownerDocument.
+		 
+		 </apiDesc><apiOperationClassifier>dom.tr.range:Range</apiOperationClassifier></apiReturn></apiOperationDef><apiDesc>
+		 This interface can be obtained from the object implementing the Document interface using binding-specific 
+		 casting methods. 
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 var range = document.createRange();
+		 range.setStart(startNode, startOffset);
+		 range.setEnd(endNode, endOffset);</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/ms536394%28VS.85%29.aspx"><linktext>MSDN: createRange Method</linktext></link><link href="http://developer.mozilla.org/en/DOM/document.createRange"><linktext>MDC - Document: createRange Method</linktext></link><link href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-DocumentRange-idl"><linktext>W3C - DOM Level 2 Range: DocumentRange</linktext></link></related-links></apiOperation></apiClassifier></apiPackage>

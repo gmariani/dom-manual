@@ -1,0 +1,65 @@
+<apiPackage id="selectors"><apiName>selectors</apiName><apiDetail/><apiClassifier id="selectors:NodeSelector"><apiName>NodeSelector</apiName><shortdesc>
+	 Objects implementing any of the Document, DocumentFragment or Element interfaces, as defined in DOM Level 3 Core, must also implement the NodeSelector interface.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Selectors" version="0"/><apiSince version="DOMCore 3"/></apiVersion></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiInterface/><apiAccess value="public"/><apiStatic/><apiBaseClassifier></apiBaseClassifier></apiClassifierDef><apiDesc>
+	 Objects implementing any of the Document, DocumentFragment or Element interfaces, as defined in DOM Level 3 Core, must also implement the NodeSelector interface.
+	 
+	 </apiDesc></apiClassifierDetail><related-links><link href="http://www.w3.org/TR/selectors-api/#nodeselector"><linktext>W3C Selectors API</linktext></link></related-links><apiOperation id="selectors:NodeSelector:selectors:NodeSelector:querySelector"><apiName>querySelector</apiName><shortdesc>
+		 Returns the first element that is a descendent of the element on which it is invoked that matches the specified group of selectors.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Selectors" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_unknown"/><apiTool name="Safari" version="3.1_unknown"/><apiTool name="Safari" version="4.0_unknown"/><apiTool name="Chrome" version="1.0_unknown"/><apiTool name="Chrome" version="2.0_unknown"/><apiTool name="Opera" version="9.62_unknown"/><apiTool name="Opera" version="10.0b_unknown"/><apiSince version="DOMCore 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NAMESPACE_ERR: May be raised if the group of selectors include namespace prefixes that need to be resolved.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>The first matching Element node within the node’s subtree. If there is no such node, returns null. 
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:Element</apiOperationClassifier></apiReturn><apiParam><apiItemName>selectors</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>One or more selectors
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns the first element that is a descendent of the element on which it is invoked that matches the specified group of selectors.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;Selectors API Example&lt;/title&gt;
+		 	&lt;/head&gt;
+		 	&lt;body&gt;
+		 
+		 		&lt;div id="foo"&gt;
+		 			&lt;p class="warning"&gt;This is a sample warning&lt;/p&gt;
+		 			&lt;p class="error"&gt;This is a sample error&lt;/p&gt;
+		 		&lt;/div&gt;
+		 		&lt;div id="bar"&gt;
+		 			&lt;p&gt;...&lt;/p&gt;
+		 		&lt;/div&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 x would contain the first element in the document with an ID of either foo or bar (or both). In the sample document above, it would select the div element with the ID of foo because it is first in document order.
+		 <codeblock>var x = document.querySelector("#foo, #bar");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/cc288169%28VS.85%29.aspx"><linktext>MSDN - querySelector Method</linktext></link><link href="http://developer.mozilla.org/En/DOM/Document.querySelector"><linktext>MDC - Document.querySelector()</linktext></link><link href="http://www.w3.org/TR/selectors-api/#nodeselector"><linktext>W3C - NodeSelector.querySelector()</linktext></link></related-links></apiOperation><apiOperation id="selectors:NodeSelector:selectors:NodeSelector:querySelectorAll"><apiName>querySelectorAll</apiName><shortdesc>
+		 Returns a list of all elements descended from the element on which it is invoked that match the specified group of selectors.</shortdesc><prolog><asMetadata><apiVersion><apiPlatform description="" name="Selectors" version="0"/><apiTool name="IE" version="5.5_no"/><apiTool name="IE" version="6.0_no"/><apiTool name="IE" version="7.0_no"/><apiTool name="IE" version="8.0_as_IE7_no"/><apiTool name="IE" version="8.0_as_IE8"/><apiTool name="Firefox" version="2.0_no"/><apiTool name="Firefox" version="3.0_no"/><apiTool name="Firefox" version="3.5"/><apiTool name="Safari" version="3.0_no"/><apiTool name="Safari" version="3.1"/><apiTool name="Safari" version="4.0"/><apiTool name="Chrome" version="1.0"/><apiTool name="Chrome" version="2.0"/><apiTool name="Opera" version="9.62_no"/><apiTool name="Opera" version="10.0b"/><apiSince version="DOMCore 3"/></apiVersion></asMetadata></prolog><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiException><apiDesc>NAMESPACE_ERR: May be raised if the group of selectors include namespace prefixes that need to be resolved.
+		 
+		 </apiDesc><apiItemName>DOMException</apiItemName><apiOperationClassifier>dom.core:DOMException</apiOperationClassifier></apiException><apiReturn><apiDesc>A NodeList containing all of the matching Element nodes within the node’s subtree, in document order. If there are no such nodes, returns an empty NodeList.
+		 
+		 </apiDesc><apiOperationClassifier>dom.core:NodeList</apiOperationClassifier></apiReturn><apiParam><apiItemName>selectors</apiItemName><apiOperationClassifier>dom.core.types:DOMString</apiOperationClassifier><apiDesc>One or more selectors
+		 </apiDesc></apiParam></apiOperationDef><apiDesc>
+		 Returns a list of all elements descended from the element on which it is invoked that match the specified group of selectors.
+		 
+		 </apiDesc><example>
+		 <codeblock>
+		 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+		 	&lt;head&gt;
+		 		&lt;title&gt;Selectors API Example&lt;/title&gt;
+		 	&lt;/head&gt;
+		 	&lt;body&gt;
+		 
+		 		&lt;div id="foo"&gt;
+		 			&lt;p class="warning"&gt;This is a sample warning&lt;/p&gt;
+		 			&lt;p class="error"&gt;This is a sample error&lt;/p&gt;
+		 		&lt;/div&gt;
+		 		&lt;div id="bar"&gt;
+		 			&lt;p&gt;...&lt;/p&gt;
+		 		&lt;/div&gt;
+		 	&lt;/body&gt;
+		 &lt;/html&gt;</codeblock>
+		 
+		 The following example would select all p elements in the document that have a class of either "error" or "warning".
+		 <codeblock>var alerts = document.querySelectorAll("p.warning, p.error");</codeblock>
+		 
+		 </example></apiOperationDetail><related-links><link href="http://msdn.microsoft.com/en-us/library/cc304115%28VS.85%29.aspx"><linktext>MSDN - querySelectorAll Method</linktext></link><link href="http://developer.mozilla.org/En/DOM/Document.querySelectorAll"><linktext>MDC - Document.querySelectorAll()</linktext></link><link href="http://www.w3.org/TR/selectors-api/#nodeselector"><linktext>W3C - NodeSelector.querySelectorAll()</linktext></link><link href="http://www.quirksmode.org/dom/w3c_core.html#gettingelements"><linktext>Quirksmode: Getting elements</linktext></link></related-links></apiOperation></apiClassifier></apiPackage>
